@@ -99,26 +99,27 @@ const IndexPage = props => {
               type="image/webp"
               className={classes.bgImgs}
             />
-            <source
+            {/* <source
               media="(max-width: 599px)"
               srcset={bgImgsV}
               type="image/gif"
               className={classes.bgImgs}
-            />
+            /> */}
             <source
               media="(min-width: 600px)"
               srcset={imgs1ov}
               type="image/webp"
               className={classes.bgImgs}
             />
-            <source
+            {/* <source
               media="(min-width: 600px)"
               srcset={bgImgs}
               type="image/gif"
               className={classes.bgImgs}
-            />
+            /> */}
 
-            <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} />
+            <img src={imgs1ov} alt="georgian food" className={classes.bgImgs} />
+            {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
           </picture>
         </Container>
         <br /> <br /> <br /> <br />
