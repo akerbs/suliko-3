@@ -1,116 +1,312 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React, { useRef, useEffect } from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import bgImgs from "../images/bgImgs.gif"
+import bgImgsV from "../images/bgImgsV.gif"
+import imgs1ov from "../images/imgs1ov.webp"
+import imgs1ovV from "../images/imgs1ovV.webp"
+import { makeStyles } from "@material-ui/core/styles"
+import sloganImg2 from "../images/slogan_eng2.png"
+import Container from "@material-ui/core/Container"
+import Typography from "@material-ui/core/Typography"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
+// import Slider from "react-slick"
+import Img from "gatsby-image"
+import HomeIcon from "@material-ui/icons/Home"
+import PhoneIcon from "@material-ui/icons/Phone"
+import EmailIcon from "@material-ui/icons/Email"
+import ScheduleIcon from "@material-ui/icons/Schedule"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate odit
-    rerum quia exercitationem itaque tempora quae dolore. Accusamus iure cumque
-    ratione sint incidunt delectus. Quis temporibus earum dignissimos quos
-    adipisci aperiam? Enim accusamus sapiente earum distinctio non veritatis
-    corrupti? Sint quis nostrum quaerat aut, neque veniam beatae amet commodi
-    quam numquam doloribus blanditiis odio cumque corrupti nulla velit ea in
-    placeat temporibus laborum nihil eius minima! Modi alias eius incidunt
-    ducimus provident optio numquam inventore doloremque nostrum, sunt
-    voluptatum, facilis maxime eligendi error vitae voluptate eveniet quas
-    facere eos? Repellendus, beatae hic tenetur unde molestiae suscipit
-    quibusdam voluptatem delectus, nostrum itaque nihil, sequi ea deserunt ipsa
-    facere saepe. Temporibus magni quis, porro inventore autem facere
-    exercitationem aspernatur aperiam, obcaecati animi non officiis odio fugit,
-    voluptatum fugiat consectetur veniam dignissimos iste? Similique esse alias
-    aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam commodi
-    cumque aspernatur corrupti repellendus natus nemo cum laudantium sunt dolore
-    est voluptates facere! Tempora eaque, accusamus commodi quos, quo, tenetur
-    similique consequuntur alias iusto corrupti ut repellat aspernatur at
-    deleniti labore quibusdam voluptatem delectus, nostrum itaque nihil, sequi
-    ea deserunt ipsa facere saepe. Temporibus magni quis, porro inventore autem
-    facere exercitationem aspernatur aperiam, obcaecati animi non officiis odio
-    fugit, voluptatum fugiat consectetur veniam dignissimos iste? Similique esse
-    alias aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam
-    commodi cumque aspernatur corrupti repellendus natus nemo cum laudantium
-    sunt dolore est voluptates facere! Tempora eaque, accusamus commodi quos,
-    quo, tenetur similique consequuntur alias iusto corrupti ut repellat
-    aspernatur at deleniti labore eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, quibusdam voluptatem delectus, nostrum itaque nihil,
-    sequi ea deserunt ipsa facere saepe. Temporibus magni quis, porro inventore
-    autem facere exercitationem aspernatur aperiam, obcaecati animi non officiis
-    odio fugit, voluptatum fugiat consectetur veniam dignissimos iste? Similique
-    esse alias aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam
-    commodi cumque aspernatur corrupti repellendus natus nemo cum laudantium
-    sunt dolore est voluptates facere! Tempora eaque, accusamus commodi quos,
-    quo, tenetur similique consequuntur alias iusto corrupti ut repellat
-    aspernatur at deleniti labore eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, quibusdam voluptatem delectus, nostrum itaque nihil,
-    sequi ea deserunt ipsa facere saepe. Temporibus magni quis, porro inventore
-    autem facere exercitationem aspernatur aperiam, obcaecati animi non officiis
-    odio fugit, voluptatum fugiat consectetur veniam dignissimos iste? Similique
-    esse alias aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam
-    commodi cumque aspernatur corrupti repellendus natus nemo cum laudantium
-    sunt dolore est voluptates facere! Tempora eaque, accusamus commodi quos,
-    quo, tenetur similique consequuntur alias iusto corrupti ut repellat
-    aspernatur at deleniti labore eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, quibusdam voluptatem delectus, nostrum itaque nihil,
-    sequi ea deserunt ipsa facere saepe. Temporibus magni quis, porro inventore
-    autem facere exercitationem aspernatur aperiam, obcaecati animi non officiis
-    odio fugit, voluptatum fugiat consectetur veniam dignissimos iste? Similique
-    esse alias aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam
-    commodi cumque aspernatur corrupti repellendus natus nemo cum laudantium
-    sunt dolore est voluptates facere! Tempora eaque, accusamus commodi quos,
-    quo, tenetur similique consequuntur alias iusto corrupti ut repellat
-    aspernatur at deleniti labore eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum,eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, quibusdam voluptatem delectus, nostrum itaque nihil,
-    sequi ea deserunt ipsa facere saepe. Temporibus magni quis, porro inventore
-    autem facere exercitationem aspernatur aperiam, obcaecati animi non officiis
-    odio fugit, voluptatum fugiat consectetur veniam dignissimos iste? Similique
-    esse alias aperiam vitae nihil modi, voluptas dolor, saepe numquam sit ullam
-    commodi cumque aspernatur corrupti repellendus natus nemo cum laudantium
-    sunt dolore est voluptates facere! Tempora eaque, accusamus commodi quos,
-    quo, tenetur similique consequuntur alias iusto corrupti ut repellat
-    aspernatur at deleniti labore eum nemo? Necessitatibus provident blanditiis
-    praesentium qui facere quibusdam sint at possimus labore aliquid corporis
-    cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, cumque aspernatur corrupti repellendus natus nemo cum
-    laudantium sunt dolore est voluptates facere! Tempora eaque, accusamus
-    commodi quos, quo, tenetur similique consequuntur alias iusto corrupti ut
-    repellat aspernatur at deleniti labore eum nemo? Necessitatibus provident
-    blanditiis praesentium qui facere quibusdam sint at possimus labore aliquid
-    corporis cupiditate, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, ducimus velit hic repellat optio exercitationem iure
-    voluptatibus. Illum, repellat ipsam tenetur tempora deleniti quibusdam
-    soluta nihil quis eius totam ipsum, provident quaerat ipsa sed veniam quos?
-    Asperiores facere mollitia voluptate eius doloribus dolorem ea recusandae et
-    aspernatur aliquid. Quia, iste accusantium impedit laboriosam obcaecati
-    veniam non velit nemo facere cum libero blanditiis quam perspiciatis
-    molestiae repudiandae quod expedita alias! Quaerat explicabo veniam ipsa
-    iste quo nemo porro ab ut aspernatur sunt, ducimus, libero aperiam! Ab rerum
-    consequatur perferendis voluptatum quia ratione consectetur asperiores.
-    Eaque, beatae. Aliquam commodi nam tempore quos. Modi, sequi possimus
-    asperiores saepe consequuntur sint officiis vitae a at voluptate
-    reprehenderit magnam? Eos ipsa inventore quidem.
-  </Layout>
-)
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: "#f9eacf",
+  },
+  bgImgs: {
+    width: "100vw",
+    height: "auto",
+    maxWidth: "100vw",
+  },
 
+  phoneEmailLink: {
+    color: "black",
+    textDecoration: "none",
+
+    "&:hover": {
+      color: "black",
+      fontWeight: "bold",
+    },
+  },
+}))
+
+const IndexPage = props => {
+  const classes = useStyles()
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    className: "center",
+    centerPadding: "60px",
+    swipeToSlide: true,
+
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
+
+  return (
+    <Layout>
+      <Container style={{ margin: 0, padding: 0, zIndex: 99 }}>
+        <SEO title="Home" />
+
+        <picture className={classes.bgImgs}>
+          <source
+            media="(max-width: 599px)"
+            srcset={imgs1ovV}
+            type="image/webp"
+            className={classes.bgImgs}
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset={imgs1ov}
+            type="image/webp"
+            className={classes.bgImgs}
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset={bgImgs}
+            className={classes.bgImgs}
+          />
+
+          <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} />
+        </picture>
+        <Container maxWidth="md">
+          <br /> <br /> <br /> <br />
+          <Container id="abount us">
+            <img
+              data-sal="zoom-in"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              src={sloganImg2}
+              alt="slogan"
+              style={{
+                display: "block",
+              }}
+            />
+            <br /> <br />
+            <Typography
+              variant="body1"
+              style={{ lineHeight: 1.5 }}
+              color="secondary"
+              data-sal="zoom-in"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+              style={{
+                display: "block",
+              }}
+            >
+              Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden
+              Sie im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
+              Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
+              einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
+              können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
+              gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für
+              alle festlichen Anlässe oder / und einfachen Abend mit Freunden
+              und Familie oder einem romantischen Abend zur Zweit zur Seite
+              stehen und machen für Sie ein individuelles Angebot, das zu Ihrem
+              Lebensstil passt...
+              <Link
+                to="/deu/about-us"
+                className={classes.navLink}
+                activeClassName={classes.active}
+              >
+                lesen weiter
+              </Link>
+            </Typography>
+          </Container>
+          <br /> <br />
+          {/* <Container id="carousel">
+          <Slider {...settings}>
+            <div>
+              <Img
+                fluid={props.data.s1.childImageSharp.fluid}
+                alt="Suliko 1"
+                style={{ margin: 1 }}
+              />
+            </div>
+            <div>
+              <Img
+                fluid={props.data.s2.childImageSharp.fluid}
+                alt="Suliko 2"
+                style={{ margin: 1 }}
+              />
+            </div>
+            <div>
+              <Img
+                fluid={props.data.s3.childImageSharp.fluid}
+                alt="Suliko 3"
+                style={{ margin: 1 }}
+              />
+            </div>
+            <div>
+              <Img
+                fluid={props.data.s4.childImageSharp.fluid}
+                alt="Suliko 4"
+                style={{ margin: 1 }}
+              />
+            </div>
+          </Slider>
+        </Container> */}
+          <Container
+            maxWidth="md"
+            style={{
+              margin: 0,
+              paddingTop: 10,
+              padding: 0,
+              // background: "rgba(255,255,255, 0.75)",
+            }}
+          >
+            <Container
+              style={{
+                padding: "50px 15px 10px 15px",
+                marginTop: 50,
+                borderRadius: 10,
+              }}
+            >
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ lineHeight: 2 }}
+                color="secondary"
+              >
+                <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148
+                Hamburg
+                <br />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:+4904049201953"
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
+                >
+                  <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
+                </a>
+                <br />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="mailto:info@restaurant-suliko.de"
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
+                >
+                  <EmailIcon style={{ fontSize: 20 }} />{" "}
+                  info@restaurant-suliko.de
+                </a>
+                <br /> <br />
+                <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
+                Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
+                Fr 12:00 - 15:00, 17:00 - 24:00 <br />
+                Sa 17:00 - 24:00 <br />
+                Son 15:00 - 22:00 <br />
+                <br />
+              </Typography>
+              <Container
+                className={classes.container}
+                style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  height: 300,
+                  width: "100%",
+                  paddingTop: "50%",
+                }}
+              >
+                <iframe
+                  className={classes.responsiveIframe}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    width: "100%",
+                    height: 600,
+                    border: 0,
+                    marginTop: -150,
+                  }}
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+                ></iframe>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+    </Layout>
+  )
+}
 export default IndexPage
+
+export const query = graphql`
+  query {
+    s1: file(relativePath: { eq: "s1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s2: file(relativePath: { eq: "s2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s3: file(relativePath: { eq: "s3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s4: file(relativePath: { eq: "s4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

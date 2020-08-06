@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 const Layout = ({ children }) => {
   const classes = useStyles()
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{ margin: 0, padding: 0 }}>
       <ThemeProvider theme={theme}>
         <Header />
         <main>{children}</main>
