@@ -89,12 +89,10 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Container
-        style={{ margin: 0, padding: 0, zIndex: 99, maxWidth: "100vw" }}
-      >
+      <Container style={{ margin: 0, padding: 0, zIndex: 99, width: "100vw" }}>
         <SEO title="Home" />
         <Container
-          style={{ margin: 0, padding: 0, zIndex: 99, maxWidth: "100vw" }}
+          style={{ margin: 0, padding: 0, zIndex: 99, width: "100vw" }}
         >
           <picture className={classes.bgImgs}>
             <source
