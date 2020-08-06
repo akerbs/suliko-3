@@ -212,7 +212,7 @@ const IndexPage = props => {
             // background: "rgba(255,255,255, 0.75)",
           }}
         >
-          <Container
+          <div
             style={{
               padding: "50px 15px 10px 15px",
               marginTop: 50,
@@ -280,7 +280,7 @@ const IndexPage = props => {
                 src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
               ></iframe>
             </Container>
-          </Container>
+          </div>
         </Container>
       </Container>
     </Layout>
