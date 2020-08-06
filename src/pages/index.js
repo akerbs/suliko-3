@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   bgImg: {
     width: "100vw",
     height: "auto",
-    // maxWidth: "100vw",
+    maxWidth: "100vw",
   },
 
   phoneEmailLink: {
@@ -89,9 +89,13 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Container style={{ width: "100vw", margin: 0, padding: 0 }}>
+      <Container
+        style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+      >
         <SEO title="Home" />
-        <Container style={{ width: "100vw", margin: 0, padding: 0 }}>
+        <Container
+          style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+        >
           <picture className={classes.bgImgs}>
             <source
               media="(max-width: 599px)"
