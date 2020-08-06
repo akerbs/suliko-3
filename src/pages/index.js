@@ -122,7 +122,12 @@ const IndexPage = props => {
               className={classes.bgImg}
             />
 
-            <img src={imgGifV} alt="georgian food" className={classes.bgImg} />
+            <img
+              src={imgGifV}
+              alt="georgian food"
+              className={classes.bgImg}
+              style={{ width: "100%" }}
+            />
           </picture>
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
