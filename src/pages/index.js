@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import bgImgs from "../images/bgImgs.gif"
-import bgImgsV from "../images/bgImgsV.gif"
-import imgs1ov from "../images/imgs1ov.webp"
-import imgs1ovV from "../images/imgs1ovV.webp"
+import imgGif from "../images/bgImgs.gif"
+import imgGifV from "../images/bgImgsV.gif"
+import imgWebp from "../images/imgs1ov.webp"
+import imgWebpV from "../images/imgs1ovV.webp"
 import { makeStyles } from "@material-ui/core/styles"
 import sloganImg2 from "../images/slogan_eng2.png"
 import Container from "@material-ui/core/Container"
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
-  bgImgs: {
+  bgImg: {
     width: "100vw",
     height: "auto",
-    maxWidth: "100vw",
+    // maxWidth: "100vw",
   },
 
   phoneEmailLink: {
@@ -89,39 +89,40 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Container style={{ margin: 0, padding: 0, zIndex: 99 }}>
+      <div>
         <SEO title="Home" />
-        <Container style={{ margin: 0, padding: 0, zIndex: 99 }}>
+        <div>
           <picture className={classes.bgImgs}>
             <source
               media="(max-width: 599px)"
-              srcset={imgs1ovV}
+              srcset={imgWebpV}
               type="image/webp"
-              className={classes.bgImgs}
+              className={classes.bgImg}
             />
-            {/* <source
+            <source
               media="(max-width: 599px)"
-              srcset={bgImgsV}
+              srcset={imgGifV}
               type="image/gif"
-              className={classes.bgImgs}
-            /> */}
+              className={classes.bgImg}
+            />
             <source
               media="(min-width: 600px)"
-              srcset={imgs1ov}
+              srcset={imgWebp}
               type="image/webp"
-              className={classes.bgImgs}
+              className={classes.bgImg}
             />
-            {/* <source
+            <source
               media="(min-width: 600px)"
-              srcset={bgImgs}
+              srcset={imgGif}
               type="image/gif"
-              className={classes.bgImgs}
-            /> */}
+              className={classes.bgImg}
+            />
 
-            <img src={imgs1ov} alt="georgian food" className={classes.bgImgs} />
-            {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
+            <img src={imgGifV} alt="georgian food" className={classes.bgImg} />
           </picture>
-        </Container>
+
+          {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
+        </div>
         <br /> <br /> <br /> <br />
         <Container id="abount us">
           <img
@@ -277,7 +278,7 @@ const IndexPage = props => {
             </Container>
           </Container>
         </Container>
-      </Container>
+      </div>
     </Layout>
   )
 }
