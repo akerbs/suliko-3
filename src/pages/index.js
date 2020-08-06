@@ -24,9 +24,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#f9eacf",
   },
   bgImg: {
-    width: "100vw",
+    width: "100%",
     height: "auto",
-    maxWidth: "100vw",
+    // maxWidth: "100vw",
   },
 
   phoneEmailLink: {
