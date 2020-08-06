@@ -89,9 +89,13 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <div>
+      <Container
+        style={{ margin: 0, padding: 0, zIndex: 99, maxWidth: "100vw" }}
+      >
         <SEO title="Home" />
-        <div>
+        <Container
+          style={{ margin: 0, padding: 0, zIndex: 99, maxWidth: "100vw" }}
+        >
           <picture className={classes.bgImgs}>
             <source
               media="(max-width: 599px)"
@@ -122,7 +126,7 @@ const IndexPage = props => {
           </picture>
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
-        </div>
+        </Container>
         <br /> <br /> <br /> <br />
         <Container id="abount us">
           <img
@@ -278,7 +282,7 @@ const IndexPage = props => {
             </Container>
           </Container>
         </Container>
-      </div>
+      </Container>
     </Layout>
   )
 }
