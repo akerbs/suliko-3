@@ -89,94 +89,83 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Container
-        style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+      <SEO title="Home" />
+      <picture className={classes.bgImgs}>
+        <source
+          media="(max-width: 599px)"
+          srcset={imgWebpV}
+          type="image/webp"
+          className={classes.bgImg}
+        />
+        <source
+          media="(max-width: 599px)"
+          srcset={imgGifV}
+          type="image/gif"
+          className={classes.bgImg}
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset={imgWebp}
+          type="image/webp"
+          className={classes.bgImg}
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset={imgGif}
+          type="image/gif"
+          className={classes.bgImg}
+        />
+
+        <img
+          src={imgGifV}
+          alt="georgian food"
+          className={classes.bgImg}
+          // style={{ width: "100%" }}
+        />
+      </picture>
+      {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
+      <br /> <br /> <br /> <br />
+      <img
+        data-sal="zoom-in"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        src={sloganImg2}
+        alt="slogan"
+        style={{
+          display: "block",
+        }}
+      />
+      <br /> <br />
+      <Typography
+        variant="body1"
+        style={{ lineHeight: 1.5 }}
+        color="secondary"
+        data-sal="zoom-in"
+        data-sal-delay="500"
+        data-sal-easing="ease"
+        style={{
+          display: "block",
+        }}
       >
-        <SEO title="Home" />
-        <Container
-          style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+        Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden Sie im
+        richtigen Sinne des Wortes mit leckerem Essen, angenehmen Ambiente und
+        georgischer Gastfreundlichkeit verwöhnt. Lassen Sie einen Blick auf
+        unser Menü werfen und sprechen Sie uns an. Bei uns können Sie zwischen
+        abwechslungsreichen Gerichten, gutem Wein und gebackenen georgischen
+        Brot wählen. Wir würden Ihnen dabei für alle festlichen Anlässe oder /
+        und einfachen Abend mit Freunden und Familie oder einem romantischen
+        Abend zur Zweit zur Seite stehen und machen für Sie ein individuelles
+        Angebot, das zu Ihrem Lebensstil passt...
+        <Link
+          to="/deu/about-us"
+          className={classes.navLink}
+          activeClassName={classes.active}
         >
-          <picture className={classes.bgImgs}>
-            <source
-              media="(max-width: 599px)"
-              srcset={imgWebpV}
-              type="image/webp"
-              className={classes.bgImg}
-            />
-            <source
-              media="(max-width: 599px)"
-              srcset={imgGifV}
-              type="image/gif"
-              className={classes.bgImg}
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset={imgWebp}
-              type="image/webp"
-              className={classes.bgImg}
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset={imgGif}
-              type="image/gif"
-              className={classes.bgImg}
-            />
-
-            <img
-              src={imgGifV}
-              alt="georgian food"
-              className={classes.bgImg}
-              // style={{ width: "100%" }}
-            />
-          </picture>
-
-          {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
-        </Container>
-        <br /> <br /> <br /> <br />
-        <Container id="abount us">
-          <img
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
-            src={sloganImg2}
-            alt="slogan"
-            style={{
-              display: "block",
-            }}
-          />
-          <br /> <br />
-          <Typography
-            variant="body1"
-            style={{ lineHeight: 1.5 }}
-            color="secondary"
-            data-sal="zoom-in"
-            data-sal-delay="500"
-            data-sal-easing="ease"
-            style={{
-              display: "block",
-            }}
-          >
-            Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden Sie
-            im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
-            Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
-            einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
-            können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
-            gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für alle
-            festlichen Anlässe oder / und einfachen Abend mit Freunden und
-            Familie oder einem romantischen Abend zur Zweit zur Seite stehen und
-            machen für Sie ein individuelles Angebot, das zu Ihrem Lebensstil
-            passt...
-            <Link
-              to="/deu/about-us"
-              className={classes.navLink}
-              activeClassName={classes.active}
-            >
-              lesen weiter
-            </Link>
-          </Typography>
-        </Container>
-        <br /> <br />
-        {/* <Container id="carousel">
+          lesen weiter
+        </Link>
+      </Typography>
+      <br /> <br />
+      {/* 
           <Slider {...settings}>
             <div>
               <Img
@@ -207,8 +196,8 @@ const IndexPage = props => {
               />
             </div>
           </Slider>
-        </Container> */}
-        <Container
+      */}
+      {/* <Container
           maxWidth="md"
           style={{
             margin: 0,
@@ -286,8 +275,7 @@ const IndexPage = props => {
               ></iframe>
             </Container>
           </div>
-        </Container>
-      </Container>
+        </Container> */}
     </Layout>
   )
 }
