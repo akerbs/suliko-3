@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 const Footer = props => {
   const classes = useStyles()
   return (
-    <Container maxWidth="sm" className={classes.footerWrapper}>
+    <Container className={classes.footerWrapper}>
       <img
         src={Logo2}
         alt="logo"
