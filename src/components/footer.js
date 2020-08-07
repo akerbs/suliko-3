@@ -6,37 +6,20 @@ import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Logo2 from "../images/Logo2.png"
 import { Link } from "gatsby"
 
-const useStyles = makeStyles(theme => ({
-  footerWrapper: {
-    display: "flex",
-    flexDirection: "column",
-
-    textAlign: "center",
-    justifyContent: "center",
-    color: "black",
-  },
-  logo2Footer: {
-    maxWidth: 140,
-    margin: "0 auto",
-  },
-  breadcrumbFooter: {
-    justifyContent: "center",
-    display: "flex",
-  },
-  copyrightLinks: {
-    textDecoration: "none",
-    color: "black",
-    "&:hover": {
-      color: "black",
-      fontWeight: 700,
-    },
-  },
-}))
+const useStyles = makeStyles(theme => ({}))
 
 const Footer = props => {
   const classes = useStyles()
   return (
-    <Container className={classes.footerWrapper}>
+    <Container
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "center",
+        justifyContent: "center",
+        color: "black",
+      }}
+    >
       <img
         src={Logo2}
         alt="logo"
@@ -47,14 +30,37 @@ const Footer = props => {
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
       </Typography>
-      <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbFooter}>
+      <Breadcrumbs
+        aria-label="breadcrumb"
+        style={{ justifyContent: "center", display: "flex" }}
+      >
         <Link color="inherit" href="#" style={{ textDecoration: "none" }}>
-          <Typography variant="caption" className={classes.copyrightLinks}>
+          <Typography
+            variant="caption"
+            style={{
+              textDecoration: "none",
+              color: "black",
+              "&:hover": {
+                color: "black",
+                fontWeight: 700,
+              },
+            }}
+          >
             Impressum
           </Typography>
         </Link>
         <Link color="inherit" href="#" style={{ textDecoration: "none" }}>
-          <Typography variant="caption" className={classes.copyrightLinks}>
+          <Typography
+            variant="caption"
+            style={{
+              textDecoration: "none",
+              color: "black",
+              "&:hover": {
+                color: "black",
+                fontWeight: 700,
+              },
+            }}
+          >
             Datenschutz
           </Typography>
         </Link>
