@@ -74,6 +74,7 @@ const IndexPage = props => {
           margin: 0,
           padding: 0,
           overflow: "hidden",
+          zIndex: 99,
         }}
       >
         <SEO title="Home" />
