@@ -30,6 +30,9 @@ import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
 const drawerWidth = "auto"
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex",
+  },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -87,28 +90,18 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
+  openCloseDrawerBtn: {
+    padding: 1,
+    margin: "10px 10px 0px 0px",
+    color: "rgba(43,42,41)",
+    backgroundColor: "#f9eacf",
+    "&:hover": {
+      backgroundColor: "#f9eacf",
+    },
+  },
+
   hide: {
     display: "none",
-  },
-
-  openDrawerBtn: {
-    padding: 1,
-    margin: "10px 10px 0px 0px",
-    color: "rgba(43,42,41)",
-    backgroundColor: "#f9eacf",
-    "&:hover": {
-      backgroundColor: "#f9eacf",
-    },
-  },
-
-  closeDrawerBtn: {
-    padding: 1,
-    margin: "10px 10px 0px 0px",
-    color: "rgba(43,42,41)",
-    backgroundColor: "#f9eacf",
-    "&:hover": {
-      backgroundColor: "#f9eacf",
-    },
   },
 
   drawer: {
@@ -119,8 +112,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(43,42,41)",
     backgroundRepeat: "repeat",
     overflowX: "hidden",
+
     width: drawerWidth,
-    height: "100vh",
+    height: "110vh",
+    zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
@@ -238,46 +233,49 @@ function Header(props) {
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <AppBar
-        color={color}
-        elevation={0}
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
-      >
-        <Toolbar className={classes.toolbar}>
-          <Hidden xsDown>
-            <Link to="/">
-              <img src={Logo2} alt="logo" className={classes.logo2Img} />
-            </Link>
-          </Hidden>
-
-          <Link to="/">
-            <Hidden smUp>
-              <img src={Logo1} alt="logo" className={classes.logoImg} />
-            </Hidden>
+    <div className={classes.root}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AppBar
+          color={color}
+          elevation={0}
+          position="fixed"
+          className={clsx(classes.appBar, {
+            [classes.appBarShift]: open,
+          })}
+        >
+          <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
-              <img src={Logo1Plus2} alt="logo" className={classes.logoImg} />
+              <Link to="/">
+                <img src={Logo2} alt="logo" className={classes.logo2Img} />
+              </Link>
             </Hidden>
-          </Link>
 
-          <div style={{ display: "flex", justifyContent: "column" }}>
-            <LangSwAkk />
+            <Link to="/">
+              <Hidden smUp>
+                <img src={Logo1} alt="logo" className={classes.logoImg} />
+              </Hidden>
+              <Hidden xsDown>
+                <img src={Logo1Plus2} alt="logo" className={classes.logoImg} />
+              </Hidden>
+            </Link>
 
-            <IconButton
-              size="small"
-              aria-label="open drawer"
-              // edge="end"
-              onClick={handleDrawerOpen}
-              className={(clsx(open && classes.hide), classes.openDrawerBtn)}
-            >
-              <MenuIcon style={{ fontSize: 30, margin: 6 }} />
-            </IconButton>
-          </div>
-          {/* <Button
+            <div style={{ display: "flex", justifyContent: "column" }}>
+              <LangSwAkk />
+
+              <IconButton
+                size="small"
+                aria-label="open drawer"
+                // edge="end"
+                onClick={handleDrawerOpen}
+                className={
+                  (clsx(open && classes.hide), classes.openCloseDrawerBtn)
+                }
+              >
+                <MenuIcon style={{ fontSize: 30, margin: 6 }} />
+              </IconButton>
+            </div>
+            {/* <Button
               // size="small"
               className={classes.reservierenButton}
               variant="contained"
@@ -286,22 +284,22 @@ function Header(props) {
             >
               Reservieren
             </Button> */}
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
+        </AppBar>
 
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        transitionDuration={{ enter: 500, exit: 500 }}
-        anchor="top"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <div className={classes.mediaIcons}>
-            {/* <a
+        <Drawer
+          className={classes.drawer}
+          variant="persistent"
+          transitionDuration={{ enter: 500, exit: 500 }}
+          anchor="top"
+          open={open}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerHeader}>
+            <div className={classes.mediaIcons}>
+              {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/restaurant.suliko.hamburg"
@@ -323,85 +321,88 @@ function Header(props) {
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </ListItem>
             </a> */}
+            </div>
+            <CloseIcon style={{ color: "transparent" }} />
+
+            <IconButton
+              size="small"
+              aria-label="close drawer"
+              onClick={handleDrawerClose}
+              className={
+                (clsx(open && classes.hide), classes.openCloseDrawerBtn)
+              }
+            >
+              <CloseIcon style={{ fontSize: 30, margin: 6 }} />
+            </IconButton>
           </div>
-          <CloseIcon style={{ color: "transparent" }} />
-
-          <IconButton
-            size="small"
-            aria-label="close drawer"
-            onClick={handleDrawerClose}
-            className={(clsx(open && classes.hide), classes.closeDrawerBtn)}
+          <Link
+            to="/page-2"
+            className={classes.drawerItem}
+            activeClassName={classes.active}
           >
-            <CloseIcon style={{ fontSize: 30, margin: 6 }} />
-          </IconButton>
-        </div>
-        <Link
-          to="/page-2"
-          className={classes.drawerItem}
-          activeClassName={classes.active}
-        >
-          <ListItem button key={"HOME"}>
-            <ListItemText
-              primary={
-                <Typography align="center" variant="h6">
-                  HOME
-                </Typography>
-              }
-            />
-          </ListItem>
-        </Link>
-        <Link
-          to="/page-2"
-          className={classes.drawerItem}
-          activeClassName={classes.active}
-        >
-          <ListItem button key={"ÜBER UNS"}>
-            <ListItemText
-              primary={
-                <Typography align="center" variant="h6">
-                  ÜBER UNS
-                </Typography>
-              }
-            />
-          </ListItem>
-        </Link>
-        <Link
-          to="/page-2"
-          className={classes.drawerItem}
-          activeClassName={classes.active}
-        >
-          <ListItem button key={"MENÜ"}>
-            <ListItemText
-              primary={
-                <Typography align="center" variant="h6">
-                  MENÜ
-                </Typography>
-              }
-            />
-          </ListItem>
-        </Link>
+            <ListItem button key={"HOME"}>
+              <ListItemText
+                primary={
+                  <Typography align="center" variant="h6">
+                    HOME
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </Link>
+          <Link
+            to="/page-2"
+            className={classes.drawerItem}
+            activeClassName={classes.active}
+          >
+            <ListItem button key={"ÜBER UNS"}>
+              <ListItemText
+                primary={
+                  <Typography align="center" variant="h6">
+                    ÜBER UNS
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </Link>
+          <Link
+            to="/page-2"
+            className={classes.drawerItem}
+            activeClassName={classes.active}
+          >
+            <ListItem button key={"MENÜ"}>
+              <ListItemText
+                primary={
+                  <Typography align="center" variant="h6">
+                    MENÜ
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </Link>
 
-        <Link
-          to="/page-2"
-          className={classes.drawerItem}
-          activeClassName={classes.active}
-        >
-          <ListItem button key={"KONTAKT"}>
-            <ListItemText
-              primary={
-                <Typography align="center" variant="h6">
-                  KONTAKT
-                </Typography>
-              }
-            />
-          </ListItem>
-        </Link>
+          <Link
+            to="/page-2"
+            className={classes.drawerItem}
+            activeClassName={classes.active}
+          >
+            <ListItem button key={"KONTAKT"}>
+              <ListItemText
+                primary={
+                  <Typography align="center" variant="h6">
+                    KONTAKT
+                  </Typography>
+                }
+              />
+            </ListItem>
+          </Link>
 
-        <div style={{ margin: "10px auto" }}>
-          <img src={Logo2} alt="logo" className={classes.logo2Img} />
-        </div>
-      </Drawer>
-    </ThemeProvider>
+          <div style={{ margin: "10px auto" }}>
+            <img src={Logo2} alt="logo" className={classes.logo2Img} />
+          </div>
+        </Drawer>
+      </ThemeProvider>
+    </div>
   )
 }
 

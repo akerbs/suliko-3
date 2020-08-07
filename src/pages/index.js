@@ -67,7 +67,14 @@ const IndexPage = props => {
   return (
     <Layout>
       <Container
-        style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+        id="main"
+        style={{
+          width: "100vw",
+          maxWidth: "100vw",
+          margin: 0,
+          padding: 0,
+          zIndex: 99,
+        }}
       >
         <SEO title="Home" />
         <Container
@@ -100,7 +107,8 @@ const IndexPage = props => {
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
-        <br /> <br /> <br /> <br />
+        <br /> <br />
+        <br />
         <Container id="abount us">
           <img
             data-sal="zoom-in"
@@ -113,7 +121,7 @@ const IndexPage = props => {
               margin: "0 auto",
             }}
           />
-          <br /> <br />
+          <br />
           <Typography
             variant="body1"
             style={{ lineHeight: 1.5 }}
@@ -170,6 +178,28 @@ const IndexPage = props => {
               />
             </div>
           </Slider>
+        </Container>
+        <br /> <br />
+        <Container id="news">
+          <Typography
+            variant="body1"
+            style={{ lineHeight: 1.5 }}
+            color="secondary"
+            data-sal="zoom-in"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            style={{
+              display: "block",
+            }}
+          >
+            Liebe Suliko-Freunde, wir sind in dieser außergewöhnlichen Zeit
+            weiterhin für Sie da und möchten unsere wunderschöne Stadt mit
+            authentisch georgischer Küche verwöhnen. Essen Sie zu unseren
+            regulären Öffnungszeiten im Restaurant Suliko oder bestellen Sie
+            Ihre Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
+            Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
+            <Link to="#">lesen weiter</Link>
+          </Typography>
         </Container>
         <Container
           id="contact"
