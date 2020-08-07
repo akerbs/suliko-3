@@ -6,43 +6,20 @@ import imgGif from "../images/bgImgs.gif"
 import imgGifV from "../images/bgImgsV.gif"
 import imgWebp from "../images/imgs1ov.webp"
 import imgWebpV from "../images/imgs1ovV.webp"
-import { makeStyles } from "@material-ui/core/styles"
 import sloganImg2 from "../images/slogan_eng2.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
-// import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: "#f9eacf",
-  },
-  bgImg: {
-    width: "100%",
-    height: "auto",
-    // maxWidth: "100vw",
-  },
-
-  phoneEmailLink: {
-    color: "black",
-    textDecoration: "none",
-
-    "&:hover": {
-      color: "black",
-      fontWeight: "bold",
-    },
-  },
-}))
+import "./index.css"
 
 const IndexPage = props => {
-  const classes = useStyles()
-
   const settings = {
     dots: false,
     infinite: true,
@@ -94,40 +71,31 @@ const IndexPage = props => {
       >
         <SEO title="Home" />
         <Container
+          id="bgImgs"
           style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
         >
-          <picture className={classes.bgImgs}>
+          <picture>
             <source
               media="(max-width: 599px)"
               srcset={imgWebpV}
               type="image/webp"
-              className={classes.bgImg}
             />
             <source
               media="(max-width: 599px)"
               srcset={imgGifV}
               type="image/gif"
-              className={classes.bgImg}
             />
             <source
               media="(min-width: 600px)"
               srcset={imgWebp}
               type="image/webp"
-              className={classes.bgImg}
             />
             <source
               media="(min-width: 600px)"
               srcset={imgGif}
               type="image/gif"
-              className={classes.bgImg}
             />
-
-            <img
-              src={imgGifV}
-              alt="georgian food"
-              className={classes.bgImg}
-              style={{ width: "100%" }}
-            />
+            <img src={imgGifV} alt="georgian food" className="bgImg" />
           </picture>
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
@@ -167,17 +135,11 @@ const IndexPage = props => {
             Familie oder einem romantischen Abend zur Zweit zur Seite stehen und
             machen für Sie ein individuelles Angebot, das zu Ihrem Lebensstil
             passt...
-            <Link
-              to="/deu/about-us"
-              className={classes.navLink}
-              activeClassName={classes.active}
-            >
-              lesen weiter
-            </Link>
+            <Link to="#">lesen weiter</Link>
           </Typography>
         </Container>
         <br /> <br />
-        {/* <Container id="carousel">
+        <Container id="carousel">
           <Slider {...settings}>
             <div>
               <Img
@@ -208,7 +170,7 @@ const IndexPage = props => {
               />
             </div>
           </Slider>
-        </Container> */}
+        </Container>
         <Container id="contact">
           <div
             style={{
@@ -229,7 +191,7 @@ const IndexPage = props => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="tel:+4904049201953"
-                className={classes.phoneEmailLink}
+                className="phoneEmailLink"
                 //  onClick="this.blur()"
               >
                 <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
@@ -239,7 +201,7 @@ const IndexPage = props => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="mailto:info@restaurant-suliko.de"
-                className={classes.phoneEmailLink}
+                className="phoneEmailLink"
                 //  onClick="this.blur()"
               >
                 <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
@@ -252,29 +214,9 @@ const IndexPage = props => {
               Son 15:00 - 22:00 <br />
               <br />
             </Typography>
-            <Container
-              className={classes.container}
-              style={{
-                position: "relative",
-                overflow: "hidden",
-                height: 300,
-                width: "100%",
-                paddingTop: "50%",
-              }}
-            >
+            <Container className="mapWrapper">
               <iframe
-                className={classes.responsiveIframe}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  bottom: 0,
-                  right: 0,
-                  width: "100%",
-                  height: 600,
-                  border: 0,
-                  marginTop: -150,
-                }}
+                className="map"
                 src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
               ></iframe>
             </Container>
