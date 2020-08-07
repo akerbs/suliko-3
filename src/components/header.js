@@ -114,7 +114,7 @@ const useStyles = makeStyles(theme => ({
     overflowX: "hidden",
 
     width: drawerWidth,
-    height: "110vh",
+    height: "100vh",
     zIndex: 9999,
   },
   drawerHeader: {

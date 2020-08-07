@@ -73,7 +73,7 @@ const IndexPage = props => {
           maxWidth: "100vw",
           margin: 0,
           padding: 0,
-          zIndex: 99,
+          overflow: "hidden",
         }}
       >
         <SEO title="Home" />
