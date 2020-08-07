@@ -209,7 +209,6 @@ const IndexPage = props => {
           </Slider>
         </Container> */}
         <Container
-          maxWidth="md"
           style={{
             margin: 0,
             paddingTop: 10,
