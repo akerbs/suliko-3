@@ -142,6 +142,7 @@ const IndexPage = props => {
             alt="slogan"
             style={{
               display: "block",
+              margin: "0 auto",
             }}
           />
           <br /> <br />
@@ -208,14 +209,7 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container> */}
-        <Container
-          style={{
-            margin: 0,
-            paddingTop: 10,
-            padding: 0,
-            // background: "rgba(255,255,255, 0.75)",
-          }}
-        >
+        <Container id="contact">
           <div
             style={{
               padding: "50px 15px 10px 15px",
