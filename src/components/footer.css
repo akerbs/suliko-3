@@ -6,9 +6,15 @@
   color: black;
 }
 .logo2Footer {
-  max-width: 140px;
+  max-width: 120px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .logo2Footer {
+    max-width: 110px;
+  }
+}
+
 .breadcrumbs {
   justify-content: center;
   display: flex;

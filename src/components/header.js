@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 0,
     marginBottom: -2,
     marginTop: 0,
-    maxWidth: 119,
+    maxWidth: 120,
     [theme.breakpoints.down("sm")]: {
       maxWidth: 110,
     },
@@ -113,7 +113,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(43,42,41)",
     backgroundRepeat: "repeat",
     overflowY: "scroll",
-
+    overflowX: "hidden",
     width: drawerWidth,
     height: "100vh",
     // zIndex: 9999,
@@ -152,14 +152,6 @@ const useStyles = makeStyles(theme => ({
   active: {
     color: "rgba(255,255,255)",
     textShadow: "rgba(133,26,29) 0 0 5px",
-  },
-
-  reservierenButton: {
-    backgroundColor: "#f9eacf",
-    position: "fixed",
-    bottom: 20,
-    right: 20,
-    zIndex: 1,
   },
 }))
 
@@ -282,15 +274,6 @@ function Header(props) {
                 <MenuIcon style={{ fontSize: 30, margin: 6 }} />
               </IconButton>
             </div>
-            {/* <Button
-              // size="small"
-              className={classes.reservierenButton}
-              variant="contained"
-              // color="primary"
-              // onClick={handleOpen}
-            >
-              Reservieren
-            </Button> */}
           </Toolbar>
         </AppBar>
 

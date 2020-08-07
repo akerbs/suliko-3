@@ -17,9 +17,18 @@ import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
+import ModalWindow from "../components/modalWindow"
 import "./index.css"
+import Button from "@material-ui/core/Button"
 
 const IndexPage = props => {
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
   const settings = {
     dots: false,
     infinite: true,
@@ -106,7 +115,6 @@ const IndexPage = props => {
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
-        <br /> <br />
         <br />
         <Container id="abount us">
           <img
@@ -191,15 +199,31 @@ const IndexPage = props => {
               display: "block",
             }}
           >
-            Liebe Suliko-Freunde, wir sind in dieser außergewöhnlichen Zeit
-            weiterhin für Sie da und möchten unsere wunderschöne Stadt mit
-            authentisch georgischer Küche verwöhnen. Essen Sie zu unseren
-            regulären Öffnungszeiten im Restaurant Suliko oder bestellen Sie
-            Ihre Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-            Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
+            <Typography variant="h6"> Liebe Suliko-Freunde,</Typography>
+            <br />
+            wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da und
+            möchten unsere wunderschöne Stadt mit authentisch georgischer Küche
+            verwöhnen. Essen Sie zu unseren regulären Öffnungszeiten im
+            Restaurant Suliko oder bestellen Sie Ihre Lieblingsgerichte und
+            lassen Sie es sich außer Haus schmecken. Für diesen Zweck bieten wir
+            Ihnen eine speziell angefertigte...
             <Link to="#">lesen weiter</Link>
           </Typography>
         </Container>
+        <br /> <br />
+        <Container>
+          <Button
+            // size="small"
+            className="reservierenButton"
+            variant="contained"
+            // color="primary"
+            onClick={handleOpen}
+          >
+            Reservieren
+          </Button>
+          <ModalWindow onClose={handleClose} open={open} />
+        </Container>
+        <br /> <br />
         <Container
           id="contact"
           style={{

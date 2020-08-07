@@ -31,3 +31,11 @@
   border: 0px;
   margin-top: -150px;
 }
+
+.reservierenButton {
+  background-color: #f9eacf;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
