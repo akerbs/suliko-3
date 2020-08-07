@@ -37,7 +37,12 @@ const Footer = props => {
   const classes = useStyles()
   return (
     <Container maxWidth="sm" className={classes.footerWrapper}>
-      <img src={Logo2} alt="logo" className={classes.logo2Footer} />
+      <img
+        src={Logo2}
+        alt="logo"
+        className={classes.logo2Footer}
+        style={{ maxWidth: 140 }}
+      />
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
