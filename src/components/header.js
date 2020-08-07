@@ -112,7 +112,7 @@ const useStyles = makeStyles(theme => ({
   drawerPaper: {
     backgroundColor: "rgba(43,42,41)",
     backgroundRepeat: "repeat",
-    overflowY: "hidden",
+    overflowY: "scroll",
 
     width: drawerWidth,
     height: "100vh",
@@ -172,15 +172,15 @@ function Header(props) {
   const handleDrawerOpen = () => {
     setOpen(true)
     document.body.style.position = "fixed"
-    document.body.style.top = `-${window.scrollY}px`
+    // document.body.style.top = `-${window.scrollY}px`
   }
 
   const handleDrawerClose = () => {
     setOpen(false)
     const scrollY = document.body.style.top
     document.body.style.position = ""
-    document.body.style.top = ""
-    window.scrollTo(0, parseInt(scrollY || "0") * -1)
+    // document.body.style.top = ""
+    // window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
 
   const listenScrollEvent = event => {
