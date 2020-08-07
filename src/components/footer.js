@@ -1,68 +1,27 @@
 import React from "react"
 import Typography from "@material-ui/core/Typography"
-import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Logo2 from "../images/Logo2.png"
 import { Link } from "gatsby"
-
-const useStyles = makeStyles(theme => ({}))
+import "./footer.css"
 
 const Footer = props => {
-  const classes = useStyles()
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        textAlign: "center",
-        justifyContent: "center",
-        color: "black",
-      }}
-    >
-      <img
-        src={Logo2}
-        alt="logo"
-        className={classes.logo2Footer}
-        style={{ maxWidth: 140, margin: "0 auto" }}
-      />
+    <Container className="footerWrapper">
+      <img src={Logo2} alt="logo" className="logo2Footer" />
+
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
       </Typography>
-      <Breadcrumbs
-        aria-label="breadcrumb"
-        style={{ justifyContent: "center", display: "flex" }}
-      >
-        <Link color="inherit" href="#" style={{ textDecoration: "none" }}>
-          <Typography
-            variant="caption"
-            style={{
-              textDecoration: "none",
-              color: "black",
-              "&:hover": {
-                color: "black",
-                fontWeight: 700,
-              },
-            }}
-          >
-            Impressum
-          </Typography>
+
+      <Breadcrumbs className="breadcrumbs">
+        <Link color="inherit" href="#" className="breadcrumbsLink">
+          Impressum
         </Link>
-        <Link color="inherit" href="#" style={{ textDecoration: "none" }}>
-          <Typography
-            variant="caption"
-            style={{
-              textDecoration: "none",
-              color: "black",
-              "&:hover": {
-                color: "black",
-                fontWeight: 700,
-              },
-            }}
-          >
-            Datenschutz
-          </Typography>
+        <Link color="inherit" href="#" className="breadcrumbsLink">
+          Datenschutz
         </Link>
       </Breadcrumbs>
       {/* <Typography variant="caption" className={classes.copyrightLinks}>
