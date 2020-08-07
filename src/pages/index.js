@@ -171,56 +171,55 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container>
-        <Container id="contact">
-          <div
-            style={{
-              padding: "50px 15px 10px 15px",
-              marginTop: 50,
-              borderRadius: 10,
-            }}
+        <Container
+          id="contact"
+          style={{
+            padding: "50px 15px 10px 15px",
+            marginTop: 50,
+            borderRadius: 10,
+          }}
+        >
+          <Typography
+            variant="body1"
+            align="center"
+            style={{ lineHeight: 2 }}
+            color="secondary"
           >
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ lineHeight: 2 }}
-              color="secondary"
+            <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
+            <br />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="tel:+4904049201953"
+              className="phoneEmailLink"
+              //  onClick="this.blur()"
             >
-              <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
-              <br />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="tel:+4904049201953"
-                className="phoneEmailLink"
-                //  onClick="this.blur()"
-              >
-                <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
-              </a>
-              <br />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:info@restaurant-suliko.de"
-                className="phoneEmailLink"
-                //  onClick="this.blur()"
-              >
-                <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
-              </a>
-              <br /> <br />
-              <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
-              Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
-              Fr 12:00 - 15:00, 17:00 - 24:00 <br />
-              Sa 17:00 - 24:00 <br />
-              Son 15:00 - 22:00 <br />
-              <br />
-            </Typography>
-            <Container className="mapWrapper">
-              <iframe
-                className="map"
-                src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
-              ></iframe>
-            </Container>
-          </div>
+              <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
+            </a>
+            <br />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:info@restaurant-suliko.de"
+              className="phoneEmailLink"
+              //  onClick="this.blur()"
+            >
+              <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
+            </a>
+            <br /> <br />
+            <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
+            Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
+            Fr 12:00 - 15:00, 17:00 - 24:00 <br />
+            Sa 17:00 - 24:00 <br />
+            Son 15:00 - 22:00 <br />
+            <br />
+          </Typography>
+          <Container className="mapWrapper">
+            <iframe
+              className="map"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+            ></iframe>
+          </Container>
         </Container>
       </Container>
     </Layout>
