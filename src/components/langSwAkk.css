@@ -1,5 +1,5 @@
 .accordion {
-  z-index: 999;
+  z-index: 1;
   padding: 0;
   /* align-self: flex-end; */
   left: 20;

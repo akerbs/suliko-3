@@ -49,6 +49,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   toolbar: {
+    zIndex: "99",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-start",
@@ -111,11 +112,11 @@ const useStyles = makeStyles(theme => ({
   drawerPaper: {
     backgroundColor: "rgba(43,42,41)",
     backgroundRepeat: "repeat",
-    overflowX: "hidden",
+    overflowY: "hidden",
 
     width: drawerWidth,
     height: "100vh",
-    zIndex: 9999,
+    // zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
@@ -158,7 +159,7 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     bottom: 20,
     right: 20,
-    zIndex: 999,
+    zIndex: 1,
   },
 }))
 
@@ -170,10 +171,16 @@ function Header(props) {
 
   const handleDrawerOpen = () => {
     setOpen(true)
+    document.body.style.position = "fixed"
+    document.body.style.top = `-${window.scrollY}px`
   }
 
   const handleDrawerClose = () => {
     setOpen(false)
+    const scrollY = document.body.style.top
+    document.body.style.position = ""
+    document.body.style.top = ""
+    window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
 
   const listenScrollEvent = event => {
