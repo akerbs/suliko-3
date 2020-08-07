@@ -107,9 +107,6 @@ const useStyles = makeStyles(theme => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    position: "fixed",
-    zIndex: 9999,
-    overflow: "hidden",
   },
   drawerPaper: {
     backgroundColor: "rgba(43,42,41)",

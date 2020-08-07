@@ -2,15 +2,17 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body.overflow-hidden {
   overflow: hidden;
+  height: 100vh;
 }
+
 article,
 aside,
 details,
