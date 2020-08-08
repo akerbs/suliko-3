@@ -166,12 +166,6 @@ const ModalWindow = props => {
       open={props.open}
     >
       <div className={classes.paper}>
-        <IconButton
-          style={{ margin: 0, padding: 0, left: "85%" }}
-          onClick={stop}
-        >
-          <HighlightOffIcon />
-        </IconButton>
         <form
           // name="myForm"
           // method="post"
@@ -445,17 +439,23 @@ const ModalWindow = props => {
               </TimelineItem>
             </Timeline>
           </MuiPickersUtilsProvider>
-
+          <IconButton
+            style={{ margin: 0, padding: 0, left: "5%" }}
+            onClick={stop}
+          >
+            <HighlightOffIcon />
+          </IconButton>
           <Button
             // onClick={submitHandler}
             id="submit"
             name="submit"
             type="submit"
-            variant="outlined"
+            variant="contained"
             style={{
-              color: "rgba(133,26,29)",
+              backgroundColor: "rgba(133,26,29)",
+              color: "white",
               position: "relative",
-              left: "50%",
+              left: "45%",
               transform: "translate(-50%, 0)",
             }}
           >

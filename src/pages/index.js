@@ -121,7 +121,29 @@ const IndexPage = props => {
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
-        <Container id="center" style={{ margin: "0 auto" }}>
+        <Container
+          id="center"
+          style={{
+            margin: "0 auto",
+          }}
+        >
+          <Button
+            // size="small"
+            className="reservierenButton"
+            variant="contained"
+            // color="primary"
+            onClick={handleOpen}
+            style={{
+              backgroundColor: "rgba(249, 234, 207)",
+              color: "rgba(133,26,29)",
+
+              position: "fixed",
+            }}
+          >
+            Tisch Reservieren
+          </Button>
+          <ModalWindow onClose={handleClose} open={open} />
+          <br /> <br />
           <Container id="abount us">
             <img
               data-sal="zoom-in"
@@ -209,28 +231,6 @@ const IndexPage = props => {
           <br /> <br />
           <br />
           <Container
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Button
-              // size="small"
-              className="reservierenButton"
-              variant="outlined"
-              // color="primary"
-              onClick={handleOpen}
-              style={{
-                color: "rgba(133,26,29)",
-                marginLeft: "2.2em",
-              }}
-            >
-              Tisch Reservieren
-            </Button>
-            <ModalWindow onClose={handleClose} open={open} />
-          </Container>
-          <br /> <br />
-          <Container
             id="contact"
             style={{
               padding: "10px 15px ",
@@ -241,7 +241,7 @@ const IndexPage = props => {
             <Typography
               variant="body1"
               align="center"
-              style={{ lineHeight: 2 }}
+              style={{ lineHeight: 1.8 }}
             >
               <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
               <br />
