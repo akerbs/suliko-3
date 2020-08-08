@@ -74,6 +74,17 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(0),
     width: 185,
   },
+  reservierenBtn: {
+    color: theme.third.color,
+    backgroundColor: theme.third.backgroundColor,
+    position: "relative",
+    left: "45%",
+    transform: "translate(-50%, 0)",
+  },
+  timeLineDot: {
+    color: theme.third.color,
+    backgroundColor: theme.third.backgroundColor,
+  },
 }))
 
 const schema = yup.object().shape({
@@ -182,7 +193,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <PeopleIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -232,7 +243,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <EventIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -289,7 +300,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <ScheduleIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -348,7 +359,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <PersonIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -383,7 +394,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <PhoneIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -414,7 +425,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary">
+                  <TimelineDot className={classes.timeLineDot}>
                     <AlternateEmailIcon />
                   </TimelineDot>
                 </TimelineSeparator>
@@ -451,13 +462,7 @@ const ModalWindow = props => {
             name="submit"
             type="submit"
             variant="outlined"
-            style={{
-              // backgroundColor: "rgba(133,26,29)",
-              color: "rgba(133,26,29)",
-              position: "relative",
-              left: "45%",
-              transform: "translate(-50%, 0)",
-            }}
+            className={classes.reservierenBtn}
           >
             Reservieren jetzt
           </Button>
