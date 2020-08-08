@@ -8,7 +8,7 @@ import "./footer.css"
 
 const Footer = props => {
   return (
-    <Container className="footerWrapper">
+    <Container className="footerWrapper" style={{ paddingBottom: "50px" }}>
       <img src={Logo2} alt="logo" className="logo2Footer" />
 
       <Typography variant="body2">

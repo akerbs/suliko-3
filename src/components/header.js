@@ -161,7 +161,6 @@ const useStyles = makeStyles(theme => ({
 
   active: {
     color: "rgba(133,26,29)",
-    textShadow: "rgba(133,26,29) 0 0 5px",
   },
 }))
 
@@ -286,13 +285,14 @@ function Header(props) {
         </AppBar>
 
         <Drawer
-          className={classes.drawer}
           variant="persistent"
           transitionDuration={{ enter: 500, exit: 500 }}
           anchor="top"
           open={open}
+          // className={classes.drawer}
           classes={{
             paper: classes.drawerPaper,
+            drawer: classes.drawer,
           }}
         >
           <div className={classes.drawerHeader}>
@@ -332,7 +332,7 @@ function Header(props) {
             </IconButton>
           </div>
           <Link
-            to="/page-2"
+            to="/deu"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -393,7 +393,7 @@ function Header(props) {
             </ListItem>
           </Link>
 
-          <div style={{ margin: "10px auto" }}>
+          <div style={{ margin: "10px auto", paddingLeft: "2vw" }}>
             <img src={Logo2} alt="logo" className={classes.logo2Img} />
           </div>
         </Drawer>

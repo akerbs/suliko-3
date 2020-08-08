@@ -166,8 +166,10 @@ const IndexPage = props => {
               alle festlichen Anlässe oder / und einfachen Abend mit Freunden
               und Familie oder einem romantischen Abend zur Zweit zur Seite
               stehen und machen für Sie ein individuelles Angebot, das zu Ihrem
-              Lebensstil passt...
-              <Link to="#">lesen weiter</Link>
+              Lebensstil passt...{" "}
+              <Link to="#" style={{ textDecoration: "none", color: "black" }}>
+                lesen weiter
+              </Link>
             </Typography>
           </Container>
           <br /> <br />
@@ -218,8 +220,10 @@ const IndexPage = props => {
               Küche verwöhnen. Essen Sie zu unseren regulären Öffnungszeiten im
               Restaurant Suliko oder bestellen Sie Ihre Lieblingsgerichte und
               lassen Sie es sich außer Haus schmecken. Für diesen Zweck bieten
-              wir Ihnen eine speziell angefertigte...
-              <Link to="#">lesen weiter</Link>
+              wir Ihnen eine speziell angefertigte...{" "}
+              <Link to="#" style={{ textDecoration: "none", color: "black" }}>
+                lesen weiter
+              </Link>
             </Typography>
           </Container>
           <br /> <br />
