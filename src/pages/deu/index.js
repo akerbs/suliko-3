@@ -139,9 +139,9 @@ const IndexPage = props => {
           <Button
             // size="small"
             className="reservierenButton"
-            variant="contained"
             // color="primary"
             onClick={handleOpen}
+            variant="contained"
             style={{
               backgroundColor: "rgba(249, 234, 207)",
               color: "rgba(133,26,29)",
@@ -166,6 +166,7 @@ const IndexPage = props => {
               }}
             />
             <br />
+
             {!readMoreText1 && (
               <div>
                 <Typography
@@ -185,7 +186,7 @@ const IndexPage = props => {
                   festlichen Anlässe oder / und einfachen Abend mit Freunden und
                   Familie oder einem romantischen Abend zur Zweit zur Seite
                   stehen und machen für Sie ein individuelles Angebot, das zu
-                  Ihrem Lebensstil passt
+                  Ihrem Lebensstil passt...
                 </Typography>
                 <p onClick={showTex1MoreHandler} style={{ cursor: "pointer" }}>
                   ...lesen weiter
@@ -194,6 +195,15 @@ const IndexPage = props => {
             )}
             {readMoreText1 && (
               <div>
+                <Button
+                  variant="contained"
+                  style={{
+                    backgroundColor: "rgba(249, 234, 207)",
+                    color: "rgba(133,26,29)",
+                  }}
+                >
+                  MenüKarte
+                </Button>
                 <Typography id="text1Big" variant="body1">
                   Herzlich willkommen in unserem Restaurant Suliko. Bei uns
                   werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
@@ -319,7 +329,8 @@ const IndexPage = props => {
                   georgischer Küche verwöhnen. Essen Sie zu unseren regulären
                   Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
                   Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-                  Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
+                  Für diesen Zweck bieten wir Ihnen eine speziell
+                  angefertigte...
                 </Typography>
                 <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
                   ...lesen weiter
@@ -344,7 +355,13 @@ const IndexPage = props => {
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
-                    <Button variant="outlined" color="secondary">
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(249, 234, 207)",
+                        color: "rgba(133,26,29)",
+                      }}
+                    >
                       Bestellmenükarte
                     </Button>
                   </Link>
@@ -370,39 +387,29 @@ const IndexPage = props => {
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
-                    <Button variant="outlined" color="secondary">
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(249, 234, 207)",
+                        color: "rgba(133,26,29)",
+                      }}
+                    >
                       Weinkarte
                     </Button>
                   </Link>
-                  <br />
-                  <br />
-                  Unsere Öffnungszeiten:
-                  <br />
-                  Montag bis Donnerstag 12:00 – 15:00 Uhr, 17:00 – 22:00 Uhr
-                  <br />
-                  Freitag 12:00 – 15:00 Uhr, 17:00 – 00:00 Uhr
-                  <br />
-                  Samstag 15:00 – 00:00 Uhr
-                  <br />
-                  Sonntag 15:00 – 22:00 Uhr
                   <br />
                   <br />
                   Lieferungen & Abholungen:
                   <br />
                   Mo. bis So. von 12.00 bis 18.00 Uhr und nach Vereinbarung.
                   <br />
+                  Unter den Lieferdiensten finden Sie uns auf Lieferando
+                  <br />
                   <br />
                   Wir freuen uns auf Sie!
                   <br />
                   <br />
                   Ihr Restaurant Suliko
-                  <br />
-                  <br />
-                  Sie finden uns im Mittelweg 24, 20148 Hamburg
-                  <br />
-                  Sie erreichen uns telefonisch unter 040/49201953
-                  <br />
-                  Unter den Lieferdiensten finden Sie uns auf Lieferando
                 </Typography>
                 <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
