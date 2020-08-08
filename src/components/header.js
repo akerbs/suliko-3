@@ -190,48 +190,48 @@ function Header(props) {
       if (window.scrollY < window.innerWidth * 1.16) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 600) {
       if (window.scrollY < window.innerWidth * 1.2) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 700) {
       if (window.scrollY < window.innerWidth * 0.48) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 800) {
       if (window.scrollY < window.innerWidth * 0.5) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 900) {
       if (window.scrollY < window.innerWidth * 0.52) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 1050) {
       if (window.scrollY < window.innerWidth * 0.54) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.innerWidth <= 1400) {
       if (window.scrollY < window.innerWidth * 0.55) {
         setColor("transparent")
       } else {
-        setColor("secondary")
+        setColor("primary")
       }
     } else if (window.scrollY < window.innerWidth * 0.57) {
       setColor("transparent")
     } else {
-      setColor("secondary")
+      setColor("primary")
     }
   }
 

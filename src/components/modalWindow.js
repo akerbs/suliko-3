@@ -182,7 +182,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <PeopleIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -232,7 +232,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <EventIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -289,7 +289,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <ScheduleIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -348,7 +348,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <PersonIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -383,7 +383,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <PhoneIcon />
                   </TimelineDot>
                   <TimelineConnector />
@@ -414,7 +414,7 @@ const ModalWindow = props => {
                   style={{ flex: 0 }}
                 ></TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="primary">
+                  <TimelineDot color="secondary">
                     <AlternateEmailIcon />
                   </TimelineDot>
                 </TimelineSeparator>
