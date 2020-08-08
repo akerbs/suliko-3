@@ -33,6 +33,10 @@ import { useForm, Controller } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers"
 import { navigate } from "gatsby"
+import IconButton from "@material-ui/core/IconButton"
+import HighlightOffIcon from "@material-ui/icons/HighlightOff"
+import CancelIcon from "@material-ui/icons/Cancel"
+import CloseIcon from "@material-ui/icons/Close"
 
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
@@ -151,15 +155,23 @@ const ModalWindow = props => {
     }
   }
 
+  function stop() {
+    navigate("/")
+  }
+
   return (
     <Modal
       className={classes.modalWrapper}
       onClose={props.onClose}
       open={props.open}
-      aria-labelledby="simple-modal-title"
-      aria-describedby="simple-modal-description"
     >
       <div className={classes.paper}>
+        <IconButton
+          style={{ margin: 0, padding: 0, left: "85%" }}
+          onClick={stop}
+        >
+          <HighlightOffIcon />
+        </IconButton>
         <form
           // name="myForm"
           // method="post"

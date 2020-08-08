@@ -25,9 +25,15 @@ const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
   const handleOpen = () => {
     setOpen(true)
+    document.body.style.position = "fixed"
+    document.body.style.top = `-${window.scrollY}px`
   }
   const handleClose = () => {
     setOpen(false)
+    const scrollY = document.body.style.top
+    document.body.style.position = ""
+    document.body.style.top = ""
+    window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
   const settings = {
     dots: false,
