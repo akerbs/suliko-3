@@ -378,7 +378,7 @@ function Header(props) {
           </Link>
 
           <Link
-            to="/page-2"
+            to="#contact"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >

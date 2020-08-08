@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -23,6 +23,8 @@ import Button from "@material-ui/core/Button"
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
+  const [readMoreText1, setReadMoreText1] = useState(false)
+  const [readMoreText2, setReadMoreText2] = useState(false)
   const handleOpen = () => {
     setOpen(true)
   }
@@ -71,6 +73,19 @@ const IndexPage = props => {
         },
       },
     ],
+  }
+
+  const showTex1MoreHandler = () => {
+    setReadMoreText1(true)
+  }
+  const showTex1LessHandler = () => {
+    setReadMoreText1(false)
+  }
+  const showTex2MoreHandler = () => {
+    setReadMoreText2(true)
+  }
+  const showTex2LessHandler = () => {
+    setReadMoreText2(false)
   }
 
   return (
@@ -151,26 +166,100 @@ const IndexPage = props => {
               }}
             />
             <br />
-            <Typography
-              variant="body1"
-              data-sal="zoom-in"
-              data-sal-delay="500"
-              data-sal-easing="ease"
-            >
-              Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden
-              Sie im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
-              Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
-              einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
-              können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
-              gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für
-              alle festlichen Anlässe oder / und einfachen Abend mit Freunden
-              und Familie oder einem romantischen Abend zur Zweit zur Seite
-              stehen und machen für Sie ein individuelles Angebot, das zu Ihrem
-              Lebensstil passt...{" "}
-              <Link to="#" style={{ textDecoration: "none", color: "black" }}>
-                lesen weiter
-              </Link>
-            </Typography>
+            {!readMoreText1 && (
+              <div>
+                <Typography
+                  id="text1Litle"
+                  variant="body1"
+                  data-sal="zoom-in"
+                  data-sal-delay="500"
+                  data-sal-easing="ease"
+                >
+                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
+                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
+                  angenehmen Ambiente und georgischer Gastfreundlichkeit
+                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
+                  sprechen Sie uns an. Bei uns können Sie zwischen
+                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
+                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
+                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
+                  Familie oder einem romantischen Abend zur Zweit zur Seite
+                  stehen und machen für Sie ein individuelles Angebot, das zu
+                  Ihrem Lebensstil passt
+                </Typography>
+                <p onClick={showTex1MoreHandler} style={{ cursor: "pointer" }}>
+                  ...lesen weiter
+                </p>
+              </div>
+            )}
+            {readMoreText1 && (
+              <div>
+                <Typography id="text1Big" variant="body1">
+                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
+                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
+                  angenehmen Ambiente und georgischer Gastfreundlichkeit
+                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
+                  sprechen Sie uns an. Bei uns können Sie zwischen
+                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
+                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
+                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
+                  Familie oder einem romantischen Abend zur Zweit zur Seite
+                  stehen und machen für Sie ein individuelles Angebot, das zu
+                  Ihrem Lebensstil passt
+                  <br />
+                  <br /> Die georgische Küche ist eine der ältesten und
+                  abwechslungsreichsten Küchen der Welt. Die georgische
+                  Festtafel ist somit mit sehr schmackhaften und
+                  abwechslungsreichen Gerichten und Trinksprüchen unter der
+                  Tischführung von “Tamada“ (ausgewählter Tischführer) ein
+                  wahres Fest unter der Freunden. Mit der Eröffnung unseres
+                  Restaurants im Herzen von Hamburg wollen wir Ihnen ein Gefühl
+                  der Gastfreundlichkeit und Festlichkeit vermitteln. <br />
+                  Fühlen Sie sich bei uns wie zuhause und genießen Sie die
+                  umfangreiche Speise- und Getränkekarte. Hier unsere kleine
+                  Vorstellung der georgischen Speisen:
+                  <br /> Vorspeisen: <br />
+                  Typische Vorspeisen sind gefüllte Auberginen mit
+                  Walnusspastete Badridschani und verschiedene Pchali – Spinat,
+                  Rote Bete oder Porree püriert mit Waldnüsse, Gewürzen,
+                  Koriander
+                  <br />
+                  <br />
+                  Hauptspeisen:
+                  <br /> Sehr verbreitet sind Teigtaschen mit Hackfleischfüllung
+                  Chinkali, Chatschapuri ist eine weitere Spezialität der
+                  georgischen Küche. Es handelt sich um ein überbackenes
+                  Käsebrot, das in Georgien meist als Zwischenmahlzeit für den
+                  kleinen Hunger gegessen wird. Lobio ist ein traditionelles
+                  Bohnengericht der georgischen Küche, das als Beilage oder
+                  allein als Vorspeise serviert wird. Des Weiteren wird das für
+                  Westgeorgien typische Maisbrot Mschadi, das mit Sulguni (einer
+                  Käsesorte aus der Region Mingrelien) zubereitet wird, sowie
+                  andere Brotsorten gegessen. Weitere Käsesorten sind der
+                  Imeruli (Käse aus der Region Imereti) und der Guda (Käse aus
+                  den Bergen); oft wird Käse aber auch zur Hauptspeise gereicht.
+                  <br />
+                  <br /> Desserts:
+                  <br /> Als Nachtisch werden einige Desserts gereicht, darunter
+                  eine beliebte georgische Süßigkeit namens Tschurtschchela, bei
+                  der man Haselnuss- oder Walnusskerne auf taucht, welche mit
+                  Mais- und Weizenmehl angedickt ist, bis sich eine dünne
+                  Schicht über die Nüsse gelegt hat eine Leine bindet und diese
+                  so lange in Traubensaft <br />
+                  <br />
+                  Weine: <br />
+                  Georgien hat eine über 8000 Jahre alte Weinbrautradition und
+                  gilt damit als Ursprungsland des Weines. Einzigartige
+                  klimatische und geologische Gegebenheiten bringen
+                  ausgezeichnete Rotweine wie „Saperavi“, „Chvanchkara“, aber
+                  auch Weißweine „Rkatziteli“, „Mtsvane“ und viele andere
+                  hervor.
+                </Typography>
+                <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
+                  ...lesen weniger
+                </p>
+              </div>
+            )}
           </Container>
           <br /> <br />
           <Container id="carousel">
@@ -208,23 +297,118 @@ const IndexPage = props => {
           <br /> <br />
           <Container id="news">
             <Typography
-              variant="body1"
+              variant="h6"
               data-sal="zoom-in"
               data-sal-delay="300"
               data-sal-easing="ease"
             >
-              <Typography variant="h6">Liebe Suliko-Freunde,</Typography>
-              <br />
-              wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da und
-              möchten unsere wunderschöne Stadt mit authentisch georgischer
-              Küche verwöhnen. Essen Sie zu unseren regulären Öffnungszeiten im
-              Restaurant Suliko oder bestellen Sie Ihre Lieblingsgerichte und
-              lassen Sie es sich außer Haus schmecken. Für diesen Zweck bieten
-              wir Ihnen eine speziell angefertigte...{" "}
-              <Link to="#" style={{ textDecoration: "none", color: "black" }}>
-                lesen weiter
-              </Link>
+              Liebe Suliko-Freunde,
             </Typography>
+            <br />
+            {!readMoreText2 && (
+              <div>
+                <Typography
+                  id="text2Litle"
+                  variant="body1"
+                  data-sal="zoom-in"
+                  data-sal-delay="500"
+                  data-sal-easing="ease"
+                >
+                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
+                  und möchten unsere wunderschöne Stadt mit authentisch
+                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
+                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
+                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
+                  Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
+                </Typography>
+                <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
+                  ...lesen weiter
+                </p>
+              </div>
+            )}
+
+            {readMoreText2 && (
+              <div>
+                <Typography id="text2Big" variant="body1">
+                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
+                  und möchten unsere wunderschöne Stadt mit authentisch
+                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
+                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
+                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
+                  Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
+                  Bestellmenükarte an.
+                  <br />
+                  <br />
+                  <Link
+                    to={"/Speisekarte.pdf"}
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button variant="outlined" color="secondary">
+                      Bestellmenükarte
+                    </Button>
+                  </Link>
+                  <br />
+                  <br />
+                  In dieser finden Sie die traditionelle Vielfalt der
+                  georgischen Küche, die zu allen Lebensstilen und Geschmäckern
+                  passt.
+                  <br />
+                  Für alle, die in die georgische Welt zunächst reinschnuppern
+                  wollen, bieten wir als besonders preiswerte Alternative die
+                  georgische Supra/Tafel ab 2 Personen an.
+                  <br />
+                  <br />
+                  Apropos Wein, schauen Sie in unsere Weinkarte. Dort finden Sie
+                  die bekanntesten georgischen Weine, unter anderem die nach
+                  alter Tradition hergestellten und ungefilterten Amphorenweine,
+                  für die Georgien so bekannt ist.
+                  <br />
+                  <br />
+                  <Link
+                    to={"/Weinkarte.pdf"}
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button variant="outlined" color="secondary">
+                      Weinkarte
+                    </Button>
+                  </Link>
+                  <br />
+                  <br />
+                  Unsere Öffnungszeiten:
+                  <br />
+                  Montag bis Donnerstag 12:00 – 15:00 Uhr, 17:00 – 22:00 Uhr
+                  <br />
+                  Freitag 12:00 – 15:00 Uhr, 17:00 – 00:00 Uhr
+                  <br />
+                  Samstag 15:00 – 00:00 Uhr
+                  <br />
+                  Sonntag 15:00 – 22:00 Uhr
+                  <br />
+                  <br />
+                  Lieferungen & Abholungen:
+                  <br />
+                  Mo. bis So. von 12.00 bis 18.00 Uhr und nach Vereinbarung.
+                  <br />
+                  <br />
+                  Wir freuen uns auf Sie!
+                  <br />
+                  <br />
+                  Ihr Restaurant Suliko
+                  <br />
+                  <br />
+                  Sie finden uns im Mittelweg 24, 20148 Hamburg
+                  <br />
+                  Sie erreichen uns telefonisch unter 040/49201953
+                  <br />
+                  Unter den Lieferdiensten finden Sie uns auf Lieferando
+                </Typography>
+                <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
+                  ...lesen weniger
+                </p>
+              </div>
+            )}
           </Container>
           <br /> <br />
           <br />
@@ -270,13 +454,13 @@ const IndexPage = props => {
               Son 15:00 - 22:00 <br />
               <br />
             </Typography>
-            <Container className="mapWrapper">
-              <iframe
-                className="map"
-                src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
-              ></iframe>
-            </Container>
           </Container>
+        </Container>
+        <Container id="map" className="mapWrapper" maxWidth="lg">
+          <iframe
+            className="map"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+          ></iframe>
         </Container>
       </Container>
     </Layout>
