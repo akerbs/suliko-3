@@ -440,7 +440,7 @@ const ModalWindow = props => {
             </Timeline>
           </MuiPickersUtilsProvider>
           <IconButton
-            style={{ margin: 0, padding: 0, left: "5%" }}
+            style={{ margin: 0, padding: 0, left: "10%" }}
             onClick={stop}
           >
             <HighlightOffIcon />
@@ -450,10 +450,10 @@ const ModalWindow = props => {
             id="submit"
             name="submit"
             type="submit"
-            variant="contained"
+            variant="outlined"
             style={{
-              backgroundColor: "rgba(133,26,29)",
-              color: "white",
+              // backgroundColor: "rgba(133,26,29)",
+              color: "rgba(133,26,29)",
               position: "relative",
               left: "45%",
               transform: "translate(-50%, 0)",
