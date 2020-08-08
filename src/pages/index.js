@@ -115,163 +115,163 @@ const IndexPage = props => {
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
-        <br />
-        <Container id="abount us">
-          <img
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
-            src={sloganImg2}
-            alt="slogan"
-            style={{
-              display: "block",
-              margin: "0 auto",
-            }}
-          />
+        <Container id="center" style={{ margin: "0 auto" }}>
+          <Container id="abount us">
+            <img
+              data-sal="zoom-in"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              src={sloganImg2}
+              alt="slogan"
+              style={{
+                display: "block",
+                margin: "0 auto",
+              }}
+            />
+            <br />
+            <Typography
+              variant="body1"
+              data-sal="zoom-in"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+            >
+              Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden
+              Sie im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
+              Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
+              einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
+              können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
+              gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für
+              alle festlichen Anlässe oder / und einfachen Abend mit Freunden
+              und Familie oder einem romantischen Abend zur Zweit zur Seite
+              stehen und machen für Sie ein individuelles Angebot, das zu Ihrem
+              Lebensstil passt...
+              <Link to="#">lesen weiter</Link>
+            </Typography>
+          </Container>
+          <br /> <br />
+          <Container id="carousel">
+            <Slider {...settings}>
+              <div>
+                <Img
+                  fluid={props.data.s1.childImageSharp.fluid}
+                  alt="Suliko 1"
+                  style={{ margin: 1 }}
+                />
+              </div>
+              <div>
+                <Img
+                  fluid={props.data.s2.childImageSharp.fluid}
+                  alt="Suliko 2"
+                  style={{ margin: 1 }}
+                />
+              </div>
+              <div>
+                <Img
+                  fluid={props.data.s3.childImageSharp.fluid}
+                  alt="Suliko 3"
+                  style={{ margin: 1 }}
+                />
+              </div>
+              <div>
+                <Img
+                  fluid={props.data.s4.childImageSharp.fluid}
+                  alt="Suliko 4"
+                  style={{ margin: 1 }}
+                />
+              </div>
+            </Slider>
+          </Container>
+          <br /> <br />
+          <Container id="news">
+            <Typography
+              variant="body1"
+              data-sal="zoom-in"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
+              <Typography variant="h6">Liebe Suliko-Freunde,</Typography>
+              <br />
+              wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da und
+              möchten unsere wunderschöne Stadt mit authentisch georgischer
+              Küche verwöhnen. Essen Sie zu unseren regulären Öffnungszeiten im
+              Restaurant Suliko oder bestellen Sie Ihre Lieblingsgerichte und
+              lassen Sie es sich außer Haus schmecken. Für diesen Zweck bieten
+              wir Ihnen eine speziell angefertigte...
+              <Link to="#">lesen weiter</Link>
+            </Typography>
+          </Container>
+          <br /> <br />
           <br />
-          <Typography
-            variant="body1"
-            style={{ lineHeight: 1.5 }}
-            color="secondary"
-            data-sal="zoom-in"
-            data-sal-delay="500"
-            data-sal-easing="ease"
+          <Container
             style={{
-              display: "block",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden Sie
-            im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
-            Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
-            einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
-            können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
-            gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für alle
-            festlichen Anlässe oder / und einfachen Abend mit Freunden und
-            Familie oder einem romantischen Abend zur Zweit zur Seite stehen und
-            machen für Sie ein individuelles Angebot, das zu Ihrem Lebensstil
-            passt...
-            <Link to="#">lesen weiter</Link>
-          </Typography>
-        </Container>
-        <br /> <br />
-        <Container id="carousel">
-          <Slider {...settings}>
-            <div>
-              <Img
-                fluid={props.data.s1.childImageSharp.fluid}
-                alt="Suliko 1"
-                style={{ margin: 1 }}
-              />
-            </div>
-            <div>
-              <Img
-                fluid={props.data.s2.childImageSharp.fluid}
-                alt="Suliko 2"
-                style={{ margin: 1 }}
-              />
-            </div>
-            <div>
-              <Img
-                fluid={props.data.s3.childImageSharp.fluid}
-                alt="Suliko 3"
-                style={{ margin: 1 }}
-              />
-            </div>
-            <div>
-              <Img
-                fluid={props.data.s4.childImageSharp.fluid}
-                alt="Suliko 4"
-                style={{ margin: 1 }}
-              />
-            </div>
-          </Slider>
-        </Container>
-        <br /> <br />
-        <Container id="news">
-          <Typography
-            variant="body1"
-            style={{ lineHeight: 1.5 }}
-            color="secondary"
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
+            <Button
+              // size="small"
+              className="reservierenButton"
+              variant="outlined"
+              // color="primary"
+              onClick={handleOpen}
+              style={{
+                color: "rgba(133,26,29)",
+                marginLeft: "2.2em",
+              }}
+            >
+              Tisch Reservieren
+            </Button>
+            <ModalWindow onClose={handleClose} open={open} />
+          </Container>
+          <br /> <br />
+          <Container
+            id="contact"
             style={{
-              display: "block",
+              padding: "10px 15px ",
+              // marginTop: 50,
+              borderRadius: 10,
             }}
           >
-            <Typography variant="h6"> Liebe Suliko-Freunde,</Typography>
-            <br />
-            wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da und
-            möchten unsere wunderschöne Stadt mit authentisch georgischer Küche
-            verwöhnen. Essen Sie zu unseren regulären Öffnungszeiten im
-            Restaurant Suliko oder bestellen Sie Ihre Lieblingsgerichte und
-            lassen Sie es sich außer Haus schmecken. Für diesen Zweck bieten wir
-            Ihnen eine speziell angefertigte...
-            <Link to="#">lesen weiter</Link>
-          </Typography>
-        </Container>
-        <br /> <br />
-        <Container>
-          <Button
-            // size="small"
-            className="reservierenButton"
-            variant="contained"
-            // color="primary"
-            onClick={handleOpen}
-          >
-            Reservieren
-          </Button>
-          <ModalWindow onClose={handleClose} open={open} />
-        </Container>
-        <br /> <br />
-        <Container
-          id="contact"
-          style={{
-            padding: "50px 15px 10px 15px",
-            marginTop: 50,
-            borderRadius: 10,
-          }}
-        >
-          <Typography
-            variant="body1"
-            align="center"
-            style={{ lineHeight: 2 }}
-            color="secondary"
-          >
-            <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
-            <br />
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="tel:+4904049201953"
-              className="phoneEmailLink"
-              //  onClick="this.blur()"
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ lineHeight: 2 }}
             >
-              <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
-            </a>
-            <br />
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:info@restaurant-suliko.de"
-              className="phoneEmailLink"
-              //  onClick="this.blur()"
-            >
-              <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
-            </a>
-            <br /> <br />
-            <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
-            Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
-            Fr 12:00 - 15:00, 17:00 - 24:00 <br />
-            Sa 17:00 - 24:00 <br />
-            Son 15:00 - 22:00 <br />
-            <br />
-          </Typography>
-          <Container className="mapWrapper">
-            <iframe
-              className="map"
-              src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
-            ></iframe>
+              <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
+              <br />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="tel:+4904049201953"
+                className="phoneEmailLink"
+                //  onClick="this.blur()"
+              >
+                <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
+              </a>
+              <br />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:info@restaurant-suliko.de"
+                className="phoneEmailLink"
+                //  onClick="this.blur()"
+              >
+                <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
+              </a>
+              <br /> <br />
+              <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
+              Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
+              Fr 12:00 - 15:00, 17:00 - 24:00 <br />
+              Sa 17:00 - 24:00 <br />
+              Son 15:00 - 22:00 <br />
+              <br />
+            </Typography>
+            <Container className="mapWrapper">
+              <iframe
+                className="map"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+              ></iframe>
+            </Container>
           </Container>
         </Container>
       </Container>

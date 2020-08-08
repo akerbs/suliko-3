@@ -48,8 +48,8 @@ const useStyles = makeStyles(theme => ({
 
     maxHeight: " 100vh",
     width: 320,
-    backgroundImage: `url(${bgPatternImg}) `,
-
+    // backgroundImage: `url(${bgPatternImg}) `,
+    backgroundColor: "rgba(249,234,207)",
     // backgroundColor: theme.palette.background.paper,
     border: "2px solid rgba(133,26,29)",
     boxShadow: theme.shadows[5],
@@ -439,9 +439,9 @@ const ModalWindow = props => {
             id="submit"
             name="submit"
             type="submit"
-            variant="contained"
-            color="primary"
+            variant="outlined"
             style={{
+              color: "rgba(133,26,29)",
               position: "relative",
               left: "50%",
               transform: "translate(-50%, 0)",

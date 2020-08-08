@@ -91,13 +91,22 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
-  openCloseDrawerBtn: {
+  openDrawerBtn: {
     padding: 1,
     margin: "10px 10px 0px 0px",
     color: "rgba(43,42,41)",
     backgroundColor: "#f9eacf",
     "&:hover": {
       backgroundColor: "#f9eacf",
+    },
+  },
+  closeDrawerBtn: {
+    padding: 1,
+    margin: "10px 10px 0px 0px",
+    color: "#f9eacf",
+    backgroundColor: "rgba(43,42,41)",
+    "&:hover": {
+      backgroundColor: "rgba(43,42,41)",
     },
   },
 
@@ -110,7 +119,7 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   drawerPaper: {
-    backgroundColor: "rgba(43,42,41)",
+    backgroundColor: "rgba(249,234,207)",
     backgroundRepeat: "repeat",
     overflowY: "scroll",
     overflowX: "hidden",
@@ -133,24 +142,25 @@ const useStyles = makeStyles(theme => ({
   mediaIcon: {
     paddingRight: 0,
   },
-  navLink: {
-    color: "#f9eacf",
-    "&:hover": {
-      color: "white",
-    },
-  },
+  // mediaLink: {
+  //   color: "rgba(43,42,41)",
+  //   "&:hover": {
+  //     color: "rgba(43,42,41)",
+  //     fontWeight: "bold",
+  //   },
+  // },
   drawerItem: {
     textDecoration: "none",
-    color: "#f9eacf",
+    color: "rgba(43,42,41)",
     width: "100vw",
     "&:hover": {
       textDecoration: "none",
-      color: "white",
+      color: "rgba(133,26,29)",
     },
   },
 
   active: {
-    color: "rgba(255,255,255)",
+    color: "rgba(133,26,29)",
     textShadow: "rgba(133,26,29) 0 0 5px",
   },
 }))
@@ -267,9 +277,7 @@ function Header(props) {
                 aria-label="open drawer"
                 // edge="end"
                 onClick={handleDrawerOpen}
-                className={
-                  (clsx(open && classes.hide), classes.openCloseDrawerBtn)
-                }
+                className={(clsx(open && classes.hide), classes.openDrawerBtn)}
               >
                 <MenuIcon style={{ fontSize: 30, margin: 6 }} />
               </IconButton>
@@ -293,7 +301,7 @@ function Header(props) {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/restaurant.suliko.hamburg"
-              className={classes.navLink}
+              className={classes.mediaLink}
               //  onClick="this.blur()"
             >
               <ListItem button key={"facebook"} className={classes.mediaIcon}>
@@ -304,7 +312,7 @@ function Header(props) {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.instagram.com/suliko_hamburg_"
-              className={classes.navLink}
+              className={classes.mediaLink}
               //  onClick="this.blur()"
             >
               <ListItem button key={"instagram"} className={classes.mediaIcon}>
@@ -318,9 +326,7 @@ function Header(props) {
               size="small"
               aria-label="close drawer"
               onClick={handleDrawerClose}
-              className={
-                (clsx(open && classes.hide), classes.openCloseDrawerBtn)
-              }
+              className={(clsx(open && classes.hide), classes.closeDrawerBtn)}
             >
               <CloseIcon style={{ fontSize: 30, margin: 6 }} />
             </IconButton>

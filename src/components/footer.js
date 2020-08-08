@@ -17,10 +17,10 @@ const Footer = props => {
       </Typography>
 
       <Breadcrumbs className="breadcrumbs">
-        <Link color="inherit" href="#" className="breadcrumbsLink">
+        <Link href="#" className="breadcrumbsLink">
           Impressum
         </Link>
-        <Link color="inherit" href="#" className="breadcrumbsLink">
+        <Link href="#" className="breadcrumbsLink">
           Datenschutz
         </Link>
       </Breadcrumbs>
