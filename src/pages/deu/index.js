@@ -20,6 +20,12 @@ import ScheduleIcon from "@material-ui/icons/Schedule"
 import ModalWindow from "../../components/modalWindow"
 import "./index.css"
 import Button from "@material-ui/core/Button"
+import Card from "@material-ui/core/Card"
+import CardActions from "@material-ui/core/CardActions"
+import CardMedia from "@material-ui/core/CardMedia"
+import zeit from "../../images/zeit.png"
+import abendblatt from "../../images/abendblatt.png"
+import Grid from "@material-ui/core/Grid"
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
@@ -195,15 +201,6 @@ const IndexPage = props => {
             )}
             {readMoreText1 && (
               <div>
-                <Button
-                  variant="contained"
-                  style={{
-                    backgroundColor: "rgba(249, 234, 207)",
-                    color: "rgba(133,26,29)",
-                  }}
-                >
-                  MenüKarte
-                </Button>
                 <Typography id="text1Big" variant="body1">
                   Herzlich willkommen in unserem Restaurant Suliko. Bei uns
                   werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
@@ -216,6 +213,17 @@ const IndexPage = props => {
                   Familie oder einem romantischen Abend zur Zweit zur Seite
                   stehen und machen für Sie ein individuelles Angebot, das zu
                   Ihrem Lebensstil passt
+                  <br />
+                  <br />
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundColor: "rgba(249, 234, 207)",
+                      color: "rgba(133,26,29)",
+                    }}
+                  >
+                    MenüKarte
+                  </Button>
                   <br />
                   <br /> Die georgische Küche ist eine der ältesten und
                   abwechslungsreichsten Küchen der Welt. Die georgische
@@ -265,9 +273,9 @@ const IndexPage = props => {
                   auch Weißweine „Rkatziteli“, „Mtsvane“ und viele andere
                   hervor.
                 </Typography>
-                <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
+                {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
-                </p>
+                </p> */}
               </div>
             )}
           </Container>
@@ -411,11 +419,74 @@ const IndexPage = props => {
                   <br />
                   Ihr Restaurant Suliko
                 </Typography>
-                <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
+                {/* <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
-                </p>
+                </p> */}
               </div>
             )}
+          </Container>
+          <br /> <br />
+          <Container id="press">
+            <Grid container spacing={3}>
+              <Grid item lg={3} md={4} sm={6} xs={12}>
+                <Card
+                  style={{
+                    maxWidth: "345px",
+                    backgroundColor: "rgba(249,234,207)",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    alt="Zeit online logo"
+                    width="100%"
+                    height="50%"
+                    image={zeit}
+                    style={{ padding: "70px 10px 0px 10px" }}
+                  />
+                  <CardActions>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      to="https://www.zeit.de/2018/17/suliko-restaurant-georgische-kueche-hamburg"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button size="small" color="secondary">
+                        Lesen Artikel
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item lg={3} md={4} sm={6} xs={12}>
+                <Card
+                  style={{
+                    maxWidth: "345px",
+                    backgroundColor: "rgba(249,234,207)",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    alt="Hamburger Abendblatt logo"
+                    width="100%"
+                    height="50%"
+                    image={abendblatt}
+                    style={{ padding: "70px 10px 0px 10px" }}
+                  />
+                  <CardActions>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      to="https://www.abendblatt.de/hamburg/article226946467/Georgiens-Seele-hat-am-Mittelweg-seine-Heimat-gefunden.html"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button size="small" color="secondary">
+                        Lesen Artikel
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
           </Container>
           <br /> <br />
           <br />
