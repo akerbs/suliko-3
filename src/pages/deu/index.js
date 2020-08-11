@@ -12,7 +12,7 @@ import Typography from "@material-ui/core/Typography"
 // import "slick-carousel/slick/slick.css"
 // import "slick-carousel/slick/slick-theme.css"
 // import Slider from "react-slick"
-import Slider from "../../components/Slider"
+// import Slider from "../../components/Slider"
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
@@ -288,7 +288,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us">
-            <Slider
+            {/* <Slider
               options={{
                 autoPlay: 4000,
                 pauseAutoPlayOnHover: true,
@@ -302,7 +302,7 @@ const IndexPage = props => {
                   <img src={image} alt="" />
                 </div>
               ))}
-            </Slider>
+            </Slider> */}
             {/* <Slider {...settings}>
               <div>
                 <Img
