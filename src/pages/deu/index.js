@@ -102,6 +102,16 @@ const IndexPage = props => {
     setReadMoreText3(false)
   }
 
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent)
+
+  //   document.getElementById("yourdivid").onblur = function() {
+  //     alert('blur');
+  //  }
+
+  //   return () => window.removeEventListener("scroll", listenScrollEvent)
+  // }, [])
+
   return (
     <Layout>
       <Container
@@ -201,7 +211,11 @@ const IndexPage = props => {
             )}
 
             {readMoreText2 && (
-              <div>
+              <div
+                onBlur={() => {
+                  console.log("outer blur")
+                }}
+              >
                 <Typography id="text2Big" variant="body1">
                   wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
                   und möchten unsere wunderschöne Stadt mit authentisch

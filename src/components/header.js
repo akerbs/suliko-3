@@ -20,13 +20,11 @@ import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
 import CloseIcon from "@material-ui/icons/Close"
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
-import { navigate } from "gatsby"
 
 const drawerWidth = "auto"
 
@@ -141,15 +139,16 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
   },
   mediaIcon: {
-    paddingRight: 0,
+    margin: "0px 0px 0px 10px",
+    padding: 0,
   },
-  // mediaLink: {
-  //   color: "rgba(43,42,41)",
-  //   "&:hover": {
-  //     color: "rgba(43,42,41)",
-  //     fontWeight: "bold",
-  //   },
-  // },
+  mediaLink: {
+    color: "rgba(43,42,41)",
+    "&:hover": {
+      color: "rgba(133,26,29)",
+      fontWeight: "bold",
+    },
+  },
   drawerItem: {
     textDecoration: "none",
     color: "rgba(43,42,41)",
@@ -303,28 +302,32 @@ function Header(props) {
         >
           <div className={classes.drawerHeader}>
             <div className={classes.mediaIcons}>
-              {/* <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/restaurant.suliko.hamburg"
-              className={classes.mediaLink}
-              //  onClick="this.blur()"
-            >
-              <ListItem button key={"facebook"} className={classes.mediaIcon}>
-                <FontAwesomeIcon icon={faFacebook} size="2x" />
-              </ListItem>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/suliko_hamburg_"
-              className={classes.mediaLink}
-              //  onClick="this.blur()"
-            >
-              <ListItem button key={"instagram"} className={classes.mediaIcon}>
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </ListItem>
-            </a> */}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/restaurant.suliko.hamburg"
+                className={classes.mediaLink}
+                //  onClick="this.blur()"
+              >
+                <ListItem button key={"facebook"} className={classes.mediaIcon}>
+                  <FontAwesomeIcon icon={faFacebook} size="2x" />
+                </ListItem>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/suliko_hamburg_"
+                className={classes.mediaLink}
+                //  onClick="this.blur()"
+              >
+                <ListItem
+                  button
+                  key={"instagram"}
+                  className={classes.mediaIcon}
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </ListItem>
+              </a>
             </div>
             <CloseIcon style={{ color: "transparent" }} />
 
