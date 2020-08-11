@@ -52,3 +52,34 @@
     height: 200px;
   }
 }
+
+.aboutUsWrapper {
+  padding-top: 210px;
+}
+
+@media screen and (max-width: 600px) {
+  .aboutUsWrapper {
+    padding-top: 150px;
+  }
+}
+
+.menuWrapper {
+  padding-top: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .menuWrapper {
+    padding-top: 200px;
+  }
+}
+
+.contactWrapper {
+  padding: 150px 15px 10px 15px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactWrapper {
+    padding: 100px 15px 10px 15px;
+  }
+}

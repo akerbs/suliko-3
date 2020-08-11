@@ -370,10 +370,10 @@ function Header(props) {
             </ListItem>
           </Link>
           <Link
-            to="/deu/menu"
+            to="/deu#menu"
             className={classes.drawerItem}
             activeClassName={classes.active}
-            // onClick={handleMenuLink}
+            onClick={handleDrawerClose}
           >
             <ListItem button key={"MENÜ"}>
               <ListItemText
