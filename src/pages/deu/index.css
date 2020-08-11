@@ -39,3 +39,16 @@
   right: 20px;
   z-index: 1;
 }
+
+.slider {
+  width: 33%;
+  height: 400px;
+  margin: 0 0.5em;
+}
+
+@media screen and (max-width: 600px) {
+  .slider {
+    width: 80%;
+    height: 200px;
+  }
+}

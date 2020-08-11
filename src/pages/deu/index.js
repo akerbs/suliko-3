@@ -9,9 +9,10 @@ import imgWebpV from "../../images/imgs1ovV.webp"
 import sloganImg2 from "../../images/slogan_eng2.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
+// import Slider from "react-slick"
+import Slider from "../../components/Slider"
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
@@ -26,6 +27,12 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
+import s1 from "../../images/s1.jpg"
+import s2 from "../../images/s2.jpg"
+import s3 from "../../images/s3.jpg"
+import s4 from "../../images/s4.jpg"
+
+const images = [s1, s2, s3, s4]
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
@@ -107,7 +114,7 @@ const IndexPage = props => {
       >
         <SEO title="Home" />
         <Container
-          id="bgImgs"
+          id="home"
           style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
         >
           <picture>
@@ -159,7 +166,7 @@ const IndexPage = props => {
           </Button>
           <ModalWindow onClose={handleClose} open={open} />
           <br /> <br />
-          <Container id="abount us">
+          <Container>
             <img
               data-sal="zoom-in"
               data-sal-delay="300"
@@ -280,8 +287,23 @@ const IndexPage = props => {
             )}
           </Container>
           <br /> <br />
-          <Container id="carousel">
-            <Slider {...settings}>
+          <Container id="about-us">
+            <Slider
+              options={{
+                autoPlay: 4000,
+                pauseAutoPlayOnHover: true,
+                wrapAround: true,
+                fullscreen: true,
+                adaptiveHeight: true,
+              }}
+            >
+              {images.map((image, index) => (
+                <div className="slider" key={index}>
+                  <img src={image} alt="" />
+                </div>
+              ))}
+            </Slider>
+            {/* <Slider {...settings}>
               <div>
                 <Img
                   fluid={props.data.s1.childImageSharp.fluid}
@@ -310,7 +332,7 @@ const IndexPage = props => {
                   style={{ margin: 1 }}
                 />
               </div>
-            </Slider>
+            </Slider> */}
           </Container>
           <br /> <br />
           <Container id="news">
@@ -546,35 +568,35 @@ const IndexPage = props => {
 }
 export default IndexPage
 
-export const query = graphql`
-  query {
-    s1: file(relativePath: { eq: "s1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s2: file(relativePath: { eq: "s2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s3: file(relativePath: { eq: "s3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s4: file(relativePath: { eq: "s4.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     s1: file(relativePath: { eq: "s1.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 2000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     s2: file(relativePath: { eq: "s2.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 2000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     s3: file(relativePath: { eq: "s3.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 2000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     s4: file(relativePath: { eq: "s4.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 2000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `

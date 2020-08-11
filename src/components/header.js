@@ -26,6 +26,7 @@ import CloseIcon from "@material-ui/icons/Close"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
+import { navigate } from "gatsby"
 
 const drawerWidth = "auto"
 
@@ -184,6 +185,11 @@ function Header(props) {
     // window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
 
+  // const handleMenuLink = () => {
+  //   navigate("/deu/menu")
+  //   setOpen(false)
+  // }
+
   const listenScrollEvent = event => {
     if (window.innerWidth <= 300) {
       if (window.scrollY < window.innerWidth * 1.16) {
@@ -254,12 +260,12 @@ function Header(props) {
         >
           <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
-              <Link to="/">
+              <Link to="/deu">
                 <img src={Logo2} alt="logo" className={classes.logo2Img} />
               </Link>
             </Hidden>
 
-            <Link to="/">
+            <Link to="/deu">
               <Hidden smUp>
                 <img src={Logo1} alt="logo" className={classes.logoImg} />
               </Hidden>
@@ -332,9 +338,10 @@ function Header(props) {
             </IconButton>
           </div>
           <Link
-            to="/deu"
+            to="/deu#home"
             className={classes.drawerItem}
             activeClassName={classes.active}
+            onClick={handleDrawerClose}
           >
             <ListItem button key={"HOME"}>
               <ListItemText
@@ -347,9 +354,10 @@ function Header(props) {
             </ListItem>
           </Link>
           <Link
-            to="/page-2"
+            to="/deu#about-us"
             className={classes.drawerItem}
             activeClassName={classes.active}
+            onClick={handleDrawerClose}
           >
             <ListItem button key={"ÜBER UNS"}>
               <ListItemText
@@ -362,9 +370,10 @@ function Header(props) {
             </ListItem>
           </Link>
           <Link
-            to="/page-2"
+            to="/deu/menu"
             className={classes.drawerItem}
             activeClassName={classes.active}
+            // onClick={handleMenuLink}
           >
             <ListItem button key={"MENÜ"}>
               <ListItemText
@@ -378,9 +387,10 @@ function Header(props) {
           </Link>
 
           <Link
-            to="#contact"
+            to="/deu#contact"
             className={classes.drawerItem}
             activeClassName={classes.active}
+            onClick={handleDrawerClose}
           >
             <ListItem button key={"KONTAKT"}>
               <ListItemText
