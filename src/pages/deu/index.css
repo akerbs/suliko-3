@@ -83,11 +83,3 @@
     padding: 100px 15px 10px 15px;
   }
 }
-
-.scrollToTopButton {
-  position: fixed;
-  bottom: 5px;
-  left: 5px;
-  z-index: 999;
-  color: white;
-}

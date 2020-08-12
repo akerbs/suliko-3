@@ -167,10 +167,17 @@ const IndexPage = props => {
           {/* <ScrollToTopBtn showBelow={2000} /> */}
           <Fab
             size="small"
-            color="primary"
+            // color="primary"
             aria-label="scrollToTopButton"
-            className="scrollToTopButton"
             onClick={() => scrollTo("#home")}
+            style={{
+              position: "fixed",
+              bottom: "3.5vh",
+              left: "3%",
+              zIndex: 999,
+              backgroundColor: "rgba(249,234,207)",
+              color: "rgba(133,26,29)",
+            }}
           >
             <ExpandLessIcon />
           </Fab>
