@@ -75,11 +75,15 @@ const useStyles = makeStyles(theme => ({
     width: 185,
   },
   reservierenBtn: {
-    color: theme.third.color,
-    backgroundColor: theme.third.backgroundColor,
+    color: theme.third.backgroundColor,
+    backgroundColor: theme.third.color,
     position: "relative",
     left: "45%",
     transform: "translate(-50%, 0)",
+    "&:hover": {
+      color: theme.third.color,
+      backgroundColor: theme.third.backgroundColor,
+    },
   },
   timeLineDot: {
     color: theme.third.color,

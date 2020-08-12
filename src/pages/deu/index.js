@@ -161,7 +161,7 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-          <ScrollToTopBtn showBelow={1000} />
+          <ScrollToTopBtn showBelow={2000} />
           <Button
             // size="small"
             className="reservierenButton"
@@ -169,9 +169,9 @@ const IndexPage = props => {
             onClick={handleOpen}
             variant="contained"
             style={{
-              backgroundColor: "rgba(249, 234, 207)",
-              color: "rgba(133,26,29)",
-              zIndex: "999",
+              backgroundColor: "rgba(133,26,29) ",
+              color: "rgba(249, 234, 207)",
+              // zIndex: "999",
               position: "fixed",
             }}
           >

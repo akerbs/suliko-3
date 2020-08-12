@@ -7,7 +7,8 @@
   margin: 0;
 }
 
-.toTop:hover {
+.toTop:hover,
+.Mui-focusVisible {
   transition: 0.3s;
   color: rgba(133, 26, 29);
   background-color: rgba(249, 234, 207);
