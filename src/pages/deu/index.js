@@ -9,9 +9,17 @@ import imgWebpV from "../../images/imgs1ovV.webp"
 import sloganImg from "../../images/slogan_eng.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
+// import Slider from "react-slick"
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Autoplay, Zoom, Navigation, EffectFade } from "swiper"
+import "swiper/swiper-bundle.css"
+
+import s1 from "../../images/s1.jpg"
+import s2 from "../../images/s2.jpg"
+import s3 from "../../images/s3.jpg"
+import s4 from "../../images/s4.jpg"
 
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
@@ -28,10 +36,11 @@ import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
 import footer from "../../images/footer.png"
-// import ScrollToTopBtn from "../../components/ScrollToTopBtn"
 import Fab from "@material-ui/core/Fab"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
+
+SwiperCore.use([Autoplay, Zoom, Navigation, EffectFade])
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
@@ -107,10 +116,6 @@ const IndexPage = props => {
     setReadMoreText3(false)
   }
 
-  // const handleClick = () => {
-  //   window[`scrollTo`]({ top: document.body.scrollHeight, behavior: `smooth` })
-  // }
-
   // useEffect(() => {
   //   window.addEventListener("scroll", listenScrollEvent)
 
@@ -164,7 +169,6 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-          {/* <ScrollToTopBtn showBelow={2000} /> */}
           <Fab
             size="small"
             // color="primary"
@@ -176,7 +180,7 @@ const IndexPage = props => {
               left: "3%",
               zIndex: 999,
               backgroundColor: "rgba(249,234,207)",
-              color: "rgba(133,26,29)",
+              color: "black",
             }}
           >
             <ExpandLessIcon />
@@ -316,7 +320,31 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="slider">
-            <Slider {...settings}>
+            <Swiper
+              spaceBetween={1}
+              slidesPerView={2}
+              autoplay
+              zoom
+              loop
+              // effect="fade"
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={swiper => console.log(swiper)}
+              style={{}}
+            >
+              <SwiperSlide>
+                <img src={s1} alt="img1" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={s2} alt="img2" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={s3} alt="img3" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={s4} alt="img4" />
+              </SwiperSlide>
+            </Swiper>
+            {/* <Slider {...settings}>
               <div>
                 <Img
                   fluid={props.data.s1.childImageSharp.fluid}
@@ -345,7 +373,7 @@ const IndexPage = props => {
                   style={{ margin: 1 }}
                 />
               </div>
-            </Slider>
+            </Slider> */}
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
