@@ -6,7 +6,7 @@ import imgGif from "../../images/bgImgs.gif"
 import imgGifV from "../../images/bgImgsV.gif"
 import imgWebp from "../../images/imgs1ov.webp"
 import imgWebpV from "../../images/imgs1ovV.webp"
-import sloganImg2 from "../../images/slogan_eng2.png"
+import sloganImg from "../../images/slogan_eng.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import "slick-carousel/slick/slick.css"
@@ -27,6 +27,8 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
+import footer from "../../images/footer.png"
+import ScrollToTopBtn from "../../components/ScrollToTopBtn"
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
@@ -102,6 +104,10 @@ const IndexPage = props => {
     setReadMoreText3(false)
   }
 
+  const handleClick = () => {
+    window[`scrollTo`]({ top: document.body.scrollHeight, behavior: `smooth` })
+  }
+
   // useEffect(() => {
   //   window.addEventListener("scroll", listenScrollEvent)
 
@@ -154,12 +160,8 @@ const IndexPage = props => {
 
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
-        <Container
-          id="center"
-          style={{
-            margin: "0 auto",
-          }}
-        >
+        <Container id="center">
+          <ScrollToTopBtn showBelow={1000} />
           <Button
             // size="small"
             className="reservierenButton"
@@ -332,7 +334,7 @@ const IndexPage = props => {
               data-sal="zoom-in"
               data-sal-delay="300"
               data-sal-easing="ease"
-              src={sloganImg2}
+              src={sloganImg}
               alt="slogan"
               style={{
                 display: "block",
@@ -511,9 +513,20 @@ const IndexPage = props => {
             </Grid>
           </Container>
           <br /> <br />
+          <img
+            src={footer}
+            alt="img"
+            style={{
+              display: "block",
+              margin: "0px auto",
+              paddingTop: "100px",
+            }}
+          />
+          <br /> <br />
+          <br />
           <Container id="menu" className="menuWrapper">
             {!readMoreText3 && (
-              <div>
+              <div style={{ textAlign: "center" }}>
                 <Button
                   variant="contained"
                   onClick={showTex3MoreHandler}
@@ -919,6 +932,7 @@ const IndexPage = props => {
                   <br />
                   135. Khvanchkara, lieblich (2010) 10,90 € / 39,90 € <br />
                 </Typography>
+
                 {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
                 </p> */}
@@ -926,6 +940,11 @@ const IndexPage = props => {
             )}
           </Container>
           <br /> <br />
+          <img
+            src={footer}
+            alt="img"
+            style={{ display: "block", margin: "0px auto" }}
+          />
           <br /> <br />
           <br />
           <Container id="contact" className="contactWrapper">
