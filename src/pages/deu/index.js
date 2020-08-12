@@ -40,7 +40,7 @@ import Fab from "@material-ui/core/Fab"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 
-var window = require("global/window")
+const window = require("global/window")
 
 SwiperCore.use([Autoplay, Zoom, Navigation, EffectFade])
 
@@ -346,36 +346,6 @@ const IndexPage = props => {
                 <img src={s4} alt="img4" />
               </SwiperSlide>
             </Swiper>
-            {/* <Slider {...settings}>
-              <div>
-                <Img
-                  fluid={props.data.s1.childImageSharp.fluid}
-                  alt="Suliko 1"
-                  style={{ margin: 1 }}
-                />
-              </div>
-              <div>
-                <Img
-                  fluid={props.data.s2.childImageSharp.fluid}
-                  alt="Suliko 2"
-                  style={{ margin: 1 }}
-                />
-              </div>
-              <div>
-                <Img
-                  fluid={props.data.s3.childImageSharp.fluid}
-                  alt="Suliko 3"
-                  style={{ margin: 1 }}
-                />
-              </div>
-              <div>
-                <Img
-                  fluid={props.data.s4.childImageSharp.fluid}
-                  alt="Suliko 4"
-                  style={{ margin: 1 }}
-                />
-              </div>
-            </Slider> */}
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
@@ -434,15 +404,17 @@ const IndexPage = props => {
                   Ihrem Lebensstil passt
                   <br />
                   <br />
-                  <Button
-                    variant="contained"
-                    style={{
-                      backgroundColor: "rgba(249, 234, 207)",
-                      color: "rgba(133,26,29)",
-                    }}
-                  >
-                    MenüKarte
-                  </Button>
+                  <Link to="/deu#menu" style={{ textDecoration: "none" }}>
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(249, 234, 207)",
+                        color: "rgba(133,26,29)",
+                      }}
+                    >
+                      MenüKarte
+                    </Button>
+                  </Link>
                   <br />
                   <br /> Die georgische Küche ist eine der ältesten und
                   abwechslungsreichsten Küchen der Welt. Die georgische
@@ -584,7 +556,7 @@ const IndexPage = props => {
                     color: "rgba(133,26,29)",
                   }}
                 >
-                  MenüKarte
+                  MenüKarte Lesen
                 </Button>
               </div>
             )}

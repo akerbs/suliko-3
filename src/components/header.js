@@ -26,6 +26,8 @@ import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
 
+const window = require("global/window")
+
 const drawerWidth = "auto"
 
 const useStyles = makeStyles(theme => ({
