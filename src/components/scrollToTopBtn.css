@@ -1,0 +1,26 @@
+.toTop {
+  z-index: 999;
+  position: fixed;
+  bottom: 3.5vh;
+  background-color: black;
+  color: rgba(249, 234, 207);
+  margin: 0;
+}
+
+.toTop:hover {
+  transition: 0.3s;
+  color: rgba(133, 26, 29);
+  background-color: rgba(249, 234, 207);
+}
+
+@media screen and (max-width: 600px) {
+  .toTop {
+    left: "3%";
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .toTop {
+    left: "5%";
+  }
+}
