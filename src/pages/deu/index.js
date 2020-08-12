@@ -355,10 +355,7 @@ const IndexPage = props => {
               data-sal-easing="ease"
               src={sloganImg}
               alt="slogan"
-              style={{
-                display: "block",
-                margin: "0 auto",
-              }}
+              className="slogan"
             />
             <br />
 
@@ -535,17 +532,18 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <img
+            id="menu"
             src={footer}
             alt="img"
             style={{
               display: "block",
               margin: "0px auto",
-              paddingTop: "100px",
+              paddingTop: "150px",
             }}
           />
           <br /> <br />
           <br />
-          <Container id="menu" className="menuWrapper">
+          <Container className="menuWrapper">
             {!readMoreText3 && (
               <div style={{ textAlign: "center" }}>
                 <Button
@@ -556,7 +554,7 @@ const IndexPage = props => {
                     color: "rgba(133,26,29)",
                   }}
                 >
-                  MenüKarte Lesen
+                  MenüKarte Öffnen
                 </Button>
               </div>
             )}

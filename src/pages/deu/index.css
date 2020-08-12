@@ -39,7 +39,7 @@
 }
 
 .aboutUsWrapper {
-  padding-top: 210px;
+  padding-top: 170px;
 }
 
 @media screen and (max-width: 600px) {
@@ -49,14 +49,14 @@
 }
 
 .menuWrapper {
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 150px;
 }
 
 @media screen and (max-width: 600px) {
   .menuWrapper {
-    padding-top: 170px;
-    padding-bottom: 220px;
+    padding-top: 10px;
+    padding-bottom: 150px;
   }
 }
 
@@ -68,5 +68,17 @@
 @media screen and (max-width: 600px) {
   .contactWrapper {
     padding: 100px 15px 10px 15px;
+  }
+}
+
+.slogan {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .slogan {
+    width: 100%;
   }
 }
