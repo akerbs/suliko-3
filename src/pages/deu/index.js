@@ -40,6 +40,8 @@ import Fab from "@material-ui/core/Fab"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 
+var window = require("global/window")
+
 SwiperCore.use([Autoplay, Zoom, Navigation, EffectFade])
 
 const IndexPage = props => {
