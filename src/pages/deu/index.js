@@ -322,14 +322,14 @@ const IndexPage = props => {
           <Container id="slider">
             <Swiper
               spaceBetween={1}
-              slidesPerView={2}
+              slidesPerView={window.innerWidth <= 600 ? 1 : 2}
               autoplay
               zoom
               loop
               // effect="fade"
               onSlideChange={() => console.log("slide change")}
               onSwiper={swiper => console.log(swiper)}
-              style={{}}
+              className="slider"
             >
               <SwiperSlide>
                 <img src={s1} alt="img1" />

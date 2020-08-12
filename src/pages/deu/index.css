@@ -39,12 +39,12 @@
 }
 /* 
 .slider {
-  width: 33%;
-  height: 400px;
+  height: 200px;
+  width: auto;
   margin: 0 0.5em;
-}
+} */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .slider {
     width: 80%;
     height: 200px;
