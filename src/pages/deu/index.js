@@ -28,7 +28,10 @@ import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
 import footer from "../../images/footer.png"
-import ScrollToTopBtn from "../../components/ScrollToTopBtn"
+// import ScrollToTopBtn from "../../components/ScrollToTopBtn"
+import Fab from "@material-ui/core/Fab"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 
 const IndexPage = props => {
   const [open, setOpen] = React.useState(false)
@@ -104,9 +107,9 @@ const IndexPage = props => {
     setReadMoreText3(false)
   }
 
-  const handleClick = () => {
-    window[`scrollTo`]({ top: document.body.scrollHeight, behavior: `smooth` })
-  }
+  // const handleClick = () => {
+  //   window[`scrollTo`]({ top: document.body.scrollHeight, behavior: `smooth` })
+  // }
 
   // useEffect(() => {
   //   window.addEventListener("scroll", listenScrollEvent)
@@ -161,7 +164,16 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-          <ScrollToTopBtn showBelow={2000} />
+          {/* <ScrollToTopBtn showBelow={2000} /> */}
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="scrollToTopButton"
+            className="scrollToTopButton"
+            onClick={() => scrollTo("#home")}
+          >
+            <ExpandLessIcon />
+          </Fab>
           <Button
             // size="small"
             className="reservierenButton"
