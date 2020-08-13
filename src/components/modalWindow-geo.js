@@ -94,25 +94,25 @@ const useStyles = makeStyles(theme => ({
 const schema = yup.object().shape({
   peopleCount: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^\d{1,2}$/, "Geben Sie die richtige Anzahl von Personen ein"),
-  date: yup.string().nullable().required("Feld ist erforderlich"),
-  time: yup.string().nullable().required("Feld ist erforderlich"),
+    .required("ველია საჭირო")
+    .matches(/^\d{1,2}$/, "შეიყვანეთ ხალხის სწორი რაოდენობა"),
+  date: yup.string().nullable().required("ველია საჭირო"),
+  time: yup.string().nullable().required("ველია საჭირო"),
   name: yup
     .string()
-    .required("Feld ist erforderlich")
-    .min(3, "Der Name muss mindestens 3 Zeichen lang sein")
-    .max(20, "Der Name darf maximal 20 Zeichen lang sein"),
+    .required("ველია საჭირო")
+    .min(3, "სახელი უნდა იყოს მინიმუმ 3 სიმბოლო")
+    .max(20, "სახელი უნდა იყოს 20 სიმბოლო ან ნაკლები"),
   phone: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^[0-9\-\+]{9,15}$/, "falsche Telefonnummer"),
+    .required("ველია საჭირო")
+    .matches(/^[0-9\-\+]{9,15}$/, "არასწორი ტელეფონის ნომერი"),
   email: yup
     .string()
-    .required("Feld ist erforderlich")
+    .required("ველია საჭირო")
     .matches(
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      "Falsche Email"
+      "არასწორი იმეილი"
     ),
   // .email('Please check your email')
 })
@@ -161,8 +161,8 @@ const ModalWindow = props => {
         }
       )
       if (response.ok) {
-        alert("Danke!!! Wir werden uns bald bei Ihnen melden :-)")
-        navigate("/deu")
+        alert("მადლობა !!! ცოტა ხანში დაგიკავშირდებით")
+        navigate("/geo")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/deu")
+    navigate("/geo")
   }
 
   return (
@@ -210,7 +210,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Anzahl der Personen"
+                      label="Ხალხის რაოდენობა"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
@@ -247,7 +247,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="date"
-                      placeholder="Datum"
+                      placeholder="თარიღი"
                     />
 
                     {/* <DatePicker
@@ -306,7 +306,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="time"
-                      placeholder="Zeit"
+                      placeholder="დრო"
                     />
                     {/* <TimePicker
                       name="time"
@@ -352,7 +352,7 @@ const ModalWindow = props => {
                       type="text"
                       name="name"
                       id="name"
-                      label="Ihr Name"
+                      label="Თქვენი სახელი"
                       inputRef={register}
                       error={!!errorName}
                       helperText={errorName}
@@ -387,7 +387,7 @@ const ModalWindow = props => {
                       type="text"
                       name="phone"
                       id="phone"
-                      label="Telefon"
+                      label="ტელეფონი"
                       inputRef={register}
                       error={!!errorPhone}
                       helperText={errorPhone}
@@ -416,7 +416,7 @@ const ModalWindow = props => {
                     <TextField
                       type="email"
                       name="email"
-                      label="Email"
+                      label="ელ.ფოსტა"
                       inputRef={register}
                       error={!!errorEmail}
                       helperText={errorEmail}
@@ -446,7 +446,7 @@ const ModalWindow = props => {
             variant="outlined"
             className={classes.reservierenBtn}
           >
-            Reservieren jetzt
+            Დაჯავშნა
           </Button>
         </form>
       </div>

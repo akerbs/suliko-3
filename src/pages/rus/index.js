@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Layout from "../../components/layout"
+import Layout from "../../components/layout-rus"
 import SEO from "../../components/seo"
 import imgGif from "../../images/bgImgs.gif"
 import imgGifV from "../../images/bgImgsV.gif"
 import imgWebp from "../../images/imgs1ov.webp"
 import imgWebpV from "../../images/imgs1ovV.webp"
-import sloganImg from "../../images/slogan_deu.png"
+import sloganImg from "../../images/slogan_rus.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -188,26 +188,23 @@ const IndexPage = props => {
               position: "fixed",
             }}
           >
-            Tisch Reservieren
+            Зарезервировать столик
           </Button>
           <ModalWindow onClose={handleClose} open={open} />
           <br /> <br />
           <Container id="home-text">
-            <Typography variant="h6">Liebe Suliko-Freunde,</Typography>
+            <Typography variant="h6">Дорогие друзья Сулико,</Typography>
             <br />
             {!readMoreText2 && (
               <div>
                 <Typography id="text2Litle" variant="body1">
-                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
-                  und möchten unsere wunderschöne Stadt mit authentisch
-                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
-                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
-                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-                  Für diesen Zweck bieten wir Ihnen eine speziell
-                  angefertigte...
+                  Не смотря на неординарное время, мы остаёмся с Вами и хотим
+                  баловать наш прекрасный город блюдами грузинской кухни. Мы
+                  будем рады видеть Вас в нашем ресторане! Вы также можете
+                  заказать любимые блюда на дом, для этого мы подготовили...
                 </Typography>
                 <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weiter
+                  ...читать дальше
                 </p>
               </div>
             )}
@@ -219,13 +216,11 @@ const IndexPage = props => {
                 }}
               >
                 <Typography id="text2Big" variant="body1">
-                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
-                  und möchten unsere wunderschöne Stadt mit authentisch
-                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
-                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
-                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-                  Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
-                  Bestellmenükarte an.
+                  Не смотря на неординарное время, мы остаёмся с Вами и хотим
+                  баловать наш прекрасный город блюдами грузинской кухни. Мы
+                  будем рады видеть Вас в нашем ресторане! Вы также можете
+                  заказать любимые блюда на дом, для этого мы подготовили для
+                  Вас специальное меню.
                   <br />
                   <br />
                   <a
@@ -240,24 +235,23 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      Bestellmenükarte
+                      Меню для заказов на дом
                     </Button>
                   </a>
                   <br />
                   <br />
-                  In dieser finden Sie die traditionelle Vielfalt der
-                  georgischen Küche, die zu allen Lebensstilen und Geschmäckern
-                  passt.
+                  В этом меню Вы найдёте разнообразные традиционные блюда
+                  грузинской кухни на любой вкус.
                   <br />
-                  Für alle, die in die georgische Welt zunächst reinschnuppern
-                  wollen, bieten wir als besonders preiswerte Alternative die
-                  georgische Supra/Tafel ab 2 Personen an.
+                  Специальное предложение для тех, кто хочет познакомиться со
+                  вкусом грузинской кухни - грузинская супра (стол от 2х
+                  человек)
                   <br />
                   <br />
-                  Apropos Wein, schauen Sie in unsere Weinkarte. Dort finden Sie
-                  die bekanntesten georgischen Weine, unter anderem die nach
-                  alter Tradition hergestellten und ungefilterten Amphorenweine,
-                  für die Georgien so bekannt ist.
+                  Кстати о вине, обратите внимание на нашу винную карту. Здесь
+                  Вы найдете самые известные грузинские вина, в том числе
+                  нефильтрованные амфорные вина, приготовленные по старинным
+                  грузинским рецептам, которыми так славится Грузия.
                   <br />
                   <br />
                   <a
@@ -272,22 +266,22 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      Weinkarte
+                      Винная карта
                     </Button>
                   </a>
                   <br />
                   <br />
-                  Lieferungen & Abholungen:
+                  Доставка:
                   <br />
-                  Mo. bis So. von 12.00 bis 18.00 Uhr und nach Vereinbarung.
+                  Пн-вс с 12.00 до 18.00 и по договорённости.
                   <br />
-                  Unter den Lieferdiensten finden Sie uns auf Lieferando
-                  <br />
-                  <br />
-                  Wir freuen uns auf Sie!
+                  Вы найдёте нас на Lieferando (служба доставки).
                   <br />
                   <br />
-                  Ihr Restaurant Suliko
+                  Мы с нетерпением ждем встречи с вами!
+                  <br />
+                  <br />
+                  Ваш ресторан Сулико
                 </Typography>
                 {/* <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
@@ -332,37 +326,33 @@ const IndexPage = props => {
             {!readMoreText1 && (
               <div>
                 <Typography id="text1Litle" variant="body1">
-                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
-                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
-                  angenehmen Ambiente und georgischer Gastfreundlichkeit
-                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
-                  sprechen Sie uns an. Bei uns können Sie zwischen
-                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
-                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
-                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
-                  Familie oder einem romantischen Abend zur Zweit zur Seite
-                  stehen und machen für Sie ein individuelles Angebot, das zu
-                  Ihrem Lebensstil passt...
+                  Добро пожаловать в наш ресторан Сулико. У нас Вы сможете
+                  побаловать себя вкусной едой, приятной атмосферой и грузинским
+                  гостеприимством. Взгляните на наше меню и мы с радостью
+                  ответим на Ваши вопросы. У нас Вы найдёте широкий выбор
+                  разнообразных блюд, хорошее вино и свежий грузинский хлеб. Мы
+                  с радостью поможем Вам устроить празник, вечер встречи с
+                  друзями, семейный или романтический вечер для двоих. Мы
+                  подготовим для Вас индивидульное предложение, подходящее
+                  Вашему стилю жизни...
                 </Typography>
                 <p onClick={showTex1MoreHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weiter
+                  ...читать дальше
                 </p>
               </div>
             )}
             {readMoreText1 && (
               <div>
                 <Typography id="text1Big" variant="body1">
-                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
-                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
-                  angenehmen Ambiente und georgischer Gastfreundlichkeit
-                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
-                  sprechen Sie uns an. Bei uns können Sie zwischen
-                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
-                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
-                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
-                  Familie oder einem romantischen Abend zur Zweit zur Seite
-                  stehen und machen für Sie ein individuelles Angebot, das zu
-                  Ihrem Lebensstil passt
+                  Добро пожаловать в наш ресторан Сулико. У нас Вы сможете
+                  побаловать себя вкусной едой, приятной атмосферой и грузинским
+                  гостеприимством. Взгляните на наше меню и мы с радостью
+                  ответим на Ваши вопросы. У нас Вы найдёте широкий выбор
+                  разнообразных блюд, хорошее вино и свежий грузинский хлеб. Мы
+                  с радостью поможем Вам устроить празник, вечер встречи с
+                  друзями, семейный или романтический вечер для двоих. Мы
+                  подготовим для Вас индивидульное предложение, подходящее
+                  Вашему стилю жизни.
                   <br />
                   <br />
                   <Link to="/deu#menu" style={{ textDecoration: "none" }}>
@@ -373,57 +363,55 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      MenüKarte
+                      Меню
                     </Button>
                   </Link>
                   <br />
-                  <br /> Die georgische Küche ist eine der ältesten und
-                  abwechslungsreichsten Küchen der Welt. Die georgische
-                  Festtafel ist somit mit sehr schmackhaften und
-                  abwechslungsreichen Gerichten und Trinksprüchen unter der
-                  Tischführung von “Tamada“ (ausgewählter Tischführer) ein
-                  wahres Fest unter der Freunden. Mit der Eröffnung unseres
-                  Restaurants im Herzen von Hamburg wollen wir Ihnen ein Gefühl
-                  der Gastfreundlichkeit und Festlichkeit vermitteln. <br />
-                  Fühlen Sie sich bei uns wie zuhause und genießen Sie die
-                  umfangreiche Speise- und Getränkekarte. Hier unsere kleine
-                  Vorstellung der georgischen Speisen:
-                  <br /> Vorspeisen: <br />
-                  Typische Vorspeisen sind gefüllte Auberginen mit
-                  Walnusspastete Badridschani und verschiedene Pchali – Spinat,
-                  Rote Bete oder Porree püriert mit Waldnüsse, Gewürzen,
-                  Koriander
+                  <br /> Грузинская кухня - одна из старейших и в мире.
+                  Грузинское застолье с широким разнообразием блюд и напитков
+                  под предвадительством "Тамады"(выбранный ведущий стола) - это
+                  настоящий праздник в кругу друзей С открытием нашего ресторана
+                  в самом центре Гамбурга, мы хотим передать вам чутство
+                  гостеприимства и праздника. <br />
+                  Почувствуйте себя с нами как дома и наслаждайтесь обширным
+                  меню блюд и напитков. Вот небольшая презентация грузинских
+                  блюд:
+                  <br /> Холодные закуски: <br />
+                  Типичные закуски - тонкие ломтики баклажана с начинкой из
+                  грецких орехов Бадриджани и различные Пхали - шпинат, свекла
+                  или лук-порей, протертые с лесными орехами, специями и
+                  кориандром.
                   <br />
                   <br />
-                  Hauptspeisen:
-                  <br /> Sehr verbreitet sind Teigtaschen mit Hackfleischfüllung
-                  Chinkali, Chatschapuri ist eine weitere Spezialität der
-                  georgischen Küche. Es handelt sich um ein überbackenes
-                  Käsebrot, das in Georgien meist als Zwischenmahlzeit für den
-                  kleinen Hunger gegessen wird. Lobio ist ein traditionelles
-                  Bohnengericht der georgischen Küche, das als Beilage oder
-                  allein als Vorspeise serviert wird. Des Weiteren wird das für
-                  Westgeorgien typische Maisbrot Mschadi, das mit Sulguni (einer
-                  Käsesorte aus der Region Mingrelien) zubereitet wird, sowie
-                  andere Brotsorten gegessen. Weitere Käsesorten sind der
-                  Imeruli (Käse aus der Region Imereti) und der Guda (Käse aus
-                  den Bergen); oft wird Käse aber auch zur Hauptspeise gereicht.
+                  Основные блюда:
                   <br />
-                  <br /> Desserts:
-                  <br /> Als Nachtisch werden einige Desserts gereicht, darunter
-                  eine beliebte georgische Süßigkeit namens Tschurtschchela, bei
-                  der man Haselnuss- oder Walnusskerne auf taucht, welche mit
-                  Mais- und Weizenmehl angedickt ist, bis sich eine dünne
-                  Schicht über die Nüsse gelegt hat eine Leine bindet und diese
-                  so lange in Traubensaft <br />
+                  Хинкали — грузинские пельмени, одно из самых известных блюд
+                  грузинской кухни, в которое просто невозможно не влюбиться!
+                  Хачапури - еще одно фирменное блюдо грузинской кухни. Это
+                  вкусная лепёшка с сыром, которую в Грузии чаще всего
+                  используют в качестве перекуса между приемами пищи. Лобио -
+                  традиционное фасолевое блюдо грузинской кухни, чаще
+                  используемое в качестве гарнира или закуски. Кукурузная
+                  лепёшка Мчади, употребляемая в Западной Грузии в качестве
+                  хлеба, с сыром Сулгуни (сыр из региона Мингрелия) и другими
+                  сортами сыра, такими как Имерули (сыр из Имеретинского
+                  региона) и Гуда (горный сыр) Сыр часто подают к основному
+                  блюду.
                   <br />
-                  Weine: <br />
-                  Georgien hat eine über 8000 Jahre alte Weinbrautradition und
-                  gilt damit als Ursprungsland des Weines. Einzigartige
-                  klimatische und geologische Gegebenheiten bringen
-                  ausgezeichnete Rotweine wie „Saperavi“, „Chvanchkara“, aber
-                  auch Weißweine „Rkatziteli“, „Mtsvane“ und viele andere
-                  hervor.
+                  <br /> Десерты:
+                  <br /> В качестве десерта подаются несколько десертов, в том
+                  числе популярная грузинская сладость под названием Чурчхела,
+                  приготовленная из нанизанных на нитку очищенных грецких орехов
+                  и фундука в загущённых кукурузной и пшеничной мукой
+                  виноградном соке
+                  <br />
+                  <br />
+                  Вина: <br />
+                  Грузия имеет традиции виноделия, которым более 8000 лет, и
+                  поэтому считается страной происхождения вина. Уникальные
+                  климатические и геологические условия позволяют производить
+                  прекрасные красные вина, такие как «Саперави», «Хванчкара», а
+                  также белые вина «Ркацители», «Мцване» и многие другие.
                 </Typography>
                 {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
@@ -958,11 +946,11 @@ const IndexPage = props => {
                 <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
               </a>
               <br /> <br />
-              <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
-              Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
-              Fr 12:00 - 15:00, 17:00 - 24:00 <br />
-              Sa 17:00 - 24:00 <br />
-              Son 15:00 - 22:00 <br />
+              <ScheduleIcon style={{ fontSize: 20 }} /> Часы работы <br />
+              Пн-Чт 12:00 - 15:00, 17:00 - 22:00 <br />
+              Пт 12:00 - 15:00, 17:00 - 24:00 <br />
+              Сб 17:00 - 24:00 <br />
+              Вс 15:00 - 22:00 <br />
               <br />
             </Typography>
           </Container>

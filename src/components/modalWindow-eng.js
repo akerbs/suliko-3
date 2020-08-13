@@ -94,25 +94,25 @@ const useStyles = makeStyles(theme => ({
 const schema = yup.object().shape({
   peopleCount: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^\d{1,2}$/, "Geben Sie die richtige Anzahl von Personen ein"),
-  date: yup.string().nullable().required("Feld ist erforderlich"),
-  time: yup.string().nullable().required("Feld ist erforderlich"),
+    .required("Field is required")
+    .matches(/^\d{1,2}$/, "enter the correct number of people"),
+  date: yup.string().nullable().required("Field is required"),
+  time: yup.string().nullable().required("Field is required"),
   name: yup
     .string()
-    .required("Feld ist erforderlich")
-    .min(3, "Der Name muss mindestens 3 Zeichen lang sein")
-    .max(20, "Der Name darf maximal 20 Zeichen lang sein"),
+    .required("Field is required")
+    .min(3, "Name must be at-least 3 characters")
+    .max(20, "Name must be 20 characters or less"),
   phone: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^[0-9\-\+]{9,15}$/, "falsche Telefonnummer"),
+    .required("Field is required")
+    .matches(/^[0-9\-\+]{9,15}$/, "incorrect phone number"),
   email: yup
     .string()
-    .required("Feld ist erforderlich")
+    .required("Field is required")
     .matches(
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      "Falsche Email"
+      "incorrect email"
     ),
   // .email('Please check your email')
 })
@@ -161,8 +161,8 @@ const ModalWindow = props => {
         }
       )
       if (response.ok) {
-        alert("Danke!!! Wir werden uns bald bei Ihnen melden :-)")
-        navigate("/deu")
+        alert("Thank You!!! We will contact You soon :-)")
+        navigate("/eng")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/deu")
+    navigate("/eng")
   }
 
   return (
@@ -210,7 +210,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Anzahl der Personen"
+                      label="Number of people"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
@@ -247,7 +247,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="date"
-                      placeholder="Datum"
+                      placeholder="Date"
                     />
 
                     {/* <DatePicker
@@ -306,7 +306,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="time"
-                      placeholder="Zeit"
+                      placeholder="Time"
                     />
                     {/* <TimePicker
                       name="time"
@@ -352,7 +352,7 @@ const ModalWindow = props => {
                       type="text"
                       name="name"
                       id="name"
-                      label="Ihr Name"
+                      label="Your name"
                       inputRef={register}
                       error={!!errorName}
                       helperText={errorName}
@@ -387,7 +387,7 @@ const ModalWindow = props => {
                       type="text"
                       name="phone"
                       id="phone"
-                      label="Telefon"
+                      label="Phone"
                       inputRef={register}
                       error={!!errorPhone}
                       helperText={errorPhone}
@@ -446,7 +446,7 @@ const ModalWindow = props => {
             variant="outlined"
             className={classes.reservierenBtn}
           >
-            Reservieren jetzt
+            Reserve now
           </Button>
         </form>
       </div>

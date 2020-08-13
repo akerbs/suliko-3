@@ -94,25 +94,25 @@ const useStyles = makeStyles(theme => ({
 const schema = yup.object().shape({
   peopleCount: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^\d{1,2}$/, "Geben Sie die richtige Anzahl von Personen ein"),
-  date: yup.string().nullable().required("Feld ist erforderlich"),
-  time: yup.string().nullable().required("Feld ist erforderlich"),
+    .required("Поле, обязательное для заполнения")
+    .matches(/^\d{1,2}$/, "Введите корректное количество людей"),
+  date: yup.string().nullable().required("Поле, обязательное для заполнения"),
+  time: yup.string().nullable().required("Поле, обязательное для заполнения"),
   name: yup
     .string()
-    .required("Feld ist erforderlich")
-    .min(3, "Der Name muss mindestens 3 Zeichen lang sein")
-    .max(20, "Der Name darf maximal 20 Zeichen lang sein"),
+    .required("Поле, обязательное для заполнения")
+    .min(3, "Имя должно состоять не менее чем из 3 символов.")
+    .max(20, "Имя должно содержать не более 20 символов."),
   phone: yup
     .string()
-    .required("Feld ist erforderlich")
-    .matches(/^[0-9\-\+]{9,15}$/, "falsche Telefonnummer"),
+    .required("Поле, обязательное для заполнения")
+    .matches(/^[0-9\-\+]{9,15}$/, "Введите корректный номер телефона"),
   email: yup
     .string()
-    .required("Feld ist erforderlich")
+    .required("Поле, обязательное для заполнения")
     .matches(
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      "Falsche Email"
+      "Введите коректный адрес электронной почты"
     ),
   // .email('Please check your email')
 })
@@ -161,8 +161,8 @@ const ModalWindow = props => {
         }
       )
       if (response.ok) {
-        alert("Danke!!! Wir werden uns bald bei Ihnen melden :-)")
-        navigate("/deu")
+        alert("Спасибо!!! Мы свяжемся с Вами в ближайшее время :-)")
+        navigate("/rus")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/deu")
+    navigate("/rus")
   }
 
   return (
@@ -210,7 +210,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Anzahl der Personen"
+                      label="Количество гостей"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
@@ -247,7 +247,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="date"
-                      placeholder="Datum"
+                      placeholder="Дата"
                     />
 
                     {/* <DatePicker
@@ -306,7 +306,7 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="time"
-                      placeholder="Zeit"
+                      placeholder="Время"
                     />
                     {/* <TimePicker
                       name="time"
@@ -352,7 +352,7 @@ const ModalWindow = props => {
                       type="text"
                       name="name"
                       id="name"
-                      label="Ihr Name"
+                      label="Ваше имя"
                       inputRef={register}
                       error={!!errorName}
                       helperText={errorName}
@@ -387,7 +387,7 @@ const ModalWindow = props => {
                       type="text"
                       name="phone"
                       id="phone"
-                      label="Telefon"
+                      label="Телефон"
                       inputRef={register}
                       error={!!errorPhone}
                       helperText={errorPhone}
@@ -416,7 +416,7 @@ const ModalWindow = props => {
                     <TextField
                       type="email"
                       name="email"
-                      label="Email"
+                      label="Имейл"
                       inputRef={register}
                       error={!!errorEmail}
                       helperText={errorEmail}
@@ -446,7 +446,7 @@ const ModalWindow = props => {
             variant="outlined"
             className={classes.reservierenBtn}
           >
-            Reservieren jetzt
+            Забронировать сейчас
           </Button>
         </form>
       </div>

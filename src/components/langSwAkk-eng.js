@@ -6,8 +6,14 @@ const LangSwAkk = () => {
   return (
     <div className="accordion">
       <div className="accordionItem">
-        Deu
+        Eng
         <div className="accordionItemContent">
+          <div className="langItem">
+            <Link to="/deu" className="link">
+              Deu
+            </Link>
+          </div>
+
           <div className="langItem">
             <Link to="/rus" className="link">
               Rus
@@ -17,12 +23,6 @@ const LangSwAkk = () => {
           <div className="langItem">
             <Link to="/geo" className="link">
               Geo
-            </Link>
-          </div>
-
-          <div className="langItem">
-            <Link to="/eng" className="link">
-              Eng
             </Link>
           </div>
 

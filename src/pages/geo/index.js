@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Layout from "../../components/layout"
+import Layout from "../../components/layout-geo"
 import SEO from "../../components/seo"
 import imgGif from "../../images/bgImgs.gif"
 import imgGifV from "../../images/bgImgsV.gif"
 import imgWebp from "../../images/imgs1ov.webp"
 import imgWebpV from "../../images/imgs1ovV.webp"
-import sloganImg from "../../images/slogan_deu.png"
+import sloganImg from "../../images/slogan_geo.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -188,26 +188,24 @@ const IndexPage = props => {
               position: "fixed",
             }}
           >
-            Tisch Reservieren
+            შეინახეთ მაგიდა
           </Button>
           <ModalWindow onClose={handleClose} open={open} />
           <br /> <br />
           <Container id="home-text">
-            <Typography variant="h6">Liebe Suliko-Freunde,</Typography>
+            <Typography variant="h6">ძვირფასო სულიკო მეგობრებო,</Typography>
             <br />
             {!readMoreText2 && (
               <div>
                 <Typography id="text2Litle" variant="body1">
-                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
-                  und möchten unsere wunderschöne Stadt mit authentisch
-                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
-                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
-                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-                  Für diesen Zweck bieten wir Ihnen eine speziell
-                  angefertigte...
+                  არაჩვეულებრივი პერიოდის მიუხედავად, ჩვენთან ვართ და ჩვენ
+                  გვინდა, რომ ჩვენი ლამაზი ქალაქი შევინარჩუნოთ ქართული
+                  სამზარეულოთი. მოხარული ვიქნებით ჩვენს რესტორანში. ასევე
+                  შეგიძლიათ შეუკვეთოთ თქვენი საყვარელი კვება სახლში, ამისათვის
+                  ჩვენ მოვამზადეთ ...
                 </Typography>
                 <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weiter
+                  ...წაიკითხე მეტი
                 </p>
               </div>
             )}
@@ -219,13 +217,11 @@ const IndexPage = props => {
                 }}
               >
                 <Typography id="text2Big" variant="body1">
-                  wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
-                  und möchten unsere wunderschöne Stadt mit authentisch
-                  georgischer Küche verwöhnen. Essen Sie zu unseren regulären
-                  Öffnungszeiten im Restaurant Suliko oder bestellen Sie Ihre
-                  Lieblingsgerichte und lassen Sie es sich außer Haus schmecken.
-                  Für diesen Zweck bieten wir Ihnen eine speziell angefertigte
-                  Bestellmenükarte an.
+                  არაჩვეულებრივი პერიოდის მიუხედავად, ჩვენ შენთან დარჩება და
+                  გვინდა გაითვალისწინეთ ჩვენი ლამაზი ქალაქი ქართული
+                  სამზარეულოთი. ჩვენ მოხარული ვიქნებით ჩვენს რესტორანში. თქვენ
+                  ასევე შეგიძლიათ შეუკვეთეთ თქვენი საყვარელი კვება სახლში,
+                  ამისათვის ჩვენ მოვამზადეთ სპეციალური მენიუ თქვენთვის.
                   <br />
                   <br />
                   <a
@@ -240,24 +236,22 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      Bestellmenükarte
+                      მენიუ საშინაო შეკვეთებისთვის
                     </Button>
                   </a>
                   <br />
                   <br />
-                  In dieser finden Sie die traditionelle Vielfalt der
-                  georgischen Küche, die zu allen Lebensstilen und Geschmäckern
-                  passt.
+                  ამ მენიუში ნახავთ მრავალფეროვან ტრადიციულ ქართულ სამზარეულოს
+                  ყველა გემოვნებით.
                   <br />
-                  Für alle, die in die georgische Welt zunächst reinschnuppern
-                  wollen, bieten wir als besonders preiswerte Alternative die
-                  georgische Supra/Tafel ab 2 Personen an.
+                  სპეციალური შეთავაზება მათთვის, ვისაც სურს გაეცნოს ქართული
+                  სამზარეულოს გემოვნებას - ქართული სუფრა (მაგიდა 2 ადამიანიდან)
                   <br />
                   <br />
-                  Apropos Wein, schauen Sie in unsere Weinkarte. Dort finden Sie
-                  die bekanntesten georgischen Weine, unter anderem die nach
-                  alter Tradition hergestellten und ungefilterten Amphorenweine,
-                  für die Georgien so bekannt ist.
+                  ღვინოზე საუბრისას გადახედეთ ჩვენს ღვინის ჩამონათვალს. აქ
+                  ნახავთ ყველაზე ცნობილ ქართულ ღვინოს, მათ შორის გაფილტრული
+                  ამფორის ღვინოები, ძველი ქართული რეცეპტების მიხედვით
+                  მომზადებული, რომლითაც საქართველო ასე ცნობილია.
                   <br />
                   <br />
                   <a
@@ -272,22 +266,22 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      Weinkarte
+                      Ღვინის სია
                     </Button>
                   </a>
                   <br />
                   <br />
-                  Lieferungen & Abholungen:
+                  ადგილზე მიტანა:
                   <br />
-                  Mo. bis So. von 12.00 bis 18.00 Uhr und nach Vereinbarung.
+                  ორშაბათს 12.00-დან 18.00 საათამდე და დანიშვნის გზით.
                   <br />
-                  Unter den Lieferdiensten finden Sie uns auf Lieferando
-                  <br />
-                  <br />
-                  Wir freuen uns auf Sie!
+                  თქვენ ნახავთ Lieferando (ადგილზე მიტანის სერვისს).
                   <br />
                   <br />
-                  Ihr Restaurant Suliko
+                  გელოდებით!
+                  <br />
+                  <br />
+                  შენი სულიკო რესტორანი
                 </Typography>
                 {/* <p onClick={showTex2LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
@@ -332,37 +326,33 @@ const IndexPage = props => {
             {!readMoreText1 && (
               <div>
                 <Typography id="text1Litle" variant="body1">
-                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
-                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
-                  angenehmen Ambiente und georgischer Gastfreundlichkeit
-                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
-                  sprechen Sie uns an. Bei uns können Sie zwischen
-                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
-                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
-                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
-                  Familie oder einem romantischen Abend zur Zweit zur Seite
-                  stehen und machen für Sie ein individuelles Angebot, das zu
-                  Ihrem Lebensstil passt...
+                  მოგესალმებით ჩვენს რესტორანში Suliko. აქ შეგიძლია შეეცადეთ
+                  გემრიელი საკვები, სასიამოვნო გარემო და ქართული
+                  სტუმართმოყვარეობა გადახედეთ ჩვენს მენიუს და გვიხარია ჩვენ
+                  ვუპასუხებთ თქვენს კითხვებს. აქ ნახავთ ფართო არჩევანს
+                  მრავალფეროვანი კერძები, კარგი ღვინო და ახალი ქართული პური.
+                  ჩვენ მოხარული ვიქნებით, რომ დაგეხმაროთ სადღესასწაულო მოწყობის,
+                  შეხვედრის საღამოს მოწყობაში მეგობრების, ოჯახის ან რომანტიული
+                  საღამო ორი ადამიანისთვის. ჩვენ ჩვენ მოვამზადებთ ინდივიდუალურ
+                  შეთავაზებას თქვენთვის, შესაფერისი თქვენი ცხოვრების წესი ...
                 </Typography>
                 <p onClick={showTex1MoreHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weiter
+                  ...წაიკითხე მეტი
                 </p>
               </div>
             )}
             {readMoreText1 && (
               <div>
                 <Typography id="text1Big" variant="body1">
-                  Herzlich willkommen in unserem Restaurant Suliko. Bei uns
-                  werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
-                  angenehmen Ambiente und georgischer Gastfreundlichkeit
-                  verwöhnt. Lassen Sie einen Blick auf unser Menü werfen und
-                  sprechen Sie uns an. Bei uns können Sie zwischen
-                  abwechslungsreichen Gerichten, gutem Wein und gebackenen
-                  georgischen Brot wählen. Wir würden Ihnen dabei für alle
-                  festlichen Anlässe oder / und einfachen Abend mit Freunden und
-                  Familie oder einem romantischen Abend zur Zweit zur Seite
-                  stehen und machen für Sie ein individuelles Angebot, das zu
-                  Ihrem Lebensstil passt
+                  მოგესალმებით ჩვენს რესტორანში Suliko. აქ შეგიძლია შეეცადეთ
+                  გემრიელი საკვები, სასიამოვნო გარემო და ქართული
+                  სტუმართმოყვარეობა გადახედეთ ჩვენს მენიუს და გვიხარია ჩვენ
+                  ვუპასუხებთ თქვენს კითხვებს. აქ ნახავთ ფართო არჩევანს
+                  მრავალფეროვანი კერძები, კარგი ღვინო და ახალი ქართული პური.
+                  ჩვენ მოხარული ვიქნებით, რომ დაგეხმაროთ სადღესასწაულო მოწყობის,
+                  შეხვედრის საღამოს მოწყობაში მეგობრების, ოჯახის ან რომანტიული
+                  საღამო ორი ადამიანისთვის. ჩვენ ჩვენ მოვამზადებთ ინდივიდუალურ
+                  შეთავაზებას თქვენთვის, შესაფერისი თქვენი ცხოვრების წესი.
                   <br />
                   <br />
                   <Link to="/deu#menu" style={{ textDecoration: "none" }}>
@@ -373,57 +363,53 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      MenüKarte
+                      მენიუ
                     </Button>
                   </Link>
                   <br />
-                  <br /> Die georgische Küche ist eine der ältesten und
-                  abwechslungsreichsten Küchen der Welt. Die georgische
-                  Festtafel ist somit mit sehr schmackhaften und
-                  abwechslungsreichen Gerichten und Trinksprüchen unter der
-                  Tischführung von “Tamada“ (ausgewählter Tischführer) ein
-                  wahres Fest unter der Freunden. Mit der Eröffnung unseres
-                  Restaurants im Herzen von Hamburg wollen wir Ihnen ein Gefühl
-                  der Gastfreundlichkeit und Festlichkeit vermitteln. <br />
-                  Fühlen Sie sich bei uns wie zuhause und genießen Sie die
-                  umfangreiche Speise- und Getränkekarte. Hier unsere kleine
-                  Vorstellung der georgischen Speisen:
-                  <br /> Vorspeisen: <br />
-                  Typische Vorspeisen sind gefüllte Auberginen mit
-                  Walnusspastete Badridschani und verschiedene Pchali – Spinat,
-                  Rote Bete oder Porree püriert mit Waldnüsse, Gewürzen,
-                  Koriander
+                  <br /> ქართული სამზარეულო ერთ-ერთი უძველესი და მსოფლიოში.
+                  მრავალფეროვანი კერძებისა და სასმელების მრავალფეროვანი ქართული
+                  სუფრა "Toastmaster" (სუფრის არჩეული მასპინძელი)
+                  ხელმძღვანელობით ნამდვილი ზეიმია მეგობრებთან ერთად ჩვენი
+                  გახსნით რესტორანი ჰამბურგის შუაგულში, გვსურს გითხრათ
+                  სტუმართმოყვარეობისა და დღესასწაულის გრძნობა. <br />
+                  იგრძენი სახლში ჩვენთან ერთად და ისიამოვნე საკვები და
+                  სასმელების ფართო მენიუ. აქ მოცემულია ქართული კერძების მცირე
+                  პრეზენტაცია:
+                  <br /> ცივი მადისმიერი: <br />
+                  ტიპიური საჭმელები არის ბადრიჯანის ნიგოზებით სავსე ბადრიჯნის
+                  თხელი ნაჭრები და სხვადასხვა ფალი - ისპანახი, ჭარხალი ან ლეკი,
+                  დაფქული თხილით, სანელებლებით და ქინძით.
                   <br />
                   <br />
-                  Hauptspeisen:
-                  <br /> Sehr verbreitet sind Teigtaschen mit Hackfleischfüllung
-                  Chinkali, Chatschapuri ist eine weitere Spezialität der
-                  georgischen Küche. Es handelt sich um ein überbackenes
-                  Käsebrot, das in Georgien meist als Zwischenmahlzeit für den
-                  kleinen Hunger gegessen wird. Lobio ist ein traditionelles
-                  Bohnengericht der georgischen Küche, das als Beilage oder
-                  allein als Vorspeise serviert wird. Des Weiteren wird das für
-                  Westgeorgien typische Maisbrot Mschadi, das mit Sulguni (einer
-                  Käsesorte aus der Region Mingrelien) zubereitet wird, sowie
-                  andere Brotsorten gegessen. Weitere Käsesorten sind der
-                  Imeruli (Käse aus der Region Imereti) und der Guda (Käse aus
-                  den Bergen); oft wird Käse aber auch zur Hauptspeise gereicht.
+                  Მთავარი კერძები:
                   <br />
-                  <br /> Desserts:
-                  <br /> Als Nachtisch werden einige Desserts gereicht, darunter
-                  eine beliebte georgische Süßigkeit namens Tschurtschchela, bei
-                  der man Haselnuss- oder Walnusskerne auf taucht, welche mit
-                  Mais- und Weizenmehl angedickt ist, bis sich eine dünne
-                  Schicht über die Nüsse gelegt hat eine Leine bindet und diese
-                  so lange in Traubensaft <br />
+                  ხინკალი - ქართული დუმალი, ქართული სამზარეულოს ერთ-ერთი ყველაზე
+                  ცნობილი კერძია, რაც უბრალოდ შეუძლებელია არ შეგიყვარდეს!
+                  ხაჭაპური ქართული სამზარეულოს კიდევ ერთი სპეციალობაა. ეს
+                  უგემრიელესი ყველით სავსე ბრტყელი ბრტყელია, რომელსაც ყველაზე
+                  ხშირად საქართველოში იყენებენ, როგორც საჭმელს შორის. ლობიო
+                  ტრადიციული ქართული ლობიო კერძია, რომელსაც ხშირად იყენებენ
+                  როგორც გვერდით კერძს ან როგორც საჭმელს. სიმინდის tortilla
+                  Mchadi, რომელიც გამოიყენება დასავლეთ საქართველოში, როგორც
+                  პური, სულგუნის ყველით (მენგრელიის რეგიონიდან ყველი) და სხვა
+                  სახის ყველი, მაგალითად, იმერული (ყველი იმერეთის რეგიონიდან) და
+                  გუდა (მთის ყველი) ყველი ხშირად ემსახურება ძირითადი კურსით.
                   <br />
-                  Weine: <br />
-                  Georgien hat eine über 8000 Jahre alte Weinbrautradition und
-                  gilt damit als Ursprungsland des Weines. Einzigartige
-                  klimatische und geologische Gegebenheiten bringen
-                  ausgezeichnete Rotweine wie „Saperavi“, „Chvanchkara“, aber
-                  auch Weißweine „Rkatziteli“, „Mtsvane“ und viele andere
-                  hervor.
+                  დესერტები:
+                  <br /> რამდენიმე დესერტს დესერტად ემსახურებიან, მათ შორის
+                  ჩურჩხელას პოპულარული ქართული ტკბილი, დამზადებულია კანიანი
+                  კაკლისა და თხილისგან დაჭრილი სიმინდის ყურძნის წვენში სიმინდისა
+                  და ხორბლის ფქვილით
+                  <br />
+                  <br />
+                  ღვინოები: <br />
+                  საქართველოს აქვს მეღვინეობის ტრადიცია, რომელიც 8000 წელზე მეტი
+                  ხნისაა და შესაბამისად ითვლება ღვინის წარმოშობის ქვეყნად.
+                  უნიკალური კლიმატური და გეოლოგიური პირობების საშუალებით
+                  შესაძლებელია შესანიშნავი წითელი ღვინოების წარმოება, როგორიცაა
+                  საფერავი, ხვანჭკარა, ისევე როგორც თეთრი ღვინოები რქაწითელი,
+                  მწვანეს და მრავალი სხვა.
                 </Typography>
                 {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
                   ...lesen weniger
@@ -958,11 +944,11 @@ const IndexPage = props => {
                 <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
               </a>
               <br /> <br />
-              <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
-              Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
-              Fr 12:00 - 15:00, 17:00 - 24:00 <br />
-              Sa 17:00 - 24:00 <br />
-              Son 15:00 - 22:00 <br />
+              <ScheduleIcon style={{ fontSize: 20 }} /> გახსნის საათები <br />
+              ორშაბათი-ხუთშაბათი 12:00 - 15:00, 17:00 - 22:00 <br />
+              პარ 12:00 - 15:00, 17:00 - 24:00 <br />
+              შაბათი 17:00 - 24:00 <br />
+              მზე 15:00 - 22:00 <br />
               <br />
             </Typography>
           </Container>
