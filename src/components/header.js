@@ -161,6 +161,16 @@ const useStyles = makeStyles(theme => ({
       color: "rgba(133,26,29)",
     },
   },
+  menuImg: {
+    display: "block",
+    margin: "0px auto",
+    paddingTop: "10px",
+
+    width: "50%",
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: "20px",
+    },
+  },
 
   active: {
     color: "rgba(133,26,29)",
@@ -345,17 +355,7 @@ function Header(props) {
             </IconButton>
           </div>
           <ListItem>
-            <img
-              id="menu"
-              src={menu}
-              alt="img"
-              style={{
-                display: "block",
-                margin: "0px auto",
-                width: "50%",
-                paddingTop: "10px",
-              }}
-            />
+            <img id="menu" src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
           <Link
             to="/deu#home"
@@ -423,17 +423,7 @@ function Header(props) {
             </ListItem>
           </Link>
           <ListItem>
-            <img
-              id="menu"
-              src={menu}
-              alt="img"
-              style={{
-                display: "block",
-                margin: "0px auto",
-                paddingTop: "10px",
-                width: "50%",
-              }}
-            />
+            <img id="menu" src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
 
           <div style={{ margin: "0 auto", paddingLeft: "2vw" }}>
