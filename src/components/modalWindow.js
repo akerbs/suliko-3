@@ -161,7 +161,7 @@ const ModalWindow = props => {
         }
       )
       if (response.ok) {
-        alert("Successful!!!Pls check your email :-)")
+        alert("Thank You!!! We will contact you soon :-)")
         navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
