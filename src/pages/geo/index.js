@@ -159,7 +159,7 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-          <Fab
+          {/* <Fab
             size="small"
             // color="primary"
             aria-label="scrollToTopButton"
@@ -174,7 +174,7 @@ const IndexPage = props => {
             }}
           >
             <ExpandLessIcon />
-          </Fab>
+          </Fab> */}
           <Button
             // size="small"
             className="reservierenButton"

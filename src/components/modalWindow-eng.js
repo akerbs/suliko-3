@@ -162,7 +162,8 @@ const ModalWindow = props => {
       )
       if (response.ok) {
         alert("Thank You!!! We will contact You soon :-)")
-        navigate("/")
+        await props.onClose()
+        // navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -170,10 +171,6 @@ const ModalWindow = props => {
     } catch (error) {
       console.error(error)
     }
-  }
-
-  function stop() {
-    navigate("/")
   }
 
   return (
@@ -434,12 +431,11 @@ const ModalWindow = props => {
           </MuiPickersUtilsProvider>
           <IconButton
             style={{ margin: 0, padding: 0, left: "10%" }}
-            onClick={stop}
+            onClick={props.onClose}
           >
             <HighlightOffIcon />
           </IconButton>
           <Button
-            // onClick={submitHandler}
             id="submit"
             name="submit"
             type="submit"

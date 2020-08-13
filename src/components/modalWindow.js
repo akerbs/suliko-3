@@ -147,6 +147,7 @@ const ModalWindow = props => {
   const errorEmail = errors.hasOwnProperty("email") && errors["email"].message
 
   async function onSubmit(data) {
+    // alert("ein Moment, bitte")
     try {
       let response = await fetch(
         "https://suliko-mailer.herokuapp.com/reservation",
@@ -162,7 +163,9 @@ const ModalWindow = props => {
       )
       if (response.ok) {
         alert("Danke!!! Wir werden uns bald bei Ihnen melden :-)")
-        navigate("/")
+        await props.onClose()
+        // navigate("/")
+
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -170,10 +173,6 @@ const ModalWindow = props => {
     } catch (error) {
       console.error(error)
     }
-  }
-
-  function stop() {
-    navigate("/")
   }
 
   return (
@@ -210,7 +209,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Anzahl der Personen"
+                      label="Anzahl Personen"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
@@ -434,7 +433,7 @@ const ModalWindow = props => {
           </MuiPickersUtilsProvider>
           <IconButton
             style={{ margin: 0, padding: 0, left: "10%" }}
-            onClick={stop}
+            onClick={props.onClose}
           >
             <HighlightOffIcon />
           </IconButton>
