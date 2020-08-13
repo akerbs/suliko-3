@@ -204,25 +204,49 @@ function Header(props) {
 
   const listenScrollEvent = event => {
     if (window.innerWidth <= 300) {
-      if (window.scrollY < window.innerWidth * 1.16) {
+      if (window.scrollY < window.innerWidth * 1.17) {
         setColor("transparent")
       } else {
         setColor("secondary")
       }
-    } else if (window.innerWidth <= 600) {
+    } else if (window.innerWidth <= 330) {
       if (window.scrollY < window.innerWidth * 1.2) {
         setColor("transparent")
       } else {
         setColor("secondary")
       }
+    } else if (window.innerWidth <= 350) {
+      if (window.scrollY < window.innerWidth * 1.23) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 375) {
+      if (window.scrollY < window.innerWidth * 1.25) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 500) {
+      if (window.scrollY < window.innerWidth * 1.2845) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 599) {
+      if (window.scrollY < window.innerWidth * 1.33) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
     } else if (window.innerWidth <= 700) {
-      if (window.scrollY < window.innerWidth * 0.48) {
+      if (window.scrollY < window.innerWidth * 0.477) {
         setColor("transparent")
       } else {
         setColor("secondary")
       }
     } else if (window.innerWidth <= 800) {
-      if (window.scrollY < window.innerWidth * 0.5) {
+      if (window.scrollY < window.innerWidth * 0.502) {
         setColor("transparent")
       } else {
         setColor("secondary")
@@ -240,7 +264,7 @@ function Header(props) {
         setColor("secondary")
       }
     } else if (window.innerWidth <= 1400) {
-      if (window.scrollY < window.innerWidth * 0.55) {
+      if (window.scrollY < window.innerWidth * 0.57) {
         setColor("transparent")
       } else {
         setColor("secondary")
@@ -355,7 +379,7 @@ function Header(props) {
             </IconButton>
           </div>
           <ListItem>
-            <img id="menu" src={menu} alt="img" className={classes.menuImg} />
+            <img src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
           <Link
             to="/deu#home"
@@ -423,7 +447,7 @@ function Header(props) {
             </ListItem>
           </Link>
           <ListItem>
-            <img id="menu" src={menu} alt="img" className={classes.menuImg} />
+            <img src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
 
           <div style={{ margin: "0 auto", paddingLeft: "2vw" }}>
