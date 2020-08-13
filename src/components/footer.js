@@ -31,9 +31,12 @@ const Footer = props => {
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
       </Typography>
-      <Typography variant="caption" onClick={handleOpen}>
-        {" "}
-        Impressum{" "}
+      <Typography
+        variant="caption"
+        onClick={handleOpen}
+        style={{ cursor: "pointer" }}
+      >
+        Impressum
       </Typography>
 
       <Modal

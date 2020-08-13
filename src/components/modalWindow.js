@@ -92,7 +92,10 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const schema = yup.object().shape({
-  peopleCount: yup.string().nullable().required("Field is required"),
+  peopleCount: yup
+    .string()
+    .required("Field is required")
+    .matches(/^\d{1,2}$/, "enter the correct number of people"),
   date: yup.string().nullable().required("Field is required"),
   time: yup.string().nullable().required("Field is required"),
   name: yup
@@ -115,7 +118,6 @@ const schema = yup.object().shape({
 })
 
 const defaultValues = {
-  peopleCount: null,
   date: null, // Don't use empty strings ""
   time: null,
 }
@@ -204,39 +206,15 @@ const ModalWindow = props => {
                 </TimelineSeparator>
                 <TimelineContent>
                   <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">
-                      People
-                    </InputLabel>
-
-                    <Controller
-                      as={
-                        <Select>
-                          <MenuItem value={1}>1</MenuItem>
-                          <MenuItem value={2}>2</MenuItem>
-                          <MenuItem value={3}>3</MenuItem>
-                          <MenuItem value={4}>4</MenuItem>
-                          <MenuItem value={5}>5</MenuItem>
-                          <MenuItem value={6}>6</MenuItem>
-                          <MenuItem value={7}>7</MenuItem>
-                          <MenuItem value={8}>8</MenuItem>
-                          <MenuItem value={9}>9</MenuItem>
-                          <MenuItem value={10}>10</MenuItem>
-                          <MenuItem value={11}>11-15</MenuItem>
-                          <MenuItem value={16}>16-20</MenuItem>
-                          <MenuItem value={20}>20+</MenuItem>
-                        </Select>
-                      }
+                    <TextField
+                      type="text"
                       name="peopleCount"
-                      rules={{ required: "this is required" }}
-                      control={control}
-                      defaultValue=""
+                      id="peopleCount"
+                      label="Number of people"
+                      inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
-                      // inputRef={register({
-                      //   required: true,
-                      // })}
                     />
-
                     {/* {errors.peopleCount && "this is required"} */}
                   </FormControl>
                 </TimelineContent>

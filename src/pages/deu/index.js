@@ -9,9 +9,6 @@ import imgWebpV from "../../images/imgs1ovV.webp"
 import sloganImg from "../../images/slogan_eng.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
-// import Slider from "react-slick"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Zoom, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
@@ -45,16 +42,10 @@ const window = require("global/window")
 SwiperCore.use([Autoplay, Zoom, Navigation, EffectFade])
 
 const IndexPage = props => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
   const [readMoreText1, setReadMoreText1] = useState(false)
   const [readMoreText2, setReadMoreText2] = useState(false)
   const [readMoreText3, setReadMoreText3] = useState(false)
-  const [showFab, setShowFab] = useState(false)
-
-
-
-
-
 
   const handleOpen = () => {
     setOpen(true)
@@ -125,16 +116,6 @@ const IndexPage = props => {
     setReadMoreText3(false)
   }
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent)
-
-  //   document.getElementById("yourdivid").onblur = function() {
-  //     alert('blur');
-  //  }
-
-  //   return () => window.removeEventListener("scroll", listenScrollEvent)
-  // }, [])
-
   return (
     <Layout>
       <Container
@@ -178,7 +159,7 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-        <Fab
+          <Fab
             size="small"
             // color="primary"
             aria-label="scrollToTopButton"
@@ -212,24 +193,11 @@ const IndexPage = props => {
           <ModalWindow onClose={handleClose} open={open} />
           <br /> <br />
           <Container id="home-text">
-            <Typography
-              variant="h6"
-              data-sal="zoom-in"
-              data-sal-delay="300"
-              data-sal-easing="ease"
-            >
-              Liebe Suliko-Freunde,
-            </Typography>
+            <Typography variant="h6">Liebe Suliko-Freunde,</Typography>
             <br />
             {!readMoreText2 && (
               <div>
-                <Typography
-                  id="text2Litle"
-                  variant="body1"
-                  data-sal="zoom-in"
-                  data-sal-delay="500"
-                  data-sal-easing="ease"
-                >
+                <Typography id="text2Litle" variant="body1">
                   wir sind in dieser außergewöhnlichen Zeit weiterhin für Sie da
                   und möchten unsere wunderschöne Stadt mit authentisch
                   georgischer Küche verwöhnen. Essen Sie zu unseren regulären
@@ -260,8 +228,8 @@ const IndexPage = props => {
                   Bestellmenükarte an.
                   <br />
                   <br />
-                  <Link
-                    to={"/Speisekarte.pdf"}
+                  <a
+                    href={"/Speisekarte.pdf"}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
@@ -274,7 +242,7 @@ const IndexPage = props => {
                     >
                       Bestellmenükarte
                     </Button>
-                  </Link>
+                  </a>
                   <br />
                   <br />
                   In dieser finden Sie die traditionelle Vielfalt der
@@ -292,8 +260,8 @@ const IndexPage = props => {
                   für die Georgien so bekannt ist.
                   <br />
                   <br />
-                  <Link
-                    to={"/Weinkarte.pdf"}
+                  <a
+                    href={"/Weinkarte.pdf"}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
@@ -306,7 +274,7 @@ const IndexPage = props => {
                     >
                       Weinkarte
                     </Button>
-                  </Link>
+                  </a>
                   <br />
                   <br />
                   Lieferungen & Abholungen:
@@ -331,7 +299,9 @@ const IndexPage = props => {
           <Container id="slider">
             <Swiper
               spaceBetween={1}
-              slidesPerView={window.innerWidth <= 600 ? 1 : (window.innerWidth <= 900 ? 2 : 3)}
+              slidesPerView={
+                window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3
+              }
               autoplay
               zoom
               loop
@@ -356,25 +326,12 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
-            <img
-              data-sal="zoom-in"
-              data-sal-delay="300"
-              data-sal-easing="ease"
-              src={sloganImg}
-              alt="slogan"
-              className="slogan"
-            />
+            <img src={sloganImg} alt="slogan" className="slogan" />
             <br />
 
             {!readMoreText1 && (
               <div>
-                <Typography
-                  id="text1Litle"
-                  variant="body1"
-                  data-sal="zoom-in"
-                  data-sal-delay="500"
-                  data-sal-easing="ease"
-                >
+                <Typography id="text1Litle" variant="body1">
                   Herzlich willkommen in unserem Restaurant Suliko. Bei uns
                   werden Sie im richtigen Sinne des Wortes mit leckerem Essen,
                   angenehmen Ambiente und georgischer Gastfreundlichkeit
