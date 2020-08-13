@@ -35,7 +35,7 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
-import footer from "../../images/footer.png"
+import menu from "../../images/menu.png"
 import Fab from "@material-ui/core/Fab"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
@@ -49,6 +49,13 @@ const IndexPage = props => {
   const [readMoreText1, setReadMoreText1] = useState(false)
   const [readMoreText2, setReadMoreText2] = useState(false)
   const [readMoreText3, setReadMoreText3] = useState(false)
+  const [showFab, setShowFab] = useState(false)
+
+
+
+
+
+
   const handleOpen = () => {
     setOpen(true)
   }
@@ -171,7 +178,7 @@ const IndexPage = props => {
           {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
         </Container>
         <Container id="center">
-          <Fab
+        <Fab
             size="small"
             // color="primary"
             aria-label="scrollToTopButton"
@@ -324,7 +331,7 @@ const IndexPage = props => {
           <Container id="slider">
             <Swiper
               spaceBetween={1}
-              slidesPerView={window.innerWidth <= 600 ? 1 : 2}
+              slidesPerView={window.innerWidth <= 600 ? 1 : (window.innerWidth <= 900 ? 2 : 3)}
               autoplay
               zoom
               loop
@@ -533,7 +540,7 @@ const IndexPage = props => {
           <br /> <br />
           <img
             id="menu"
-            src={footer}
+            src={menu}
             alt="img"
             style={{
               display: "block",
@@ -960,7 +967,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <img
-            src={footer}
+            src={menu}
             alt="img"
             style={{ display: "block", margin: "0px auto" }}
           />
