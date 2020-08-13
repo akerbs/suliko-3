@@ -320,7 +320,15 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
-            <img src={sloganImg} alt="slogan" className="slogan" />
+            <img
+              src={sloganImg}
+              alt="slogan"
+              className="slogan"
+              style={{
+                maxHeight: "80px",
+                minHeight: "40px",
+              }}
+            />
             <br />
 
             {!readMoreText1 && (
@@ -441,7 +449,7 @@ const IndexPage = props => {
                       style={{ textDecoration: "none" }}
                     >
                       <Button size="small" color="secondary">
-                        Lesen Artikel
+                        read Article
                       </Button>
                     </Link>
                   </CardActions>
@@ -470,7 +478,7 @@ const IndexPage = props => {
                       style={{ textDecoration: "none" }}
                     >
                       <Button size="small" color="secondary">
-                        Lesen Artikel
+                        read Article
                       </Button>
                     </Link>
                   </CardActions>
