@@ -353,6 +353,7 @@ function Header(props) {
                 display: "block",
                 margin: "0px auto",
                 width: "50%",
+                paddingTop: "10px",
               }}
             />
           </ListItem>
@@ -435,7 +436,7 @@ function Header(props) {
             />
           </ListItem>
 
-          <div style={{ margin: "10px auto", paddingLeft: "2vw" }}>
+          <div style={{ margin: "0 auto", paddingLeft: "2vw" }}>
             <img src={Logo2} alt="logo" className={classes.logo2Img} />
           </div>
         </Drawer>
