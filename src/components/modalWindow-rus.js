@@ -162,7 +162,7 @@ const ModalWindow = props => {
       )
       if (response.ok) {
         alert("Спасибо!!! Мы свяжемся с Вами в ближайшее время :-)")
-        navigate("/rus")
+        navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/rus")
+    navigate("/")
   }
 
   return (
@@ -446,7 +446,7 @@ const ModalWindow = props => {
             variant="outlined"
             className={classes.reservierenBtn}
           >
-            Забронировать сейчас
+            Забронировать
           </Button>
         </form>
       </div>

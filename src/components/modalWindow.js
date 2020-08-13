@@ -162,7 +162,7 @@ const ModalWindow = props => {
       )
       if (response.ok) {
         alert("Danke!!! Wir werden uns bald bei Ihnen melden :-)")
-        navigate("/deu")
+        navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/deu")
+    navigate("/")
   }
 
   return (

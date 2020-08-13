@@ -314,12 +314,12 @@ function Header(props) {
         >
           <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
-              <Link to="/deu">
+              <Link to="/eng">
                 <img src={Logo2} alt="logo" className={classes.logo2Img} />
               </Link>
             </Hidden>
 
-            <Link to="/deu">
+            <Link to="/eng">
               <Hidden smUp>
                 <img src={Logo1} alt="logo" className={classes.logoImg} />
               </Hidden>
@@ -400,7 +400,7 @@ function Header(props) {
             <img src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
           <Link
-            to="/deu#home"
+            to="/eng#home"
             className={classes.drawerItem}
             activeClassName={classes.active}
             onClick={handleDrawerClose}
@@ -416,7 +416,7 @@ function Header(props) {
             </ListItem>
           </Link>
           <Link
-            to="/deu#about-us"
+            to="/eng#about-us"
             className={classes.drawerItem}
             activeClassName={classes.active}
             onClick={handleDrawerClose}
@@ -432,7 +432,7 @@ function Header(props) {
             </ListItem>
           </Link>
           <Link
-            to="/deu#menu"
+            to="/eng#menu"
             className={classes.drawerItem}
             activeClassName={classes.active}
             onClick={handleDrawerClose}
@@ -449,7 +449,7 @@ function Header(props) {
           </Link>
 
           <Link
-            to="/deu#contact"
+            to="/eng#contact"
             className={classes.drawerItem}
             activeClassName={classes.active}
             onClick={handleDrawerClose}

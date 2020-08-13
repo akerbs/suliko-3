@@ -23,7 +23,7 @@ import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
-import ModalWindow from "../../components/modalWindow"
+import ModalWindow from "../../components/modalWindow-eng"
 import "../index.css"
 import Button from "@material-ui/core/Button"
 import Card from "@material-ui/core/Card"
@@ -355,7 +355,7 @@ const IndexPage = props => {
                   suitable Your lifestyle.
                   <br />
                   <br />
-                  <Link to="/deu#menu" style={{ textDecoration: "none" }}>
+                  <Link to="/eng#menu" style={{ textDecoration: "none" }}>
                     <Button
                       variant="contained"
                       style={{
@@ -502,7 +502,7 @@ const IndexPage = props => {
                     color: "rgba(133,26,29)",
                   }}
                 >
-                  MenüKarte Öffnen
+                  Open menu card
                 </Button>
               </div>
             )}

@@ -23,7 +23,7 @@ import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
-import ModalWindow from "../../components/modalWindow"
+import ModalWindow from "../../components/modalWindow-rus"
 import "../index.css"
 import Button from "@material-ui/core/Button"
 import Card from "@material-ui/core/Card"
@@ -188,7 +188,7 @@ const IndexPage = props => {
               position: "fixed",
             }}
           >
-            Зарезервировать столик
+            Забронировать столик
           </Button>
           <ModalWindow onClose={handleClose} open={open} />
           <br /> <br />
@@ -235,7 +235,7 @@ const IndexPage = props => {
                         color: "rgba(133,26,29)",
                       }}
                     >
-                      Меню для заказов на дом
+                      Меню для заказа на дом
                     </Button>
                   </a>
                   <br />
@@ -355,7 +355,7 @@ const IndexPage = props => {
                   Вашему стилю жизни.
                   <br />
                   <br />
-                  <Link to="/deu#menu" style={{ textDecoration: "none" }}>
+                  <Link to="/rus#menu" style={{ textDecoration: "none" }}>
                     <Button
                       variant="contained"
                       style={{
@@ -506,7 +506,7 @@ const IndexPage = props => {
                     color: "rgba(133,26,29)",
                   }}
                 >
-                  MenüKarte Öffnen
+                  Открыть меню
                 </Button>
               </div>
             )}

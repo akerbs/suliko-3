@@ -162,7 +162,7 @@ const ModalWindow = props => {
       )
       if (response.ok) {
         alert("მადლობა !!! ცოტა ხანში დაგიკავშირდებით")
-        navigate("/geo")
+        navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
         return responseJson
@@ -173,7 +173,7 @@ const ModalWindow = props => {
   }
 
   function stop() {
-    navigate("/geo")
+    navigate("/")
   }
 
   return (
@@ -210,7 +210,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Ხალხის რაოდენობა"
+                      label="რაოდენობა"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
