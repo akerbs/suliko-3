@@ -25,6 +25,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
+import menu from "../images/menu.png"
 
 const window = require("global/window")
 
@@ -331,6 +332,7 @@ function Header(props) {
                 </ListItem>
               </a>
             </div>
+
             <CloseIcon style={{ color: "transparent" }} />
 
             <IconButton
@@ -342,6 +344,18 @@ function Header(props) {
               <CloseIcon style={{ fontSize: 30, margin: 6 }} />
             </IconButton>
           </div>
+          <ListItem>
+            <img
+              id="menu"
+              src={menu}
+              alt="img"
+              style={{
+                display: "block",
+                margin: "0px auto",
+                width: "50%",
+              }}
+            />
+          </ListItem>
           <Link
             to="/deu#home"
             className={classes.drawerItem}
@@ -407,6 +421,19 @@ function Header(props) {
               />
             </ListItem>
           </Link>
+          <ListItem>
+            <img
+              id="menu"
+              src={menu}
+              alt="img"
+              style={{
+                display: "block",
+                margin: "0px auto",
+                paddingTop: "10px",
+                width: "50%",
+              }}
+            />
+          </ListItem>
 
           <div style={{ margin: "10px auto", paddingLeft: "2vw" }}>
             <img src={Logo2} alt="logo" className={classes.logo2Img} />
