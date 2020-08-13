@@ -263,13 +263,31 @@ function Header(props) {
       } else {
         setColor("secondary")
       }
+    } else if (window.innerWidth <= 1150) {
+      if (window.scrollY < window.innerWidth * 0.55) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 1250) {
+      if (window.scrollY < window.innerWidth * 0.557) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 1300) {
+      if (window.scrollY < window.innerWidth * 0.565) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
     } else if (window.innerWidth <= 1400) {
       if (window.scrollY < window.innerWidth * 0.57) {
         setColor("transparent")
       } else {
         setColor("secondary")
       }
-    } else if (window.scrollY < window.innerWidth * 0.57) {
+    } else if (window.scrollY < window.innerWidth * 0.575) {
       setColor("transparent")
     } else {
       setColor("secondary")
