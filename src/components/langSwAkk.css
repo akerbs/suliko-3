@@ -79,5 +79,5 @@
 .link:hover {
   text-decoration: none;
   color: rgba(43, 42, 41);
-  font-weight: bold;
+  /* font-weight: bold; */
 }

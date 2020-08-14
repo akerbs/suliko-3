@@ -72,7 +72,7 @@ const useStyles = makeStyles(theme => ({
   },
   formControl: {
     margin: theme.spacing(0),
-    width: 185,
+    width: 190,
   },
   reservierenBtn: {
     color: theme.third.backgroundColor,
@@ -207,7 +207,7 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="რაოდენობა"
+                      label="პირთა რაოდენობა"
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}

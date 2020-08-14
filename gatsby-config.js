@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Restaurant Suliko, Hamburg`,
-    description: `Restaurant Suliko, Hamburg`,
-    author: `@a_kerbs`,
+    title: `restaurant-suliko.de`,
+    description: `Georgian restaurant Suliko in Hamburg, Germany`,
+    author: `@anatol_kerbs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `restaurant-suliko.de`,
+        short_name: `suliko`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `rgba(249,234,207)`,
+        theme_color: `rgba(249,234,207)`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/suliko-icon.png`, // This path is relative to the root of the site.
       },
     },
 

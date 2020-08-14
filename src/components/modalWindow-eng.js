@@ -72,7 +72,7 @@ const useStyles = makeStyles(theme => ({
   },
   formControl: {
     margin: theme.spacing(0),
-    width: 185,
+    width: 190,
   },
   reservierenBtn: {
     color: theme.third.backgroundColor,
