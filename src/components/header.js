@@ -124,7 +124,6 @@ const useStyles = makeStyles(theme => ({
     overflowX: "hidden",
     width: drawerWidth,
     height: "100vh",
-    // zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
@@ -183,15 +182,12 @@ function Header(props) {
   const handleDrawerOpen = () => {
     setOpen(true)
     document.body.style.position = "fixed"
-    // document.body.style.top = `-${window.scrollY}px`
   }
 
   const handleDrawerClose = () => {
     setOpen(false)
     const scrollY = document.body.style.top
     document.body.style.position = ""
-    // document.body.style.top = ""
-    // window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
 
   const listenScrollEvent = event => {

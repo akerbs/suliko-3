@@ -38,14 +38,11 @@ const IndexPage = props => {
   const handleOpen = () => {
     setOpen(true)
     document.body.style.position = "fixed"
-    // document.body.style.top = `-${window.scrollY}px`
   }
   const handleClose = () => {
     setOpen(false)
     const scrollY = document.body.style.top
     document.body.style.position = ""
-    // document.body.style.top = ""
-    // window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
   const settings = {
     dots: false,
@@ -140,8 +137,6 @@ const IndexPage = props => {
               autoplay
               loop
               effect="fade"
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={swiper => console.log(swiper)}
             >
               <SwiperSlide>
                 <Img
@@ -164,8 +159,6 @@ const IndexPage = props => {
               autoplay
               loop
               effect="fade"
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={swiper => console.log(swiper)}
             >
               <SwiperSlide>
                 <Img
@@ -329,8 +322,6 @@ const IndexPage = props => {
               autoplay
               zoom
               loop
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={swiper => console.log(swiper)}
               className="slider"
             >
               <SwiperSlide>
