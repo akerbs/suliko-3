@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+// import SEO from "../../components/seo"
 import sloganImg from "../../images/slogan_deu.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
@@ -168,7 +168,7 @@ const IndexPage = props => {
             </SwiperSlide>
           </Swiper>
         </Container>
-       
+
         <Container id="center">
           {/* <Fab
             size="small"
@@ -293,6 +293,23 @@ const IndexPage = props => {
                   Mo. bis So. von 12.00 bis 18.00 Uhr und nach Vereinbarung.
                   <br />
                   Unter den Lieferdiensten finden Sie uns auf Lieferando
+                  <br />
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    to="https://www.suliko-hamburg.de/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(133,26,29) ",
+                        color: "rgba(249, 234, 207)",
+                      }}
+                    >
+                      Bestellen jetzt
+                    </Button>
+                  </Link>
                   <br />
                   <br />
                   Wir freuen uns auf Sie!

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-eng"
-import SEO from "../../components/seo"
+// import SEO from "../../components/seo"
 import sloganImg from "../../images/slogan_eng.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
@@ -286,6 +286,23 @@ const IndexPage = props => {
                   Mon-Sun from 12.00 to 18.00 and by appointment.
                   <br />
                   You will find us at Lieferando (delivery service).
+                  <br />
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    to="https://www.suliko-hamburg.de/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(133,26,29) ",
+                        color: "rgba(249, 234, 207)",
+                      }}
+                    >
+                      Order now
+                    </Button>
+                  </Link>
                   <br />
                   <br />
                   We look forward to you!

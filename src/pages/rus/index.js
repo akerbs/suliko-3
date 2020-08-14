@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-rus"
-import SEO from "../../components/seo"
+// import SEO from "../../components/seo"
 
 import sloganImg from "../../images/slogan_rus.png"
 import Container from "@material-ui/core/Container"
@@ -287,6 +287,23 @@ const IndexPage = props => {
                   Пн-вс с 12.00 до 18.00 и по договорённости.
                   <br />
                   Вы найдёте нас на Lieferando (служба доставки).
+                  <br />
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    to="https://www.suliko-hamburg.de/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(133,26,29) ",
+                        color: "rgba(249, 234, 207)",
+                      }}
+                    >
+                      Заказать сейчас
+                    </Button>
+                  </Link>
                   <br />
                   <br />
                   Мы с нетерпением ждем встречи с вами!

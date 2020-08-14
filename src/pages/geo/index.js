@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-geo"
-import SEO from "../../components/seo"
+// import SEO from "../../components/seo"
 import sloganImg from "../../images/slogan_geo.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
@@ -284,6 +284,23 @@ const IndexPage = props => {
                   ორშაბათს 12.00-დან 18.00 საათამდე და დანიშვნის გზით.
                   <br />
                   თქვენ ნახავთ Lieferando (ადგილზე მიტანის სერვისს).
+                  <br />
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    to="https://www.suliko-hamburg.de/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="contained"
+                      style={{
+                        backgroundColor: "rgba(133,26,29) ",
+                        color: "rgba(249, 234, 207)",
+                      }}
+                    >
+                      შეუკვეთე ახლა
+                    </Button>
+                  </Link>
                   <br />
                   <br />
                   გელოდებით!
