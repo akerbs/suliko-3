@@ -535,7 +535,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Img
-            fluid={props.data.nemu.childImageSharp.fluid}
+            fluid={props.data.menu.childImageSharp.fluid}
             id="menu"
             alt="img"
             className="slogan"
@@ -964,7 +964,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Img
-            fluid={props.data.nemu.childImageSharp.fluid}
+            fluid={props.data.menu.childImageSharp.fluid}
             id="menu"
             alt="img"
             className="slogan"

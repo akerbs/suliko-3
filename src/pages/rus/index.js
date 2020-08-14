@@ -22,7 +22,6 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
-import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
 
 const window = require("global/window")
@@ -507,7 +506,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Img
-            fluid={props.data.nemu.childImageSharp.fluid}
+            fluid={props.data.menu.childImageSharp.fluid}
             id="menu"
             alt="img"
             className="slogan"
@@ -936,7 +935,7 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Img
-            fluid={props.data.nemu.childImageSharp.fluid}
+            fluid={props.data.menu.childImageSharp.fluid}
             id="menu"
             alt="img"
             className="slogan"
