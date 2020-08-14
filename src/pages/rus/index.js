@@ -198,11 +198,11 @@ const IndexPage = props => {
                 }}
               >
                 <Typography id="text2Big" variant="body1">
-                  Despite the extraordinary time, we stay with you and want to
-                  pamper our beautiful city with Georgian cuisine. We will be
-                  glad to see you in our restaurant! You can also order your
-                  favorite meals at home, for this we have prepared a special
-                  menu for you.
+                  Несмотря на неординарное время, мы остаёмся с Вами и хотим
+                  баловать наш прекрасный город блюдами грузинской кухни. Мы
+                  будем рады видеть Вас в нашем ресторане! Вы также можете
+                  заказать любимые блюда на дом, для этого мы подготовили для
+                  Вас специальное меню.
                   <br />
                   <br />
                   <a
