@@ -19,10 +19,6 @@ const Footer = props => {
     setOpen(false)
   }
 
-  // function stop() {
-  //   navigate("/")
-  // }
-
   return (
     <Container className="footerWrapper" style={{ paddingBottom: "70px" }}>
       <img src={Logo2} alt="logo" className="logo2Footer" />

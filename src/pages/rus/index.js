@@ -2,21 +2,13 @@ import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-rus"
 import SEO from "../../components/seo"
-import imgGif from "../../images/bgImgs.gif"
-import imgGifV from "../../images/bgImgsV.gif"
-import imgWebp from "../../images/imgs1ov.webp"
-import imgWebpV from "../../images/imgs1ovV.webp"
+
 import sloganImg from "../../images/slogan_rus.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Zoom, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
-
-import s1 from "../../images/s1.jpg"
-import s2 from "../../images/s2.jpg"
-import s3 from "../../images/s3.jpg"
-import s4 from "../../images/s4.jpg"
 
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
@@ -141,36 +133,41 @@ const IndexPage = props => {
           padding: 0,
         }}
       >
-        <SEO title="Home" />
+        {/* <SEO title="Home" /> */}
         <Container
-          id="home"
+          id="slider-first"
           style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
         >
-          <picture>
-            <source
-              media="(max-width: 599px)"
-              srcset={imgWebpV}
-              type="image/webp"
-            />
-            <source
-              media="(max-width: 599px)"
-              srcset={imgGifV}
-              type="image/gif"
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset={imgWebp}
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset={imgGif}
-              type="image/gif"
-            />
-            <img src={imgGifV} alt="georgian food" className="bgImg" />
-          </picture>
-
-          {/* <img src={bgImgsV} alt="georgian food" className={classes.bgImgs} /> */}
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            autoplay
+            loop
+            effect="fade"
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={swiper => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <Img
+                fluid={
+                  window.innerWidth <= 599
+                    ? props.data.bgV1.childImageSharp.fluid
+                    : props.data.bgH1.childImageSharp.fluid
+                }
+                alt="Suliko 1"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img
+                fluid={
+                  window.innerWidth <= 599
+                    ? props.data.bgV2.childImageSharp.fluid
+                    : props.data.bgH2.childImageSharp.fluid
+                }
+                alt="Suliko 2"
+              />
+            </SwiperSlide>
+          </Swiper>
         </Container>
         <Container id="center">
           {/* <Fab
@@ -319,16 +316,28 @@ const IndexPage = props => {
               className="slider"
             >
               <SwiperSlide>
-                <img src={s1} alt="img1" />
+                <Img
+                  fluid={props.data.s1.childImageSharp.fluid}
+                  alt="Suliko img1"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={s2} alt="img2" />
+                <Img
+                  fluid={props.data.s2.childImageSharp.fluid}
+                  alt="Suliko img2"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={s3} alt="img3" />
+                <Img
+                  fluid={props.data.s3.childImageSharp.fluid}
+                  alt="Suliko img3"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={s4} alt="img4" />
+                <Img
+                  fluid={props.data.s4.childImageSharp.fluid}
+                  alt="Suliko img4"
+                />
               </SwiperSlide>
             </Swiper>
           </Container>
@@ -988,6 +997,34 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    bgH1: file(relativePath: { eq: "bgH1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bgH2: file(relativePath: { eq: "bgH2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     s1: file(relativePath: { eq: "s1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {

@@ -28,7 +28,6 @@ import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import TextField from "@material-ui/core/TextField"
-import bgPatternImg from "../images/bgPatternImg.png"
 import { useForm, Controller } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers"
@@ -52,7 +51,7 @@ const useStyles = makeStyles(theme => ({
 
     maxHeight: " 100vh",
     width: 320,
-    // backgroundImage: `url(${bgPatternImg}) `,
+
     backgroundColor: "rgba(249,234,207)",
     // backgroundColor: theme.palette.background.paper,
     border: "2px solid rgba(133,26,29)",
