@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-eng"
 // import SEO from "../../components/seo"
-import sloganImg from "../../images/slogan_eng.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -22,7 +21,6 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
-import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
 
 const window = require("global/window")
@@ -337,16 +335,12 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
-            <img
-              src={sloganImg}
+            <Img
+              fluid={props.data.slogan_eng.childImageSharp.fluid}
               alt="slogan"
               className="slogan"
-              style={{
-                maxHeight: "75px",
-                minHeight: "30px",
-              }}
+              style={{ maxHeight: "75px", minHeight: "30px" }}
             />
-            <br />
 
             {!readMoreText1 && (
               <div>
@@ -503,10 +497,11 @@ const IndexPage = props => {
             </Grid>
           </Container>
           <br /> <br />
-          <img
+          <Img
+            fluid={props.data.nemu.childImageSharp.fluid}
             id="menu"
-            src={menu}
             alt="img"
+            className="slogan"
             style={{
               display: "block",
               margin: "0px auto",
@@ -931,10 +926,16 @@ const IndexPage = props => {
             )}
           </Container>
           <br /> <br />
-          <img
-            src={menu}
+          <Img
+            fluid={props.data.nemu.childImageSharp.fluid}
+            id="menu"
             alt="img"
-            style={{ display: "block", margin: "0px auto" }}
+            className="slogan"
+            style={{
+              display: "block",
+              margin: "0px auto",
+              paddingTop: "150px",
+            }}
           />
           <br /> <br />
           <br />
@@ -1038,6 +1039,21 @@ export const query = graphql`
       }
     }
     s4: file(relativePath: { eq: "s4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    slogan_eng: file(relativePath: { eq: "slogan_eng.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    menu: file(relativePath: { eq: "menu.png" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid

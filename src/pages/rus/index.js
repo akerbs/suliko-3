@@ -337,8 +337,8 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
-            <img
-              src={sloganImg}
+            <Img
+              fluid={props.data.slogan_rus.childImageSharp.fluid}
               alt="slogan"
               className="slogan"
               style={{ maxHeight: "75px", minHeight: "30px" }}
@@ -506,10 +506,11 @@ const IndexPage = props => {
             </Grid>
           </Container>
           <br /> <br />
-          <img
+          <Img
+            fluid={props.data.nemu.childImageSharp.fluid}
             id="menu"
-            src={menu}
             alt="img"
+            className="slogan"
             style={{
               display: "block",
               margin: "0px auto",
@@ -934,10 +935,16 @@ const IndexPage = props => {
             )}
           </Container>
           <br /> <br />
-          <img
-            src={menu}
+          <Img
+            fluid={props.data.nemu.childImageSharp.fluid}
+            id="menu"
             alt="img"
-            style={{ display: "block", margin: "0px auto" }}
+            className="slogan"
+            style={{
+              display: "block",
+              margin: "0px auto",
+              paddingTop: "150px",
+            }}
           />
           <br /> <br />
           <br />
@@ -1041,6 +1048,21 @@ export const query = graphql`
       }
     }
     s4: file(relativePath: { eq: "s4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    slogan_rus: file(relativePath: { eq: "slogan_rus.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    menu: file(relativePath: { eq: "menu.png" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
