@@ -137,7 +137,7 @@ const IndexPage = props => {
           id="slider-first"
           style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
         >
-          {window.innerWidth <= 599 ? (
+          {window.innerWidth <= 599 && (
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -160,7 +160,8 @@ const IndexPage = props => {
                 />
               </SwiperSlide>
             </Swiper>
-          ) : (
+          )}
+          {window.innerWidth >= 600 && (
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
