@@ -331,8 +331,8 @@ const IndexPage = props => {
               alt="slogan"
               className="slogan"
               style={{
-                maxHeight: "80px",
-                minHeight: "40px",
+                maxHeight: "75px",
+                minHeight: "30px",
               }}
             />
             <br />
