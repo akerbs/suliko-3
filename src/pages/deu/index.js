@@ -312,6 +312,7 @@ const IndexPage = props => {
                   <br />
                   Unter den Lieferdiensten finden Sie uns auf Lieferando
                   <br />
+                  <br />
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"

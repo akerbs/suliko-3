@@ -208,10 +208,10 @@ const IndexPage = props => {
             {!readMoreText2 && (
               <div>
                 <Typography id="text2Litle" variant="body1">
-                  Despite the extraordinary time, we stay with you and want
-                  pamper our beautiful city with Georgian cuisine. we we will be
-                  glad to see you in our restaurant! you also can order your
-                  favorite meals at home, for this we have prepared ...
+                  Despite the extraordinary time, we stay with you and want to
+                  pamper our beautiful city with Georgian cuisine. We will be
+                  glad to see you in our restaurant! You can also order your
+                  favorite meals at home, for this we have prepared ..
                 </Typography>
                 <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
                   ...read more
@@ -251,17 +251,17 @@ const IndexPage = props => {
                   <br />
                   <br />
                   In this menu you will find a variety of traditional Georgian
-                  cuisine for every taste.
+                  dishes for every taste.
                   <br />
-                  Special offer for those who want to get acquainted with the
+                  A special offer for those who want to get acquainted with the
                   taste of Georgian cuisine - Georgian supra (table from 2
-                  people)
+                  people).
                   <br />
                   <br />
                   Speaking of wine, take a look at our wine list. Here you will
-                  find the most famous Georgian wines, including unfiltered
-                  amphora wines prepared according to old Georgian recipes,
-                  which Georgia is so famous for.
+                  find the most famous Georgian wines, including those prepared
+                  according to old Georgian recipes, unfiltered amphora wines
+                  for which Georgia is so famous.
                   <br />
                   <br />
                   <a
@@ -286,6 +286,7 @@ const IndexPage = props => {
                   Mon-Sun from 12.00 to 18.00 and by appointment.
                   <br />
                   You will find us at Lieferando (delivery service).
+                  <br />
                   <br />
                   <Link
                     target="_blank"
@@ -375,13 +376,12 @@ const IndexPage = props => {
                 <Typography id="text1Litle" variant="body1">
                   Welcome to our restaurant Suliko. Here you can pamper yourself
                   with delicious food, pleasant atmosphere and Georgian
-                  hospitality. Take a look at our menu and we are happy to we
-                  will answer your questions. Here you will find a wide
-                  selection varied dishes, good wine and fresh Georgian bread.
-                  we we will be happy to help you arrange a celebration, an
-                  evening of meeting with friends, family or romantic evening
-                  for two. we we will prepare for you an individual offer
-                  suitable Your lifestyle ...
+                  hospitality. Take a look at our menu and we will be happy to
+                  answer your questions. Here you will find a wide selection of
+                  varied dishes, good wine and fresh Georgian bread. We will be
+                  happy to help you arrange a holiday, an evening meeting with
+                  friends, a family or romantic evening for two. We will prepare
+                  for you an individual offer that suits your lifestyle ...
                 </Typography>
                 <p onClick={showTex1MoreHandler} style={{ cursor: "pointer" }}>
                   ...read more
@@ -393,13 +393,12 @@ const IndexPage = props => {
                 <Typography id="text1Big" variant="body1">
                   Welcome to our restaurant Suliko. Here you can pamper yourself
                   with delicious food, pleasant atmosphere and Georgian
-                  hospitality. Take a look at our menu and we are happy to we
-                  will answer your questions. Here you will find a wide
-                  selection varied dishes, good wine and fresh Georgian bread.
-                  we we will be happy to help you arrange a celebration, an
-                  evening of meeting with friends, family or romantic evening
-                  for two. we we will prepare for you an individual offer
-                  suitable Your lifestyle.
+                  hospitality. Take a look at our menu and we will be happy to
+                  answer your questions. Here you will find a wide selection of
+                  varied dishes, good wine and fresh Georgian bread. We will be
+                  happy to help you arrange a holiday, an evening meeting with
+                  friends, a family or romantic evening for two. We will prepare
+                  for you an individual offer that suits your lifestyle.
                   <br />
                   <br />
                   <Link to="/eng#menu" style={{ textDecoration: "none" }}>
@@ -414,14 +413,15 @@ const IndexPage = props => {
                     </Button>
                   </Link>
                   <br />
-                  <br /> Georgian cuisine is one of the oldest and in the world.
-                  A Georgian feast with a wide variety of dishes and drinks
-                  under the leadership of "Toastmaster" (selected host of the
-                  table) is a real celebration with friends With the opening of
-                  our restaurant in the heart of Hamburg, we want to convey to
-                  you the feeling of hospitality and celebration. <br />
-                  Feel at home with us and enjoy an extensive menu of food and
-                  drinks. Here is a small presentation of Georgian dishes:
+                  <br /> Georgian cuisine is one of the oldest in the world. A
+                  Georgian feast with a wide variety of dishes and drinks under
+                  the leadership of "Tamada" (the chosen host of the table) is a
+                  real celebration with friends. With the opening of our
+                  restaurant in the heart of Hamburg, we want to convey to you a
+                  sense of hospitality and celebration. <br />
+                  Feel at home with us and enjoy our extensive food and beverage
+                  menu. Here is a small presentation of Georgian dishes:
+                  <br />
                   <br /> Cold appetizers: <br />
                   Typical snacks are thin slices of eggplant stuffed with
                   Badrijani walnuts and various Phali - spinach, beetroot or
@@ -436,17 +436,17 @@ const IndexPage = props => {
                   cuisine. This is a delicious cheese-filled flatbread that is
                   most often used in Georgia as a snack between meals. Lobio is
                   a traditional Georgian bean dish, often used as a side dish or
-                  as a snack. Mchadi corn tortilla, eaten in Western Georgia as
+                  as a snack. Mchadi corn tortilla, used in Western Georgia as
                   bread, with Sulguni cheese (cheese from the Mingrelia region)
                   and other types of cheese such as Imeruli (cheese from the
-                  Imereti region) and Guda (mountain cheese) Cheese is often
+                  Imereti region) and Guda (mountain cheese). Cheese is often
                   served with a main course.
                   <br />
                   <br /> Desserts:
-                  <br /> Several desserts are served as a dessert, including
+                  <br /> Several desserts are served as a dessert, including a
                   popular Georgian sweet called Churchkhela, made from peeled
                   walnuts and hazelnuts strung on a string in grape juice
-                  thickened with corn and wheat flour
+                  thickened with corn and wheat flour.
                   <br />
                   <br />
                   Wines: <br />
