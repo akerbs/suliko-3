@@ -1,7 +1,6 @@
 import React from "react"
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
-import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Logo2 from "../images/Logo2.png"
 import { Link } from "gatsby"
 import "./footer.css"
@@ -35,13 +34,7 @@ const Footer = props => {
         Impressum
       </Typography>
 
-      <Modal
-        className="modalWrapper"
-        onClose={handleClose}
-        open={open}
-        // onClose={props.onClose}
-        // open={props.open}
-      >
+      <Modal className="modalWrapper" onClose={handleClose} open={open}>
         <div className="paper">
           <IconButton
             style={{ margin: 0, padding: 0, marginLeft: "220px" }}
@@ -156,14 +149,7 @@ const Footer = props => {
           </Typography>
         </div>
       </Modal>
-      {/* <Breadcrumbs className="breadcrumbs">
-        <Link href="#" className="breadcrumbsLink">
-          Impressum
-        </Link>
-        <Link href="#" className="breadcrumbsLink">
-          Datenschutz
-        </Link>
-      </Breadcrumbs> */}
+
       {/* <Typography variant="caption" className={classes.copyrightLinks}>
         Designed by{" "}
         <Link

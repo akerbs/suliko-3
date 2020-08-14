@@ -14,7 +14,6 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import { Link } from "gatsby"
 import Logo1Plus2 from "../images/Logo1Plus2.gif"
 import Logo1 from "../images/Logo1.gif"
-// import Logo1x from "../images/logo2.gif"
 import Logo2 from "../images/Logo2.png"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
@@ -23,8 +22,6 @@ import CloseIcon from "@material-ui/icons/Close"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk-eng"
-import Button from "@material-ui/core/Button"
-import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
 import menu from "../images/menu.png"
 
 const window = require("global/window")
@@ -127,7 +124,6 @@ const useStyles = makeStyles(theme => ({
     overflowX: "hidden",
     width: drawerWidth,
     height: "100vh",
-    // zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
@@ -196,11 +192,6 @@ function Header(props) {
     // document.body.style.top = ""
     // window.scrollTo(0, parseInt(scrollY || "0") * -1)
   }
-
-  // const handleMenuLink = () => {
-  //   navigate("/deu/menu")
-  //   setOpen(false)
-  // }
 
   const listenScrollEvent = event => {
     if (window.innerWidth <= 300) {
@@ -334,7 +325,6 @@ function Header(props) {
               <IconButton
                 size="small"
                 aria-label="open drawer"
-                // edge="end"
                 onClick={handleDrawerOpen}
                 className={(clsx(open && classes.hide), classes.openDrawerBtn)}
               >
@@ -349,7 +339,6 @@ function Header(props) {
           transitionDuration={{ enter: 500, exit: 500 }}
           anchor="top"
           open={open}
-          // className={classes.drawer}
           classes={{
             paper: classes.drawerPaper,
             drawer: classes.drawer,
@@ -362,7 +351,6 @@ function Header(props) {
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/restaurant.suliko.hamburg"
                 className={classes.mediaLink}
-                //  onClick="this.blur()"
               >
                 <ListItem button key={"facebook"} className={classes.mediaIcon}>
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
@@ -373,7 +361,6 @@ function Header(props) {
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/suliko_hamburg_"
                 className={classes.mediaLink}
-                //  onClick="this.blur()"
               >
                 <ListItem
                   button

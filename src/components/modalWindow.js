@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-// import "./layout.css"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import {
@@ -23,20 +22,13 @@ import PhoneIcon from "@material-ui/icons/Phone"
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
 import PersonIcon from "@material-ui/icons/Person"
 import ScheduleIcon from "@material-ui/icons/Schedule"
-import InputLabel from "@material-ui/core/InputLabel"
-import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
-import Select from "@material-ui/core/Select"
 import TextField from "@material-ui/core/TextField"
-
 import { useForm, Controller } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers"
-import { navigate } from "gatsby"
 import IconButton from "@material-ui/core/IconButton"
 import HighlightOffIcon from "@material-ui/icons/HighlightOff"
-import CancelIcon from "@material-ui/icons/Cancel"
-import CloseIcon from "@material-ui/icons/Close"
 
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
@@ -49,12 +41,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       overflowY: "scroll",
     },
-
     maxHeight: " 100vh",
     width: 320,
-
     backgroundColor: "rgba(249,234,207)",
-    // backgroundColor: theme.palette.background.paper,
     border: "2px solid rgba(133,26,29)",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(3, 0, 1, 0),
@@ -136,7 +125,6 @@ const ModalWindow = props => {
     resolver: yupResolver(schema),
     defaultValues,
   })
-  // const [selectedDate, handleDateChange] = React.useState(new Date())
 
   const errorPeopleCount =
     errors.hasOwnProperty("peopleCount") && errors["peopleCount"].message
@@ -214,11 +202,9 @@ const ModalWindow = props => {
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
                     />
-                    {/* {errors.peopleCount && "this is required"} */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
-
               <TimelineItem className={classes.timelineItem}>
                 <TimelineOppositeContent
                   style={{ flex: 0 }}
@@ -248,30 +234,6 @@ const ModalWindow = props => {
                       name="date"
                       placeholder="Datum"
                     />
-
-                    {/* <DatePicker
-                    
-                      value={selectedDate}
-                      onChange={handleDateChange}
-  
-                    /> */}
-                    {/* <DatePicker
-                      id="eventDate"
-                      name="eventDate"
-                      label="Event date"
-                      format="dd.MM.yyyy"
-                      disablePast
-                      margin="normal"
-                      disableToolbar
-                      fullWidth
-                      value={values.eventDate}
-                      onChange={handleDateChange}
-                      KeyboardButtonProps={{
-                        "aria-label": "change date",
-                      }}
-                      error={errors.hasOwnProperty("eventDate")}
-                      helperText={errors.eventDate && errors.eventDate.message}
-                    /> */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
@@ -291,14 +253,11 @@ const ModalWindow = props => {
                     <Controller
                       as={
                         <TimePicker
-                          // fullWidth
                           autoOk
                           ampm={false}
                           style={{ marginTop: 15 }}
-                          // inputVariant="outlined"
                           variant="inline"
                           ampm={false}
-                          // format="hh:mm"
                           error={!!errorTime}
                           helperText={errorTime}
                         />
@@ -307,30 +266,6 @@ const ModalWindow = props => {
                       name="time"
                       placeholder="Zeit"
                     />
-                    {/* <TimePicker
-                      name="time"
-                      id="time"
-                      value={selectedDate}
-                      onChange={handleDateChange}
-                      ampm={false}
-                      style={{ marginTop: 15 }}
-                      autoOk={true}
-                    /> */}
-                    {/* <TimePicker
-                      id="startTime"
-                      name="startTime"
-                      label="Starts at"
-                      margin="normal"
-                      ampm={false}
-                      fullWidth
-                      value={values.startTime}
-                      onChange={handleStartTime}
-                      KeyboardButtonProps={{
-                        "aria-label": "change start time",
-                      }}
-                      error={errors.hasOwnProperty("startTime")}
-                      helperText={errors.startTime && errors.startTime.message}
-                    /> */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
@@ -356,16 +291,6 @@ const ModalWindow = props => {
                       error={!!errorName}
                       helperText={errorName}
                     />
-                    {/* {errors.fullname && "fullname is required"} */}
-                    {/* {errors.fullname &&
-                      errors.fullname.type === "required" &&
-                      "this is required"}
-                    {errors.fullname &&
-                      errors.fullname.type === "minLength" &&
-                      "Enter a correct name"}
-                    {errors.fullname &&
-                      errors.fullname.type === "maxLength" &&
-                      "Enter a correct name"} */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
@@ -391,12 +316,6 @@ const ModalWindow = props => {
                       error={!!errorPhone}
                       helperText={errorPhone}
                     />
-                    {/* {errors.phone &&
-                      errors.phone.type === "required" &&
-                      "this is required"}
-                    {errors.phone &&
-                      errors.phone.type === "pattern" &&
-                      "Enter a correct phone number"} */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
@@ -420,12 +339,6 @@ const ModalWindow = props => {
                       error={!!errorEmail}
                       helperText={errorEmail}
                     />
-                    {/* {errors.email &&
-                      errors.email.type === "required" &&
-                      "this is required"}
-                    {errors.email &&
-                      errors.email.type === "pattern" &&
-                      "Enter a correct phone number"} */}
                   </FormControl>
                 </TimelineContent>
               </TimelineItem>
@@ -438,7 +351,6 @@ const ModalWindow = props => {
             <HighlightOffIcon />
           </IconButton>
           <Button
-            // onClick={submitHandler}
             id="submit"
             name="submit"
             type="submit"

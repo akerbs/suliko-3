@@ -25,29 +25,9 @@ const LangSwAkk = () => {
               Eng
             </Link>
           </div>
-
-          {/* <ul class="list">
-            <li class="listItem">rus</li>
-            <li class="listItem">geo</li>
-            <li class="listItem">eng</li>
-          </ul> */}
         </div>
       </div>
     </div>
-    // <div class="accordion">
-    //   {/* <Typography align="center" variant="body2"> */}
-    //   <section class="accordionItem">
-    //     deu
-    //     <div class="accordionItemContent">
-    //       <ul className={classes.list}>
-    //         <li className={classes.listItem}>rus</li>
-    //         <li className={classes.listItem}>geo</li>
-    //         <li className={classes.listItem}>eng</li>
-    //       </ul>
-    //     </div>
-    //   </section>
-    //   {/* </Typography> */}
-    // </div>
   )
 }
 

@@ -8,7 +8,6 @@ import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Zoom, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
-
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
@@ -24,9 +23,6 @@ import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
 import menu from "../../images/menu.png"
-import Fab from "@material-ui/core/Fab"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import { Helmet } from "react-helmet"
 
 const window = require("global/window")
@@ -167,32 +163,13 @@ const IndexPage = props => {
           </Swiper>
         </Container>
         <Container id="center">
-          {/* <Fab
-            size="small"
-            // color="primary"
-            aria-label="scrollToTopButton"
-            onClick={() => scrollTo("#home")}
-            style={{
-              position: "fixed",
-              bottom: "3.5vh",
-              left: "3%",
-              zIndex: 999,
-              backgroundColor: "rgba(249,234,207)",
-              color: "black",
-            }}
-          >
-            <ExpandLessIcon />
-          </Fab> */}
           <Button
-            // size="small"
             className="reservierenButton"
-            // color="primary"
             onClick={handleOpen}
             variant="contained"
             style={{
               backgroundColor: "rgba(133,26,29) ",
               color: "rgba(249, 234, 207)",
-              // zIndex: "999",
               position: "fixed",
             }}
           >
@@ -975,7 +952,6 @@ const IndexPage = props => {
                 rel="noopener noreferrer"
                 href="tel:+4904049201953"
                 className="phoneEmailLink"
-                //  onClick="this.blur()"
               >
                 <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
               </a>
@@ -985,7 +961,6 @@ const IndexPage = props => {
                 rel="noopener noreferrer"
                 href="mailto:info@restaurant-suliko.de"
                 className="phoneEmailLink"
-                //  onClick="this.blur()"
               >
                 <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
               </a>
@@ -1002,6 +977,7 @@ const IndexPage = props => {
         <Container id="map" className="mapWrapper" maxWidth="lg">
           <iframe
             className="map"
+            title="map"
             src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
           ></iframe>
         </Container>
