@@ -130,34 +130,50 @@ const IndexPage = props => {
           id="slider-first"
           style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
         >
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            autoplay
-            loop
-            effect="fade"
-          >
-            <SwiperSlide>
-              <Img
-                fluid={
-                  window.innerWidth <= 599
-                    ? props.data.bgV1.childImageSharp.fluid
-                    : props.data.bgH1.childImageSharp.fluid
-                }
-                alt="Suliko 1"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img
-                fluid={
-                  window.innerWidth <= 599
-                    ? props.data.bgV2.childImageSharp.fluid
-                    : props.data.bgH2.childImageSharp.fluid
-                }
-                alt="Suliko 2"
-              />
-            </SwiperSlide>
-          </Swiper>
+          {window.innerWidth <= 599 && (
+            <Swiper
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay
+              loop
+              effect="fade"
+            >
+              <SwiperSlide>
+                <Img
+                  fluid={props.data.bgV1.childImageSharp.fluid}
+                  alt="Suliko 1"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Img
+                  fluid={props.data.bgV2.childImageSharp.fluid}
+                  alt="Suliko 2"
+                />
+              </SwiperSlide>
+            </Swiper>
+          )}
+          {window.innerWidth >= 600 && (
+            <Swiper
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay
+              loop
+              effect="fade"
+            >
+              <SwiperSlide>
+                <Img
+                  fluid={props.data.bgH1.childImageSharp.fluid}
+                  alt="Suliko 1"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Img
+                  fluid={props.data.bgH2.childImageSharp.fluid}
+                  alt="Suliko 2"
+                />
+              </SwiperSlide>
+            </Swiper>
+          )}
         </Container>
         <Container id="center">
           <Button
