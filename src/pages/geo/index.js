@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout-geo"
 // import SEO from "../../components/seo"
-
+import sloganImg from "../../images/slogan_geo.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -22,6 +22,7 @@ import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../../images/zeit.png"
 import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
+import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
 
 const window = require("global/window")
@@ -335,8 +336,8 @@ const IndexPage = props => {
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
-            <Img
-              fluid={props.data.slogan_geo.childImageSharp.fluid}
+            <img
+              src={sloganImg}
               alt="slogan"
               className="slogan"
               style={{ maxHeight: "75px", minHeight: "30px" }}
@@ -503,11 +504,10 @@ const IndexPage = props => {
             </Grid>
           </Container>
           <br /> <br />
-          <Img
-            fluid={props.data.menu.childImageSharp.fluid}
+          <img
             id="menu"
+            src={menu}
             alt="img"
-            className="slogan"
             style={{
               display: "block",
               margin: "0px auto",
@@ -932,16 +932,10 @@ const IndexPage = props => {
             )}
           </Container>
           <br /> <br />
-          <Img
-            fluid={props.data.menu.childImageSharp.fluid}
-            id="menu"
+          <img
+            src={menu}
             alt="img"
-            className="slogan"
-            style={{
-              display: "block",
-              margin: "0px auto",
-              paddingTop: "150px",
-            }}
+            style={{ display: "block", margin: "0px auto" }}
           />
           <br /> <br />
           <br />
@@ -1045,21 +1039,6 @@ export const query = graphql`
       }
     }
     s4: file(relativePath: { eq: "s4.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
-    slogan_geo: file(relativePath: { eq: "slogan_geo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    menu: file(relativePath: { eq: "menu.png" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
