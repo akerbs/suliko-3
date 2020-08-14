@@ -36,6 +36,7 @@ import menu from "../../images/menu.png"
 import Fab from "@material-ui/core/Fab"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
+import { Helmet } from "react-helmet"
 
 const window = require("global/window")
 
