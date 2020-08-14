@@ -125,9 +125,11 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <html lang="ge" />
-      <title>restaurant-suliko.de</title>
-      <description>ქართული რესტორანი სულიკო ჰამბურგში, გერმანია</description>
+      <Helmet>
+        <html lang="ge" />
+        <title>restaurant-suliko.de</title>
+        <description>ქართული რესტორანი სულიკო ჰამბურგში, გერმანია</description>
+      </Helmet>
       <Container
         id="main"
         style={{
