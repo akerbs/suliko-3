@@ -279,7 +279,7 @@ const IndexPage = props => {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    to="https://www.suliko-hamburg.de/"
+                    to="https://www.lieferando.de/suliko"
                     style={{ textDecoration: "none" }}
                   >
                     <Button

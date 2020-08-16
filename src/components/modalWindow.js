@@ -251,6 +251,7 @@ const ModalWindow = props => {
                           style={{ marginTop: 15 }}
                           variant="inline"
                           ampm={false}
+                          format="HH:mm"
                           error={!!errorTime}
                           helperText={errorTime}
                         />
