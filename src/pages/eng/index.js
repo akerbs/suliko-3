@@ -543,20 +543,19 @@ const IndexPage = props => {
               <div>
                 <Typography id="text1Big" variant="body1">
                   <Typography align="center" variant="h5">
-                    Suppen / Супы{" "}
+                    Suppen / Супы
                   </Typography>
                   <br />
                   1. Hartcho - pikante Kalbfleischsuppe mit Reis, Tomaten,
                   Gewürzen 5,50 € <br />
-                  Суп Харчо -грузинский суп из телятины с рисом помидорами и
+                  Суп Харчо - грузинский суп из телятины с рисом помидорами и
                   зеленью
                   <br /> <br />
                   2. Tschichirtma - Hühnerfleisch, Eier und frische Kräuter €
                   5,90 <br />
                   Чихиртма - грузинский густой куриный суп <br /> <br />
                   <Typography align="center" variant="h5">
-                    {" "}
-                    Salate / Салаты{" "}
+                    Salate / Салаты
                   </Typography>
                   <br />
                   3. Kaukasische Gemüseplatte mit Feta - große Gemüseplatte,
@@ -572,7 +571,7 @@ const IndexPage = props => {
                   грецкими орехами (вег) <br /> <br />
                   6. Hähnchensalat - pikanter Hähnchenfleischsalat mit
                   Mayonnaise, Erbsen und Gewürzen 8,50 € <br />
-                  Куриный салат по-грузински с майонезом и приправами <br />{" "}
+                  Куриный салат по-грузински с майонезом и приправами <br />
                   <br />
                   <Typography align="center" variant="h5">
                     Kalte Vorspeisen / Холодные закуски
@@ -580,7 +579,7 @@ const IndexPage = props => {
                   <br />
                   8. Spinat-Pchali - Blattspinatbällchen mit Walnusspaste,
                   Koriander und Gewürzen (veg.) 7,50 € <br />
-                  Шпинат-Пхали - шпинат с грецкими орехами и специями (вег){" "}
+                  Шпинат-Пхали - шпинат с грецкими орехами и специями (вег)
                   <br />
                   <br />
                   9. Rote-Bete-Pchali - Bällchen aus Rote-Bete-Püree mit
@@ -604,14 +603,13 @@ const IndexPage = props => {
                   13. Mjawe Mix – eingelegtes Gemüse nach georgischer Art (veg.)
                   6,50 €
                   <br />
-                  Мжаве ассорти - aссорти из грузинскиx солений (вег) <br />{" "}
+                  Мжаве ассорти - aссорти из грузинскиx солений (вег) <br />
                   <br />
                   Zu Suppen, Salaten und Vorspeisen wird hausgemachtes Brot
                   gereicht.
                   <br /> <br />
                   <Typography align="center" variant="h5">
-                    {" "}
-                    Vorspeisen /Горячие закуски{" "}
+                    Vorspeisen /Горячие закуски
                   </Typography>
                   <br />
                   15. Grillgemüse - saftig gegrilltes Gemüse 7,90 € <br />
@@ -620,11 +618,11 @@ const IndexPage = props => {
                   Лобио - тушёная красная фасоль со специями <br /> <br />
                   17. Dolma - Weintraubenblätter gefüllt mit Rinderhack,
                   Zwiebeln und Kräutern 6,50 € <br />
-                  Долма по-кавказски с говядиной в виноградных листьях <br />{" "}
+                  Долма по-кавказски с говядиной в виноградных листьях <br />
                   <br />
                   18."Soko kezse" - Champignons aus dem Ofen mit Käse gefüllt
                   und überbacken 5,60 € <br />
-                  Грибы на кеци - Шампиньоны с зеленью, запечёные с сыром <br />{" "}
+                  Грибы на кеци - Шампиньоны с зеленью, запечёные с сыром <br />
                   <br />
                   19. Chvischtari - Maismehl-Käse-Puffer 4,90 € <br />
                   Чвиштари - кукурузная лепёшка с сыром сулугуни <br /> <br />
@@ -633,17 +631,17 @@ const IndexPage = props => {
                   Аджапсандали - баклажаны тушёные с помидорами, паприкой, луком
                   и зеленью (вег) <br /> <br />
                   <Typography align="center" variant="h5">
-                    Teiggerichte / Блюда из теста{" "}
+                    Teiggerichte / Блюда из теста
                   </Typography>
                   <br />
                   21. Chatschapuri „Imeruli“ - Teigfladen gefüllt mit Käse
                   (veg.) 9,60 €
                   <br />
-                  Хачапури „имерули“ - лепешка с сыром по-имеретински <br />{" "}
+                  Хачапури „имерули“ - лепешка с сыром по-имеретински <br />
                   <br />
                   22. Chatschapuri „Megruli“ - Teigfladen gefüllt und überbacken
                   mit Käse aus dem Ofen (veg.) 10,90 € <br />
-                  Хачапури "мегрули" - лепешка с сыром по-мегрельски <br />{" "}
+                  Хачапури "мегрули" - лепешка с сыром по-мегрельски <br />
                   <br />
                   23. Chatschapuri "Atscharuli" - Bootförmige Teigtasche mit
                   Käse und Ei aus dem Ofen (veg.) 12,90 € <br />
@@ -655,10 +653,10 @@ const IndexPage = props => {
                   nach georgischer Art (ab 4 Stk.) 1,90 € <br />
                   Хинкали с мясом - варёные, из теста, начиненные сочным фаршем
                   (от 4 шт.) <br /> <br />
-                  Zu allen Vorspeisen wird hausgemachtes Brot gereicht. <br />{" "}
+                  Zu allen Vorspeisen wird hausgemachtes Brot gereicht. <br />
                   <br />
                   <Typography align="center" variant="h5">
-                    Fleischgerichte / Мясные блюда{" "}
+                    Fleischgerichte / Мясные блюда
                   </Typography>
                   <br />
                   29. Schweineschaschlik - Schweinefleisch auf Spieß gegrillt
@@ -675,11 +673,11 @@ const IndexPage = props => {
                   Каре ягнёнка <br /> <br />
                   35. Chkmeruli - Hähnchen in Knoblauch-Creme-Fraiche-Soße aus
                   dem Ofen 15,90 € <br />
-                  Чкмерули - курица, запеченная в молочно-чесночном соусе <br />{" "}
+                  Чкмерули - курица, запеченная в молочно-чесночном соусе <br />
                   <br />
                   36. Chanachi im Tontopf - Rindfleischeintopf mit Kartoffeln,
                   Gemüse und Gewürzen 16,90 € <br />
-                  Чанахи - говядина, запеченная с овощами в горшочке <br />{" "}
+                  Чанахи - говядина, запеченная с овощами в горшочке <br />
                   <br />
                   38. Sazivi - Putenfleisch in Walnusssauce 16,90 € <br />
                   Сациви – индейка в соусе из грецких орехов <br /> <br />
@@ -694,7 +692,7 @@ const IndexPage = props => {
                   чеснока
                   <br />
                   (Nur auf Vorbestellung. Reicht für ca. 6 Personen /по
-                  предварительному заказу, количество на 6 человек) <br />{" "}
+                  предварительному заказу, количество на 6 человек) <br />
                   <br />
                   <Typography align="center" variant="h5">
                     Fischspezialitäten / Блюда из рыбы
@@ -702,7 +700,7 @@ const IndexPage = props => {
                   <br />
                   41. Lachsfilet in Knoblauch-Creme-Fraiche-Soße mit Beilage
                   Ihrer Wahl 17,90 € <br />
-                  Лосось с молочно-чесночным соусом и гарниром по выбору <br />{" "}
+                  Лосось с молочно-чесночным соусом и гарниром по выбору <br />
                   <br />
                   42. Riesengarnelen mit Tandoori-Sauce in einer Pfanne serviert
                   20,90 €
@@ -711,7 +709,7 @@ const IndexPage = props => {
                   43. Königsstör ganz, überbacken mit Gemüse 140,- € <br />
                   Королевский осётр запеченный целиком <br />
                   (Nur auf Vorbestellung. Reicht für ca. 6 Personen /по
-                  предварительному заказу, количество на 6 человек) <br />{" "}
+                  предварительному заказу, количество на 6 человек) <br />
                   <br />
                   Zu allen Fleischgerichten vom Grill wird die Beilage Ihrer
                   Wahl und hausgemachtes Brot serviert. <br /> <br />
@@ -737,8 +735,8 @@ const IndexPage = props => {
                   52. Baje - georgische Walnusspastete 4,40 € <br />
                   Грузинский ореховый соус <br /> <br />
                   <Typography align="center" variant="h5">
-                    Dessert / Десерт{" "}
-                  </Typography>{" "}
+                    Dessert / Десерт
+                  </Typography>
                   <br />
                   53. Hausgemachter Kuchen „Napoleon“ 4,10 € <br />
                   Tорт "Наполеон" <br /> <br />
@@ -765,24 +763,24 @@ const IndexPage = props => {
                   </Typography>
                   <br />
                   0,2 l / 0,4 l / Flasche <br /> <br />
-                  70. Coca- Cola, Coca-Cola light 2,50 € / 4,50 € / 8,50 €{" "}
+                  70. Coca- Cola, Coca-Cola light 2,50 € / 4,50 € / 8,50 €
                   <br />
                   <br />
                   71. Fanta , Sprite 2,50 € / 4,50 € / 8,50 € <br /> <br />
-                  72. St. Michaelis Naturell / Classic 2,20 € / 3,90 € / 6,50 €{" "}
+                  72. St. Michaelis Naturell / Classic 2,20 € / 3,90 € / 6,50 €
                   <br />
                   <br />
-                  73. Borjomi - Georgisches Heilwasser 0,5 l Fl. 5,80 € <br />{" "}
+                  73. Borjomi - Georgisches Heilwasser 0,5 l Fl. 5,80 € <br />
                   <br />
                   74. Georgische Birnenlimonade 0,5 l Fl. 5,80 € <br />
                   <br />
-                  75. Georgische Estragonlimonade "Tarkhun" 0,5 l Fl. 5,80 €{" "}
+                  75. Georgische Estragonlimonade "Tarkhun" 0,5 l Fl. 5,80 €
                   <br />
                   <br />
-                  76. Georgische Traubenlimonade "Saperavi" 0,5 l Fl. 5,80 €{" "}
+                  76. Georgische Traubenlimonade "Saperavi" 0,5 l Fl. 5,80 €
                   <br />
                   <br />
-                  77. Georgische Feijoalimonade "Feijoa" 0,5 l Fl. 5,80 € <br />{" "}
+                  77. Georgische Feijoalimonade "Feijoa" 0,5 l Fl. 5,80 € <br />
                   <br />
                   78. Red Bull 4,60 € <br /> <br />
                   <Typography align="center" variant="h5">
@@ -806,7 +804,7 @@ const IndexPage = props => {
                   </Typography>
                   <br />
                   0,3 / 0,4 l / Flasche <br /> <br />
-                  90. Einbecker Brauherren Pils (Fassbier) 3,80 € / 4,90 €{" "}
+                  90. Einbecker Brauherren Pils (Fassbier) 3,80 € / 4,90 €
                   <br />
                   <br />
                   91. Alsterwasser 3,60 € / 4,70 € <br />
@@ -817,7 +815,7 @@ const IndexPage = props => {
                   <br />
                   94. Einbecker Brauherren Alkoholfrei (Flasche) 3,80 € <br />
                   <br />
-                  95. Herrnbräu Hefe Weißbier Alkoholfrei (Flasche) 4,90 €{" "}
+                  95. Herrnbräu Hefe Weißbier Alkoholfrei (Flasche) 4,90 €
                   <br /> <br />
                   <Typography align="center" variant="h5">
                     Spirituosen und Liköre /Крепкие спиртные напитки и ликёры
@@ -833,10 +831,10 @@ const IndexPage = props => {
                   60,00 €
                   <br />
                   <br />
-                  100. Wodka "Beluga", "Grey Goose" 5,60 € / 19,00 € / 120,00 €{" "}
+                  100. Wodka "Beluga", "Grey Goose" 5,60 € / 19,00 € / 120,00 €
                   <br />
                   <br />
-                  101. Georgische Chacha 2,90 € / 45,00 € / 10,00 € <br />{" "}
+                  101. Georgische Chacha 2,90 € / 45,00 € / 10,00 € <br />
                   <br />
                   102. Georgischer Brandy Sarajishvili David 2,90 € / 10,- € /
                   49,00 €
@@ -854,9 +852,8 @@ const IndexPage = props => {
                   <br />
                   106. Hennessy 4,90 € / 21,- € / 120,- € <br /> <br />
                   <Typography align="center" variant="h5">
-                    {" "}
-                    Longdrinks / Kоктейлu{" "}
-                  </Typography>{" "}
+                    Longdrinks / Kоктейлu
+                  </Typography>
                   <br />
                   107. Wodka-Red Bull 7,50 € <br />
                   <br />
@@ -875,14 +872,13 @@ const IndexPage = props => {
                   <br />
                   113. Marani Sekt Rosé Brut 0,75 l Flasche 35,00 € <br />
                   <br />
-                  114. Bagrationi 1882 Finest Brut (2015) 0,75 l Flasche 49,90 €{" "}
+                  114. Bagrationi 1882 Finest Brut (2015) 0,75 l Flasche 49,90 €
                   <br />
                   <br />
                   115. Champagner "Moët & Chandon", "Veuve Clicquot" 0,75 l
                   Flasche 95,00 € <br /> <br />
                   <Typography align="center" variant="h5">
-                    {" "}
-                    Weine, Weiss / Белые вина{" "}
+                    Weine, Weiss / Белые вина
                   </Typography>
                   <br />
                   0,2 l / 0,75 l Flasche <br /> <br />
@@ -899,21 +895,20 @@ const IndexPage = props => {
                   <br />
                   125. Weinschorle 4,90 € / - <br /> <br />
                   <Typography align="center" variant="h5">
-                    Weine, rosé / Розовые вина{" "}
+                    Weine, rosé / Розовые вина
                   </Typography>
                   <br />
                   0,2 l / 0,75 l Flasche <br /> <br />
-                  126. Marani Saperavi Rosé, trocken (2014) 7,20 € / 25,90 €{" "}
+                  126. Marani Saperavi Rosé, trocken (2014) 7,20 € / 25,90 €
                   <br />
                   <br />
-                  127. Marani Alazani Valley Rosé, lieblich 7,20 € / 25,90 €{" "}
+                  127. Marani Alazani Valley Rosé, lieblich 7,20 € / 25,90 €
                   <br />
                   <br />
-                  128. Marani Pirosmani Rosé, halbtrocken 7,20 € / 25,90 €{" "}
+                  128. Marani Pirosmani Rosé, halbtrocken 7,20 € / 25,90 €
                   <br /> <br />
                   <Typography align="center" variant="h5">
-                    {" "}
-                    Weine, rot / Красные вина{" "}
+                    Weine, rot / Красные вина
                   </Typography>
                   <br />
                   0,2 l / 0,75 l Flasche <br /> <br />
@@ -927,15 +922,15 @@ const IndexPage = props => {
                   <br />
                   133. Marani Kindzmarauli, lieblich 8,60 € / 31,00 € <br />
                   <br />
-                  134. Vinoterra Saperavi Schuchmann, trocken (2008) - / 34,90 €{" "}
+                  134. Vinoterra Saperavi Schuchmann, trocken (2008) - / 34,90 €
                   <br />
                   <br />
                   135. Khvanchkara, lieblich (2010) 10,90 € / 39,90 € <br />
                 </Typography>
 
                 {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weniger
-                </p> */}
+               ...lesen weniger
+             </p> */}
               </div>
             )}
           </Container>
