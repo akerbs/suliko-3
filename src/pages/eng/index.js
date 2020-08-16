@@ -199,7 +199,8 @@ const IndexPage = props => {
                   Despite the extraordinary time, we stay with you and want to
                   pamper our beautiful city with Georgian cuisine. We will be
                   glad to see you in our restaurant! You can also order your
-                  favorite meals at home, for this we have prepared ..
+                  favorite dishes for delivery to any doorstep, for this we have
+                  prepared ..
                 </Typography>
                 <p onClick={showTex2MoreHandler} style={{ cursor: "pointer" }}>
                   ...read more
@@ -215,10 +216,10 @@ const IndexPage = props => {
               >
                 <Typography id="text2Big" variant="body1">
                   Despite the extraordinary time, we stay with you and want
-                  pamper our beautiful city with Georgian cuisine. we we will be
-                  glad to see you in our restaurant! you also can order your
-                  favorite meals at home, for this we have prepared a special
-                  menu for you.
+                  pamper our beautiful city with Georgian cuisine. We will be
+                  glad to see you in our restaurant! You can also order your
+                  favorite dishes for delivery to any doorstep, for this we have
+                  prepared a special menu for you.
                   <br />
                   <br />
                   <a
