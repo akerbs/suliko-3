@@ -63,7 +63,7 @@ const Footer = props => {
             <br />
             Fax: 04041356779 <br />
             <br />
-            Mail: info@restaurant-suliko.de <br />
+            Mail: info[at]restaurant-suliko.de <br />
             <br />
             Ust:42/610/02294 <br />
             <br />

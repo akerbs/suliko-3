@@ -979,7 +979,8 @@ const IndexPage = props => {
                 href="mailto:info@restaurant-suliko.de"
                 className="phoneEmailLink"
               >
-                <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
+                <EmailIcon style={{ fontSize: 20 }} />
+                info[at]restaurant-suliko.de
               </a>
               <br /> <br />
               <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
