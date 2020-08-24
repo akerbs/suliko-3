@@ -268,7 +268,7 @@ const IndexPage = props => {
           <br /> <br />
           <Container id="slider">
             <Swiper
-              spaceBetween={1}
+              spaceBetween={0}
               slidesPerView={
                 window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3
               }
@@ -276,6 +276,7 @@ const IndexPage = props => {
               zoom
               loop
               className="slider"
+              effect="fade"
             >
               <SwiperSlide>
                 <Img
