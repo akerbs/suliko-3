@@ -6,7 +6,7 @@ import sloganImg from "../../images/slogan_deu.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Autoplay, Zoom, Navigation, EffectFade } from "swiper"
+import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
 import Img from "gatsby-image"
 import HomeIcon from "@material-ui/icons/Home"
@@ -27,7 +27,7 @@ import { Helmet } from "react-helmet"
 
 const window = require("global/window")
 
-SwiperCore.use([Autoplay, Zoom, Navigation, EffectFade])
+SwiperCore.use([Autoplay, Navigation, EffectFade])
 
 const IndexPage = props => {
   const [open, setOpen] = useState(false)
@@ -279,7 +279,6 @@ const IndexPage = props => {
                 window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3
               }
               autoplay
-              zoom
               loop
               className="slider"
             >
