@@ -24,6 +24,7 @@ import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
 import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
+import Header from "../../components/header"
 
 const window = require("global/window")
 
@@ -82,6 +83,7 @@ const IndexPage = props => {
           padding: 0,
         }}
       >
+        <Header />
         {/* <SEO title="Home" /> */}
         <Container
           id="slider-first"

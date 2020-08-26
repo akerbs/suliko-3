@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Layout from "../../components/layout-geo"
+import Layout from "../../components/layout"
 // import SEO from "../../components/seo"
 import sloganImg from "../../images/slogan_geo.png"
 import Container from "@material-ui/core/Container"
@@ -24,6 +24,7 @@ import abendblatt from "../../images/abendblatt.png"
 import Grid from "@material-ui/core/Grid"
 import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
+import Header from "../../components/header-geo"
 
 const window = require("global/window")
 
@@ -80,6 +81,7 @@ const IndexPage = props => {
           padding: 0,
         }}
       >
+        <Header />
         {/* <SEO title="Home" /> */}
         <Container
           id="slider-first"

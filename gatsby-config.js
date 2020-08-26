@@ -28,13 +28,35 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: "UA-176078108-1",
-        head: true,
-        anonymize: true,
+        googleAnalytics: {
+          trackingId: "UA-176078108-1", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+        },
+        // googleTagManager: {
+        //   trackingId: "YOUR_GOOGLE_TAG_MANAGER_TRACKING_ID", // leave empty if you want to disable the tracker
+        //   cookieName: "gatsby-gdpr-google-tagmanager", // default
+        //   dataLayerName: "dataLayer", // default
+        // },
+        // facebookPixel: {
+        //   pixelId: "YOUR_FACEBOOK_PIXEL_ID", // leave empty if you want to disable the tracker
+        //   cookieName: "gatsby-gdpr-facebook-pixel", // default
+        // },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
       },
     },
+
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-176078108-1",
+    //     head: true,
+    //     anonymize: true,
+    //   },
+    // },
     "gatsby-plugin-preload-link-crossorigin",
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
