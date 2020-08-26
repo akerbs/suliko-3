@@ -954,56 +954,56 @@ export const query = graphql`
   query {
     bgH1: file(relativePath: { eq: "bgH1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 4000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgH2: file(relativePath: { eq: "bgH2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 4000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 4000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 4000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     s1: file(relativePath: { eq: "s1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     s2: file(relativePath: { eq: "s2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     s3: file(relativePath: { eq: "s3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     s4: file(relativePath: { eq: "s4.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

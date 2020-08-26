@@ -968,28 +968,28 @@ export const query = graphql`
   query {
     bgH1: file(relativePath: { eq: "bgH1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgH2: file(relativePath: { eq: "bgH2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3000) {
+        fluid(maxWidth: 1500) {
           ...GatsbyImageSharpFluid
         }
       }
