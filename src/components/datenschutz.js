@@ -51,7 +51,7 @@ export default function Datenschutz(props) {
           style={{
             margin: 0,
             padding: 0,
-            marginLeft: "250px",
+            marginLeft: "270px",
           }}
           // onClick={stop}
           onClick={props.onClose}
