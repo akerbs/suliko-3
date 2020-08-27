@@ -71,7 +71,7 @@ const Footer = props => {
       >
         <Typography
           variant="overline"
-          style={{ fontSize: 3, color: "rgba(0, 0, 0, 0.5 )" }}
+          style={{ fontSize: 5, color: "rgba(0, 0, 0, 0.5 )" }}
         >
           Created by{" "}
           <Link
