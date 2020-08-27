@@ -8,7 +8,7 @@ export default function CookiesBar() {
       cookieName="gatsby-gdpr-google-tagmanager"
       location="bottom"
       style={{ background: "rgba(0,0,0, .8)" }}
-      buttonText="Accept"
+      buttonText="Alle akzeptieren"
       buttonStyle={{
         backgroundColor: "white",
         color: "black",
@@ -16,13 +16,12 @@ export default function CookiesBar() {
       }}
       expires={150}
       enableDeclineButton
-      declineButtonText="Decline"
+      declineButtonText="Nur essenzielle"
       declineButtonStyle={{
         backgroundColor: "black",
         color: "white",
         fontSize: "15px",
       }}
-
       // flipButtons
       // acceptOnScroll={true}
       // acceptOnScrollPercentage={50}
@@ -44,15 +43,11 @@ export default function CookiesBar() {
       // expires={999}
       //  overlay
     >
+      <Typography variant="body1"> DATENSCHUTZEINSTELLUNGEN </Typography>
       <Typography variant="caption">
-        This website uses cookies to enhance the user experience.
-        {/* This website stores cookies on your computer. These cookies are used to
-        collect information about how you interact with this website and allow
-        us to remember you. We use this information in order to improve and
-        customize your browsing experience and for analytics and metrics about
-        our visitors on this website. If you decline, your information won’t be
-        tracked when you visit this website. A single cookie will be used in
-        your browser to remember your preference not to be tracked. */}
+        Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
+        essenziell, während andere uns helfen, diese Website und Ihre Erfahrung
+        zu verbessern.
       </Typography>{" "}
     </CookieConsent>
   )

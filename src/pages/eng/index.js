@@ -25,6 +25,7 @@ import Grid from "@material-ui/core/Grid"
 import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
 import Header from "../../components/header-eng"
+import Footer from "../../components/footer"
 
 const window = require("global/window")
 
@@ -945,6 +946,7 @@ const IndexPage = props => {
             src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
           ></iframe>
         </Container>
+        <Footer />
       </Container>
     </Layout>
   )

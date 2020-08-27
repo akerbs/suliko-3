@@ -1,0 +1,208 @@
+import React, { useState } from "react"
+import Typography from "@material-ui/core/Typography"
+import Modal from "@material-ui/core/Modal"
+import Button from "@material-ui/core/Button"
+import Checkbox from "@material-ui/core/Checkbox"
+import FormGroup from "@material-ui/core/FormGroup"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import { Link } from "gatsby"
+import sulikoIcon from "../images/suliko-icon.png"
+import Grid from "@material-ui/core/Grid"
+import { withStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
+
+const useStyles = makeStyles(theme => ({
+  modalWrapper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    overflowX: "hidden",
+    [theme.breakpoints.down("xs")]: {
+      overflowY: "scroll",
+    },
+    maxHeight: " 100vh",
+    width: 320,
+    backgroundColor: "rgba(249,234,207)",
+    border: "2px solid rgba(133,26,29)",
+    boxShadow: theme.shadows[5],
+
+    zIndex: 9999,
+    position: "fixed",
+    outline: 1,
+    padding: 10,
+    fontSize: 12,
+  },
+
+  logo2: {
+    width: 50,
+    marginTop: 5,
+  },
+  link1: {
+    textDecoration: "none",
+    color: "rgba(0, 0, 0, 0.7 )",
+    fontSize: 14,
+  },
+  link: {
+    textDecoration: "none",
+    color: "rgba(0, 0, 0, 0.4)",
+    fontSize: 12,
+  },
+  btn1: {
+    textTransform: "none",
+    backgroundColor: "rgba(133,26,29) ",
+    color: "rgba(249, 234, 207)",
+    "&:hover": {
+      backgroundColor: "rgba(133, 26, 29, 0.7 )  ",
+      color: "white",
+    },
+  },
+
+  btn2: {
+    textTransform: "none",
+    backgroundColor: "rgba(0, 0, 0, 0.05 )",
+    "&:hover": {
+      backgroundColor: "rgba(0, 0, 0, 0.1 ) ",
+    },
+  },
+}))
+
+const CustomCheckbox = withStyles({
+  root: {
+    color: "rgba(133,26,29)",
+    "&$checked": {
+      color: "rgba(133,26,29)",
+    },
+  },
+  checked: {},
+})(props => <Checkbox color="default" {...props} />)
+
+export default function CookiesBar() {
+  const classes = useStyles()
+  const [open, setOpen] = useState(true)
+  const [state, setState] = useState({
+    checkedA: true,
+    checkedB: false,
+    checkedC: false,
+  })
+
+  const handleChange = event => {
+    setState({ ...state, [event.target.name]: event.target.checked })
+  }
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  return (
+    <Modal
+      className={classes.modalWrapper}
+      // onClose={props.onClose}
+      open={open}
+    >
+      <div className={classes.paper}>
+        <Grid container spacing={3}>
+          <Grid item xs={3}>
+            <img src={sulikoIcon} alt="logo" className={classes.logo2} />
+          </Grid>
+          <Grid item xs={9}>
+            <Typography variant="body1">
+              DATENSCHUTZ <wbr />
+              EINSTELLUNGEN <br />
+            </Typography>
+          </Grid>
+        </Grid>
+        <Typography variant="caption" style={{ lineHeight: 1 }}>
+          Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
+          essenziell, während andere uns helfen, diese Website und Ihre
+          Erfahrung zu verbessern. <br />
+        </Typography>
+        <FormGroup row>
+          <FormControlLabel
+            disabled
+            control={<Checkbox checked name="checkedA" size="small" />}
+            label={
+              <Typography variant="caption" color="textSecondary">
+                Essenziell
+              </Typography>
+            }
+          />
+
+          <FormControlLabel
+            control={
+              <CustomCheckbox
+                checked={state.checkedB}
+                onChange={handleChange}
+                name="checkedB"
+                size="small"
+              />
+            }
+            label={
+              <Typography variant="caption" color="textSecondary">
+                Statistiken
+              </Typography>
+            }
+          />
+          <FormControlLabel
+            control={
+              <CustomCheckbox
+                checked={state.checkedC}
+                onChange={handleChange}
+                name="checkedC"
+                size="small"
+              />
+            }
+            label={
+              <Typography variant="caption" color="textSecondary">
+                Externe Medien
+              </Typography>
+            }
+          />
+        </FormGroup>
+        <br /> <br />
+        <Button
+          fullWidth
+          onClick={() => {
+            setState({ checkedB: true, checkedC: true })
+            handleClose()
+          }}
+          className={classes.btn1}
+        >
+          Alle akzeptieren
+        </Button>
+        <Button
+          fullWidth
+          onClick={() => {
+            handleClose()
+          }}
+          className={classes.btn2}
+        >
+          Speichern
+        </Button>
+        <br /> <br />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Link to="#" className={classes.link1}>
+            Individuelle Datenschutzeinstellungen
+          </Link>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Link to="#" className={classes.link}>
+            Cookie-Details
+          </Link>{" "}
+          |{" "}
+          <Link to="#" className={classes.link}>
+            Datenschutzerklärung{" "}
+          </Link>{" "}
+          |{" "}
+          <Link to="#" className={classes.link}>
+            Impressum
+          </Link>
+        </div>
+      </div>
+    </Modal>
+  )
+}

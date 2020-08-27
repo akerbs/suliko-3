@@ -55,6 +55,8 @@ module.exports = {
     //     trackingId: "UA-176078108-1",
     //     head: true,
     //     anonymize: true,
+    //     respectDNT: true,
+    //     pageTransitionDelay: 0,
     //   },
     // },
     "gatsby-plugin-preload-link-crossorigin",
