@@ -4,18 +4,26 @@ import Container from "@material-ui/core/Container"
 import Logo2 from "../images/Logo2.png"
 import { Link } from "gatsby"
 import "./footer.css"
-import Modal from "@material-ui/core/Modal"
-import IconButton from "@material-ui/core/IconButton"
-import HighlightOffIcon from "@material-ui/icons/HighlightOff"
+import Breadcrumbs from "@material-ui/core/Breadcrumbs"
+import Impressum from "./impressum"
+import Datenschutz from "./datenschutz"
 
 const Footer = props => {
-  const [open, setOpen] = React.useState(false)
+  const [openImpressum, setOpenImpressum] = React.useState(false)
+  const [openDatenschutz, setOpenDatenschutz] = React.useState(false)
 
-  const handleOpen = () => {
-    setOpen(true)
+  const handleOpenImpressum = () => {
+    setOpenImpressum(true)
   }
-  const handleClose = () => {
-    setOpen(false)
+  const handleCloseImpressum = () => {
+    setOpenImpressum(false)
+  }
+
+  const handleOpenDatenschutz = () => {
+    setOpenDatenschutz(true)
+  }
+  const handleCloseDatenschutz = () => {
+    setOpenDatenschutz(false)
   }
 
   return (
@@ -23,18 +31,64 @@ const Footer = props => {
       <img src={Logo2} alt="logo" className="logo2Footer" />
 
       <Typography variant="body2">
-        {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
+        {" © "} {new Date().getFullYear()} Suliko
         <br />{" "}
       </Typography>
-      <Typography
-        variant="caption"
-        onClick={handleOpen}
-        style={{ cursor: "pointer" }}
-      >
-        Impressum
-      </Typography>
 
-      <Modal className="modalWrapper" onClose={handleClose} open={open}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Breadcrumbs
+          aria-label="breadcrumb"
+          separator={<Typography variant="caption">|</Typography>}
+        >
+          <Typography
+            variant="caption"
+            onClick={handleOpenImpressum}
+            style={{ cursor: "pointer" }}
+          >
+            Impressum
+          </Typography>
+
+          <Typography
+            variant="caption"
+            onClick={handleOpenDatenschutz}
+            style={{ cursor: "pointer" }}
+          >
+            Datenschutz
+          </Typography>
+        </Breadcrumbs>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 50,
+        }}
+      >
+        <Typography
+          variant="overline"
+          style={{ fontSize: 3, color: "rgba(0, 0, 0, 0.5 )" }}
+        >
+          Created by{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            to="#"
+            // to="https://kerbs.now.sh/"
+            style={{ textDecoration: "none", color: "rgba(0, 0, 0, 0.5 )" }}
+          >
+            Anatol Kerbs
+          </Link>
+        </Typography>
+      </div>
+      <Impressum open={openImpressum} onClose={handleCloseImpressum} />
+      <Datenschutz open={openDatenschutz} onClose={handleCloseDatenschutz} />
+
+      {/* <Modal className="modalWrapper" onClose={handleClose} open={open}>
         <div className="paper">
           <IconButton
             style={{ margin: 0, padding: 0, marginLeft: "220px" }}
@@ -44,7 +98,21 @@ const Footer = props => {
             <HighlightOffIcon />
           </IconButton>
           <br />
-          <Typography
+          <Typography variant="h6">IMPRESSUM</Typography>
+          <Typography variant="body2">
+            Angaben gemäß § 5 TMG: <br /> <br />
+            Cheper & Busjar GbR <br />
+            Mittelweg 24 <br />
+            20148 Hamburg <br /> <br />
+            <b>GESCHÄFTSFÜHRER:</b> <br />
+            Georg Welia, Elchin Aliev <br />
+            <b>KONTAKT:</b> <br />
+            040 49201953 <br />
+            info[at]restaurant-suliko.de <br /> <br />
+            Umsatzsteuer-Identifikationsnummer <br />
+            gemäß §27 a Umsatzsteuergesetz: DE 42/610/02294
+          </Typography> */}
+      {/* <Typography
             variant="caption"
             style={{ lineHeight: 1.2 }}
             color="secondary"
@@ -146,21 +214,9 @@ const Footer = props => {
             ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich
             ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung
             von Werbeinformationen, etwa durch Spam-Mails, vor.
-          </Typography>
-        </div>
-      </Modal>
-
-      {/* <Typography variant="caption" className={classes.copyrightLinks}>
-        Designed by{" "}
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          to="https://kerbs.now.sh/"
-          style={{ textDecoration: "none" }}
-        >
-          Anatol Kerbs
-        </Link>
-      </Typography> */}
+          </Typography> */}
+      {/* </div>
+      </Modal> */}
     </Container>
   )
 }
