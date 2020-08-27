@@ -52,7 +52,7 @@ export default function Impressum(props) {
           style={{
             margin: 0,
             padding: 0,
-            marginLeft: "250px",
+            marginLeft: "248px",
           }}
           // onClick={stop}
           onClick={props.onClose}
