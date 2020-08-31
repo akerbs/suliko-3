@@ -12,12 +12,13 @@ const window = require("global/window")
 const modalWindowWidth = window.innerWidth <= 599 ? "100vw" : "50vw"
 
 const mainTitelLeftMargin =
-  window.innerWidth <= 320
-    ? "3%"
-    : window.innerWidth <= 400
+  // window.innerWidth <= 320
+  //   ? "3%"
+  //   :
+  window.innerWidth <= 400
     ? "6%"
     : window.innerWidth <= 500
-    ? "8%"
+    ? "10%"
     : window.innerWidth <= 600
     ? "12%"
     : window.innerWidth <= 800
@@ -28,7 +29,7 @@ const mainTitelLeftMargin =
     ? "10%"
     : window.innerWidth <= 1200
     ? "12%"
-    : "17%"
+    : "18%"
 
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
