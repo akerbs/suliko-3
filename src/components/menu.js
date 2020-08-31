@@ -104,7 +104,8 @@ export function Speisekarte(props) {
         </Grid>
         <Typography variant="body1" style={{ lineHeight: 1.2 }}>
           <Typography variant="h6" align="center">
-            <br /> Suppen /Супы
+            <br />
+            <b> Suppen /Супы</b>
           </Typography>
           <br />
           <br />
@@ -123,8 +124,10 @@ export function Speisekarte(props) {
           4. Matsoni-Suppe - Joghurtsuppe mit Kräutern / Суп 'Mацони' из йогурта
           с зеленью A, F, I 5,60 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Salate/Салаты
+            <b>Salate/Салаты</b>
           </Typography>
           <br />
           <br />
@@ -149,8 +152,10 @@ export function Speisekarte(props) {
           Cалат из говяжьего языка с жаренными шампиньонами, овощами и майонезом
           <br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Kalte Vorspeisen / Холодные закуски
+            <b> Kalte Vorspeisen / Холодные закуски</b>
           </Typography>
           <br />
           <br />
@@ -189,8 +194,10 @@ export function Speisekarte(props) {
           Zu Suppen, Salaten und Vorspeisen wird hausgemachtes Brot gereicht
           <br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Warme Vorspeisen /Горячие закуски
+            <b> Warme Vorspeisen /Горячие закуски</b>
           </Typography>
           <br />
           <br />
@@ -210,8 +217,10 @@ export function Speisekarte(props) {
           Zwiebeln, Kräuter, Gewürze 9,90 €<br />
           Аджапсандали - баклажаны тушёные с помидорами, паприкой, луком и
           зеленью (вег) <br /> <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Teiggerichte / Блюда из теста
+            <b> Teiggerichte / Блюда из теста</b>
           </Typography>
           <br />
           <br />
@@ -244,8 +253,10 @@ export function Speisekarte(props) {
           Stück
           <br /> <br />
           Zu allen Vorspeisen wird hausgemachtes Brot gereicht <br /> <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Fleischgerichte / Мясные блюда
+            <b> Fleischgerichte / Мясные блюда</b>
           </Typography>
           <br />
           <br />
@@ -288,8 +299,10 @@ export function Speisekarte(props) {
           (Nur auf Vorbestellung. Reicht für ca. 6 Personen /по предварительному
           заказу, количество на 6 человек) <br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Fischspezialitäten / Блюда из рыбы
+            <b> Fischspezialitäten / Блюда из рыбы</b>
           </Typography>
           <br />
           <br />
@@ -308,8 +321,10 @@ export function Speisekarte(props) {
           <br />
           Zu allen Gerichten wird hausgemachtes Brot serviert <br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Beilagen und Soßen / Гарниры и соусы
+            <b> Beilagen und Soßen / Гарниры и соусы</b>
           </Typography>
           <br />
           <br />
@@ -337,8 +352,10 @@ export function Speisekarte(props) {
           <br />
           50. Schmand / Сметана 2,60 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Dessert / Десерт
+            <b> Dessert / Десерт</b>
           </Typography>
           <br />
           <br />
@@ -350,9 +367,13 @@ export function Speisekarte(props) {
           кукурузной муки <br /> <br />
           53. Hausgemachte Dessertvariationen Stk. 4,90 €<br />
           Домашние пирожные <br /> <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            In unseren Speisen und Getränken sind folgende Zusatzstoffe
-            enthalten:
+            <b>
+              In unseren Speisen und Getränken sind folgende Zusatzstoffe
+              enthalten:
+            </b>
           </Typography>
           <br />
           <br />
@@ -364,8 +385,10 @@ export function Speisekarte(props) {
           F Milch / Laktose <br />
           H Nüsse <br />
           I Eier <br /> <br /> <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Heiße Getränke / Горячие напитки
+            <b> Heiße Getränke / Горячие напитки</b>
           </Typography>
           <br />
           60. Kaffee 2 2,70 €<br />
@@ -380,8 +403,10 @@ export function Speisekarte(props) {
           <br />
           65. Tee (diverse Sorten) 2,60 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Mineralwasser und Limonaden / Безалкогольные напитки
+            <b> Mineralwasser und Limonaden / Безалкогольные напитки</b>
           </Typography>
           <Typography variant="body1" align="center">
             0,2 l 0,4 l Flasche
@@ -407,8 +432,10 @@ export function Speisekarte(props) {
           <br />
           78. Red Bull 4,60 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Säfte und Nektare / Соки и нектары
+            <b> Säfte und Nektare / Соки и нектары</b>
           </Typography>
           <Typography variant="body1" align="center">
             0,2 l 0,4 l Flasche
@@ -426,8 +453,10 @@ export function Speisekarte(props) {
           <br />
           85. KiBa 2,80 € 4,90 € <br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Fass- und Flaschenbier / Пиво бочковое и бутылочное
+            <b> Fass- und Flaschenbier / Пиво бочковое и бутылочное</b>
           </Typography>
           <Typography variant="body1" align="center">
             0,3 l 0,4 l Flasche
@@ -445,8 +474,10 @@ export function Speisekarte(props) {
           <br />
           95. Herrnbräu Hefe Weißbier Alkoholfrei (0,5l) 4,90 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Spirituosen und Liköre /Крепкие спиртные напитки и ликёры
+            <b> Spirituosen und Liköre /Крепкие спиртные напитки и ликёры</b>
           </Typography>
           <Typography variant="body1" align="center">
             2 cl 0,1 l 0,5 l Flasche
@@ -480,8 +511,10 @@ export function Speisekarte(props) {
           <br />
           107. Gin 2,90 € 12,00 € 65,00 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Longdrinks / Kоктейлu
+            <b> Longdrinks / Kоктейлu</b>
           </Typography>
           <br />
           108. Wodka Red Bull 7,50 €<br />
@@ -494,8 +527,10 @@ export function Speisekarte(props) {
           <br />
           112. Gin Tonic 7,90 €<br />
           <br />
+          <br />
+          <br />
           <Typography variant="h6" align="center">
-            Sekt und Champagner / Игристое вино и шампанское
+            <b> Sekt und Champagner / Игристое вино и шампанское</b>
           </Typography>
           <br />
           113. Sekt "Freixenet" Piccolo 0,2 l Flasche 7,50 €<br />
