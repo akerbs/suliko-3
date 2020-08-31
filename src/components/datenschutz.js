@@ -55,7 +55,12 @@ export default function Datenschutz(props) {
       <div className={classes.paper}>
         <Grid container spacing={0}>
           <Grid item xs={3}>
-            <img src={sulikoIcon} alt="logo" className={classes.logo2} />
+            <img
+              src={sulikoIcon}
+              alt="logo"
+              className={classes.logo2}
+              onClick={props.onClose}
+            />
           </Grid>
           <Grid item xs={8}>
             <Typography

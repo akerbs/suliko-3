@@ -51,8 +51,8 @@ const useStyles = makeStyles(theme => ({
     zIndex: 9999,
     position: "fixed",
     outline: 1,
-    padding: 10,
-    // padding: "30px 10px",
+    // padding: 10,
+    padding: "30px 10px",
     fontSize: 10,
   },
 
@@ -74,7 +74,12 @@ export function Speisekarte(props) {
       <div className={classes.paper}>
         <Grid container spacing={0}>
           <Grid item xs={3}>
-            <img src={sulikoIcon} alt="logo" className={classes.logo2} />
+            <img
+              src={sulikoIcon}
+              alt="logo"
+              className={classes.logo2}
+              onClick={props.onClose}
+            />
           </Grid>
           <Grid item xs={8}>
             <Typography
@@ -623,7 +628,12 @@ export function Weinkarte(props) {
       <div className={classes.paper}>
         <Grid container spacing={0}>
           <Grid item xs={3}>
-            <img src={sulikoIcon} alt="logo" className={classes.logo2} />
+            <img
+              src={sulikoIcon}
+              alt="logo"
+              className={classes.logo2}
+              onClick={props.onClose}
+            />
           </Grid>
           <Grid item xs={8}>
             <Typography
@@ -813,7 +823,12 @@ export function Mittagsmenu(props) {
       <div className={classes.paper}>
         <Grid container spacing={0}>
           <Grid item xs={3}>
-            <img src={sulikoIcon} alt="logo" className={classes.logo2} />
+            <img
+              src={sulikoIcon}
+              alt="logo"
+              className={classes.logo2}
+              onClick={props.onClose}
+            />
           </Grid>
           <Grid item xs={8}>
             <Typography
