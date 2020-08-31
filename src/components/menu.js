@@ -573,8 +573,8 @@ export function Weinkarte(props) {
             </IconButton>
           </Grid>
         </Grid>
-        <Typography variant="body2" style={{ lineHeight: 1.2 }}>
-          <Typography variant="body1" align="center">
+        <Typography variant="body1" style={{ lineHeight: 1.2 }}>
+          <Typography variant="h6" align="center">
             <br /> <b> Weine, weiß / Белые вина</b>
           </Typography>
           <Typography variant="body1" align="center">
@@ -616,7 +616,7 @@ export function Weinkarte(props) {
           <br />
           <br />
           <br />
-          <Typography variant="body1" align="center">
+          <Typography variant="h6" align="center">
             <b> Qvevri - weiße Amphorweine</b>
           </Typography>
           <Typography variant="body1" align="center">
@@ -639,7 +639,7 @@ export function Weinkarte(props) {
           <br />
           <br />
           <br />
-          <Typography variant="body1" align="center">
+          <Typography variant="h6" align="center">
             <b> Weine, rosé / Розовые вина</b>
           </Typography>
           <Typography variant="body1" align="center">
@@ -667,7 +667,7 @@ export function Weinkarte(props) {
           <br />
           <br />
           <br />
-          <Typography variant="body1" align="center">
+          <Typography variant="h6" align="center">
             <b> Weine, rot / Красные вина</b>
           </Typography>
           <Typography variant="body1" align="center">
@@ -704,7 +704,7 @@ export function Weinkarte(props) {
           <br />
           <br />
           <br />
-          <Typography variant="body1" align="center">
+          <Typography variant="h6" align="center">
             <b> Qvevri - Rote Amphorweine</b>
           </Typography>
           <Typography variant="body1" align="center">
