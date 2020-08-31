@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     outline: 1,
     // padding: 10,
-    padding: "40px 10px",
+    padding: "50px 10px",
     fontSize: 10,
   },
 
@@ -99,6 +99,7 @@ export function Speisekarte(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
+                marginRight: "3%",
               }}
               // onClick={stop}
               onClick={props.onClose}
@@ -653,6 +654,7 @@ export function Weinkarte(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
+                marginRight: "3%",
               }}
               // onClick={stop}
               onClick={props.onClose}
@@ -848,6 +850,7 @@ export function Mittagsmenu(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
+                marginRight: "3%",
               }}
               // onClick={stop}
               onClick={props.onClose}
