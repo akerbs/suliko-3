@@ -102,7 +102,7 @@ export function Speisekarte(props) {
             </IconButton>
           </Grid>
         </Grid>
-        <Typography variant="body2" style={{ lineHeight: 1.2 }}>
+        <Typography variant="body1" style={{ lineHeight: 1.2 }}>
           <Typography variant="h6" align="center">
             <br /> Suppen /Супы
           </Typography>
@@ -124,9 +124,8 @@ export function Speisekarte(props) {
           с зеленью A, F, I 5,60 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Salate/Салаты{" "}
-          </Typography>{" "}
+            Salate/Салаты
+          </Typography>
           <br />
           <br />
           5. Gemischter Salat - frische Tomaten, Gurken, Zwiebeln, Kräuter mit
@@ -147,13 +146,12 @@ export function Speisekarte(props) {
           <br />
           9.  Zungensalat - Kalbszungensalat mit Brat-Champignons, frischem
           Gemüse und Mayonnaise 9,20 €<br />
-          Cалат из говяжьего языка с жаренными шампиньонами, овощами и майонезом{" "}
+          Cалат из говяжьего языка с жаренными шампиньонами, овощами и майонезом
           <br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Kalte Vorspeisen / Холодные закуски{" "}
-          </Typography>{" "}
+            Kalte Vorspeisen / Холодные закуски
+          </Typography>
           <br />
           <br />
           10. Spinat-Pchali - Blattspinatbällchen mit Walnusspaste, Koriander
@@ -162,12 +160,12 @@ export function Speisekarte(props) {
           <br />
           11. Rote-Bete-Pchali - Bällchen aus Rote-Bete-Püree mit Walnusspaste
           und Koriander (veg) H 8,60 €<br />
-          Пхали из свёклы по-грузински c грецкими орехами и специями (вег){" "}
+          Пхали из свёклы по-грузински c грецкими орехами и специями (вег)
           <br />
           <br />
           12. Karotten-Pchali - Karotten-Bällchen mit Walnusspaste, Koriander,
           Gewürzen (veg.) H 8,60 €<br />
-          Пхали из моркови по-грузински c грецкими орехами и специями (вег){" "}
+          Пхали из моркови по-грузински c грецкими орехами и специями (вег)
           <br />
           <br />
           13. Pchali-Mix – Spinat-, Rote Bete und Karotten-Pchali (veg.) H 13,60
@@ -188,13 +186,12 @@ export function Speisekarte(props) {
           Dip / Гебжалия - сырный рулет из молодого сыра с мятой и грузинскими
           приправами <br />
           <br />
-          Zu Suppen, Salaten und Vorspeisen wird hausgemachtes Brot gereicht{" "}
+          Zu Suppen, Salaten und Vorspeisen wird hausgemachtes Brot gereicht
           <br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Warme Vorspeisen /Горячие закуски{" "}
-          </Typography>{" "}
+            Warme Vorspeisen /Горячие закуски
+          </Typography>
           <br />
           <br />
           17. Grillgemüse - saftig gegrilltes Gemüse 9,90 €<br />
@@ -214,9 +211,8 @@ export function Speisekarte(props) {
           Аджапсандали - баклажаны тушёные с помидорами, паприкой, луком и
           зеленью (вег) <br /> <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Teiggerichte / Блюда из теста{" "}
-          </Typography>{" "}
+            Teiggerichte / Блюда из теста
+          </Typography>
           <br />
           <br />
           23. Chatschapuri „Imeruli“ - Teigfladen gefüllt mit Käse (veg.) A, F
@@ -249,9 +245,8 @@ export function Speisekarte(props) {
           <br /> <br />
           Zu allen Vorspeisen wird hausgemachtes Brot gereicht <br /> <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Fleischgerichte / Мясные блюда{" "}
-          </Typography>{" "}
+            Fleischgerichte / Мясные блюда
+          </Typography>
           <br />
           <br />
           30. Schweineschaschlik - Schweinefleisch auf Spieß gegrillt mit
@@ -283,20 +278,19 @@ export function Speisekarte(props) {
           <br />
           37. Chakapuli - Kalbfleisch in Tontopf mit Estragon und Weisswein
           geschmort D 18,90 €<br />
-          Чакапули - телятина, тушеная с эстрагоном и белым вином в горшочке{" "}
+          Чакапули - телятина, тушеная с эстрагоном и белым вином в горшочке
           <br />
           <br />
           38. Lammkeule aus dem Ofen mariniert in Adjika, Gewürzen und Knoblauch
           140,00 €<br />
-          Запечённая баранья ножка в маринаде из аджики, приправ и чеснока{" "}
+          Запечённая баранья ножка в маринаде из аджики, приправ и чеснока
           <br />
           (Nur auf Vorbestellung. Reicht für ca. 6 Personen /по предварительному
           заказу, количество на 6 человек) <br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Fischspezialitäten / Блюда из рыбы{" "}
-          </Typography>{" "}
+            Fischspezialitäten / Блюда из рыбы
+          </Typography>
           <br />
           <br />
           39. Lachsfilet in Knoblauch-Creme-Fraiche-Soße mit Beilage Ihrer Wahl
@@ -315,9 +309,8 @@ export function Speisekarte(props) {
           Zu allen Gerichten wird hausgemachtes Brot serviert <br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Beilagen und Soßen / Гарниры и соусы{" "}
-          </Typography>{" "}
+            Beilagen und Soßen / Гарниры и соусы
+          </Typography>
           <br />
           <br />
           42. Bratkartoffelhälften / Жареная картошка по-деревенски 3,70 €<br />
@@ -345,9 +338,8 @@ export function Speisekarte(props) {
           50. Schmand / Сметана 2,60 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Dessert / Десерт{" "}
-          </Typography>{" "}
+            Dessert / Десерт
+          </Typography>
           <br />
           <br />
           51. Hausgemachter Kuchen „Napoleon“ / Tорт "Наполеон" A, F 4,10 €
@@ -359,10 +351,9 @@ export function Speisekarte(props) {
           53. Hausgemachte Dessertvariationen Stk. 4,90 €<br />
           Домашние пирожные <br /> <br />
           <Typography variant="h6" align="center">
-            {" "}
             In unseren Speisen und Getränken sind folgende Zusatzstoffe
-            enthalten:{" "}
-          </Typography>{" "}
+            enthalten:
+          </Typography>
           <br />
           <br />
           A Getreide (Glutenhaltig) 1 mit Farbstoffen <br />
@@ -374,9 +365,8 @@ export function Speisekarte(props) {
           H Nüsse <br />
           I Eier <br /> <br /> <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Heiße Getränke / Горячие напитки{" "}
-          </Typography>{" "}
+            Heiße Getränke / Горячие напитки
+          </Typography>
           <br />
           60. Kaffee 2 2,70 €<br />
           <br />
@@ -391,13 +381,11 @@ export function Speisekarte(props) {
           65. Tee (diverse Sorten) 2,60 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Mineralwasser und Limonaden / Безалкогольные напитки{" "}
+            Mineralwasser und Limonaden / Безалкогольные напитки
           </Typography>
           <Typography variant="body1" align="center">
-            {" "}
-            0,2 l 0,4 l Flasche{" "}
-          </Typography>{" "}
+            0,2 l 0,4 l Flasche
+          </Typography>
           <br /> <br />
           70. Coca- Cola, Coca-Cola light 1, 2, 3 2,50 € 4,50 € 8,50 €<br />
           <br />
@@ -420,13 +408,11 @@ export function Speisekarte(props) {
           78. Red Bull 4,60 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Säfte und Nektare / Соки и нектары{" "}
+            Säfte und Nektare / Соки и нектары
           </Typography>
           <Typography variant="body1" align="center">
-            {" "}
-            0,2 l 0,4 l Flasche{" "}
-          </Typography>{" "}
+            0,2 l 0,4 l Flasche
+          </Typography>
           <br /> <br />
           80. Orangensaft 2,80 € 4,90 € 10,40 €<br />
           <br />
@@ -441,13 +427,11 @@ export function Speisekarte(props) {
           85. KiBa 2,80 € 4,90 € <br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Fass- und Flaschenbier / Пиво бочковое и бутылочное{" "}
+            Fass- und Flaschenbier / Пиво бочковое и бутылочное
           </Typography>
           <Typography variant="body1" align="center">
-            {" "}
-            0,3 l 0,4 l Flasche{" "}
-          </Typography>{" "}
+            0,3 l 0,4 l Flasche
+          </Typography>
           <br /> <br />
           90. Einbecker Brauherren Pils (Fassbier) 3,80 € 4,90 € <br />
           <br />
@@ -462,13 +446,11 @@ export function Speisekarte(props) {
           95. Herrnbräu Hefe Weißbier Alkoholfrei (0,5l) 4,90 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Spirituosen und Liköre /Крепкие спиртные напитки и ликёры{" "}
+            Spirituosen und Liköre /Крепкие спиртные напитки и ликёры
           </Typography>
           <Typography variant="body1" align="center">
-            {" "}
-            2 cl 0,1 l 0,5 l Flasche{" "}
-          </Typography>{" "}
+            2 cl 0,1 l 0,5 l Flasche
+          </Typography>
           <br /> <br />
           96. Martini 6,60 € 39,00 €<br />
           <br />
@@ -499,8 +481,7 @@ export function Speisekarte(props) {
           107. Gin 2,90 € 12,00 € 65,00 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Longdrinks / Kоктейлu{" "}
+            Longdrinks / Kоктейлu
           </Typography>
           <br />
           108. Wodka Red Bull 7,50 €<br />
@@ -514,8 +495,7 @@ export function Speisekarte(props) {
           112. Gin Tonic 7,90 €<br />
           <br />
           <Typography variant="h6" align="center">
-            {" "}
-            Sekt und Champagner / Игристое вино и шампанское{" "}
+            Sekt und Champagner / Игристое вино и шампанское
           </Typography>
           <br />
           113. Sekt "Freixenet" Piccolo 0,2 l Flasche 7,50 €<br />
@@ -764,7 +744,7 @@ export function Mittagsmenu(props) {
           </Grid>
         </Grid>
         <div style={{ padding: "0 10px" }}>
-          <Typography variant="body2" style={{ lineHeight: 1.2 }}>
+          <Typography variant="body1" style={{ lineHeight: 1.2 }}>
             <Typography variant="body1" align="center">
               <b> 12 bis 15 Uhr</b>
             </Typography>
