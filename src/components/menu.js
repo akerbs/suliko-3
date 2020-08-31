@@ -81,7 +81,7 @@ export function Speisekarte(props) {
               onClick={props.onClose}
             />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={7} sm={8}>
             <Typography
               variant="h6"
               style={{
@@ -92,14 +92,14 @@ export function Speisekarte(props) {
               SPEISEKARTE
             </Typography>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item xs={2} sm={1}>
             <IconButton
               style={{
                 margin: 0,
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                marginRight: "3%",
+                // marginRight: "8%",
               }}
               // onClick={stop}
               onClick={props.onClose}
@@ -636,7 +636,7 @@ export function Weinkarte(props) {
               onClick={props.onClose}
             />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={7} sm={8}>
             <Typography
               variant="h6"
               style={{
@@ -647,14 +647,14 @@ export function Weinkarte(props) {
               WEINKARTE
             </Typography>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item xs={2} sm={1}>
             <IconButton
               style={{
                 margin: 0,
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                marginRight: "3%",
+                // marginRight: "5%",
               }}
               // onClick={stop}
               onClick={props.onClose}
@@ -832,7 +832,7 @@ export function Mittagsmenu(props) {
               onClick={props.onClose}
             />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={7} sm={8}>
             <Typography
               variant="h6"
               style={{
@@ -843,14 +843,14 @@ export function Mittagsmenu(props) {
               MITTAGSMENÜ
             </Typography>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item xs={2} sm={1}>
             <IconButton
               style={{
                 margin: 0,
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                marginRight: "3%",
+                // marginRight: "5%",
               }}
               // onClick={stop}
               onClick={props.onClose}
