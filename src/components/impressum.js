@@ -27,13 +27,13 @@ const useStyles = makeStyles(theme => ({
     zIndex: 9999,
     position: "fixed",
     outline: 1,
-    padding: 30,
+    padding: 20,
     paddingTop: 10,
     fontSize: 12,
   },
 
   logo2: {
-    width: 60,
+    width: "3rem",
     marginBottom: 10,
   },
 }))
@@ -48,24 +48,34 @@ export default function Impressum(props) {
       open={props.open}
     >
       <div className={classes.paper}>
-        <IconButton
-          style={{
-            margin: 0,
-            padding: 0,
-            marginLeft: "248px",
-          }}
-          // onClick={stop}
-          onClick={props.onClose}
-        >
-          <HighlightOffIcon />
-        </IconButton>
-
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
+        <Grid container spacing={0}>
+          <Grid item xs={3}>
             <img src={sulikoIcon} alt="logo" className={classes.logo2} />
           </Grid>
           <Grid item xs={8}>
-            <Typography variant="h6">IMPRESSUM</Typography>
+            <Typography
+              variant="h6"
+              style={{
+                marginLeft: "3%",
+                marginTop: "8%",
+              }}
+            >
+              IMPRESSUM
+            </Typography>
+          </Grid>
+          <Grid item xs={1}>
+            <IconButton
+              style={{
+                margin: 0,
+                padding: 0,
+                zIndex: 9999,
+                position: "fixed",
+              }}
+              // onClick={stop}
+              onClick={props.onClose}
+            >
+              <HighlightOffIcon />
+            </IconButton>
           </Grid>
         </Grid>
         <Typography variant="body2" style={{ lineHeight: 1.2 }}>

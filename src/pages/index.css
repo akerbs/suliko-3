@@ -60,6 +60,12 @@
   }
 }
 
+/* .menuButton {
+  background-color: rgba(249, 234, 207);
+  color: rgba(133, 26, 29);
+  margin: 10px;
+} */
+
 .contactWrapper {
   padding: 150px 15px 10px 15px;
   border-radius: 10px;

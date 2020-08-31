@@ -7,6 +7,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
 import HighlightOffIcon from "@material-ui/icons/HighlightOff"
 
+const window = require("global/window")
+
+const modalWindowWidth = window.innerWidth <= 599 ? 320 : "50vw"
+
+const mainTitelLeftMargin = window.innerWidth <= 599 ? "4%" : "16%"
+
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
     display: "flex",
@@ -19,7 +25,7 @@ const useStyles = makeStyles(theme => ({
       overflowY: "scroll",
     },
     maxHeight: " 100vh",
-    width: 320,
+    width: modalWindowWidth,
     backgroundColor: "rgba(249,234,207)",
     border: "2px solid rgba(133,26,29)",
     boxShadow: theme.shadows[5],
@@ -27,12 +33,12 @@ const useStyles = makeStyles(theme => ({
     zIndex: 9999,
     position: "fixed",
     outline: 1,
-    padding: 6,
+    padding: 10,
     fontSize: 10,
   },
 
   logo2: {
-    width: 60,
+    width: "4rem",
     marginBottom: 20,
   },
 }))
@@ -47,24 +53,34 @@ export default function Datenschutz(props) {
       open={props.open}
     >
       <div className={classes.paper}>
-        <IconButton
-          style={{
-            margin: 0,
-            padding: 0,
-            marginLeft: "277px",
-          }}
-          // onClick={stop}
-          onClick={props.onClose}
-        >
-          <HighlightOffIcon />
-        </IconButton>
-
-        <Grid container spacing={3}>
+        <Grid container spacing={0}>
           <Grid item xs={3}>
             <img src={sulikoIcon} alt="logo" className={classes.logo2} />
           </Grid>
-          <Grid item xs={9}>
-            <Typography variant="h6">DATENSCHUTZ</Typography>
+          <Grid item xs={8}>
+            <Typography
+              variant="h6"
+              style={{
+                marginLeft: mainTitelLeftMargin,
+                marginTop: "7%",
+              }}
+            >
+              DATENSCHUTZ
+            </Typography>
+          </Grid>
+          <Grid item xs={1}>
+            <IconButton
+              style={{
+                margin: 0,
+                padding: 0,
+                zIndex: 9999,
+                position: "fixed",
+              }}
+              // onClick={stop}
+              onClick={props.onClose}
+            >
+              <HighlightOffIcon />
+            </IconButton>
           </Grid>
         </Grid>
         <Typography variant="body2" style={{ lineHeight: 1.2 }}>

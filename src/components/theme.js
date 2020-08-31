@@ -15,6 +15,14 @@ const theme = createMuiTheme({
     backgroundColor: "rgba(249,234,207)",
     color: "rgba(133,26,29)",
   },
+
+  typography: {
+    fontFamily: ["Raleway", "sans-serif"].join(","),
+    // "fontSize": 14,
+    // "fontWeightLight": 300,
+    // "fontWeightRegular": 400,
+    // "fontWeightMedium": 500
+  },
 })
 
 export default theme
