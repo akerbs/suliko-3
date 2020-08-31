@@ -114,7 +114,8 @@ export function Speisekarte(props) {
           Суп Харчо -грузинский суп из телятины с рисом помидорами и зеленью
           <br />
           <br />
-          2. Tschichirtma - Hühnerfleisch, Eier und frische Kräuter I 6,20 €
+          2. Tschichirtma - Hühnerfleisch, Eier und frische Kräuter{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup> 6,20 €
           <br />
           Чихиртма - грузинский густой куриный суп <br />
           <br />
@@ -122,7 +123,10 @@ export function Speisekarte(props) {
           Солянка-густой мясной суп 6,90 €<br />
           <br />
           4. Matsoni-Suppe - Joghurtsuppe mit Kräutern / Суп 'Mацони' из йогурта
-          с зеленью A, F, I 5,60 €<br />
+          с зеленью <sup style={{ color: "rgba(133, 26, 29)" }}>
+            A, F, I
+          </sup>{" "}
+          5,60 €<br />
           <br />
           <br />
           <br />
@@ -132,16 +136,19 @@ export function Speisekarte(props) {
           <br />
           <br />
           5. Gemischter Salat - frische Tomaten, Gurken, Zwiebeln, Kräuter mit
-          Feta (veg.) F 6,40 €<br />
+          Feta (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> 6,40 €
+          <br />
           Салат из свежих овощей с брынзой (вег) <br />
           <br />
           6. Gemischter Salat nach „georgischer Art“ - Frische Tomaten, Gurken,
-          Walnüsse, Essig (veg.) H 8,60 €<br />
+          Walnüsse, Essig (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €<br />
           Грузинский салат - cалат из свежих овощей по-грузински с грецкими
           орехами (вег) <br />
           <br />
           7. Hähnchensalat - pikanter Hähnchenfleischsalat mit Mayonnaise,
-          Erbsen und GewürzenI, K, F 9,20 €<br />
+          Erbsen und Gewürzen{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I, K, F</sup> 9,20 €<br />
           Куриный салат по-грузински с майонезом и приправами <br />
           <br />
           8. Schafskäse mit Olivenöl, Sumak und Petersillie (veg.) Брынза -
@@ -160,30 +167,38 @@ export function Speisekarte(props) {
           <br />
           <br />
           10. Spinat-Pchali - Blattspinatbällchen mit Walnusspaste, Koriander
-          und Gewürzen (veg.) H 8,60 €<br />
+          und Gewürzen (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €<br />
           Шпинат-Пхали - шпинат с грецкими орехами и специями (вег) <br />
           <br />
           11. Rote-Bete-Pchali - Bällchen aus Rote-Bete-Püree mit Walnusspaste
-          und Koriander (veg) H 8,60 €<br />
+          und Koriander (veg){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €<br />
           Пхали из свёклы по-грузински c грецкими орехами и специями (вег)
           <br />
           <br />
           12. Karotten-Pchali - Karotten-Bällchen mit Walnusspaste, Koriander,
-          Gewürzen (veg.) H 8,60 €<br />
+          Gewürzen (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>
+            H
+          </sup>{" "}
+          8,60 €<br />
           Пхали из моркови по-грузински c грецкими орехами и специями (вег)
           <br />
           <br />
-          13. Pchali-Mix – Spinat-, Rote Bete und Karotten-Pchali (veg.) H 13,60
-          €<br />
+          13. Pchali-Mix – Spinat-, Rote Bete und Karotten-Pchali (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 13,60 €<br />
           Пхали-Ассорти - три вида пхали (вег) <br />
           <br />
           14. Badridschani – gebratene Aubergine gefüllt mit Walnusspaste und
-          Gewürzen (veg.) H 9,90 €<br />
+          Gewürzen (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>
+            H
+          </sup>{" "}
+          9,90 €<br />
           Баклажаны с орехами - баклажаны, фаршированные грецкими орехами со
           специями <br />
           <br />
-          15. Mjawe Mix – eingelegtes Gemüse nach georgischer Art (veg.) E 8,60
-          €<br />
+          15. Mjawe Mix – eingelegtes Gemüse nach georgischer Art (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup> 8,60 €<br />
           Мжаве ассорти - aссорти из грузинскиx солений (вег) <br />
           <br />
           16. Gebjalia - hauchdünne Käserollen gefüllt mit hausgemachtem
@@ -209,9 +224,11 @@ export function Speisekarte(props) {
           Kräutern 8,50 €<br />
           Долма по-кавказски с фаршем, в виноградных листьях <br /> <br />
           20. "Soko kezse" - Champignons aus dem Ofen mit Käse gefüllt und
-          überbacken F, I 7,60 €<br />
+          überbacken <sup style={{ color: "rgba(133, 26, 29)" }}>F, I</sup> 7,60
+          €<br />
           Грибы на кеци - Шампиньоны с зеленью, запечёные с сыром <br /> <br />
-          21. Chvischtari - Maismehl-Käse-Puffer A, F 4,90 €<br />
+          21. Chvischtari - Maismehl-Käse-Puffer{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F</sup> 4,90 €<br />
           Чвиштари - кукурузная лепёшка с сыром сулугуни <br /> <br />
           22. Adschapsandali - Geschmorte Auberginen, Tomaten, Paprika,
           Zwiebeln, Kräuter, Gewürze 9,90 €<br />
@@ -224,26 +241,31 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          23. Chatschapuri „Imeruli“ - Teigfladen gefüllt mit Käse (veg.) A, F
-          10,90 €<br />
+          23. Chatschapuri „Imeruli“ - Teigfladen gefüllt mit Käse (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 10,90 €<br />
           Хачапури „имерули“ - лепешка с сыром по-имеретински <br /> <br />
           24. Chatschapuri „Megruli“ - Teigfladen gefüllt und überbacken mit
-          Käse aus dem Ofen (veg.) A, F 12,90 €<br />
+          Käse aus dem Ofen (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 12,90 €<br />
           Хачапури "мегрули" - лепешка с сыром по-мегрельски <br /> <br />
           25. Chatschapuri "Atscharuli" - Bootförmige Teigtasche mit Käse und Ei
-          aus dem Ofen (veg.) A, F, I 14,90 €<br />
+          aus dem Ofen (veg.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F,I</sup> 14,90 €<br />
           Хачапури "аджарули" - лепёшка в форме лодки с сыром и яйцом
           по-аджарски <br /> <br />
           26. Lobiani - Teigfladen mit Bohnen gefüllt / Лобиани - лепёшка
-          начинённая фасолью A, F 12,90 €<br />
+          начинённая фасолью{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 12,90 €<br />
           <br />
           27. Chinkali - Teigtaschen mit Hackfleisch gefüllt, gewürzt nach
-          georgischer Art (ab 4 Stk.) A, F 2,20 €<br />
+          georgischer Art (ab 4 Stk.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,20 €<br />
           Хинкали с мясом - варёные, из теста, начиненные сочным фаршем (от 4
           шт.) Stück
           <br /> <br />
           28. Chinkali - Teigtaschen mit Rinderhackfleisch gefüllt, gewürzt nach
-          georgischer Art (ab 4 Stk.) A, F 2,50 €<br />
+          georgischer Art (ab 4 Stk.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,50 €<br />
           Хинкали с говяжьим мясом - варёные, из теста, начиненные сочным фаршем
           (от 4 шт.) Stück
           <br /> <br />
@@ -275,8 +297,9 @@ export function Speisekarte(props) {
           33. Zarte Lammkrone / Каре ягнёнка 28,90 €<br />
           Edle Lammkrone mit Zwiebeln, Kräuter und Satsebela <br />
           <br />
-          34. Chkmeruli - Hähnchen in Knoblauch-Creme-Fraiche-Soße aus dem Ofen
-          F (mit Knochen) 17,90 €<br />
+          34. Chkmeruli - Hähnchen in Knoblauch-Creme-Fraiche-Soße aus dem Ofen{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> (mit Knochen)
+          17,90 €<br />
           Чкмерули - курица, запеченная в молочно-чесночном соусе соусе(с
           косточками) <br />
           <br />
@@ -288,7 +311,8 @@ export function Speisekarte(props) {
           из грецких орехов H 18,90 €<br />
           <br />
           37. Chakapuli - Kalbfleisch in Tontopf mit Estragon und Weisswein
-          geschmort D 18,90 €<br />
+          geschmort <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup> 18,90 €
+          <br />
           Чакапули - телятина, тушеная с эстрагоном и белым вином в горшочке
           <br />
           <br />
@@ -306,16 +330,19 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          39. Lachsfilet in Knoblauch-Creme-Fraiche-Soße mit Beilage Ihrer Wahl
-          B, F 18,90 €<br />
+          39. Lachsfilet in Knoblauch-Creme-Fraiche-Soße mit Beilage Ihrer Wahl{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B,F</sup> 18,90 €<br />
           Лосось с молочно-чесночным соусом и гарниром по выбору <br />
           <br />
-          40. Riesengarnelen mit Tandoori-Sauce in einer Pfanne serviert C 24,90
-          €<br />
+          40. Riesengarnelen mit Tandoori-Sauce in einer Pfanne serviert{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup> 24,90 €<br />
           Королевские креветки с соусом тандури <br />
           <br />
           41. Königsstör ganz, überbacken mit Gemüse / Королевский осётр
-          запеченный целиком B 140,00 €<br />
+          запеченный целиком <sup style={{ color: "rgba(133, 26, 29)" }}>
+            B
+          </sup>{" "}
+          140,00 €<br />
           (Nur auf Vorbestellung. Reicht für ca. 6 Personen /по предварительному
           заказу, количество на 6 человек) <br />
           <br />
@@ -332,7 +359,8 @@ export function Speisekarte(props) {
           <br />
           43. Reis / Pис 3,90 €<br />
           <br />
-          44. Hausgemachtes Brot / Cвежевыпеченный хлеб A, F 1,50 €<br />
+          44. Hausgemachtes Brot / Cвежевыпеченный хлеб{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 1,50 €<br />
           <br />
           45. Satsebela -traditionelle georgische Tomatensoße / Сацебела - соус
           из томатов 3,10 €<br />
@@ -344,7 +372,8 @@ export function Speisekarte(props) {
           <br />
           Ткемали - соус из алычи, перца, чеснока и специй <br />
           <br />
-          48. Baje - georgische Walnusspaste / Грузинский ореховый соус H 4,40 €
+          48. Baje - georgische Walnusspaste / Грузинский ореховый соус{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 4,40 €
           <br />
           <br />
           49. Tzatziki - Joghurtdip mit Knoblauch und Dill <br />
@@ -359,9 +388,11 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          51. Hausgemachter Kuchen „Napoleon“ / Tорт "Наполеон" A, F 4,10 €
+          51. Hausgemachter Kuchen „Napoleon“ / Tорт "Наполеон"{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 4,10 €
           <br /> <br />
-          52. "Pelamuschi" - georgisches Soufflé aus Weintraubensaft A, H 3,20 €
+          52. "Pelamuschi" - georgisches Soufflé aus Weintraubensaft{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,H</sup> 3,20 €
           <br />
           Пеламуши - старинный грузинский десерт из виноградного сока и
           кукурузной муки <br /> <br />
@@ -376,30 +407,50 @@ export function Speisekarte(props) {
             </b>
           </Typography>
           <br />
+          <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>A</sup> Getreide
+          (Glutenhaltig) <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B</sup> Fisch <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup> Krebstiere <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup> Schwefeldioxide /
+          Sulfite <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup>{" "}
+          Sellerie <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup>{" "}
+          Milch / Laktose <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> Nüsse <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup> Eier
           <br />
-          A Getreide (Glutenhaltig) 1 mit Farbstoffen <br />
-          B Fisch 2 Koffeinhaltig <br />
-          C Krebstiere 3 Chitinhaltig <br />
-          D Schwefeldioxide / Sulfite 4 mit Konservierungsstoffen <br />
-          E Sellerie 5 Antioxidationsmittel <br />
-          F Milch / Laktose <br />
-          H Nüsse <br />
-          I Eier <br /> <br /> <br />
+          <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>1</sup> mit
+          Farbstoffen <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>{" "}
+          Koffeinhaltig
+          <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>3</sup>{" "}
+          Chitinhaltig <br />{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>4</sup> mit
+          Konservierungsstoffen
+          <br /> <sup style={{ color: "rgba(133, 26, 29)" }}>5</sup>{" "}
+          Antioxidationsmittel
+          <br />
+          <br /> <br /> <br />
           <br />
           <br />
           <Typography variant="h6" align="center">
             <b> Heiße Getränke / Горячие напитки</b>
           </Typography>
           <br />
-          60. Kaffee 2 2,70 €<br />
+          60. Kaffee <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> 2,70 €
           <br />
-          61. Latte Macchiato 2, F 3,90 €<br />
           <br />
-          62. Espresso 2 2,50 €<br />
+          61. Latte Macchiato{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup> 3,90 €<br />
           <br />
-          63. Doppelter Espresso 2 3,50 €<br />
+          62. Espresso <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> 2,50
+          €<br />
           <br />
-          64. Cappuccino 2, F 3,10 €<br />
+          63. Doppelter Espresso{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> 3,50 €<br />
+          <br />
+          64. Cappuccino <sup style={{ color: "rgba(133, 26, 29)" }}>
+            2,F
+          </sup>{" "}
+          3,10 €<br />
           <br />
           65. Tee (diverse Sorten) 2,60 €<br />
           <br />
@@ -412,21 +463,33 @@ export function Speisekarte(props) {
             0,2 l 0,4 l Flasche
           </Typography>
           <br /> <br />
-          70. Coca- Cola, Coca-Cola light 1, 2, 3 2,50 € 4,50 € 8,50 €<br />
+          70. Coca- Cola, Coca-Cola light{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,2,3</sup> 2,50 € 4,50 €
+          8,50 €<br />
           <br />
-          71. Fanta , Sprite 5, 4 2,50 € 4,50 € 8,50 €<br />
+          71. Fanta , Sprite{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>5,4</sup> 2,50 € 4,50 €
+          8,50 €<br />
           <br />
           72. St. Michaelis Naturell / Classic 2,20 € 3,90 € 6,50 €<br />
           <br />
           73. Borjomi - Georgisches Heilwasser 0,5 l Fl. 6,20 €<br />
           <br />
-          74. Georgische Birnenlimonade 1, 3 0,5 l Fl. 6,20 €<br />
+          74. Georgische Birnenlimonade{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
           <br />
-          75. Georgische Estragonlimonade "Tarkhun" 1, 3 0,5 l Fl. 6,20 €<br />
           <br />
-          76. Georgische Traubenlimonade "Saperavi" 1, 3 0,5 l Fl. 6,20 €<br />
+          75. Georgische Estragonlimonade "Tarkhun"{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
           <br />
-          77. Georgische Feijoalimonade "Feijoa" 1, 3 0,5 l Fl. 6,20 €<br />
+          <br />
+          76. Georgische Traubenlimonade "Saperavi"{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <br />
+          <br />
+          77. Georgische Feijoalimonade "Feijoa"{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <br />
           <br />
           (Feijoa - brasilianische Goave) <br />
           <br />
