@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     outline: 1,
     // padding: 10,
-    padding: "30px 10px",
+    padding: "40px 10px",
     fontSize: 10,
   },
 
