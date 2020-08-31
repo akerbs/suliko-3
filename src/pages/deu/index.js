@@ -26,7 +26,7 @@ import menu from "../../images/menu.png"
 import { Helmet } from "react-helmet"
 import Header from "../../components/header"
 import Footer from "../../components/footer"
-import { Speisekarte, Weinkarte, Mittagsmenu } from "../../components/menu"
+import { Speisekarte, Weinkarte, Mittagsmenu } from "../../components/menu-deu"
 
 const window = require("global/window")
 

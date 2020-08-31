@@ -16,7 +16,7 @@ const mainTitelLeftMargin =
   //   ? "3%"
   //   :
   window.innerWidth <= 400
-    ? "6%"
+    ? "5%"
     : window.innerWidth <= 500
     ? "10%"
     : window.innerWidth <= 600
@@ -90,7 +90,7 @@ export function Speisekarte(props) {
                 marginTop: "8%",
               }}
             >
-              SPEISEKARTE
+              МЕНЮ И БАР
             </Typography>
           </Grid>
           <Grid item xs={2} sm={1}>
@@ -266,20 +266,22 @@ export function Speisekarte(props) {
           <br />
           27. Chinkali - Teigtaschen mit Hackfleisch gefüllt, gewürzt nach
           georgischer Art (ab 4 Stk.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,20 €<br />
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,20 €/Stück
+          <br />
           Хинкали с мясом - варёные, из теста, начиненные сочным фаршем (от 4
-          шт.) Stück
+          шт.)
           <br /> <br />
           28. Chinkali - Teigtaschen mit Rinderhackfleisch gefüllt, gewürzt nach
           georgischer Art (ab 4 Stk.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,50 €<br />
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,50 €/Stück
+          <br />
           Хинкали с говяжьим мясом - варёные, из теста, начиненные сочным фаршем
-          (от 4 шт.) Stück
+          (от 4 шт.)
           <br /> <br />
           29. Chinkali mit Käse - Teigtaschen mit Käse gefüllt nach georgischer
-          Art (ab 4 Stk.) veg. 2,20 €<br />
+          Art (ab 4 Stk.) veg. 2,20 €/Stück
+          <br />
           Хинкали с сыром - варёные, из теста, начиненные сыром (вег) (от 4 шт.)
-          Stück
           <br /> <br />
           Zu allen Vorspeisen wird hausgemachtes Brot gereicht <br /> <br />
           <br />
@@ -645,7 +647,7 @@ export function Weinkarte(props) {
                 marginTop: "8%",
               }}
             >
-              WEINKARTE
+              ВИННАЯ КАРТА
             </Typography>
           </Grid>
           <Grid item xs={2} sm={1}>
@@ -841,7 +843,7 @@ export function Mittagsmenu(props) {
                 marginTop: "8%",
               }}
             >
-              MITTAGSMENÜ
+              ОБЕДEННОЕ МЕНЮ
             </Typography>
           </Grid>
           <Grid item xs={2} sm={1}>
@@ -863,40 +865,37 @@ export function Mittagsmenu(props) {
         <div style={{ padding: "0 10px" }}>
           <Typography variant="body1" style={{ lineHeight: 1.2 }}>
             <Typography variant="body1" align="center">
-              <b> 12 bis 15 Uhr</b>
+              <b>с 12 до 15 часов</b>
             </Typography>
             <br /> <br />
             <br />
-            1001. „Soljanka“ Kräftiger würziger Eintopf mit viel Fleisch Euro
-            5,90
+            1001. „Soljanka“ Kräftiger würziger Eintopf mit viel Fleisch 5,90 €
             <br />
             <br />
-            1002. „Hartcho“ Kalbfleischeintopf mit Reis, Gemüse, Gewürzen Euro
-            5,90
+            1002. „Hartcho“ Kalbfleischeintopf mit Reis, Gemüse, Gewürzen 5,90 €
             <br />
             <br />
-            1003. „Matsoni“ georgische Joghurtsuppe mit Kräutern (veg.) Euro
-            4,80
+            1003. „Matsoni“ georgische Joghurtsuppe mit Kräutern (veg.) 4,80 €
             <br />
             <br />
             1004. Chatschapuri „Imeruli“ Pizzafladen gefüllt mit Käse (veg.)
-            Euro 8,50 <br />
+            8,50 €<br />
             <br />
-            1005. Chatschapuri „Spinat“ Pizzafladen mit Spinat/Käse (veg.) Euro
-            8,90
-            <br />
-            <br />
-            1006. Auberginen-Kartoffel-Pfanne „Adschapsandali“ (veg.) Euro 7,90
+            1005. Chatschapuri „Spinat“ Pizzafladen mit Spinat/Käse (veg.) 8,90
+            €
             <br />
             <br />
-            1007. Pfannkuchen gefüllt mit Hackfleisch Euro 5,60
+            1006. Auberginen-Kartoffel-Pfanne „Adschapsandali“ (veg.) 7,90 €
             <br />
             <br />
-            1008. Kalbgeschnetzeltes „Beef Stroganoff“ mit Reis Euro 9,40
+            1007. Pfannkuchen gefüllt mit Hackfleisch 5,60 €
             <br />
             <br />
-            1009. Hähnchenfilet überbacken mit Käse und Tomaten Euro 8,90 mit
-            Bratkartoffeln
+            1008. Kalbgeschnetzeltes „Beef Stroganoff“ mit Reis 9,40 €
+            <br />
+            <br />
+            1009. Hähnchenfilet überbacken mit Käse und Tomaten mit
+            Bratkartoffeln 8,90 €
             <br />
             <br />
           </Typography>
