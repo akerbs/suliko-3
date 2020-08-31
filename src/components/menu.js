@@ -51,8 +51,8 @@ const useStyles = makeStyles(theme => ({
     zIndex: 9999,
     position: "fixed",
     outline: 1,
-    padding: "30px 10px",
-
+    padding: 10,
+    // padding: "30px 10px",
     fontSize: 10,
   },
 
