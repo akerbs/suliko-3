@@ -513,7 +513,7 @@ const IndexPage = props => {
             style={{
               display: "block",
               margin: "0px auto",
-              paddingTop: "120px",
+              paddingTop: "100px",
             }}
           />
           <br /> <br />
