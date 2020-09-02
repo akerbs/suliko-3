@@ -5,12 +5,8 @@ const window = require("global/window")
 // const global = require("global")
 // const document = require("global/document")
 
-// const lng = navigator.language || navigator.userLanguage
-
-const nav = window.navigator
-const lng = nav.language
-
-console.log("lng: ", lng)
+const lng =
+  navigator.language || navigator.userLanguage || navigator.languages[0]
 
 const lang =
   lng.slice(0, 2) === "ru"
