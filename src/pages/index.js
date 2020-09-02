@@ -1,8 +1,11 @@
 import { useEffect } from "react"
 import { navigate } from "gatsby"
+const window = require("global/window")
 
 const lng =
-  navigator.language || navigator.userLanguage || navigator.languages[0]
+  window.navigator.language ||
+  window.navigator.userLanguage ||
+  window.navigator.languages[0]
 
 export default () => {
   useEffect(() => {
