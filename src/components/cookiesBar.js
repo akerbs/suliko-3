@@ -3,10 +3,16 @@ import CookieConsent from "react-cookie-consent"
 import Typography from "@material-ui/core/Typography"
 const window = require("global/window")
 
-const language = window.navigator.language
-const lang = language.slice(0, 2)
-
-console.log(lang)
+const lang =
+  window.navigator.language.slice(0, 2) === "ru"
+    ? "rus"
+    : window.navigator.language.slice(0, 2) === "ge"
+    ? "geo"
+    : window.navigator.language.slice(0, 2) === "de"
+    ? "deu"
+    : window.navigator.language.slice(0, 2) === "en"
+    ? "eng"
+    : "eng"
 
 export default function CookiesBar() {
   return (
@@ -58,47 +64,47 @@ export default function CookiesBar() {
 }
 
 const btnYes =
-  lang === "ru"
+  lang === "rus"
     ? "Принять все cookies"
-    : lang === "ge"
+    : lang === "geo"
     ? "მიიღეთ ყველა cookies"
-    : lang === "de"
+    : lang === "deu"
     ? "Akzeptiere alle Cookies"
-    : lang === "en"
+    : lang === "eng"
     ? "Accept all cookies"
     : "Accept all cookies"
 
 const btnNo =
-  lang === "ru"
+  lang === "rus"
     ? "Только необходимые"
-    : lang === "ge"
+    : lang === "geo"
     ? "მხოლოდ საჭიროა"
-    : lang === "de"
+    : lang === "deu"
     ? "Nur essenzielle"
-    : lang === "en"
+    : lang === "eng"
     ? "Only essentials"
     : "Only essentials"
 
 const cookiesTitle =
-  lang === "ru"
+  lang === "rus"
     ? "НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ"
-    : lang === "ge"
+    : lang === "geo"
     ? "კონფიდენციალურობის პარამეტრები"
-    : lang === "de"
+    : lang === "deu"
     ? "DATENSCHUTZEINSTELLUNGEN"
-    : lang === "en"
+    : lang === "eng"
     ? "PRIVACY SETTINGS"
     : "PRIVACY SETTINGS"
 
 const cookiesText =
-  lang === "ru"
+  lang === "rus"
     ? `На нашем веб-сайте мы используем файлы cookie. Некоторые из них необходимы, а другие помогают нам улучшить этот веб-сайт и улучшить ваш опыт.`
-    : lang === "ge"
+    : lang === "geo"
     ? `ჩვენ ვიყენებთ ქუქი – ფაილებს ჩვენს ვებ – გვერდზე. ზოგიერთი მათგანი აუცილებელია, ზოგი კი დაგვეხმარება ამ ვებ – გვერდის გაუმჯობესებაში და თქვენი გამოცდილების გაუმჯობესებაში.`
-    : lang === "de"
+    : lang === "deu"
     ? ` Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
     essenziell, während andere uns helfen, diese Website und Ihre Erfahrung
     zu verbessern.`
-    : lang
+    : lang === "eng"
     ? `We use cookies on our website. Some of them are essential, while others help us to improve this website and your experience.`
     : `We use cookies on our website. Some of them are essential, while others help us to improve this website and your experience.`
