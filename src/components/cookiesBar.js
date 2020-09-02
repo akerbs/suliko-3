@@ -2,16 +2,17 @@ import React from "react"
 import CookieConsent from "react-cookie-consent"
 import Typography from "@material-ui/core/Typography"
 const window = require("global/window")
-const global = require("global")
+
+const lng = window.navigator.language || window.navigator.userLanguage
 
 const lang =
-  global.navigator.language.slice(0, 2) === "ru"
+  lng.slice(0, 2) === "ru"
     ? "rus"
-    : global.navigator.language.slice(0, 2) === "ge"
+    : lng.slice(0, 2) === "ge"
     ? "geo"
-    : global.navigator.language.slice(0, 2) === "de"
+    : lng.slice(0, 2) === "de"
     ? "deu"
-    : global.navigator.language.slice(0, 2) === "en"
+    : lng.slice(0, 2) === "en"
     ? "eng"
     : "eng"
 

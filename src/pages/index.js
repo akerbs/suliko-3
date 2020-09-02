@@ -1,15 +1,16 @@
 import { useEffect } from "react"
 import { navigate } from "gatsby"
 const window = require("global/window")
-const global = require("global")
+
+const lang = window.navigator.language || window.navigator.userLanguage
 
 export default () => {
   useEffect(() => {
-    if (global.navigator.language.slice(0, 2) === "ru") {
+    if (lang.slice(0, 2) === "ru") {
       navigate("/rus")
-    } else if (global.navigator.language.slice(0, 2) === "de") {
+    } else if (lang.slice(0, 2) === "de") {
       navigate("/deu")
-    } else if (global.navigator.language.slice(0, 2) === "ge") {
+    } else if (lang.slice(0, 2) === "ge") {
       navigate("/geo")
     } else {
       navigate("/eng")
