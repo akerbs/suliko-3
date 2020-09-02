@@ -48,7 +48,7 @@ export default function CookiesBar() {
         Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
         essenziell, während andere uns helfen, diese Website und Ihre Erfahrung
         zu verbessern.
-      </Typography>{" "}
+      </Typography>
     </CookieConsent>
   )
 }
