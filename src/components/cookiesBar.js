@@ -1,11 +1,16 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
 import Typography from "@material-ui/core/Typography"
-// const window = require("global/window")
+const window = require("global/window")
 // const global = require("global")
 // const document = require("global/document")
 
-const lng = navigator.language || navigator.userLanguage
+// const lng = navigator.language || navigator.userLanguage
+
+const nav = window.navigator
+const lng = nav.language
+
+console.log("lng: ", lng)
 
 const lang =
   lng.slice(0, 2) === "ru"
