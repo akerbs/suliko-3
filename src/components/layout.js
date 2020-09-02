@@ -2,7 +2,7 @@ import React from "react"
 import "./layout.css"
 import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./theme"
-import CookiesBar from "./cookiesBar"
+// import CookiesBar from "./cookiesBar"
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <main>{children}</main>
       </ThemeProvider>
-      <CookiesBar />
+      {/* <CookiesBar /> */}
     </div>
   )
 }

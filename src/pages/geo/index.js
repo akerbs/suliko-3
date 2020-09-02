@@ -27,6 +27,7 @@ import { Helmet } from "react-helmet"
 import Header from "../../components/header-geo"
 import Footer from "../../components/footer"
 import { Speisekarte, Weinkarte, Mittagsmenu } from "../../components/menu-geo"
+import CookiesBar from "../../components/cookiesBar-geo"
 
 const window = require("global/window")
 
@@ -603,6 +604,7 @@ const IndexPage = props => {
           ></iframe>
         </Container>
         <Footer />
+        <CookiesBar />
       </Container>
     </Layout>
   )
