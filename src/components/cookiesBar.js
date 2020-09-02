@@ -3,7 +3,10 @@ import CookieConsent from "react-cookie-consent"
 import Typography from "@material-ui/core/Typography"
 const window = require("global/window")
 
-const lang = window.navigator.language.slice(0, 2)
+const language = window.navigator.language
+const lang = language.slice(0, 2)
+
+console.log(lang)
 
 export default function CookiesBar() {
   return (
