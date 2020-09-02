@@ -335,6 +335,7 @@ function Header(props) {
           variant="persistent"
           transitionDuration={{ enter: 500, exit: 500 }}
           anchor="top"
+          onEscapeKeyDown={handleDrawerClose}
           open={open}
           classes={{
             paper: classes.drawerPaper,

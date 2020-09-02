@@ -22,13 +22,33 @@ export default function CookiesBar() {
         color: "white",
         fontSize: "15px",
       }}
+      // flipButtons
+      // acceptOnScroll={true}
+      // acceptOnScrollPercentage={50}
+      // onAccept={() => {
+      //   alert("yay!")
+      // }}
+      // onAccept={({ acceptedByScrolling }) => {
+      //   if (acceptedByScrolling) {
+      //     // triggered if user scrolls past threshold
+      //     alert("Accept was triggered by user scrolling")
+      //   } else {
+      //     alert("Accept was triggered by clicking the Accept button")
+      //   }
+      // }}
+
+      // onDecline={() => {
+      //   alert("nay!")
+      // }}
+      // expires={999}
+      //  overlay
     >
       <Typography variant="body1"> DATENSCHUTZEINSTELLUNGEN </Typography>
       <Typography variant="caption">
         Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
         essenziell, während andere uns helfen, diese Website und Ihre Erfahrung
         zu verbessern.
-      </Typography>
+      </Typography>{" "}
     </CookieConsent>
   )
 }
