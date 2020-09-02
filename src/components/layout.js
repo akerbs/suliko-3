@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
     <div style={{ backgroundColor: "#f9eacf" }}>
       <ThemeProvider theme={theme}>
         <main>{children}</main>
-        <CookiesBar />
       </ThemeProvider>
+      <CookiesBar />
     </div>
   )
 }
