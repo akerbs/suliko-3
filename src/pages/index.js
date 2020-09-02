@@ -1,8 +1,9 @@
 import { useEffect } from "react"
 import { navigate } from "gatsby"
 const window = require("global/window")
+const global = require("global")
 
-const lang = window.navigator.language || window.navigator.userLanguage
+const lang = global.navigator.language || global.navigator.userLanguage
 
 export default () => {
   useEffect(() => {
