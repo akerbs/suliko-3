@@ -3,6 +3,8 @@ import CookieConsent from "react-cookie-consent"
 import Typography from "@material-ui/core/Typography"
 const window = require("global/window")
 
+const lang = window.navigator.language.slice(0, 2)
+
 export default function CookiesBar() {
   return (
     <CookieConsent
@@ -53,47 +55,47 @@ export default function CookiesBar() {
 }
 
 const btnYes =
-  window.navigator.language.slice(0, 2) === "ru"
+  lang === "ru"
     ? "Принять все cookies"
-    : window.navigator.language.slice(0, 2) === "ge"
+    : lang === "ge"
     ? "მიიღეთ ყველა cookies"
-    : window.navigator.language.slice(0, 2) === "de"
+    : lang === "de"
     ? "Akzeptiere alle Cookies"
-    : window.navigator.language.slice(0, 2) === "en"
+    : lang === "en"
     ? "Accept all cookies"
     : "Accept all cookies"
 
 const btnNo =
-  window.navigator.language.slice(0, 2) === "ru"
+  lang === "ru"
     ? "Только необходимые"
-    : window.navigator.language.slice(0, 2) === "ge"
+    : lang === "ge"
     ? "მხოლოდ საჭიროა"
-    : window.navigator.language.slice(0, 2) === "de"
+    : lang === "de"
     ? "Nur essenzielle"
-    : window.navigator.language.slice(0, 2) === "en"
+    : lang === "en"
     ? "Only essentials"
     : "Only essentials"
 
 const cookiesTitle =
-  window.navigator.language.slice(0, 2) === "ru"
+  lang === "ru"
     ? "НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ"
-    : window.navigator.language.slice(0, 2) === "ge"
+    : lang === "ge"
     ? "კონფიდენციალურობის პარამეტრები"
-    : window.navigator.language.slice(0, 2) === "de"
+    : lang === "de"
     ? "DATENSCHUTZEINSTELLUNGEN"
-    : window.navigator.language.slice(0, 2) === "en"
+    : lang === "en"
     ? "PRIVACY SETTINGS"
     : "PRIVACY SETTINGS"
 
 const cookiesText =
-  window.navigator.language.slice(0, 2) === "ru"
+  lang === "ru"
     ? `На нашем веб-сайте мы используем файлы cookie. Некоторые из них необходимы, а другие помогают нам улучшить этот веб-сайт и улучшить ваш опыт.`
-    : window.navigator.language.slice(0, 2) === "ge"
+    : lang === "ge"
     ? `ჩვენ ვიყენებთ ქუქი – ფაილებს ჩვენს ვებ – გვერდზე. ზოგიერთი მათგანი აუცილებელია, ზოგი კი დაგვეხმარება ამ ვებ – გვერდის გაუმჯობესებაში და თქვენი გამოცდილების გაუმჯობესებაში.`
-    : window.navigator.language.slice(0, 2) === "de"
+    : lang === "de"
     ? ` Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
     essenziell, während andere uns helfen, diese Website und Ihre Erfahrung
     zu verbessern.`
-    : window.navigator.language.slice(0, 2) === "en"
+    : lang
     ? `We use cookies on our website. Some of them are essential, while others help us to improve this website and your experience.`
     : `We use cookies on our website. Some of them are essential, while others help us to improve this website and your experience.`
