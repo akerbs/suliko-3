@@ -116,23 +116,26 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          1. სუპ-ხარჩო - პიკანტური ხბოს ხორცის სუპი ბრინჯით, პომიდვრითა და
-          სუნელებით 6,90 €
+          <b>1.</b> სუპ-ხარჩო - პიკანტური ხბოს ხორცის სუპი ბრინჯით, პომიდვრითა
+          და სუნელებით <b>6,90 €</b>
           <br />
           Hartcho - spicy veal soup with rice, tomatoes, spices
           <br />
           <br />
-          2. ჩიხირთმა - ქათმის ხორცი, კვერცხი და ცოცხალი მწვანილი{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup> 6,20 €
+          <b>2.</b> ჩიხირთმა - ქათმის ხორცი, კვერცხი და ცოცხალი მწვანილი{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup> <b>6,20 €</b>
           <br />
           Tshikhirtma - chicken, eggs and fresh green <br />
           <br />
-          3. სალიანკა - ხორცის ცხარე სუპი / Solyanka - rich spicy hotpot with a
-          lot of meat 6,90 €<br />
+          <b>3. </b>სალიანკა - ხორცის ცხარე სუპი / Solyanka - rich spicy hotpot
+          with a lot of meat <b>6,90 €</b>
           <br />
-          4. მაწვნის სუპი - სუპი მაწვნისგან მწვანილეულობით / Matsoni - yogurt
-          soap with herbs
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F, I</sup> 5,60 €<br />
+          <br />
+          <b>4. </b>მაწვნის სუპი - სუპი მაწვნისგან მწვანილეულობით / Matsoni -
+          yogurt soap with herbs
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F, I</sup>{" "}
+          <b>5,60 €</b>
+          <br />
           <br />
           <br />
           <br />
@@ -141,31 +144,34 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          5. შერეული სალათა - ახალი პომიდოი, კიტრი, ხახვი, მწვანილი ყველით ფეტა
-          (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> 6,40 €
+          <b>5.</b> შერეული სალათა - ახალი პომიდოი, კიტრი, ხახვი, მწვანილი
+          ყველით ფეტა (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup>{" "}
+          <b>6,40 €</b>
           <br />
           Mixed salad - fresh tomatoes, cucumbers, onion, greens with Feta
           (veg.) <br />
           <br />
-          6. შერეული სალათა "ქართული" - ახალი პომიდორი, კიტრი, ნიგოზი, ძმარი
-          (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €
+          <b>6.</b> შერეული სალათა "ქართული" - ახალი პომიდორი, კიტრი, ნიგოზი,
+          ძმარი (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b>8,60 €</b>
           <br />
           Mixed salad "Georgian style" - fresh tomatoes, cucumbers, walnuts,
           vinegar (veg.) <br />
           <br />
-          7. ქათმის სალათა - ქათმის პიკანტური სალათა მაიონეზით, ბარდითა და
-          სუნელებით <sup style={{ color: "rgba(133, 26, 29)" }}>
-            I, K, F
-          </sup>{" "}
-          9,20 €<br />
+          <b>7. </b>ქათმის სალათა - ქათმის პიკანტური სალათა მაიონეზით, ბარდითა
+          და სუნელებით <sup style={{ color: "rgba(133, 26, 29)" }}>I, K, F</sup>{" "}
+          <b>9,20 €</b>
+          <br />
           Chicken Salad - Spicy chicken salad with mayonnaise, peas and spices
           <br />
           <br />
-          8. ცხვრის ყველი - ზეითუნის ზეთით, თუთუბოთი და ოხრახუშით (ვეგ.)7,20 €
+          <b>8. </b>ცხვრის ყველი - ზეითუნის ზეთით, თუთუბოთი და ოხრახუშით (ვეგ.){" "}
+          <b>7,20 €</b>
           <br />
           Sheep cheese - with olive oil, sumac and parsley (veg.)
           <br /> <br />
-          9.  ენის სალათა - ხბოს ენა შემწვარი ქამა სოკოთი კიტრით და მაიონეზით
+          <b>9.  </b>ენის სალათა - ხბოს ენა შემწვარი ქამა სოკოთი კიტრით და
+          მაიონეზით <b>9,20 €</b>
           <br />
           Tongue salad - veal tongue, with fried mushrooms cucumber and
           mayonnaise
@@ -178,40 +184,48 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          10. ისპანახის ფხალი - ბოსტნის ისპანახიt ნიგვზით, ქინძითა და სუნელებით
-          (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €
+          <b>10. </b>ისპანახის ფხალი - ბოსტნის ისპანახიt ნიგვზით, ქინძითა და
+          სუნელებით (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b>8,60 €</b>
           <br />
           Spinach-Pkhali - balls of spinach leaves with walnut paste, coriander
           and spices (veg.) <br />
           <br />
-          11. ჭარხლის ფხალი - ჭარხლის ფურცლის ბურთები ნიგვზითა და ქინძით (ვეგ){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €<br />
+          <b>11.</b> ჭარხლის ფხალი - ჭარხლის ფურცლის ბურთები ნიგვზითა და ქინძით
+          (ვეგ) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b>8,60 €</b>
+          <br />
           Beetroot Pkhali - Beetroot puree balls with walnut paste and coriander
           (veg)
           <br />
           <br />
-          12. სტაფილოს ფხალი - ნიგვზით, ქინძითა და სუნელებით (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 8,60 €<br />
+          <b>12.</b> სტაფილოს ფხალი - ნიგვზით, ქინძითა და სუნელებით (ვეგ.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>8,60 €</b>
+          <br />
           Carrot Pkhali - Carrot balls with walnut paste, coriander, spices
           (veg.)
           <br />
           <br />
-          13. ფხალის ასორტი - ისპანახის, ჭარხლისა და სტაფილოს ფხალი (ვეგ){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 13,60 €<br />
+          <b>13. </b>ფხალის ასორტი - ისპანახის, ჭარხლისა და სტაფილოს ფხალი (ვეგ){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>13,60 €</b>
+          <br />
           Pkhali Mix - spinach, beetroot and carrot Pkhali (veg) <br />
           <br />
-          14. ბადრიჯანი - შემწვარი ბადრიჯანი ნიგვზითა და სუნელებთ (ვეგ.)
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 9,90 €<br />
+          <b>14. </b>ბადრიჯანი - შემწვარი ბადრიჯანი ნიგვზითა და სუნელებთ (ვეგ.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>9,90 €</b>
+          <br />
           Eggplants - fried eggplants filled with walnut paste and spices (veg.)
           <br />
           <br />
-          15. მჟავის ასორტი - ქართული მწნილის ასორტი (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup> 8,60 €<br />
+          <b>15.</b> მჟავის ასორტი - ქართული მწნილის ასორტი (ვეგ.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup> <b>8,60 €</b>
+          <br />
           Assortment of pickles - pickled vegetables in Georgian style (veg.){" "}
           <br />
           <br />
-          16. გებჟალია - ვეგეტარიანული ყველის თხელი ბურთულები, მოცარელას ყველით
-          და სახლში მომზადებული იოგურტისა და პიტnის სოუსით 9,90 €<br />
+          <b>16. </b>გებჟალია - ვეგეტარიანული ყველის თხელი ბურთულები, მოცარელას
+          ყველით და სახლში მომზადებული იოგურტისა და პიტnის სოუსით<b> 9,90 €</b>
+          <br />
           Gebzhalia -vegetarian cheese rolls filled with Mozarella with homemade
           herb pesto in light yoghurt-mint-sauce <br />
           <br />
@@ -227,24 +241,31 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          17. შემწვარი ბოსტნეული - წვნიანი შემწვარი ბოსტნეული 9,90 €<br />
+          <b>17.</b> შემწვარი ბოსტნეული - წვნიანი შემწვარი ბოსტნეული{" "}
+          <b>9,90 €</b>
+          <br />
           Grilled vegetables - juicy grilled vegetables
           <br /> <br />
-          18. ლობიო - მოხარშული ლობიო ქართული სუნელებით 8,90 €<br />
+          <b>18.</b> ლობიო - მოხარშული ლობიო ქართული სუნელებით <b>8,90 €</b>
+          <br />
           Lobio - bean stew with Georgian spices <br /> <br />
-          19. ტოლმა - ხორცის ფარში ვაზის ფოთოლში, ხახვითა და მწვანილებით 8,50 €
+          <b>19. </b>ტოლმა - ხორცის ფარში ვაზის ფოთოლში, ხახვითა და მწვანილებით{" "}
+          <b>8,50 €</b>
           <br />
           Dolma - grape leaves filled with minced meat, onions and herbs <br />{" "}
           <br />
-          20. "სოკო კეცზე" - შამპინიონები ღუმელიდან ყველით და მობრაწული{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>F, I</sup> 7,60 €<br />
+          <b>20. </b>"სოკო კეცზე" - შამპინიონები ღუმელიდან ყველით და მობრაწული{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>F, I</sup> <b>7,60 €</b>
+          <br />
           "Soko ketsze" - Champignon from the oven filled with cheese and
           gratinated <br /> <br />
-          21. ჭვიშტარი - მჭადის პურები სულუგუნის შიგთავსით{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F</sup> 4,90 €<br />
+          <b> 21. </b>ჭვიშტარი - მჭადის პურები სულუგუნის შიგთავსით{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F</sup> <b>4,90 €</b>
+          <br />
           Chvishtari - corn patty with cheese Suluguni <br /> <br />
-          22. აჯაფსანდალი - მოთუშული ბადრიჯანი პომიდვრით, პაპრიკით, ხახვით და
-          სუნელებით 9,90 €<br />
+          <b>22. </b>აჯაფსანდალი - მოთუშული ბადრიჯანი პომიდვრით, პაპრიკით,
+          ხახვით და სუნელებით <b>9,90 €</b>
+          <br />
           Adzhapsandali - Braised eggplants, tomatoes, paprika, onions, herbs
           and spices (veg.) <br /> <br />
           <br />
@@ -254,39 +275,45 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          23. ხაჭაპური "იმერული" - ხაჭაპური ყველით (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 10,90 €<br />
+          <b>23.</b> ხაჭაპური "იმერული" - ხაჭაპური ყველით (ვეგ.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>10,90 €</b>
+          <br />
           Khatshapuri "Imeruli" - flatbread filled with cheese (veg.) <br />{" "}
           <br />
-          24. ხაჭაპური "მეგრული" - ხაჭაპური ყველით და მობრაწული ყველით ღუმელიდან
-          (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 12,90 €
+          <b>24.</b> ხაჭაპური "მეგრული" - ხაჭაპური ყველით და მობრაწული ყველით
+          ღუმელიდან (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b>12,90 €</b>
           <br />
           Khatshapuri "Megruli" - flatbread filled and baked with cheese from
           the oven (veg.) <br /> <br />
-          25. ხაჭაპური "აჭარული" - ნავის ფორმის ხაჭაპური ყველითა და კვერცხით
-          ღუმელიდან (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F,I</sup> 14,90 €<br />
+          <b>25.</b> ხაჭაპური "აჭარული" - ნავის ფორმის ხაჭაპური ყველითა და
+          კვერცხით ღუმელიდან (ვეგ.){" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F,I</sup> <b>14,90 €</b>
+          <br />
           Khatshapuri "Adsharuli" - Boat-shaped dumplings with cheese and egg
           from the oven (veg.) <br /> <br />
-          26. ლობიანი - ლობიოთი დატენილი ცომი{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 12,90 €<br />
+          <b>26.</b> ლობიანი - ლობიოთი დატენილი ცომი{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>12,90 €</b>
+          <br />
           Lobiani - flatbread filled with beans
           <br />
           <br />
-          27. ხინკალი - ხორცის ფარშით (ძროხის + ღორის ხორცი) 4 ცალიდან{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,20 €/Piece
+          <b>27.</b> ხინკალი - ხორცის ფარშით (ძროხის + ღორის ხორცი) 4 ცალიდან{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b>2,20 €/Piece</b>
           <br />
           Khinkali - dumplings filled with minced meat (beef + pork), seasoned
           in Georgian style (from 4 pieces)
           <br /> <br />
-          28. ხინკალი - ძროხის ხორცის ფარშით, შესუნელებული ქართულად (4 ცალიდან){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 2,50 €/Piece
+          <b>28.</b> ხინკალი - ძროხის ხორცის ფარშით, შესუნელებული ქართულად (4
+          ცალიდან) <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b>2,50 €/Piece</b>
           <br />
           Khinkali - dumplings filled with minced beef meat, seasoned in
           Georgian style (from 4 pieces)
           <br /> <br />
-          29. ხინკალი - ყველით, შესუნელებული ქართულად (4 ცალიდან) 2,20 €/Piece{" "}
-          <br />
+          <b>29. </b>ხინკალი - ყველით, შესუნელებული ქართულად (4 ცალიდან){" "}
+          <b>2,20 €/Piece</b> <br />
           Khinkali - dumplings filled with cheese, seasoned in Georgian style
           (from 4 pieces)
           <br /> <br />
@@ -300,46 +327,57 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          30. ღორის მწვადი - ღორის ხორცი შამფურზე შემწვარი ხახვით, მწვანილითა და
-          საწებელით 16,90 €<br />
+          <b> 30. </b>ღორის მწვადი - ღორის ხორცი შამფურზე შემწვარი ხახვით,
+          მწვანილითა და საწებელით <b>16,90 €</b>
+          <br />
           Pork Shashlik - Pork grilled on skewers with onions, herbs and
           satsebela <br />
           <br />
-          31. ქათმის მწვადი - დამარინებული ქათმის ხორცი შამფურზე შემწვარი
-          სააწებელით 16,90 €<br />
+          <b>31. </b>ქათმის მწვადი - დამარინებული ქათმის ხორცი შამფურზე შემწვარი
+          სააწებელით <b>16,90 €</b>
+          <br />
           Chicken Shashlik - marinated chicken grilled on skewers with satsebela{" "}
           <br />
           <br />
-          32. ცხვრის მწვადი - ცხვრის ხორცი შამფურზე შემწვარი ხახვით, მწანილითა
-          და საწებელით 18,90 €<br />
+          <b>32.</b> ცხვრის მწვადი - ცხვრის ხორცი შამფურზე შემწვარი ხახვით,
+          მწანილითა და საწებელით <b>18,90 €</b>
+          <br />
           Lamb shashlik - lamb grilled on skewers with onions, herbs and
           satsebela <br />
           <br />
-          33. ბატკნის კარე ხახვით, მწვანილებითა და საწებელით 28,90 €<br />
+          <b>33.</b> ბატკნის კარე ხახვით, მწვანილებითა და საწებელით{" "}
+          <b>28,90 €</b>
+          <br />
           Noble lamb crown with onions, herbs and satsebela <br />
           <br />
-          34. შქმერული - ქათამი ნივრის, არაჟნის სოუსში ღუმელიდან (ძვლით){" "}
+          <b>34.</b> შქმერული - ქათამი ნივრის, არაჟნის სოუსში ღუმელიდან (ძვლით){" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> (mit Knochen)
-          17,90 €<br />
+          <b>17,90 €</b>
+          <br />
           Shkmeruli - Chicken in garlic-Cream Fraiche -sauce from the Oven (with
           a bone) <br />
           <br />
-          35. ჩანახი თიხის ქვაბში - ძროხის ხორცი კარტოფილით, ბოსტნეულითა და
-          სუნელებით 18,40 €<br />
+          <b>35. </b>ჩანახი თიხის ქვაბში - ძროხის ხორცი კარტოფილით, ბოსტნეულითა
+          და სუნელებით <b>18,40 €</b>
+          <br />
           Chanakhi in a clay pot - beef stew with potatoes, vegetables and
           spices <br />
           <br />
-          36. საცივი - ინდაური ნიგვზის სოუსში / Satsivi - turkey meat in walnut
-          sauce 18,90 €<br />
+          <b>36.</b> საცივი - ინდაური ნიგვზის სოუსში / Satsivi - turkey meat in
+          walnut sauce <b>18,90 €</b>
           <br />
-          37. ჩაქაფული - ხბოს ხორცი თიხის ქვაბში ტარხუნითა და მოთუშული თეთრი
-          ღვინით <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup> 18,90 €
+          <br />
+          <b>37. </b>ჩაქაფული - ხბოს ხორცი თიხის ქვაბში ტარხუნითა და მოთუშული
+          თეთრი ღვინით <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup>{" "}
+          <b>18,90 €</b>
           <br />
           Chakapuli - veal stewed in a clay pot with tarragon and white wine
           <br />
           <br />
-          38. ბატკნის ფეხი ღუმელიდან, დამარინებული აჯიკით, სუნელებითა და ნივრით
-          140,00 €<br />
+          <b>38. </b>ბატკნის ფეხი ღუმელიდან, დამარინებული აჯიკით, სუნელებითა და
+          ნივრით
+          <b>140,00 €</b>
+          <br />
           Leg of lamb from the oven marinated in adjika, spices and garlic
           <br />
           (მხოლოდ წინასწარი შეკვეთით, დაახლოებით 6 კაცზე / Only with advance
@@ -352,19 +390,22 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          39. ორაგულის ფილე ნივრისა და არაჟნის წვენში, თქვეთვის სასურველი
-          გარნირით <sup style={{ color: "rgba(133, 26, 29)" }}>B,F</sup> 18,90 €
+          <b> 39. </b>ორაგულის ფილე ნივრისა და არაჟნის წვენში, თქვეთვის
+          სასურველი გარნირით{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B,F</sup> <b>18,90 €</b>
           <br />
           Salmon fillet in garlic-cream fraiche-sauce with side dish of your
           choice <br />
           <br />
-          40. სამეფო კრევეტები ტანდურის სოუსით, ტაფაში{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup> 24,90 €<br />
+          <b>40. </b>სამეფო კრევეტები ტანდურის სოუსით, ტაფაში{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup> <b>24,90 €</b>
+          <br />
           King prawns with tandoori sauce served in a pan <br />
           <br />
-          41. სამეფო ზუთხი მთელი, შემწვარი ბოსტნეულით / Whole king sturgeon
-          gratinated with vegetables{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>B</sup> 140,00 €<br />
+          <b>41. </b>სამეფო ზუთხი მთელი, შემწვარი ბოსტნეულით / Whole king
+          sturgeon gratinated with vegetables{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B</sup> <b>140,00 €</b>
+          <br />
           (მხოლოდ წინასწარი შეკვეთით, დაახლოებით 6 კაცზე / Only with advance
           reservation, enough for approx. 6 people) <br />
           <br />
@@ -380,31 +421,40 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          42. შემწვარი კარტოფილი / Roasted potatoes 3,70 €<br />
+          <b>42.</b> შემწვარი კარტოფილი / Roasted potatoes <b>3,70 €</b>
           <br />
-          43. ბრინჯი / Rice 3,90 €<br />
           <br />
-          44. სახლში გამომცხვარი პური / Homemade bread{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 1,50 €<br />
+          <b>43. </b>ბრინჯი / Rice <b>3,90 €</b>
           <br />
-          45. საწებელა - ტრადიციული ქართული პომიდვრის სოუსი / Satsebela -
-          Georgian traditional tomato sauce 3,10 €<br />
           <br />
-          46. აჯიკა - ქართული ცხარე პომიდვრის სოუსი / Adjika - spicy tomato
-          sauce 3,10 €<br />
+          <b>44. </b>სახლში გამომცხვარი პური / Homemade bread{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>1,50 €</b>
           <br />
-          47. ტყემალი - ქართული მწვანე ან წითელი ტყემლის ცხარე სოუსი 4,20 €
+          <br />
+          <b>45. </b>საწებელა - ტრადიციული ქართული პომიდვრის სოუსი / Satsebela -
+          Georgian traditional tomato sauce <b>3,10 €</b>
+          <br />
+          <br />
+          <b>46. </b>აჯიკა - ქართული ცხარე პომიდვრის სოუსი / Adjika - spicy
+          tomato sauce <b>3,10 €</b>
+          <br />
+          <br />
+          <b>47. </b>ტყემალი - ქართული მწვანე ან წითელი ტყემლის ცხარე სოუსი{" "}
+          <b>4,20 €</b>
           <br />
           Tkemali - Georgian spicy green or red cherry plum <br />
           <br />
-          48. ბაჟე - ტრადიციული ქართული ნიგვზის სოუსი / Bazhe - Georgian walnut
-          sauce <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> 4,40 €
+          <b>48. </b>ბაჟე - ტრადიციული ქართული ნიგვზის სოუსი / Bazhe - Georgian
+          walnut sauce <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b>4,40 €</b>
           <br />
           <br />
-          49. ცაციკი - იოგურტის სოუსი ნივრითა და კამით <br />
-          Tzatziki yogurt sauce with garlic and dill 3,10 €<br />
+          <b>49.</b> ცაციკი - იოგურტის სოუსი ნივრითა და კამით <br />
+          Tzatziki yogurt sauce with garlic and dill <b>3,10 €</b>
           <br />
-          50. არაჟანი / Sour cream 2,60 €<br />
+          <br />
+          <b>50. </b>არაჟანი / Sour cream <b>2,60 €</b>
+          <br />
           <br />
           <br />
           <br />
@@ -413,15 +463,18 @@ export function Speisekarte(props) {
           </Typography>
           <br />
           <br />
-          51. სახლში გამომცხავარი ნამცხვარი "ნაპოლეონი" / Cake "Napoleon"
-          homemade <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> 4,10 €
+          <b> 51.</b> სახლში გამომცხავარი ნამცხვარი "ნაპოლეონი" / Cake
+          "Napoleon" homemade{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>4,10 €</b>
           <br /> <br />
-          52. "ფელამუში" - ქართული სუფლე ყურძნის წვენისა და მჭადის ფქვილისგან{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,H</sup> 3,20 €
+          <b>52.</b> "ფელამუში" - ქართული სუფლე ყურძნის წვენისა და მჭადის
+          ფქვილისგან <sup style={{ color: "rgba(133, 26, 29)" }}>A,H</sup>{" "}
+          <b>3,20 €</b>
           <br />
           "Pelamushi" - Georgian traditional dessert of grape juice and corn
           flower <br /> <br />
-          53. სახლში გამომცხვარი ნამცხვრების ნაირსახეობები 4,90 €<br />
+          <b>53.</b> სახლში გამომცხვარი ნამცხვრების ნაირსახეობები <b>4,90 €</b>
+          <br />
           Homemade cake variations <br /> <br />
           <br />
           <br />
@@ -463,25 +516,28 @@ export function Speisekarte(props) {
             <b> ცხელი სასმელები/ Hot drinks</b>
           </Typography>
           <br />
-          60. ყავა / Coffee<sup style={{ color: "rgba(133, 26, 29)" }}>
-            2
-          </sup>{" "}
-          2,70 €
+          <b> 60.</b> ყავა / Coffee
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> <b> 2,70 €</b>
           <br />
           <br />
-          61. ლატე მაკიატო / Latte Macchiato{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup> 3,90 €<br />
+          <b>61. </b> ლატე მაკიატო / Latte Macchiato{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup> <b>3,90 €</b>{" "}
           <br />
-          62. ესპრესსო / Espresso{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> 2,50 €<br />
           <br />
-          63. ორმაგი ესპრესსო / Double Espresso{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> 3,50 €<br />
+          <b>62. </b> ესპრესსო / Espresso{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>
+          <b>2,50 €</b> <br />
           <br />
-          64. კაპუჩინო / Cappuccino{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup> 3,10 €<br />
+          <b>63. </b> ორმაგი ესპრესსო / Double Espresso{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>
+          <b> 3,50 €</b> <br />
           <br />
-          65. ჩაი (სხვადასხვა ტიპის) / Tea (various types) 2,60 €<br />
+          <b> 64.</b> კაპუჩინო / Cappuccino{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup>
+          <b> 3,10 €</b> <br />
+          <br />
+          <b>65.</b> ჩაი (სხვადასხვა ტიპის) / Tea (various types) <b>2,60 €</b>{" "}
+          <br />
           <br />
           <br />
           <br />
@@ -492,39 +548,44 @@ export function Speisekarte(props) {
             0,2 l 0,4 l bottle
           </Typography>
           <br /> <br />
-          70. კოკა-კოლა, კოკა-კოლა ლაითი / Coca- Cola, Coca-Cola light{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>1,2,3</sup> 2,50 € 4,50 €
-          8,50 €<br />
+          <b>70. </b> კოკა-კოლა, კოკა-კოლა ლაითი / Coca- Cola, Coca-Cola light{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,2,3</sup>{" "}
+          <b>2,50 € 4,50 € 8,50 €</b> <br />
           <br />
-          71. ფანტა, სპრაიტი / Fanta , Sprite{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>5,4</sup> 2,50 € 4,50 €
-          8,50 €<br />
+          <b>71. </b> ფანტა, სპრაიტი / Fanta , Sprite{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>5,4</sup>{" "}
+          <b>2,50 € 4,50 € 8,50 €</b> <br />
           <br />
-          72. St. Michaelis Naturell კლასიკური / Classic 2,20 € 3,90 € 6,50 €
-          <br />
-          <br />
-          73. ბორჯომი - ქართული სამკურნალო წყალი - Borjomi - Georgian healing
-          water 0,5 l Fl. 6,20 €<br />
-          <br />
-          74. მსხლის ლიმონათი, ქართული / Georgian pear lemonade{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <b>72.</b> St. Michaelis Naturell კლასიკური / Classic{" "}
+          <b>2,20 € 3,90 € 6,50 €</b>
           <br />
           <br />
-          75. ტარხუნის ქართული ლიმონათი / Georgian estragon lemonade "Tarkhuna"{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <b> 73. </b> ბორჯომი - ქართული სამკურნალო წყალი - Borjomi - Georgian
+          healing water 0,5 l Fl. <b>6,20 €</b> <br />
+          <br />
+          <b>74. </b> მსხლის ლიმონათი, ქართული / Georgian pear lemonade{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl.{" "}
+          <b>6,20 €</b>
           <br />
           <br />
-          76. ყურძნის ქართული ლიმონათი / Georgian grape lemonade "Saperavi"{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <b>75.</b> ტარხუნის ქართული ლიმონათი / Georgian estragon lemonade
+          "Tarkhuna" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
+          Fl. <b>6,20 €</b>
           <br />
           <br />
-          77. ფეიხოას ქართული ლიმონათი / Georgian Feijoa lemonade "Feijoa"{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl. 6,20 €
+          <b>76. </b> ყურძნის ქართული ლიმონათი / Georgian grape lemonade
+          "Saperavi" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
+          Fl. <b>6,20 €</b>
+          <br />
+          <br />
+          <b>77. </b> ფეიხოას ქართული ლიმონათი / Georgian Feijoa lemonade
+          "Feijoa" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
+          Fl. <b>6,20 €</b>
           <br />
           <br />
           (ფეიხოა - ბრაზილიური გოავა - Feijoa - brasilian Goave) <br />
           <br />
-          78. რედ ბული / Red Bull 4,60 €<br />
+          <b>78.</b> რედ ბული / Red Bull <b>4,60 €</b> <br />
           <br />
           <br />
           <br />
@@ -535,17 +596,22 @@ export function Speisekarte(props) {
             0,2 l 0,4 l bottle
           </Typography>
           <br /> <br />
-          80. ფორთოხლის წვენი / Orange juice 2,80 € 4,90 € 10,40 €<br />
+          <b>80. </b> ფორთოხლის წვენი / Orange juice{" "}
+          <b>2,80 € 4,90 € 10,40 €</b> <br />
           <br />
-          81. ვაშლის წვენი / Apple juice 2,80 € 4,90 € 10,40 €<br />
+          <b>81. </b> ვაშლის წვენი / Apple juice <b>2,80 € 4,90 € 10,40 €</b>{" "}
           <br />
-          82. ალუბლის წვენი Cherry juice 2,80 € 4,90 € 10,40 €<br />
           <br />
-          83. რევანდის ნექტარი / Rhababa nectar 2,80 € 4,90 € 10,40 €<br />
+          <b>82. </b> ალუბლის წვენი Cherry juice <b>2,80 € 4,90 € 10,40 €</b>{" "}
           <br />
-          84. გაზირებული წვენი / Juice spritzer 2,60 € 4,70 € <br />
           <br />
-          85. KiBa 2,80 € 4,90 € <br />
+          <b> 83.</b> რევანდის ნექტარი / Rhababa nectar{" "}
+          <b>2,80 € 4,90 € 10,40 €</b> <br />
+          <br />
+          <b> 84. </b> გაზირებული წვენი / Juice spritzer <b>2,60 € 4,70 € </b>{" "}
+          <br />
+          <br />
+          <b> 85.</b> KiBa <b> 2,80 € 4,90 € </b> <br />
           <br />
           <br />
           <br />
@@ -556,19 +622,21 @@ export function Speisekarte(props) {
             0,3 l 0,4 l bottle
           </Typography>
           <br /> <br />
-          90. Einbecker Brauherren Pils (ჩამოსასხმელი ლუდი / Draught beer) 3,80
-          € 4,90 € <br />
+          <b> 90. </b> Einbecker Brauherren Pils (ჩამოსასხმელი ლუდი / Draught
+          beer) <b>3,80 € 4,90 €</b> <br />
           <br />
-          91. Alsterwasser 3,60 € 4,70 € <br />
+          <b>91.</b> Alsterwasser <b>3,60 € 4,70 €</b> <br />
           <br />
-          92. Herrnbräu ხორბლის / wheat(0,5l) 4,90 €<br />
+          <b> 92. </b> Herrnbräu ხორბლის / wheat(0,5l) <b>4,90 €</b> <br />
           <br />
-          93. Herrnbräu ხორბლის შავი / wheat dark (0,5l) 4,90 €<br />
+          <b> 93. </b> Herrnbräu ხორბლის შავი / wheat dark (0,5l) <b>4,90 €</b>{" "}
           <br />
-          94. Einbecker Brauherren უალკოჰოლო / alcohol-free (0,3l)3,80 €<br />
           <br />
-          95. Herrnbräu საფუვრიანი უალკოჰოლო ხორბლის ლუდი / yeast wheat beer
-          alcohol-free (0,5l) 4,90 €<br />
+          <b>94.</b> Einbecker Brauherren უალკოჰოლო / alcohol-free (0,3l){" "}
+          <b>3,80 €</b> <br />
+          <br />
+          <b>95.</b> Herrnbräu საფუვრიანი უალკოჰოლო ხორბლის ლუდი / yeast wheat
+          beer alcohol-free (0,5l) <b>4,90 €</b> <br />
           <br />
           <br />
           <br />
@@ -579,35 +647,39 @@ export function Speisekarte(props) {
             2 cl 0,1 l 0,5 l bottle
           </Typography>
           <br /> <br />
-          96. მარტინი / Martini 6,60 € 39,00 €<br />
+          <b>96.</b> მარტინი / Martini <b>6,60 € 39,00 €</b> <br />
           <br />
-          97. ბაკარდი / Bacardi 2,90 € 12,00 € <br />
+          <b>97. </b> ბაკარდი / Bacardi <b>2,90 € 12,00 € </b> <br />
           <br />
-          98. ბეილისი / Baileys 2,90 € 12,00 € <br />
-          <br />
-          <br />
-          99. არაყი / Vodka "Finlandia" 2,90 € 12,00 € 65,00 €<br />
-          <br />
-          100. არაყი / Vodka "Absolut" 2,90 € 12,00 € 65,00 €<br />
-          <br />
-          101. არაყი / Vodka "Beluga", "Grey Goose" 4,90 € 19,00 € 90,00 €
-          120,00 €
+          <b>98.</b> ბეილისი / Baileys <b>2,90 € 12,00 €</b> <br />
           <br />
           <br />
-          102. ქართული ჭაჭა / Georgian Chacha 2,80 € 11,00 € 52,00 € <br />
+          <b> 99.</b> არაყი / Vodka "Finlandia" <b>2,90 € 12,00 € 65,00 €</b>{" "}
           <br />
           <br />
-          103. ქართული ბრენდი / Georgian Brandy Sarajishvili David 2,80 € 11,00
-          € 0,5 l bottle 52,00 €<br />
-          <br />
-          104. Chivas Regal, Jack Daniel's, Tullamore 3,90 € 17,50 € 95,00 €
+          <b>100. </b> არაყი / Vodka "Absolut" <b>2,90 € 12,00 € 65,00 €</b>{" "}
           <br />
           <br />
-          105. Remy Martin 4,90 € 21,00 € 120,00 €<br />
+          <b>101. </b> არაყი / Vodka "Beluga", "Grey Goose"{" "}
+          <b>4,90 € 19,00 € 90,00 € 120,00 €</b>
           <br />
-          106. Hennessy 4,90 € 21,00 € 120,00 €<br />
           <br />
-          107. ჯინი / Gin 2,90 € 12,00 € 65,00 €<br />
+          <b>102. </b> ქართული ჭაჭა / Georgian Chacha{" "}
+          <b>2,80 € 11,00 € 52,00 €</b> <br />
+          <br />
+          <br />
+          <b> 103. </b> ქართული ბრენდი / Georgian Brandy Sarajishvili David{" "}
+          <b>2,80 € 11,00 € 0,5 l bottle 52,00 €</b> <br />
+          <br />
+          <b>104.</b> Chivas Regal, Jack Daniel's, Tullamore{" "}
+          <b>3,90 € 17,50 € 95,00 €</b>
+          <br />
+          <br />
+          <b>105. </b> Remy Martin <b>4,90 € 21,00 € 120,00 €</b> <br />
+          <br />
+          <b>106. </b> Hennessy <b>4,90 € 21,00 € 120,00 €</b> <br />
+          <br />
+          <b>107. </b> ჯინი / Gin <b>2,90 € 12,00 € 65,00 €</b> <br />
           <br />
           <br />
           <br />
@@ -615,15 +687,16 @@ export function Speisekarte(props) {
             <b> კოქტეილები / Cocktails </b>
           </Typography>
           <br />
-          108. არაყი / Vodka Red Bull 7,50 €<br />
+          <b>108.</b> არაყი / Vodka Red Bull <b>7,50 €</b> <br />
           <br />
-          109. ვისკი კოლა/ვოდკა კოლა / Whisky Cola/Wodka Cola 7,20 €<br />
+          <b> 109.</b> ვისკი კოლა/ვოდკა კოლა / Whisky Cola/Wodka Cola{" "}
+          <b>7,20 €</b> <br />
           <br />
-          110. ბაკარდი კოლა / Bacardi Cola 7,20 €<br />
+          <b> 110. </b> ბაკარდი კოლა / Bacardi Cola <b>7,20 €</b> <br />
           <br />
-          111. კუბა ლიბრე / Cuba Libre 7,50 €<br />
+          <b>111. </b> კუბა ლიბრე / Cuba Libre <b>7,50 €</b> <br />
           <br />
-          112. ჯინ ტონიკი / Gin Tonic 7,90 €<br />
+          <b> 112. </b> ჯინ ტონიკი / Gin Tonic <b>7,90 €</b> <br />
           <br />
           <br />
           <br />
@@ -631,17 +704,18 @@ export function Speisekarte(props) {
             <b> ცქრიალა ღვინო და შამპანური / Sparkling wine and Champagne</b>
           </Typography>
           <br />
-          113. ცქრიალა ღვინო / Sparkling wine "Freixenet" Piccolo 0,2 l bottle
-          7,50 €<br />
+          <b>113. </b> ცქრიალა ღვინო / Sparkling wine "Freixenet" Piccolo 0,2 l
+          bottle
+          <b>7,50 €</b> <br />
           <br />
-          114. ბადაგონის ცქრიალა ღვინო (ნახევრად მშრალი) / Badagoni Sparkling
-          wine (semi-dry) 0,75 l bottle 35,00 €<br />
+          <b>114. </b> ბადაგონის ცქრიალა ღვინო (ნახევრად მშრალი) / Badagoni
+          Sparkling wine (semi-dry) 0,75 l bottle <b>35,00 €</b> <br />
           <br />
-          115. ბადაგონის ცქრიალა ღვინო ბრუტი / ბადაგონი Sparkling wine Brut 0,75
-          l bottle 35,00 €<br />
+          <b>115.</b> ბადაგონის ცქრიალა ღვინო ბრუტი / ბადაგონი Sparkling wine
+          Brut 0,75 l bottle <b>35,00 €</b> <br />
           <br />
-          116. შამპანური / Champagne "Moët & Chandon", "Veuve Clicquot" 0,75 l
-          bottle 95,00 €<br />
+          <b>116.</b> შამპანური / Champagne "Moët & Chandon", "Veuve Clicquot"
+          0,75 l bottle <b>95,00 €</b> <br />
           <br />
         </Typography>
       </div>
@@ -705,32 +779,36 @@ export function Weinkarte(props) {
           <br />
           <br />
           <b>
-            120. რქაწითელი , მშრალი თეთრი ღვინო / Rkatsiteli, dry white wine,{" "}
-          </b>{" "}
-          7,90 € 24,90 €<br />
+            120. რქაწითელი , მშრალი თეთრი ღვინო / Rkatsiteli, dry white wine
+            7,90 € 24,90 €{" "}
+          </b>
+          <br />
           Rkatsiteli, Dry white wine, is made from grape variety Rkatsiteli. The
           wine with a light straw color, plesent fruity and harmony.
           <br />
           <br />
           <b>
-            {" "}
             121. რქაწითელი მწვანე, მშრალი თეთრი ღვინო / Rkatsiteli Mtsvane, dry
-            white wine,
-          </b>{" "}
-          8,60 € 27,90 €<br />
+            white wine 8,60 € 27,90 €{" "}
+          </b>
+          <br />
           Mix of local grape variety Rkatsiteli and Manavian Mtsvane The wine
           with fine acidity and is made aftercol fermentation.
           <br />
           <br />
           <b>
-            122. წინანდალი, მშრალი თეთრი ღვინო / Tsinandali, dry white wine,
-          </b>{" "}
-          8,70 € 28,90 €<br />
+            122. წინანდალი, მშრალი თეთრი ღვინო / Tsinandali, dry white wine 8,70
+            € 28,90 €
+          </b>
+          <br />
           Produced from grape varieties Rkatsiteli und Mtsvane. The wine with
           lively, soft harmonius taste. <br />
           <br />
-          <b>123. მწვანე, მშრალი თეთრი ღვინო / Mtsvane, dry white wine,</b> 8,70
-          € 28,90 €<br />
+          <b>
+            123. მწვანე, მშრალი თეთრი ღვინო / Mtsvane, dry white wine 8,70 €
+            28,90 €
+          </b>
+          <br />
           Made of Mtsvane grape variety. With a lively, smooth, harmonious
           taste. The wine has a greenishyellow color with a lively, soft
           harmonious taste.
@@ -738,15 +816,16 @@ export function Weinkarte(props) {
           <br />
           <b>
             124. ფიროსმანი, ნახევრად მშრალი თეთრი ღვინო / Pirosmani, Semi-dry
-            white wine
-          </b>{" "}
-          8,70 € 28,90 €<br />
+            white wine 8,70 € 28,90 €{" "}
+          </b>
+          <br />
           Semi-dry white wine named after a famous artist Niko Pirosmanashvili.
           The wine with a strongly developed variety bucket and harmoniously
           pleasant taste.
           <br />
           <br />
-          <b> 125. თეთრი ღვინო გაზირებული / Weinschorle</b> 5,90 € (0.2l) <br />
+          <b> 125. თეთრი ღვინო გაზირებული / Weinschorle 5,90 € (0.2l) </b>{" "}
+          <br />
           <br />
           <br />
           <br />
@@ -760,21 +839,20 @@ export function Weinkarte(props) {
           <br />
           <br />
           <b>
-            126. მწვანე, მშრალი თეთრი ღვინო / Mtsvane, dry white wine,{" "}
-          </b>{" "}
-          44,90 €<br />
+            126. მწვანე, მშრალი თეთრი ღვინო / Mtsvane, dry white wine 44,90 €{" "}
+          </b>
+          <br />
           Dry white wine is produced in Qvevri (Clay jug) from Mtsvane grape
           varieties. The wine has a greenish yellow color with a lively, soft
           harmonious taste. <br />
           <br />
           <b>
-            {" "}
             127. რქაწითელი, გაუფილტრავი მშრალი თეთრი ღვინო / Rkatsiteli,
-            unfiltered dry white wine,{" "}
-          </b>{" "}
-          49, 90 €<br />
+            unfiltered dry white wine 49, 90 €{" "}
+          </b>
+          <br />
           Dry white wine is produced in Qvevri (Clay jug) from Rkatsiteli grape
-          varieties. Body rich with tannins and harmonious and mild aftertaste.{" "}
+          varieties. Body rich with tannins and harmonious and mild aftertaste.
           <br />
           <br />
           <br />
@@ -788,23 +866,25 @@ export function Weinkarte(props) {
           </Typography>
           <br />
           <br />
-          <b>128. მშრალი როზე / Khareba,dry rose wine, </b> 8,60 € 27,90 €<br />
+          <b>128. მშრალი როზე / Khareba,dry rose wine 8,60 € 27,90 €</b>
+          <br />
           ღვინო დამზადებულია საფერავის ყურძნის ჯიშისგან. / Wine is made of grape
           varieties Saperavi. The wine is characterizedby the vital aroma of
           watermelon and cherries. <br />
           <br />
           <b>
             129. კაბერნე-საფერავი, ნახევრად მშრალი როზე / Cabarnet-Saperavi,
-            semi-dry Rose wine,
-          </b>{" "}
-          8,60 € 27,90 €<br />
+            semi-dry Rose wine 8,60 € 27,90 €{" "}
+          </b>
+          <br />
           Semi-dry rosé wine made from Saperavi and European Cabernet Sauvignon
           grapes. The wine is characterizedby the vital aroma of berries. <br />
           <br />
           <b>
-            130. იას როზე, ნახევრად მშრალი როზე / Ias Rose, semi-dry Rose wine,
-          </b>{" "}
-          8,90 € 29,90 €<br />
+            130. იას როზე, ნახევრად მშრალი როზე / Ias Rose, semi-dry Rose wine
+            8,90 € 29,90 €{" "}
+          </b>
+          <br />
           Semi-dry rosé wine from Saperavi, Mtsvane and Muscat grapes. <br />
           <br />
           <br />
@@ -820,53 +900,54 @@ export function Weinkarte(props) {
           <br />
           <b>
             131. საფერავი გვირაბი, წითელი მშრალი ღვინო/Saperavi Gvirabi, dry red
-            wine,{" "}
-          </b>{" "}
-          7,90 € 24,90 €<br />
+            wine 7,90 € 24,90 €{" "}
+          </b>
+          <br />
           The red dry wine white rich dark pomegranate colour, made from the
-          grapes of Saperavi
+          grapes of Saperavi.
           <br />
           <br />
           <b>
             132. საფერავი კლასიკი, მშრალი წითელი ღვინო, / Saperavi Clasic, dry
-            red wine,
-          </b>{" "}
-          8,50 € 26,90 €<br />
+            red wine 8,50 € 26,90 €{" "}
+          </b>
+          <br />
           Premium dry red wine from grape variety Saperavi.   The red dry wine
           with a darkc pomegranate color, with remembering distinctive boucuet
           and harmonious taste. <br />
           <br />
           <b>
-            {" "}
-            133. მუკუზანი, მშრალი წითელი ღვინო, / Mukuzani Khareba, dry red
-            wine,{" "}
-          </b>{" "}
-          8,60 € 27,90 €<br />
+            133. მუკუზანი, მშრალი წითელი ღვინო, / Mukuzani Khareba, dry red wine
+            8,60 € 27,90 €
+          </b>
+          <br />
           Dry red wine is made of grape variety Saperavi from Microregion
           Mukuzani.  Mukuzani is the color of dark ruby, with a fine fruty
           bouquet and full, fresh and harmonious taste. <br />
           <br />
-          <b> 134. ფიროსმანი, ნახევრად მშრალი / Pirosmani, semi-dry, </b> 9,20 €
-          29,90 €<br />
+          <b>
+            {" "}
+            134. ფიროსმანი, ნახევრად მშრალი / Pirosmani, semi-dry 9,20 € 29,90 €
+          </b>
+          <br />
           Semi-dry red wine named after a famous artist Niko Pirosmanashvili.
           The wine with intense ruby red color with a taste currants and ripe
           blackberries. <br />
           <br />
           <b>
-            {" "}
             135. ქინძმარაული, ნახ. მშრალი წითელი ღვინო / Kindzmarauli,
-            semi-sweet red wine,{" "}
-          </b>{" "}
-          10,20 € 31,90 €<br />
+            semi-sweet red wine 10,20 € 31,90 €
+          </b>
+          <br />
           Semi-dry red wine is made of grape variety Saperavi from microregion
           Kindzmarauli.  It has a strong sorted bouquet and aroma together with
           velvety and harmonious taste. <br />
           <br />
           <b>
             136. ხვანჭკარა, ნახევრადტკბილი წითელი ღვინო / Khvanchkara, semi -
-            sweet red wine{" "}
-          </b>{" "}
-          15,20 € 49,90 €<br />
+            sweet red wine 15,20 € 49,90 €{" "}
+          </b>
+          <br />
           Semi - sweet red wine is made of Aleksandrouli and Mujuretuli grape
           varieties, from the Region Racha. Khvanchkara is characterized by a
           ruby color, distinctive harmonious, delicious taste, with specific
@@ -885,15 +966,13 @@ export function Weinkarte(props) {
           <br />
           <br />
           <b>
-            {" "}
             137.საფერავი ქვევრი, გაუფილტრავი წითელი ღვინო / Saperavi Qvevri,
-            unfiltered dry red wine
-          </b>{" "}
-          49,90 €
+            unfiltered dry red wine 49,90 €{" "}
+          </b>
           <br />
-          Dry red wine from Qvevri (clay jug), from Saperavi grapes. თჰე რედ დრზ
-          წინე წიტჰ ა დარკ. The red dry wine with a dark pomegranate color, with
-          remembering distinctive boucuet and harmonious taste. <br />
+          Dry red wine from Qvevri (clay jug), from Saperavi grapes. The red dry
+          wine with a dark pomegranate color, with remembering distinctive
+          boucuet and harmonious taste. <br />
           <br />
         </Typography>
       </div>
@@ -954,34 +1033,36 @@ export function Mittagsmenu(props) {
             </Typography>
             <br /> <br />
             <br />
-            1001. „Soljanka“ Kräftiger würziger Eintopf mit viel Fleisch 5,90 €
+            <b> 1001.</b>„Soljanka“ Kräftiger würziger Eintopf mit viel Fleisch{" "}
+            <b>5,90 €</b>
             <br />
             <br />
-            1002. „Hartcho“ Kalbfleischeintopf mit Reis, Gemüse, Gewürzen 5,90 €
+            <b> 1002.</b> „Hartcho“Kalbfleischeintopf mit Reis, Gemüse, Gewürzen{" "}
+            <b>5,90 €</b> <br />
+            <br />
+            <b> 1003. </b> „Matsoni“georgische Joghurtsuppe mit Kräutern (veg.){" "}
+            <b>4,80 €</b> <br />
+            <br />
+            <b> 1004.</b> Chatschapuri „Imeruli“Pizzafladen gefüllt mit Käse
+            (veg.)
+            <b>8,50 €</b>
             <br />
             <br />
-            1003. „Matsoni“ georgische Joghurtsuppe mit Kräutern (veg.) 4,80 €
+            <b> 1005. </b> Chatschapuri „Spinat“Pizzafladen mit Spinat/Käse
+            (veg.) <b>8,90</b> €
             <br />
             <br />
-            1004. Chatschapuri „Imeruli“ Pizzafladen gefüllt mit Käse (veg.)
-            8,50 €<br />
+            <b> 1006. </b>Auberginen-Kartoffel-Pfanne „Adschapsandali“ (veg.){" "}
+            <b>7,90 €</b> <br />
             <br />
-            1005. Chatschapuri „Spinat“ Pizzafladen mit Spinat/Käse (veg.) 8,90
-            €
-            <br />
-            <br />
-            1006. Auberginen-Kartoffel-Pfanne „Adschapsandali“ (veg.) 7,90 €
+            <b> 1007. </b> Pfannkuchengefüllt mit Hackfleisch <b>5,60 €</b>{" "}
             <br />
             <br />
-            1007. Pfannkuchen gefüllt mit Hackfleisch 5,60 €
+            <b> 1008.</b> Kalbgeschnetzeltes „Beef Stroganoff“ mit Reis{" "}
+            <b>9,40 €</b> <br />
             <br />
-            <br />
-            1008. Kalbgeschnetzeltes „Beef Stroganoff“ mit Reis 9,40 €
-            <br />
-            <br />
-            1009. Hähnchenfilet überbacken mit Käse und Tomaten mit
-            Bratkartoffeln 8,90 €
-            <br />
+            <b> 1009. </b>Hähnchenfilet überbacken mit Käse und Tomaten mit
+            Bratkartoffeln <b>8,90 €</b> <br />
             <br />
           </Typography>
         </div>
