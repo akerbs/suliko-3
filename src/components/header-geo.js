@@ -333,10 +333,11 @@ function Header(props) {
         </AppBar>
 
         <Drawer
+          // variant="temporary"
+          // onEscapeKeyDown={handleDrawerClose}
           variant="persistent"
-          transitionDuration={{ enter: 500, exit: 500 }}
+          transitionDuration={{ enter: 400, exit: 300 }}
           anchor="top"
-          onEscapeKeyDown={handleDrawerClose}
           open={open}
           classes={{
             paper: classes.drawerPaper,

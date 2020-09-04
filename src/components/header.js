@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import clsx from "clsx"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import Drawer from "@material-ui/core/Drawer"
+import Dialog from "@material-ui/core/Dialog"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import CssBaseline from "@material-ui/core/CssBaseline"
@@ -332,10 +333,11 @@ function Header(props) {
         </AppBar>
 
         <Drawer
+          // variant="temporary"
+          // onEscapeKeyDown={handleDrawerClose}
           variant="persistent"
-          transitionDuration={{ enter: 500, exit: 500 }}
+          transitionDuration={{ enter: 400, exit: 300 }}
           anchor="top"
-          onEscapeKeyDown={handleDrawerClose}
           open={open}
           classes={{
             paper: classes.drawerPaper,
