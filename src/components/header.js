@@ -24,6 +24,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import menu from "../images/menu.png"
+import Slide from "@material-ui/core/Slide"
+import Fade from "@material-ui/core/Fade"
 
 const window = require("global/window")
 
@@ -383,6 +385,7 @@ function Header(props) {
               <CloseIcon style={{ fontSize: 30, margin: 6 }} />
             </IconButton>
           </div>
+
           <ListItem>
             <img src={menu} alt="img" className={classes.menuImg} />
           </ListItem>
