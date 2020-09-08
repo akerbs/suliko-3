@@ -29,8 +29,7 @@ const Footer = props => {
   return (
     <Container className="footerWrapper" style={{ paddingBottom: "70px" }}>
       <img src={Logo2} alt="logo" className="logo2Footer" />
-
-      <Typography variant="body2">
+      <Typography variant="body2" style={{ color: "rgba(0, 0, 0, 0.8 )" }}>
         {" © "} {new Date().getFullYear()} Suliko
         <br />{" "}
       </Typography>
@@ -42,9 +41,9 @@ const Footer = props => {
         }}
       >
         <Typography
-          variant="caption"
+          variant="body2"
           onClick={handleOpenImpressum}
-          style={{ cursor: "pointer", color: "rgba(0, 0, 0, 0.8 )" }}
+          style={{ cursor: "pointer", color: "rgba(0, 0, 0, 1 )" }}
         >
           Impressum
         </Typography>
