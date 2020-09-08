@@ -103,9 +103,8 @@ export default function Impressum(props) {
           <b>KONTAKT:</b> <br />
           040 49201953 <br />
           info[at]restaurant-suliko.de <br /> <br />
-          <b>UMSATZSTEUER-ID: </b>
+          <b>UMSATZSTEUERNUMMER: </b>
           <br />
-          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
           42/610/02294
           <br />
           <br />
