@@ -412,7 +412,7 @@ function Header(props) {
               <ListItemText
                 primary={
                   <Typography align="center" variant="h6">
-                    ჩვენ შესახებ
+                    კეთილი იყოს თქვენი მობრძანება
                   </Typography>
                 }
               />

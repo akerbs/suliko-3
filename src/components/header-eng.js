@@ -411,7 +411,7 @@ function Header(props) {
               <ListItemText
                 primary={
                   <Typography align="center" variant="h6">
-                    ABOUT US
+                    WELCOME
                   </Typography>
                 }
               />
