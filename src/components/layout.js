@@ -5,6 +5,7 @@ import theme from "./theme"
 // import CookiesBar from "./cookiesBar"
 import CssBaseline from "@material-ui/core/CssBaseline"
 // import { navigate } from "gatsby"
+const window = require("global/window")
 
 export const LanguageContext = createContext()
 
