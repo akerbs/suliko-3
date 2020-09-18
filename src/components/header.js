@@ -14,8 +14,8 @@ import Logo2 from "../images/Logo2.png"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
-import LangSwAkk from "./langSwAkk-eng"
-import DrawerTop from "./drawer-eng"
+import LangSwAkk from "./langSwAkk"
+import DrawerTop from "./drawer"
 
 const window = require("global/window")
 
@@ -226,12 +226,12 @@ function Header(props) {
         >
           <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
-              <Link to="/rus">
+              <Link to="/">
                 <img src={Logo2} alt="logo" className={classes.logo2Img} />
               </Link>
             </Hidden>
 
-            <Link to="/rus">
+            <Link to="/">
               <Hidden smUp>
                 <img src={Logo1} alt="logo" className={classes.logoImg} />
               </Hidden>

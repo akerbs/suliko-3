@@ -3,16 +3,6 @@
   height: auto;
 }
 
-.phoneEmailLink {
-  color: black;
-  text-decoration: none;
-}
-
-.phoneEmailLink:hover {
-  color: black;
-  font-weight: bold;
-}
-
 .mapWrapper {
   position: relative;
   overflow: hidden;
@@ -30,12 +20,6 @@
   height: 600px;
   border: 0px;
   margin-top: -150px;
-}
-
-.reservierenButton {
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
 }
 
 .aboutUsWrapper {
@@ -74,17 +58,5 @@
 @media screen and (max-width: 600px) {
   .contactWrapper {
     padding: 100px 15px 10px 15px;
-  }
-}
-
-.slogan {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
-}
-
-@media screen and (max-width: 600px) {
-  .slogan {
-    width: 100%;
   }
 }

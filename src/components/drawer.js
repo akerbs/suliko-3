@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import clsx from "clsx"
 import Drawer from "@material-ui/core/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
@@ -15,6 +15,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import menu from "../images/menu.png"
 import Slide from "@material-ui/core/Slide"
 import Fade from "@material-ui/core/Fade"
+import { LanguageContext } from "../components/layout"
 
 const drawerWidth = "auto"
 
@@ -84,7 +85,7 @@ const useStyles = makeStyles(theme => ({
 
     width: "50%",
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: "20px",
+      // paddingLeft: "10px",
     },
   },
 
@@ -112,6 +113,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function DrawerTop(props) {
+  const { actLanguage } = useContext(LanguageContext)
   const classes = useStyles()
   const theme = useTheme()
 
@@ -130,7 +132,6 @@ export default function DrawerTop(props) {
           drawer: classes.drawer,
         }}
       >
-        {" "}
         <Slide in={props.open} timeout={1000} direction="up">
           <div>
             <Fade in={props.open} timeout={1600}>
@@ -180,11 +181,12 @@ export default function DrawerTop(props) {
                     <CloseIcon style={{ fontSize: 30, margin: 6 }} />
                   </IconButton>
                 </div>
+
                 <ListItem>
                   <img src={menu} alt="img" className={classes.menuImg} />
                 </ListItem>
                 <Link
-                  to="/geo#home"
+                  to="#home"
                   className={classes.drawerItem}
                   activeClassName={classes.active}
                   onClick={props.onClose}
@@ -193,14 +195,22 @@ export default function DrawerTop(props) {
                     <ListItemText
                       primary={
                         <Typography align="center" variant="h6">
-                          მთავარი
+                          {actLanguage === "DEU"
+                            ? "HOME"
+                            : actLanguage === "RUS"
+                            ? "ГЛАВНОЕ"
+                            : actLanguage === "ENG"
+                            ? "HOME"
+                            : actLanguage === "GEO"
+                            ? " მთავარი"
+                            : null}
                         </Typography>
                       }
                     />
                   </ListItem>
                 </Link>
                 <Link
-                  to="/geo#about-us"
+                  to="#about-us"
                   className={classes.drawerItem}
                   activeClassName={classes.active}
                   onClick={props.onClose}
@@ -209,14 +219,22 @@ export default function DrawerTop(props) {
                     <ListItemText
                       primary={
                         <Typography align="center" variant="h6">
-                          კეთილი იყოს თქვენი მობრძანება
+                          {actLanguage === "DEU"
+                            ? "HERZLICH WILLKOMMEN"
+                            : actLanguage === "RUS"
+                            ? " ДОБРО ПОЖАЛОВАТЬ"
+                            : actLanguage === "ENG"
+                            ? "WELCOME"
+                            : actLanguage === "GEO"
+                            ? "კეთილი იყოს თქვენი მობრძანება"
+                            : null}
                         </Typography>
                       }
                     />
                   </ListItem>
                 </Link>
                 <Link
-                  to="/geo#menu"
+                  to="#menu"
                   className={classes.drawerItem}
                   activeClassName={classes.active}
                   onClick={props.onClose}
@@ -225,7 +243,15 @@ export default function DrawerTop(props) {
                     <ListItemText
                       primary={
                         <Typography align="center" variant="h6">
-                          მენიუ
+                          {actLanguage === "DEU"
+                            ? "MENÜ"
+                            : actLanguage === "RUS"
+                            ? "МЕНЮ"
+                            : actLanguage === "ENG"
+                            ? "MENU"
+                            : actLanguage === "GEO"
+                            ? "მენიუ"
+                            : null}
                         </Typography>
                       }
                     />
@@ -233,7 +259,7 @@ export default function DrawerTop(props) {
                 </Link>
 
                 <Link
-                  to="/geo#contact"
+                  to="#contact"
                   className={classes.drawerItem}
                   activeClassName={classes.active}
                   onClick={props.onClose}
@@ -242,7 +268,15 @@ export default function DrawerTop(props) {
                     <ListItemText
                       primary={
                         <Typography align="center" variant="h6">
-                          კონტაქტი
+                          {actLanguage === "DEU"
+                            ? "KONTAKT"
+                            : actLanguage === "RUS"
+                            ? "КОНТАКТЫ"
+                            : actLanguage === "ENG"
+                            ? "CONTACT US"
+                            : actLanguage === "GEO"
+                            ? "კონტაქტი"
+                            : null}
                         </Typography>
                       }
                     />
