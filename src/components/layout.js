@@ -10,7 +10,6 @@ const window = require("global/window")
 export const LanguageContext = createContext()
 
 export default function Layout({ children }) {
-  // debugger
   const [actLanguage, setActLanguage] = useState(lang)
 
   function handleLanguageChange(event) {
