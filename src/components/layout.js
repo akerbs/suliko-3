@@ -20,13 +20,13 @@ export default function Layout({ children }) {
   init()
 
   function lang() {
-    if (window.navigator.language.slice(0, 2) === "ru") {
+    if (navigator.language.slice(0, 2) === "ru") {
       return "RUS"
-    } else if (window.navigator.language.slice(0, 2) === "de") {
+    } else if (navigator.language.slice(0, 2) === "de") {
       return "DEU"
-    } else if (window.navigator.language.slice(0, 2) === "en") {
+    } else if (navigator.language.slice(0, 2) === "en") {
       return "ENG"
-    } else if (window.navigator.language.slice(0, 2) === "ge") {
+    } else if (navigator.language.slice(0, 2) === "ge") {
       return "GEO"
     } else {
       return "ENG"
