@@ -1,5 +1,6 @@
-import React, { useState, createContext, useEffect } from "react"
+import React, { useState, createContext, useEffect, useMemo } from "react"
 import "./layout.css"
+import PropTypes from "prop-types"
 import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./theme"
 // import CookiesBar from "./cookiesBar"
@@ -10,61 +11,55 @@ const window = require("global/window")
 export const LanguageContext = createContext()
 
 export default function Layout({ children }) {
-  const [actLanguage, setActLanguage] = useState("GEO")
+  const [actLanguage, setActLanguage] = useState("")
+
+  window.onload = init()
+
+  function init() {
+    // window.onload = function () {
+    useMemo(() => {
+      detectLanguage()
+    }, [window.navigator.language])
+    console.log("LANGUAGE: ", window.navigator.language.slice(0, 2))
+    // }
+  }
+  // init()
+
+  function detectLanguage() {
+    if (window.navigator.language.slice(0, 2) === "ru") {
+      setActLanguage("RUS")
+    } else if (window.navigator.language.slice(0, 2) === "de") {
+      setActLanguage("DEU")
+    } else if (window.navigator.language.slice(0, 2) === "en") {
+      setActLanguage("ENG")
+    } else if (window.navigator.language.slice(0, 2) === "ge") {
+      setActLanguage("GEO")
+    } else {
+      setActLanguage("ENG")
+    }
+  }
 
   function handleLanguageChange(event) {
     setActLanguage(event.target.value)
   }
 
-  // function init() {
-  //   window.onload = function () {
-  //     lang()
-  //   }
-  // }
-  // init()
-
-  // function lang() {
-  //   if (window.navigator.language.slice(0, 2) === "ru") {
-  //     return "RUS"
-  //   } else if (window.navigator.language.slice(0, 2) === "de") {
-  //     return "DEU"
-  //   } else if (window.navigator.language.slice(0, 2) === "en") {
-  //     return "ENG"
-  //   } else if (window.navigator.language.slice(0, 2) === "ge") {
-  //     return "GEO"
-  //   } else {
-  //     return "ENG"
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   if (actLanguage === "RUS") {
-  //     navigate("/rus")
-  //   } else if (actLanguage === "DEU") {
-  //     navigate("/deu")
-  //   } else if (actLanguage === "ENG") {
-  //     navigate("/eng")
-  //   } else if (actLanguage === "GEO") {
-  //     navigate("/geo")
-  //   }
-  // }, [])
-
   return (
-    <>
+    <div style={{ backgroundColor: "#f9eacf" }}>
       <LanguageContext.Provider
         value={{
           actLanguage,
+          setActLanguage,
           handleLanguageChange,
         }}
       >
         <CssBaseline />
-        <ThemeProvider theme={theme}>
-          <div style={{ backgroundColor: "#f9eacf" }}>
-            <main>{children}</main>
-          </div>
-        </ThemeProvider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
         {/* <CookiesBar /> */}
       </LanguageContext.Provider>
-    </>
+    </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }

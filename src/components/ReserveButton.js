@@ -16,9 +16,6 @@ export default function ReserveButton(props) {
   const classes = useStyles()
 
   const { actLanguage } = useContext(LanguageContext)
-
-  // console.log("RRRRR", window.location.pathname)
-
   return (
     <>
       <Button
@@ -31,13 +28,13 @@ export default function ReserveButton(props) {
           position: "fixed",
         }}
       >
-        {window.location.pathname === "/deu"
+        {actLanguage === "DEU"
           ? "Tisch reservieren"
-          : window.location.pathname === "/rus"
+          : actLanguage === "RUS"
           ? "Забронировать столик"
-          : window.location.pathname === "/eng"
+          : actLanguage === "ENG"
           ? "Reserve a table"
-          : window.location.pathname === "/geo"
+          : actLanguage === "GEO"
           ? " შეინახეთ მაგიდა"
           : null}
         {/* Забронировать столик */}

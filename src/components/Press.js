@@ -18,7 +18,7 @@ export default function AboutUs(props) {
     <>
       <Grid container spacing={3}>
         <Grid item lg={3} md={4} sm={6} xs={12}>
-          <Link
+          <a
             target="_blank"
             rel="noopener noreferrer"
             to="https://www.zeit.de/2018/17/suliko-restaurant-georgische-kueche-hamburg"
@@ -54,10 +54,10 @@ export default function AboutUs(props) {
                 </CardActions>
               </CardActionArea>
             </Card>
-          </Link>
+          </a>
         </Grid>
         <Grid item lg={3} md={4} sm={6} xs={12}>
-          <Link
+          <a
             target="_blank"
             rel="noopener noreferrer"
             to="https://www.abendblatt.de/hamburg/article226946467/Georgiens-Seele-hat-am-Mittelweg-seine-Heimat-gefunden.html"
@@ -93,7 +93,7 @@ export default function AboutUs(props) {
                 </CardActions>
               </CardActionArea>
             </Card>
-          </Link>
+          </a>
         </Grid>
       </Grid>
     </>

@@ -6,7 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem"
 
 export default function LangSwAkk() {
   const { actLanguage, handleLanguageChange } = useContext(LanguageContext)
-  console.log("LANG!!:", actLanguage)
+
   // debugger
   return (
     <div className="accordion">
@@ -25,7 +25,6 @@ export default function LangSwAkk() {
                 value={"RUS"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  navigate("/rus")
                 }}
               >
                 RUS
@@ -46,7 +45,6 @@ export default function LangSwAkk() {
                 value={"DEU"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  navigate("/deu")
                 }}
               >
                 DEU
@@ -67,7 +65,6 @@ export default function LangSwAkk() {
                 value={"GEO"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  navigate("/geo")
                 }}
               >
                 GEO
@@ -88,7 +85,6 @@ export default function LangSwAkk() {
                 value={"ENG"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  navigate("/eng")
                 }}
               >
                 ENG
