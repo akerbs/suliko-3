@@ -17,9 +17,7 @@ export default function Layout({ children }) {
 
   function init() {
     // window.onload = function () {
-    useMemo(() => {
-      detectLanguage()
-    }, [actLanguage])
+    detectLanguage()
     console.log("LANGUAGE: ", window.navigator.language.slice(0, 2))
     // }
   }
