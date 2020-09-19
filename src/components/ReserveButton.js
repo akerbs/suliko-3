@@ -16,6 +16,9 @@ export default function ReserveButton(props) {
   const classes = useStyles()
 
   const { actLanguage } = useContext(LanguageContext)
+
+  // console.log("RRRRR", window.location.pathname)
+
   return (
     <>
       <Button
