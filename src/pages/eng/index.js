@@ -28,7 +28,7 @@ const window = require("global/window")
 
 SwiperCore.use([Autoplay, Navigation, EffectFade])
 
-export default function IndexPage(props) {
+export default function (props) {
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
