@@ -20,13 +20,25 @@ export default function Layout({ children }) {
   init()
 
   function lang() {
-    if (navigator.language.slice(0, 2) === "ru") {
+    if (
+      window.navigator.language.slice(0, 2) === "ru" ||
+      window.navigator.languages[0].slice(0, 2) === "ru"
+    ) {
       return "RUS"
-    } else if (navigator.language.slice(0, 2) === "de") {
+    } else if (
+      window.navigator.language.slice(0, 2) === "de" ||
+      window.navigator.languages[0].slice(0, 2) === "de"
+    ) {
       return "DEU"
-    } else if (navigator.language.slice(0, 2) === "en") {
+    } else if (
+      window.navigator.language.slice(0, 2) === "en" ||
+      window.navigator.languages[0].slice(0, 2) === "en"
+    ) {
       return "ENG"
-    } else if (navigator.language.slice(0, 2) === "ge") {
+    } else if (
+      window.navigator.language.slice(0, 2) === "ge" ||
+      window.navigator.languages[0].slice(0, 2) === "ge"
+    ) {
       return "GEO"
     } else {
       return "ENG"
