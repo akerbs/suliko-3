@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === "development") {
+  require("dotenv").config()
+}
+
 module.exports = {
   siteMetadata: {
     title: `restaurant-suliko.de`,
@@ -35,6 +39,7 @@ module.exports = {
           cookieName: "gatsby-gdpr-google-analytics", // default
           anonymize: true, // default
         },
+
         // googleTagManager: {
         //   trackingId: "YOUR_GOOGLE_TAG_MANAGER_TRACKING_ID", // leave empty if you want to disable the tracker
         //   cookieName: "gatsby-gdpr-google-tagmanager", // default
@@ -48,7 +53,12 @@ module.exports = {
         environments: ["production", "development"],
       },
     },
-
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.js`),
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
