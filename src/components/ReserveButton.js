@@ -31,13 +31,13 @@ export default function ReserveButton(props) {
           position: "fixed",
         }}
       >
-        {actLanguage === "DEU"
+        {window.location.pathname === "/deu"
           ? "Tisch reservieren"
-          : actLanguage === "RUS"
+          : window.location.pathname === "/rus"
           ? "Забронировать столик"
-          : actLanguage === "ENG"
+          : window.location.pathname === "/eng"
           ? "Reserve a table"
-          : actLanguage === "GEO"
+          : window.location.pathname === "/geo"
           ? " შეინახეთ მაგიდა"
           : null}
         {/* Забронировать столик */}

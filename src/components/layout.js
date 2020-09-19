@@ -10,32 +10,18 @@ const window = require("global/window")
 export const LanguageContext = createContext()
 
 export default function Layout({ children }) {
-  const [actLanguage, setActLanguage] = useState(lang)
+  const [actLanguage, setActLanguage] = useState("GEO")
 
   function handleLanguageChange(event) {
     setActLanguage(event.target.value)
   }
 
-  function init() {
-    window.onload = function () {
-      lang()
-    }
-  }
-  init()
-
-  function lang() {
-    if (window.location.pathname === "/rus") {
-      return "RUS"
-    } else if (window.location.pathname === "/deu") {
-      return "DEU"
-    } else if (window.location.pathname === "/eng") {
-      return "ENG"
-    } else if (window.location.pathname === "/geo") {
-      return "GEO"
-    } else {
-      return "ENG"
-    }
-  }
+  // function init() {
+  //   window.onload = function () {
+  //     lang()
+  //   }
+  // }
+  // init()
 
   // function lang() {
   //   if (window.navigator.language.slice(0, 2) === "ru") {
