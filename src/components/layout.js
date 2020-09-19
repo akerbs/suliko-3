@@ -12,10 +12,6 @@ export const LanguageContext = createContext()
 export default function Layout({ children }) {
   const [actLanguage, setActLanguage] = useState(lang)
 
-  function handleLanguageChange(event) {
-    setActLanguage(event.target.value)
-  }
-
   function init() {
     window.onload = function () {
       lang()
@@ -35,6 +31,10 @@ export default function Layout({ children }) {
     } else {
       return "ENG"
     }
+  }
+
+  function handleLanguageChange(event) {
+    setActLanguage(event.target.value)
   }
 
   // useEffect(() => {
