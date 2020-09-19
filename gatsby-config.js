@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV === "development") {
-  require("dotenv").config()
-}
-
 module.exports = {
   siteMetadata: {
     title: `restaurant-suliko.de`,
@@ -53,12 +49,7 @@ module.exports = {
         environments: ["production", "development"],
       },
     },
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/components/layout.js`),
-      },
-    },
+
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
