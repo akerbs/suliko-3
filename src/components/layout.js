@@ -11,7 +11,7 @@ export const LanguageContext = createContext()
 
 export default function Layout({ children }) {
   const myLang =
-    window.navigator.language.slice(0, 2) ||
+    // window.navigator.language.slice(0, 2) ||
     window.navigator.languages[0].slice(0, 2) ||
     window.navigator.browserLanguage.slice(0, 2) ||
     window.navigator.userLanguage.slice(0, 2)
