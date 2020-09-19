@@ -9,29 +9,25 @@ const window = require("global/window")
 
 export const LanguageContext = createContext()
 
+let maLang
+
+window.onload = function () {
+  if (window.navigator.language.slice(0, 2) === "ru") {
+    maLang = "RUS"
+  } else if (window.navigator.language.slice(0, 2) === "de") {
+    maLang = "DEU"
+  } else if (window.navigator.language.slice(0, 2) === "en") {
+    maLang = "ENG"
+  } else if (window.navigator.language.slice(0, 2) === "ge") {
+    maLang = "GEO"
+  } else {
+    maLang = "ENG"
+  }
+  return maLang
+}
+
 export default function Layout({ children }) {
-  const [actLanguage, setActLanguage] = useState(lang)
-
-  function init() {
-    window.onload = function () {
-      lang()
-    }
-  }
-  init()
-
-  function lang() {
-    if (window.navigator.language.slice(0, 2) === "ru") {
-      return "RUS"
-    } else if (window.navigator.language.slice(0, 2) === "de") {
-      return "DEU"
-    } else if (window.navigator.language.slice(0, 2) === "en") {
-      return "ENG"
-    } else if (window.navigator.language.slice(0, 2) === "ge") {
-      return "GEO"
-    } else {
-      return "ENG"
-    }
-  }
+  const [actLanguage, setActLanguage] = useState(maLang)
 
   function handleLanguageChange(event) {
     setActLanguage(event.target.value)
