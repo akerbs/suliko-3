@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import {
@@ -29,6 +29,7 @@ import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers"
 import IconButton from "@material-ui/core/IconButton"
 import HighlightOffIcon from "@material-ui/icons/HighlightOff"
+import { LanguageContext } from "../components/layout"
 
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
@@ -80,7 +81,90 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const schema = yup.object().shape({
+const defaultValues = {
+  date: null, // Don't use empty strings ""
+  time: null,
+}
+
+const schemaRus = yup.object().shape({
+  peopleCount: yup
+    .string()
+    .required("Поле, обязательное для заполнения")
+    .matches(/^\d{1,2}$/, "Введите корректное количество людей"),
+  date: yup.string().nullable().required("Поле, обязательное для заполнения"),
+  time: yup.string().nullable().required("Поле, обязательное для заполнения"),
+  name: yup
+    .string()
+    .required("Поле, обязательное для заполнения")
+    .min(3, "Имя должно состоять не менее чем из 3 символов.")
+    .max(20, "Имя должно содержать не более 20 символов."),
+  phone: yup
+    .string()
+    .required("Поле, обязательное для заполнения")
+    .matches(/^[0-9\-\+]{9,15}$/, "Введите корректный номер телефона"),
+  email: yup
+    .string()
+    .required("Поле, обязательное для заполнения")
+    .matches(
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      "Введите коректный адрес электронной почты"
+    ),
+  // .email('Please check your email')
+})
+
+const schemaDeu = yup.object().shape({
+  peopleCount: yup
+    .string()
+    .required("Feld ist erforderlich")
+    .matches(/^\d{1,2}$/, "Geben Sie die richtige Anzahl von Personen ein"),
+  date: yup.string().nullable().required("Feld ist erforderlich"),
+  time: yup.string().nullable().required("Feld ist erforderlich"),
+  name: yup
+    .string()
+    .required("Feld ist erforderlich")
+    .min(3, "Der Name muss mindestens 3 Zeichen lang sein")
+    .max(20, "Der Name darf maximal 20 Zeichen lang sein"),
+  phone: yup
+    .string()
+    .required("Feld ist erforderlich")
+    .matches(/^[0-9\-\+]{9,15}$/, "falsche Telefonnummer"),
+  email: yup
+    .string()
+    .required("Feld ist erforderlich")
+    .matches(
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      "Falsche Email"
+    ),
+  // .email('Please check your email')
+})
+
+const schemaGeo = yup.object().shape({
+  peopleCount: yup
+    .string()
+    .required("ველია საჭირო")
+    .matches(/^\d{1,2}$/, "შეიყვანეთ ხალხის სწორი რაოდენობა"),
+  date: yup.string().nullable().required("ველია საჭირო"),
+  time: yup.string().nullable().required("ველია საჭირო"),
+  name: yup
+    .string()
+    .required("ველია საჭირო")
+    .min(3, "სახელი უნდა იყოს მინიმუმ 3 სიმბოლო")
+    .max(20, "სახელი უნდა იყოს 20 სიმბოლო ან ნაკლები"),
+  phone: yup
+    .string()
+    .required("ველია საჭირო")
+    .matches(/^[0-9\-\+]{9,15}$/, "არასწორი ტელეფონის ნომერი"),
+  email: yup
+    .string()
+    .required("ველია საჭირო")
+    .matches(
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      "არასწორი იმეილი"
+    ),
+  // .email('Please check your email')
+})
+
+const schemaEng = yup.object().shape({
   peopleCount: yup
     .string()
     .required("Field is required")
@@ -106,13 +190,20 @@ const schema = yup.object().shape({
   // .email('Please check your email')
 })
 
-const defaultValues = {
-  date: null, // Don't use empty strings ""
-  time: null,
-}
-
-const ModalWindow = props => {
+export default function WindowReserve(props) {
+  const { actLanguage } = useContext(LanguageContext)
   const classes = useStyles()
+
+  const schema =
+    actLanguage === "DEU"
+      ? schemaDeu
+      : actLanguage === "RUS"
+      ? schemaRus
+      : actLanguage === "ENG"
+      ? schemaEng
+      : actLanguage === "GEO"
+      ? schemaGeo
+      : null
 
   const { register, handleSubmit, control, errors } = useForm({
     resolver: yupResolver(schema),
@@ -126,6 +217,17 @@ const ModalWindow = props => {
   const errorName = errors.hasOwnProperty("name") && errors["name"].message
   const errorPhone = errors.hasOwnProperty("phone") && errors["phone"].message
   const errorEmail = errors.hasOwnProperty("email") && errors["email"].message
+
+  const alertMessage =
+    actLanguage === "DEU"
+      ? "Danke!!! Wir werden uns bald bei Ihnen melden :-)"
+      : actLanguage === "RUS"
+      ? "Спасибо!!! Мы свяжемся с Вами в ближайшее время :-)"
+      : actLanguage === "ENG"
+      ? "Thank You!!! We will contact You soon :-)"
+      : actLanguage === "GEO"
+      ? "მადლობა !!! ცოტა ხანში დაგიკავშირდებით :-)"
+      : null
 
   async function onSubmit(data) {
     try {
@@ -142,7 +244,7 @@ const ModalWindow = props => {
         }
       )
       if (response.ok) {
-        alert("Thank You!!! We will contact You soon :-)")
+        alert(alertMessage)
         await props.onClose()
         // navigate("/")
         // window.location.reload()
@@ -188,7 +290,17 @@ const ModalWindow = props => {
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
-                      label="Number of people"
+                      label={
+                        actLanguage === "DEU"
+                          ? "Anzahl der Personen"
+                          : actLanguage === "RUS"
+                          ? "Количество гостей"
+                          : actLanguage === "ENG"
+                          ? "Number of people"
+                          : actLanguage === "GEO"
+                          ? "პირთა რაოდენობა"
+                          : null
+                      }
                       inputRef={register}
                       error={!!errorPeopleCount}
                       helperText={errorPeopleCount}
@@ -223,7 +335,17 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="date"
-                      placeholder="Date"
+                      placeholder={
+                        actLanguage === "DEU"
+                          ? "Datum"
+                          : actLanguage === "RUS"
+                          ? "Дата"
+                          : actLanguage === "ENG"
+                          ? "Date"
+                          : actLanguage === "GEO"
+                          ? "თარიღი"
+                          : null
+                      }
                     />
                   </FormControl>
                 </TimelineContent>
@@ -254,7 +376,17 @@ const ModalWindow = props => {
                       }
                       control={control}
                       name="time"
-                      placeholder="Time"
+                      placeholder={
+                        actLanguage === "DEU"
+                          ? "Zeit"
+                          : actLanguage === "RUS"
+                          ? "Время"
+                          : actLanguage === "ENG"
+                          ? "Time"
+                          : actLanguage === "GEO"
+                          ? "დრო"
+                          : null
+                      }
                     />
                   </FormControl>
                 </TimelineContent>
@@ -275,7 +407,17 @@ const ModalWindow = props => {
                       type="text"
                       name="name"
                       id="name"
-                      label="Your name"
+                      label={
+                        actLanguage === "DEU"
+                          ? "Ihr Name"
+                          : actLanguage === "RUS"
+                          ? "Ваше имя"
+                          : actLanguage === "ENG"
+                          ? "Your name"
+                          : actLanguage === "GEO"
+                          ? "Თქვენი სახელი"
+                          : null
+                      }
                       inputRef={register}
                       error={!!errorName}
                       helperText={errorName}
@@ -299,7 +441,17 @@ const ModalWindow = props => {
                       type="text"
                       name="phone"
                       id="phone"
-                      label="Phone"
+                      label={
+                        actLanguage === "DEU"
+                          ? "Telefon"
+                          : actLanguage === "RUS"
+                          ? "Телефон"
+                          : actLanguage === "ENG"
+                          ? "Phone"
+                          : actLanguage === "GEO"
+                          ? "ტელეფონი"
+                          : null
+                      }
                       inputRef={register}
                       error={!!errorPhone}
                       helperText={errorPhone}
@@ -321,7 +473,17 @@ const ModalWindow = props => {
                     <TextField
                       type="email"
                       name="email"
-                      label="Email"
+                      label={
+                        actLanguage === "DEU"
+                          ? "Email"
+                          : actLanguage === "RUS"
+                          ? "Эл. почта"
+                          : actLanguage === "ENG"
+                          ? "Email"
+                          : actLanguage === "GEO"
+                          ? "ელ.ფოსტა"
+                          : null
+                      }
                       inputRef={register}
                       error={!!errorEmail}
                       helperText={errorEmail}
@@ -344,11 +506,18 @@ const ModalWindow = props => {
             variant="outlined"
             className={classes.reservierenBtn}
           >
-            Reserve now
+            {actLanguage === "DEU"
+              ? "Reservieren jetzt"
+              : actLanguage === "RUS"
+              ? "Забронировать"
+              : actLanguage === "ENG"
+              ? "Reserve now"
+              : actLanguage === "GEO"
+              ? "Დაჯავშნა"
+              : null}
           </Button>
         </form>
       </div>
     </Modal>
   )
 }
-export default ModalWindow

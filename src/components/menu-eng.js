@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export function Speisekarte(props) {
+export function SpeisekarteEng(props) {
   const classes = useStyles()
 
   return (
@@ -723,7 +723,7 @@ export function Speisekarte(props) {
   )
 }
 
-export function Weinkarte(props) {
+export function WeinkarteEng(props) {
   const classes = useStyles()
 
   return (
@@ -980,7 +980,7 @@ export function Weinkarte(props) {
   )
 }
 
-export function Mittagsmenu(props) {
+export function MittagsmenuEng(props) {
   const classes = useStyles()
 
   return (

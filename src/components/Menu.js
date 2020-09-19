@@ -7,7 +7,10 @@ import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
-import { Speisekarte, Weinkarte, Mittagsmenu } from "./menu-rus"
+import { SpeisekarteRus, WeinkarteRus, MittagsmenuRus } from "./menu-rus"
+import { SpeisekarteDeu, WeinkarteDeu, MittagsmenuDeu } from "./menu-deu"
+import { SpeisekarteGeo, WeinkarteGeo, MittagsmenuGeo } from "./menu-geo"
+import { SpeisekarteEng, WeinkarteEng, MittagsmenuEng } from "./menu-eng"
 
 const useStyles = makeStyles(theme => ({
   phoneEmailLink: {
@@ -61,7 +64,15 @@ export default function Menu(props) {
             margin: 10,
           }}
         >
-          Меню и бар
+          {actLanguage === "DEU"
+            ? "Speise- und Barkarte"
+            : actLanguage === "RUS"
+            ? " Меню и бар"
+            : actLanguage === "ENG"
+            ? "Menu and bar"
+            : actLanguage === "GEO"
+            ? "მენიუ და ბარი"
+            : null}
         </Button>
         <Button
           variant="contained"
@@ -72,7 +83,15 @@ export default function Menu(props) {
             margin: 10,
           }}
         >
-          Винная карта
+          {actLanguage === "DEU"
+            ? "Weinkarte"
+            : actLanguage === "RUS"
+            ? "Винная карта"
+            : actLanguage === "ENG"
+            ? "Wine list"
+            : actLanguage === "GEO"
+            ? "ღვინის რუკა"
+            : null}
         </Button>
         <Button
           variant="contained"
@@ -83,13 +102,70 @@ export default function Menu(props) {
             margin: 10,
           }}
         >
-          Обеденное меню
+          {actLanguage === "DEU"
+            ? "Mittagsmenü"
+            : actLanguage === "RUS"
+            ? "Обеденное меню"
+            : actLanguage === "ENG"
+            ? "Lunch menu"
+            : actLanguage === "GEO"
+            ? "სადილის მენიუ"
+            : null}
         </Button>
       </div>
 
-      <Speisekarte open={openSpeisekarte} onClose={handleCloseSpeisekarte} />
-      <Weinkarte open={openWeinkarte} onClose={handleCloseWeinkarte} />
-      <Mittagsmenu open={openMittagsmenu} onClose={handleCloseMittagsmenu} />
+      {actLanguage === "DEU" && (
+        <div>
+          <SpeisekarteDeu
+            open={openSpeisekarte}
+            onClose={handleCloseSpeisekarte}
+          />
+          <WeinkarteDeu open={openWeinkarte} onClose={handleCloseWeinkarte} />
+          <MittagsmenuDeu
+            open={openMittagsmenu}
+            onClose={handleCloseMittagsmenu}
+          />
+        </div>
+      )}
+      {actLanguage === "RUS" && (
+        <div>
+          <SpeisekarteRus
+            open={openSpeisekarte}
+            onClose={handleCloseSpeisekarte}
+          />
+          <WeinkarteRus open={openWeinkarte} onClose={handleCloseWeinkarte} />
+          <MittagsmenuRus
+            open={openMittagsmenu}
+            onClose={handleCloseMittagsmenu}
+          />
+        </div>
+      )}
+      {actLanguage === "GEO" && (
+        <div>
+          <SpeisekarteGeo
+            open={openSpeisekarte}
+            onClose={handleCloseSpeisekarte}
+          />
+          <WeinkarteGeo open={openWeinkarte} onClose={handleCloseWeinkarte} />
+          <MittagsmenuGeo
+            open={openMittagsmenu}
+            onClose={handleCloseMittagsmenu}
+          />
+        </div>
+      )}
+      {actLanguage === "ENG" && (
+        <div>
+          <SpeisekarteEng
+            open={openSpeisekarte}
+            onClose={handleCloseSpeisekarte}
+          />
+          <WeinkarteEng open={openWeinkarte} onClose={handleCloseWeinkarte} />
+          <MittagsmenuEng
+            open={openMittagsmenu}
+            onClose={handleCloseMittagsmenu}
+          />
+        </div>
+      )}
     </>
   )
 }

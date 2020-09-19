@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
 import Img from "gatsby-image"
-import ModalWindow from "../components/modalWindow-rus"
+
 import "./index.css"
 import Button from "@material-ui/core/Button"
 import menu from "../images/menu.png"
@@ -17,7 +17,8 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import CookiesBar from "../components/cookiesBar"
 
-import ButtonReserve from "../components/ButtonReserve"
+import ReserveWindow from "../components/ReserveWindow"
+import ReserveButton from "../components/ReserveButton"
 import HomeText from "../components/HomeText"
 import AboutUs from "../components/AboutUs"
 import Press from "../components/Press"
@@ -115,8 +116,8 @@ export default function IndexPage(props) {
             )}
           </Container>
           <Container id="center">
-            <ButtonReserve onOpen={handleOpen} />
-            <ModalWindow onClose={handleClose} open={open} />
+            <ReserveButton onOpen={handleOpen} />
+            <ReserveWindow onClose={handleClose} open={open} />
             <br /> <br />
             <Container id="home-text">
               <HomeText />

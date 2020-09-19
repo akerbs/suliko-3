@@ -12,14 +12,14 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function ButtonReserve(props) {
+export default function ReserveButton(props) {
   const classes = useStyles()
 
   const { actLanguage } = useContext(LanguageContext)
   return (
     <>
       <Button
-        className="reservierenButton"
+        className={classes.reservierenButton}
         onClick={props.onOpen}
         variant="contained"
         style={{
