@@ -10,6 +10,12 @@ const window = require("global/window")
 export const LanguageContext = createContext()
 
 export default function Layout({ children }) {
+  const myLang =
+    window.navigator.language.slice(0, 2) ||
+    window.navigator.languages[0].slice(0, 2) ||
+    window.navigator.browserLanguage.slice(0, 2) ||
+    window.navigator.userLanguage.slice(0, 2)
+
   const [actLanguage, setActLanguage] = useState(lang)
 
   function init() {
@@ -20,25 +26,13 @@ export default function Layout({ children }) {
   init()
 
   function lang() {
-    if (
-      window.navigator.language.slice(0, 2) === "ru" ||
-      window.navigator.languages[0].slice(0, 2) === "ru"
-    ) {
+    if (myLang === "ru") {
       return "RUS"
-    } else if (
-      window.navigator.language.slice(0, 2) === "de" ||
-      window.navigator.languages[0].slice(0, 2) === "de"
-    ) {
+    } else if (myLang === "de") {
       return "DEU"
-    } else if (
-      window.navigator.language.slice(0, 2) === "en" ||
-      window.navigator.languages[0].slice(0, 2) === "en"
-    ) {
+    } else if (myLang === "en") {
       return "ENG"
-    } else if (
-      window.navigator.language.slice(0, 2) === "ge" ||
-      window.navigator.languages[0].slice(0, 2) === "ge"
-    ) {
+    } else if (myLang === "ge") {
       return "GEO"
     } else {
       return "ENG"
