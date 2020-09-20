@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
@@ -37,7 +36,6 @@ export default function ReserveButton(props) {
           : actLanguage === "GEO"
           ? " შეინახეთ მაგიდა"
           : null}
-        {/* Забронировать столик */}
       </Button>
     </>
   )

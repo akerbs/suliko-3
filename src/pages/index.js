@@ -1,21 +1,17 @@
-import React, { useRef, useEffect, useState, useContext } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-
+import React, { useState, useContext } from "react"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Container from "@material-ui/core/Container"
-import Typography from "@material-ui/core/Typography"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper"
 import "swiper/swiper-bundle.css"
 import Img from "gatsby-image"
 import "./index.css"
-import Button from "@material-ui/core/Button"
 import menu from "../images/menu.png"
 import { Helmet } from "react-helmet"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import CookiesBar from "../components/cookiesBar"
-
 import ReserveWindow from "../components/ReserveWindow"
 import ReserveButton from "../components/ReserveButton"
 import HomeText from "../components/HomeText"
@@ -23,12 +19,14 @@ import AboutUs from "../components/AboutUs"
 import Press from "../components/Press"
 import Contact from "../components/Contact"
 import Menu from "../components/Menu"
+import { LanguageContext } from "../components/layout"
 
 const window = require("global/window")
 
 SwiperCore.use([Autoplay, Navigation, EffectFade])
 
 export default function (props) {
+  const { actLanguage } = useContext(LanguageContext)
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -44,13 +42,34 @@ export default function (props) {
   return (
     <>
       {/* <SEO title="Home" /> */}
-      {/* <Helmet>
-          <html lang="ru" />
-          <title>restaurant-suliko.de</title>
-          <description>
-            Грузинский ресторан Сулико в Гамбурге, Германия
-          </description>
-        </Helmet> */}
+      <Helmet>
+        <html
+          lang={
+            actLanguage === "DEU"
+              ? "del"
+              : actLanguage === "RUS"
+              ? "ru"
+              : actLanguage === "ENG"
+              ? "en"
+              : actLanguage === "GEO"
+              ? "ge"
+              : null
+          }
+        />
+        <title>restaurant-suliko.de</title>
+        <description>
+          {actLanguage ===
+          "Georgisches Restaurant Suliko in Hamburg, Deutschland"
+            ? "del"
+            : actLanguage === "Грузинский ресторан Сулико в Гамбурге, Германия"
+            ? "ru"
+            : actLanguage === "Georgian restaurant Suliko in Hamburg, Germany"
+            ? "en"
+            : actLanguage === "ქართული რესტორანი სულიკო ჰამბურგში, გერმანია"
+            ? "ge"
+            : null}
+        </description>
+      </Helmet>
       <Container
         id="main"
         style={{

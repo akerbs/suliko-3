@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Typography from "@material-ui/core/Typography"
 import Modal from "@material-ui/core/Modal"
 import sulikoIcon from "../images/suliko-icon.png"

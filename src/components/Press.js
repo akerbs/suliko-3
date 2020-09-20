@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react"
-import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
-import { Link } from "gatsby"
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
 import CardActions from "@material-ui/core/CardActions"

@@ -4,13 +4,10 @@ import Container from "@material-ui/core/Container"
 import Logo2 from "../images/Logo2.png"
 import { Link } from "gatsby"
 import "./footer.css"
-import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Impressum from "./impressum"
-// import Datenschutz from "./datenschutz"
 
 const Footer = props => {
   const [openImpressum, setOpenImpressum] = React.useState(false)
-  // const [openDatenschutz, setOpenDatenschutz] = React.useState(false)
 
   const handleOpenImpressum = () => {
     setOpenImpressum(true)
@@ -18,13 +15,6 @@ const Footer = props => {
   const handleCloseImpressum = () => {
     setOpenImpressum(false)
   }
-
-  // const handleOpenDatenschutz = () => {
-  //   setOpenDatenschutz(true)
-  // }
-  // const handleCloseDatenschutz = () => {
-  //   setOpenDatenschutz(false)
-  // }
 
   return (
     <Container className="footerWrapper" style={{ paddingBottom: "70px" }}>
@@ -47,26 +37,6 @@ const Footer = props => {
         >
           Impressum
         </Typography>
-        {/* <Breadcrumbs
-          aria-label="breadcrumb"
-          separator={<Typography variant="caption">|</Typography>}
-        >
-          <Typography
-            variant="caption"
-            onClick={handleOpenImpressum}
-            style={{ cursor: "pointer" }}
-          >
-            Impressum
-          </Typography>
-
-          <Typography
-            variant="caption"
-            onClick={handleOpenDatenschutz}
-            style={{ cursor: "pointer" }}
-          >
-            Datenschutz
-          </Typography>
-        </Breadcrumbs> */}
       </div>
       <div
         style={{
@@ -92,7 +62,6 @@ const Footer = props => {
         </Typography>
       </div>
       <Impressum open={openImpressum} onClose={handleCloseImpressum} />
-      {/* <Datenschutz open={openDatenschutz} onClose={handleCloseDatenschutz} /> */}
     </Container>
   )
 }
