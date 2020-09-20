@@ -84,8 +84,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: "10px",
 
     width: "50%",
-    [theme.breakpoints.up("lg")]: {
-      // paddingLeft: "10px",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
     },
   },
 
