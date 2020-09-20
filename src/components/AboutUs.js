@@ -3,26 +3,14 @@ import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
 import { Link } from "gatsby"
-import sloganImgRus from "../images/slogan_rus.png"
-import sloganImgDeu from "../images/slogan_deu.png"
-import sloganImgGeo from "../images/slogan_geo.png"
-import sloganImgEng from "../images/slogan_eng.png"
 import { makeStyles } from "@material-ui/core/styles"
 
+const window = require("global/window")
+
 const useStyles = makeStyles(theme => ({
-  sloganWrapper: {
-    display: "flex",
-    justifyContent: "center",
-  },
   slogan: {
-    maxHeight: "75px",
-    minHeight: "30px",
-    display: "block",
-    margin: " 0 auto",
-    width: "60%",
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-    },
+    fontFamily: "Pacifico",
+    lineHeight: 1.2,
   },
 }))
 
@@ -41,9 +29,29 @@ export default function AboutUs(props) {
     <>
       {actLanguage === "RUS" && (
         <div>
-          <div className={classes.sloganWrapper}>
-            <img src={sloganImgRus} alt="slogan" className={classes.slogan} />
-          </div>
+          {window.innerWidth <= 599 && (
+            <Typography
+              id="slogan"
+              variant="h5"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Вкусная еда, соответствующая Вашему образу жизни
+            </Typography>
+          )}
+          {window.innerWidth >= 600 && (
+            <Typography
+              id="slogan"
+              variant="h4"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Вкусная еда, соответствующая Вашему образу жизни
+            </Typography>
+          )}
+
           <br />
 
           {!readMoreText1 && (
@@ -141,9 +149,29 @@ export default function AboutUs(props) {
       )}
       {actLanguage === "DEU" && (
         <div>
-          <div className={classes.sloganWrapper}>
-            <img src={sloganImgDeu} alt="slogan" className={classes.slogan} />
-          </div>
+          {window.innerWidth <= 599 && (
+            <Typography
+              id="slogan"
+              variant="h5"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Leckeres Essen, das zu Ihrem Lebensstiel passt
+            </Typography>
+          )}
+          {window.innerWidth >= 600 && (
+            <Typography
+              id="slogan"
+              variant="h4"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Leckeres Essen, das zu Ihrem Lebensstiel passt
+            </Typography>
+          )}
+
           <br />
 
           {!readMoreText1 && (
@@ -247,9 +275,29 @@ export default function AboutUs(props) {
       )}
       {actLanguage === "GEO" && (
         <div>
-          <div className={classes.sloganWrapper}>
-            <img src={sloganImgGeo} alt="slogan" className={classes.slogan} />
-          </div>
+          {window.innerWidth <= 599 && (
+            <Typography
+              id="slogan"
+              variant="h5"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              <b>გემრიელი საკვები, რომელიც შეესაბამება თქვენს ცხოვრების წესს</b>
+            </Typography>
+          )}
+          {window.innerWidth >= 600 && (
+            <Typography
+              id="slogan"
+              variant="h4"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              <b>გემრიელი საკვები, რომელიც შეესაბამება თქვენს ცხოვრების წესს</b>
+            </Typography>
+          )}
+
           <br />
 
           {!readMoreText1 && (
@@ -351,9 +399,29 @@ export default function AboutUs(props) {
       )}
       {actLanguage === "ENG" && (
         <div>
-          <div className={classes.sloganWrapper}>
-            <img src={sloganImgEng} alt="slogan" className={classes.slogan} />
-          </div>
+          {window.innerWidth <= 599 && (
+            <Typography
+              id="slogan"
+              variant="h5"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Delicious Food to fit your lifestyle
+            </Typography>
+          )}
+          {window.innerWidth >= 600 && (
+            <Typography
+              id="slogan"
+              variant="h4"
+              align="center"
+              color="primary"
+              className={classes.slogan}
+            >
+              Delicious Food to fit your lifestyle
+            </Typography>
+          )}
+
           <br />
 
           {!readMoreText1 && (

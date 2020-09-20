@@ -17,7 +17,7 @@ const theme = createMuiTheme({
   },
 
   typography: {
-    fontFamily: ["Raleway", "sans-serif"].join(","),
+    fontFamily: ["Raleway", "Pacifico", "sans-serif"].join(","),
     // "fontSize": 14,
     // "fontWeightLight": 300,
     // "fontWeightRegular": 400,
