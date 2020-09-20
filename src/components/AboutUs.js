@@ -407,7 +407,7 @@ export default function AboutUs(props) {
               color="primary"
               className={classes.slogan}
             >
-              Delicious Food to fit your lifestyle
+              Delicious food that fits your lifestyle
             </Typography>
           )}
           {window.innerWidth >= 600 && (
@@ -418,7 +418,7 @@ export default function AboutUs(props) {
               color="primary"
               className={classes.slogan}
             >
-              Delicious Food to fit your lifestyle
+              Delicious food that fits your lifestyle
             </Typography>
           )}
 
