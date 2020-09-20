@@ -13,11 +13,7 @@ export default function LangSwAkk() {
           {actLanguage !== "RUS" && (
             <div className="langItem">
               <button
-                style={{
-                  border: 0,
-                  backgroundColor: "rgba(249,234,207)",
-                  cursor: "pointer",
-                }}
+                className="button"
                 value={"RUS"}
                 onClick={e => {
                   handleLanguageChange(e)
@@ -31,11 +27,7 @@ export default function LangSwAkk() {
           {actLanguage !== "DEU" && (
             <div className="langItem">
               <button
-                style={{
-                  border: 0,
-                  backgroundColor: "rgba(249,234,207)",
-                  cursor: "pointer",
-                }}
+                className="button"
                 value={"DEU"}
                 onClick={e => {
                   handleLanguageChange(e)
@@ -49,11 +41,7 @@ export default function LangSwAkk() {
           {actLanguage !== "GEO" && (
             <div className="langItem">
               <button
-                style={{
-                  border: 0,
-                  backgroundColor: "rgba(249,234,207)",
-                  cursor: "pointer",
-                }}
+                className="button"
                 value={"GEO"}
                 onClick={e => {
                   handleLanguageChange(e)
@@ -67,11 +55,7 @@ export default function LangSwAkk() {
           {actLanguage !== "ENG" && (
             <div className="langItem">
               <button
-                style={{
-                  border: 0,
-                  backgroundColor: "rgba(249,234,207)",
-                  cursor: "pointer",
-                }}
+                className="button"
                 value={"ENG"}
                 onClick={e => {
                   handleLanguageChange(e)
