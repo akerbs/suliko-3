@@ -132,167 +132,211 @@ export default function DrawerTop(props) {
           drawer: classes.drawer,
         }}
       >
-        <Slide in={props.open} timeout={1000} direction="up">
-          <div>
-            <Fade in={props.open} timeout={1600}>
-              <div>
-                <div className={classes.drawerHeader}>
-                  <div className={classes.mediaIcons}>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.facebook.com/restaurant.suliko.hamburg"
-                      className={classes.mediaLink}
-                    >
-                      <ListItem
-                        button
-                        key={"facebook"}
-                        className={classes.mediaIcon}
-                      >
-                        <FontAwesomeIcon icon={faFacebook} size="2x" />
-                      </ListItem>
-                    </a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.instagram.com/suliko_hamburg_"
-                      className={classes.mediaLink}
-                    >
-                      <ListItem
-                        button
-                        key={"instagram"}
-                        className={classes.mediaIcon}
-                      >
-                        <FontAwesomeIcon icon={faInstagram} size="2x" />
-                      </ListItem>
-                    </a>
-                  </div>
-
-                  <CloseIcon style={{ color: "transparent" }} />
-
-                  <IconButton
-                    size="small"
-                    aria-label="close drawer"
-                    onClick={props.onClose}
-                    className={
-                      (clsx(props.open && classes.hide), classes.closeDrawerBtn)
-                    }
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={800} direction="up">
+            <div>
+              {/*     <Fade in={props.open} timeout={1600}>
+              <div> */}
+              <div className={classes.drawerHeader}>
+                <div className={classes.mediaIcons}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/restaurant.suliko.hamburg"
+                    className={classes.mediaLink}
                   >
-                    <CloseIcon style={{ fontSize: 30, margin: 6 }} />
-                  </IconButton>
+                    <ListItem
+                      button
+                      key={"facebook"}
+                      className={classes.mediaIcon}
+                    >
+                      <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    </ListItem>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/suliko_hamburg_"
+                    className={classes.mediaLink}
+                  >
+                    <ListItem
+                      button
+                      key={"instagram"}
+                      className={classes.mediaIcon}
+                    >
+                      <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </ListItem>
+                  </a>
                 </div>
 
-                <ListItem>
-                  <img src={menu} alt="img" className={classes.menuImg} />
-                </ListItem>
-                <Link
-                  to="#home"
-                  className={classes.drawerItem}
-                  activeClassName={classes.active}
-                  onClick={props.onClose}
-                >
-                  <ListItem button key={"HOME"}>
-                    <ListItemText
-                      primary={
-                        <Typography align="center" variant="h6">
-                          {actLanguage === "DEU"
-                            ? "HOME"
-                            : actLanguage === "RUS"
-                            ? "ГЛАВНОЕ"
-                            : actLanguage === "ENG"
-                            ? "HOME"
-                            : actLanguage === "GEO"
-                            ? " მთავარი"
-                            : null}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-                <Link
-                  to="#about-us"
-                  className={classes.drawerItem}
-                  activeClassName={classes.active}
-                  onClick={props.onClose}
-                >
-                  <ListItem button key={"ÜBER UNS"}>
-                    <ListItemText
-                      primary={
-                        <Typography align="center" variant="h6">
-                          {actLanguage === "DEU"
-                            ? "HERZLICH WILLKOMMEN"
-                            : actLanguage === "RUS"
-                            ? " ДОБРО ПОЖАЛОВАТЬ"
-                            : actLanguage === "ENG"
-                            ? "WELCOME"
-                            : actLanguage === "GEO"
-                            ? "კეთილი იყოს თქვენი მობრძანება"
-                            : null}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-                <Link
-                  to="#menu"
-                  className={classes.drawerItem}
-                  activeClassName={classes.active}
-                  onClick={props.onClose}
-                >
-                  <ListItem button key={"MENÜ"}>
-                    <ListItemText
-                      primary={
-                        <Typography align="center" variant="h6">
-                          {actLanguage === "DEU"
-                            ? "MENÜ"
-                            : actLanguage === "RUS"
-                            ? "МЕНЮ"
-                            : actLanguage === "ENG"
-                            ? "MENU"
-                            : actLanguage === "GEO"
-                            ? "მენიუ"
-                            : null}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
+                <CloseIcon style={{ color: "transparent" }} />
 
-                <Link
-                  to="#contact"
-                  className={classes.drawerItem}
-                  activeClassName={classes.active}
+                <IconButton
+                  size="small"
+                  aria-label="close drawer"
                   onClick={props.onClose}
+                  className={
+                    (clsx(props.open && classes.hide), classes.closeDrawerBtn)
+                  }
                 >
-                  <ListItem button key={"KONTAKT"}>
-                    <ListItemText
-                      primary={
-                        <Typography align="center" variant="h6">
-                          {actLanguage === "DEU"
-                            ? "KONTAKT"
-                            : actLanguage === "RUS"
-                            ? "КОНТАКТЫ"
-                            : actLanguage === "ENG"
-                            ? "CONTACT US"
-                            : actLanguage === "GEO"
-                            ? "კონტაქტი"
-                            : null}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-                <ListItem>
-                  <img src={menu} alt="img" className={classes.menuImg} />
-                </ListItem>
-
-                <div className={classes.imgWrapper}>
-                  <img src={Logo2} alt="logo" className={classes.img} />
-                </div>
+                  <CloseIcon style={{ fontSize: 30, margin: 6 }} />
+                </IconButton>
               </div>
+            </div>
+          </Slide>
+        </div>
+
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1000} direction="up">
+            <div>
+              <ListItem>
+                <img src={menu} alt="img" className={classes.menuImg} />
+              </ListItem>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1400} direction="up">
+            <div>
+              <Link
+                to="#home"
+                className={classes.drawerItem}
+                activeClassName={classes.active}
+                onClick={props.onClose}
+              >
+                <ListItem button key={"HOME"}>
+                  <ListItemText
+                    primary={
+                      <Typography align="center" variant="h6">
+                        {actLanguage === "DEU"
+                          ? "HOME"
+                          : actLanguage === "RUS"
+                          ? "ГЛАВНОЕ"
+                          : actLanguage === "ENG"
+                          ? "HOME"
+                          : actLanguage === "GEO"
+                          ? " მთავარი"
+                          : null}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </Link>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1500} direction="up">
+            <div>
+              <Link
+                to="#about-us"
+                className={classes.drawerItem}
+                activeClassName={classes.active}
+                onClick={props.onClose}
+              >
+                <ListItem button key={"ÜBER UNS"}>
+                  <ListItemText
+                    primary={
+                      <Typography align="center" variant="h6">
+                        {actLanguage === "DEU"
+                          ? "HERZLICH WILLKOMMEN"
+                          : actLanguage === "RUS"
+                          ? " ДОБРО ПОЖАЛОВАТЬ"
+                          : actLanguage === "ENG"
+                          ? "WELCOME"
+                          : actLanguage === "GEO"
+                          ? "კეთილი იყოს თქვენი მობრძანება"
+                          : null}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </Link>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1600} direction="up">
+            <div>
+              <Link
+                to="#menu"
+                className={classes.drawerItem}
+                activeClassName={classes.active}
+                onClick={props.onClose}
+              >
+                <ListItem button key={"MENÜ"}>
+                  <ListItemText
+                    primary={
+                      <Typography align="center" variant="h6">
+                        {actLanguage === "DEU"
+                          ? "MENÜ"
+                          : actLanguage === "RUS"
+                          ? "МЕНЮ"
+                          : actLanguage === "ENG"
+                          ? "MENU"
+                          : actLanguage === "GEO"
+                          ? "მენიუ"
+                          : null}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </Link>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1700} direction="up">
+            <div>
+              <Link
+                to="#contact"
+                className={classes.drawerItem}
+                activeClassName={classes.active}
+                onClick={props.onClose}
+              >
+                <ListItem button key={"KONTAKT"}>
+                  <ListItemText
+                    primary={
+                      <Typography align="center" variant="h6">
+                        {actLanguage === "DEU"
+                          ? "KONTAKT"
+                          : actLanguage === "RUS"
+                          ? "КОНТАКТЫ"
+                          : actLanguage === "ENG"
+                          ? "CONTACT US"
+                          : actLanguage === "GEO"
+                          ? "კონტაქტი"
+                          : null}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </Link>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1000} direction="up">
+            <div>
+              <ListItem>
+                <img src={menu} alt="img" className={classes.menuImg} />
+              </ListItem>
+            </div>
+          </Slide>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <Slide in={props.open} timeout={1000} direction="up">
+            <div>
+              <div className={classes.imgWrapper}>
+                <img src={Logo2} alt="logo" className={classes.img} />
+              </div>
+            </div>
+          </Slide>
+        </div>
+        {/* </div>
             </Fade>
           </div>
-        </Slide>
+        </Slide> */}
       </Drawer>
     </>
   )
