@@ -63,21 +63,10 @@
   height: 7em;
 }
 
-.list {
-  list-style-type: none;
+.button {
+  border: 0;
+  background-color: rgba(249, 234, 207);
+  cursor: pointer;
   padding: 0;
-}
-.listItem {
-  margin-bottom: 0;
-
-  /* padding-right: 10px; */
-}
-.link {
-  text-decoration: none;
-  color: rgba(43, 42, 41);
-}
-.link:hover {
-  text-decoration: none;
-  color: rgba(43, 42, 41);
-  /* font-weight: bold; */
+  margin: 0;
 }
