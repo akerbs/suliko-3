@@ -55,6 +55,11 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar,
     justifyContent: "space-between",
   },
+  listItem: {
+    paddingTop: 5,
+    paddingBottom: 5,
+  },
+
   mediaIcons: {
     display: "flex",
   },
@@ -81,7 +86,6 @@ const useStyles = makeStyles(theme => ({
   menuImg: {
     display: "block",
     margin: "0px auto",
-    paddingTop: "10px",
 
     width: "50%",
     [theme.breakpoints.down("sm")]: {
@@ -107,7 +111,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: 0,
     maxWidth: 120,
     [theme.breakpoints.down("sm")]: {
-      maxWidth: 110,
+      maxWidth: 80,
+      heigth: "auto",
     },
   },
 }))
@@ -149,6 +154,7 @@ export default function DrawerTop(props) {
                       button
                       key={"facebook"}
                       className={classes.mediaIcon}
+                      className={classes.listItem}
                     >
                       <FontAwesomeIcon icon={faFacebook} size="2x" />
                     </ListItem>
@@ -163,6 +169,7 @@ export default function DrawerTop(props) {
                       button
                       key={"instagram"}
                       className={classes.mediaIcon}
+                      className={classes.listItem}
                     >
                       <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </ListItem>
@@ -189,7 +196,7 @@ export default function DrawerTop(props) {
         <div style={{ overflow: "hidden" }}>
           <Slide in={props.open} timeout={1000} direction="up">
             <div>
-              <ListItem>
+              <ListItem className={classes.listItem}>
                 <img src={menu} alt="img" className={classes.menuImg} />
               </ListItem>
             </div>
@@ -204,7 +211,7 @@ export default function DrawerTop(props) {
                 activeClassName={classes.active}
                 onClick={props.onClose}
               >
-                <ListItem button key={"HOME"}>
+                <ListItem button key={"HOME"} className={classes.listItem}>
                   <ListItemText
                     primary={
                       <Typography align="center" variant="h6">
@@ -234,7 +241,7 @@ export default function DrawerTop(props) {
                 activeClassName={classes.active}
                 onClick={props.onClose}
               >
-                <ListItem button key={"ÜBER UNS"}>
+                <ListItem button key={"ÜBER UNS"} className={classes.listItem}>
                   <ListItemText
                     primary={
                       <Typography align="center" variant="h6">
@@ -264,7 +271,7 @@ export default function DrawerTop(props) {
                 activeClassName={classes.active}
                 onClick={props.onClose}
               >
-                <ListItem button key={"MENÜ"}>
+                <ListItem button key={"MENÜ"} className={classes.listItem}>
                   <ListItemText
                     primary={
                       <Typography align="center" variant="h6">
@@ -294,7 +301,7 @@ export default function DrawerTop(props) {
                 activeClassName={classes.active}
                 onClick={props.onClose}
               >
-                <ListItem button key={"KONTAKT"}>
+                <ListItem button key={"KONTAKT"} className={classes.listItem}>
                   <ListItemText
                     primary={
                       <Typography align="center" variant="h6">
@@ -318,13 +325,13 @@ export default function DrawerTop(props) {
         <div style={{ overflow: "hidden" }}>
           <Slide in={props.open} timeout={1000} direction="up">
             <div>
-              <ListItem>
+              <ListItem className={classes.listItem}>
                 <img src={menu} alt="img" className={classes.menuImg} />
               </ListItem>
             </div>
           </Slide>
         </div>
-        {/* <div style={{ overflow: "hidden" }}>
+        <div style={{ overflow: "hidden" }}>
           <Slide in={props.open} timeout={1000} direction="up">
             <div>
               <div className={classes.imgWrapper}>
@@ -332,11 +339,7 @@ export default function DrawerTop(props) {
               </div>
             </div>
           </Slide>
-        </div> */}
-        {/* </div>
-            </Fade>
-          </div>
-        </Slide> */}
+        </div>
       </Drawer>
     </>
   )
