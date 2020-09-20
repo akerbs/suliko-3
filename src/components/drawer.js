@@ -111,10 +111,16 @@ const useStyles = makeStyles(theme => ({
     marginTop: 0,
     maxWidth: 120,
     [theme.breakpoints.down("sm")]: {
+      paddingTop: 0,
+      height: 90,
+      width: "100%",
       maxWidth: 90,
-      minHeigth: "100%",
-      maxHeigth: "100%",
-      heigth: "100%",
+      objectFit: "cover",
+      overflow: "hidden",
+
+      // minHeigth: "100%",
+      // maxHeigth: "100%",
+      // heigth: "100%",
     },
   },
 }))
