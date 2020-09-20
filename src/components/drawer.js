@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import menu from "../images/menu.png"
 import Slide from "@material-ui/core/Slide"
-import Fade from "@material-ui/core/Fade"
 import { LanguageContext } from "../components/layout"
 
 const drawerWidth = "auto"
@@ -90,6 +89,7 @@ const useStyles = makeStyles(theme => ({
     width: "50%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
+      paddingTop: 10,
     },
   },
 
@@ -117,10 +117,6 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 90,
       objectFit: "cover",
       overflow: "hidden",
-
-      // minHeigth: "100%",
-      // maxHeigth: "100%",
-      // heigth: "100%",
     },
   },
 }))
@@ -148,8 +144,6 @@ export default function DrawerTop(props) {
         <div style={{ overflow: "hidden" }}>
           <Slide in={props.open} timeout={800} direction="up">
             <div>
-              {/*     <Fade in={props.open} timeout={1600}>
-              <div> */}
               <div className={classes.drawerHeader}>
                 <div className={classes.mediaIcons}>
                   <a
@@ -239,7 +233,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1500} direction="up">
+          <Slide in={props.open} timeout={1450} direction="up">
             <div>
               <Link
                 to="#about-us"
@@ -269,7 +263,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1600} direction="up">
+          <Slide in={props.open} timeout={1500} direction="up">
             <div>
               <Link
                 to="#menu"
@@ -299,7 +293,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1700} direction="up">
+          <Slide in={props.open} timeout={1550} direction="up">
             <div>
               <Link
                 to="#contact"
@@ -338,7 +332,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1000} direction="up">
+          <Slide in={props.open} timeout={800} direction="up">
             <div>
               <div className={classes.imgWrapper}>
                 <img src={Logo2} alt="logo" className={classes.img} />
