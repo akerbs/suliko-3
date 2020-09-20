@@ -111,8 +111,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: 0,
     maxWidth: 120,
     [theme.breakpoints.down("sm")]: {
-      maxWidth: 80,
-      heigth: "auto",
+      maxWidth: 90,
+      maxHeigth: "100%",
     },
   },
 }))
@@ -154,7 +154,6 @@ export default function DrawerTop(props) {
                       button
                       key={"facebook"}
                       className={classes.mediaIcon}
-                      className={classes.listItem}
                     >
                       <FontAwesomeIcon icon={faFacebook} size="2x" />
                     </ListItem>
@@ -169,7 +168,6 @@ export default function DrawerTop(props) {
                       button
                       key={"instagram"}
                       className={classes.mediaIcon}
-                      className={classes.listItem}
                     >
                       <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </ListItem>
