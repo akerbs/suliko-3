@@ -8,12 +8,15 @@ import sloganImgDeu from "../images/slogan_deu.png"
 import sloganImgGeo from "../images/slogan_geo.png"
 import sloganImgEng from "../images/slogan_eng.png"
 import { makeStyles } from "@material-ui/core/styles"
+
 const useStyles = makeStyles(theme => ({
   sloganWrapper: {
     display: "flex",
     justifyContent: "center",
   },
   slogan: {
+    maxHeight: "75px",
+    minHeight: "30px",
     display: "block",
     margin: " 0 auto",
     width: "60%",
@@ -39,12 +42,7 @@ export default function AboutUs(props) {
       {actLanguage === "RUS" && (
         <div>
           <div className={classes.sloganWrapper}>
-            <img
-              src={sloganImgRus}
-              alt="slogan"
-              className="slogan"
-              style={{ maxHeight: "75px", minHeight: "30px" }}
-            />
+            <img src={sloganImgRus} alt="slogan" className={classes.slogan} />
           </div>
           <br />
 
@@ -144,12 +142,7 @@ export default function AboutUs(props) {
       {actLanguage === "DEU" && (
         <div>
           <div className={classes.sloganWrapper}>
-            <img
-              src={sloganImgDeu}
-              alt="slogan"
-              className="slogan"
-              style={{ maxHeight: "75px", minHeight: "30px" }}
-            />
+            <img src={sloganImgDeu} alt="slogan" className={classes.slogan} />
           </div>
           <br />
 
@@ -255,12 +248,7 @@ export default function AboutUs(props) {
       {actLanguage === "GEO" && (
         <div>
           <div className={classes.sloganWrapper}>
-            <img
-              src={sloganImgGeo}
-              alt="slogan"
-              className="slogan"
-              style={{ maxHeight: "75px", minHeight: "30px" }}
-            />
+            <img src={sloganImgGeo} alt="slogan" className={classes.slogan} />
           </div>
           <br />
 
@@ -364,15 +352,7 @@ export default function AboutUs(props) {
       {actLanguage === "ENG" && (
         <div>
           <div className={classes.sloganWrapper}>
-            <img
-              src={sloganImgEng}
-              alt="slogan"
-              className="slogan"
-              style={{
-                maxHeight: "75px",
-                minHeight: "30px",
-              }}
-            />
+            <img src={sloganImgEng} alt="slogan" className={classes.slogan} />
           </div>
           <br />
 
