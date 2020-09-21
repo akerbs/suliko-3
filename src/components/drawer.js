@@ -331,7 +331,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={800} direction="up">
+          <Slide in={props.open} timeout={1000} direction="up">
             <div>
               <div className={classes.imgWrapper}>
                 <img src={Logo2} alt="logo" className={classes.img} />
