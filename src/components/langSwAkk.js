@@ -7,16 +7,21 @@ export default function LangSwAkk() {
 
   function blurSwAcc() {
     document.getElementById("swAcc").blur()
+    document.getElementById("swAccItem").blur()
+    document.getElementById("swAccItemCon").blur()
+    document.getElementById("swAccLangItem").blur()
+    document.getElementById("btn").blur()
   }
 
   return (
     <div className="accordion" id="swAcc">
-      <div className="accordionItem">
+      <div className="accordionItem" id="swAccItem">
         <span>{actLanguage}</span>
-        <div className="accordionItemContent">
+        <div className="accordionItemContent" id="swAccItemCon">
           {actLanguage !== "RUS" && (
-            <div className="langItem">
+            <div className="langItem" id="swAccLangItem">
               <button
+                id="btn"
                 className="button"
                 value={"RUS"}
                 onClick={e => {
@@ -30,8 +35,9 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "DEU" && (
-            <div className="langItem">
+            <div className="langItem" id="swAccLangItem">
               <button
+                id="btn"
                 className="button"
                 value={"DEU"}
                 onClick={e => {
@@ -45,8 +51,9 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "GEO" && (
-            <div className="langItem">
+            <div className="langItem" id="swAccLangItem">
               <button
+                id="btn"
                 className="button"
                 value={"GEO"}
                 onClick={e => {
@@ -60,8 +67,9 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "ENG" && (
-            <div className="langItem">
+            <div className="langItem" id="swAccLangItem">
               <button
+                id="btn"
                 className="button"
                 value={"ENG"}
                 onClick={e => {
