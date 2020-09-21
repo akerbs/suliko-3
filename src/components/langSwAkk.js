@@ -17,6 +17,7 @@ export default function LangSwAkk() {
                 value={"RUS"}
                 onClick={e => {
                   handleLanguageChange(e)
+                  this.blur()
                 }}
               >
                 RUS
@@ -31,6 +32,7 @@ export default function LangSwAkk() {
                 value={"DEU"}
                 onClick={e => {
                   handleLanguageChange(e)
+                  this.blur()
                 }}
               >
                 DEU
@@ -45,6 +47,7 @@ export default function LangSwAkk() {
                 value={"GEO"}
                 onClick={e => {
                   handleLanguageChange(e)
+                  this.blur()
                 }}
               >
                 GEO
@@ -59,6 +62,7 @@ export default function LangSwAkk() {
                 value={"ENG"}
                 onClick={e => {
                   handleLanguageChange(e)
+                  this.blur()
                 }}
               >
                 ENG
