@@ -24,6 +24,8 @@ import s1 from "../images/s1.jpg"
 import s2 from "../images/s2.jpg"
 import s3 from "../images/s3.jpg"
 import s4 from "../images/s4.jpg"
+import bgV1 from "../images/bgV1.jpg"
+import bgV2 from "../images/bgV2.jpg"
 
 const window = require("global/window")
 
@@ -100,16 +102,18 @@ export default function (props) {
               preventInteractionOnTransition={true}
             >
               <SwiperSlide>
-                <Img
+                {/* <Img
                   fluid={props.data.bgV1.childImageSharp.fluid}
                   alt="Suliko 1"
-                />
+                /> */}
+                <img src={bgV1} alt="Suliko 1" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img
+                {/* <Img
                   fluid={props.data.bgV2.childImageSharp.fluid}
                   alt="Suliko 2"
-                />
+                /> */}
+                <img src={bgV2} alt="Suliko 2" />
               </SwiperSlide>
             </Swiper>
           )}
@@ -234,22 +238,22 @@ export const query = graphql`
         }
       }
     }
-    bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `
+// bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1500) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1500) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
 
 // s1: file(relativePath: { eq: "s1.jpg" }) {
 //   childImageSharp {
