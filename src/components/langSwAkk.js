@@ -5,8 +5,12 @@ import { LanguageContext } from "./layout"
 export default function LangSwAkk() {
   const { actLanguage, handleLanguageChange } = useContext(LanguageContext)
 
+  function blurSwAcc() {
+    document.getElementById("swAcc").blur()
+  }
+
   return (
-    <div className="accordion">
+    <div className="accordion" id="swAcc">
       <div className="accordionItem">
         <span>{actLanguage}</span>
         <div className="accordionItemContent">
@@ -17,7 +21,7 @@ export default function LangSwAkk() {
                 value={"RUS"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  this.blur()
+                  blurSwAcc()
                 }}
               >
                 RUS
@@ -32,7 +36,7 @@ export default function LangSwAkk() {
                 value={"DEU"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  this.blur()
+                  blurSwAcc()
                 }}
               >
                 DEU
@@ -47,7 +51,7 @@ export default function LangSwAkk() {
                 value={"GEO"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  this.blur()
+                  blurSwAcc()
                 }}
               >
                 GEO
@@ -62,7 +66,7 @@ export default function LangSwAkk() {
                 value={"ENG"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  this.blur()
+                  blurSwAcc()
                 }}
               >
                 ENG
