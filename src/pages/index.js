@@ -155,16 +155,16 @@ export default function (props) {
               className="slider"
             >
               <SwiperSlide>
-                <Img src={s1} alt="Suliko img1" />
+                <img src={s1} alt="Suliko img1" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img src={s2} alt="Suliko img2" />
+                <img src={s2} alt="Suliko img2" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img src={s3} alt="Suliko img3" />
+                <img src={s3} alt="Suliko img3" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img src={s4} alt="Suliko img4" />
+                <img src={s4} alt="Suliko img4" />
               </SwiperSlide>
             </Swiper>
           </Container>
