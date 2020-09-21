@@ -20,6 +20,10 @@ import Press from "../components/Press"
 import Contact from "../components/Contact"
 import Menu from "../components/Menu"
 import { LanguageContext } from "../components/layout"
+import s1 from "../images/s1.jpg"
+import s2 from "../images/s2.jpg"
+import s3 from "../images/s3.jpg"
+import s4 from "../images/s4.jpg"
 
 const window = require("global/window")
 
@@ -151,28 +155,16 @@ export default function (props) {
               className="slider"
             >
               <SwiperSlide>
-                <Img
-                  fluid={props.data.s1.childImageSharp.fluid}
-                  alt="Suliko img1"
-                />
+                <Img src={s1} alt="Suliko img1" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img
-                  fluid={props.data.s2.childImageSharp.fluid}
-                  alt="Suliko img2"
-                />
+                <Img src={s2} alt="Suliko img2" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img
-                  fluid={props.data.s3.childImageSharp.fluid}
-                  alt="Suliko img3"
-                />
+                <Img src={s3} alt="Suliko img3" />
               </SwiperSlide>
               <SwiperSlide>
-                <Img
-                  fluid={props.data.s4.childImageSharp.fluid}
-                  alt="Suliko img4"
-                />
+                <Img src={s4} alt="Suliko img4" />
               </SwiperSlide>
             </Swiper>
           </Container>
@@ -256,33 +248,34 @@ export const query = graphql`
         }
       }
     }
-    s1: file(relativePath: { eq: "s1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s2: file(relativePath: { eq: "s2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s3: file(relativePath: { eq: "s3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    s4: file(relativePath: { eq: "s4.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `
+
+// s1: file(relativePath: { eq: "s1.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// s2: file(relativePath: { eq: "s2.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// s3: file(relativePath: { eq: "s3.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// s4: file(relativePath: { eq: "s4.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }

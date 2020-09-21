@@ -5,28 +5,18 @@ import { LanguageContext } from "./layout"
 export default function LangSwAkk() {
   const { actLanguage, handleLanguageChange } = useContext(LanguageContext)
 
-  function blurSwAcc() {
-    document.getElementById("swAcc").blur()
-    document.getElementById("swAccItem").blur()
-    document.getElementById("swAccItemCon").blur()
-    document.getElementById("swAccLangItem").blur()
-    document.getElementById("btn").blur()
-  }
-
   return (
-    <div className="accordion" id="swAcc">
-      <div className="accordionItem" id="swAccItem">
+    <div className="accordion">
+      <div className="accordionItem">
         <span>{actLanguage}</span>
-        <div className="accordionItemContent" id="swAccItemCon">
+        <div className="accordionItemContent">
           {actLanguage !== "RUS" && (
-            <div className="langItem" id="swAccLangItem">
+            <div className="langItem">
               <button
-                id="btn"
                 className="button"
                 value={"RUS"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  blurSwAcc()
                 }}
               >
                 RUS
@@ -35,14 +25,12 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "DEU" && (
-            <div className="langItem" id="swAccLangItem">
+            <div className="langItem">
               <button
-                id="btn"
                 className="button"
                 value={"DEU"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  blurSwAcc()
                 }}
               >
                 DEU
@@ -51,14 +39,12 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "GEO" && (
-            <div className="langItem" id="swAccLangItem">
+            <div className="langItem">
               <button
-                id="btn"
                 className="button"
                 value={"GEO"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  blurSwAcc()
                 }}
               >
                 GEO
@@ -67,14 +53,12 @@ export default function LangSwAkk() {
           )}
 
           {actLanguage !== "ENG" && (
-            <div className="langItem" id="swAccLangItem">
+            <div className="langItem">
               <button
-                id="btn"
                 className="button"
                 value={"ENG"}
                 onClick={e => {
                   handleLanguageChange(e)
-                  blurSwAcc()
                 }}
               >
                 ENG
