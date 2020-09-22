@@ -50,7 +50,7 @@ export default function AboutUs(props) {
                 специальное меню.
                 <br />
                 <br />
-                {/* <a
+                <a
                   href={"/Speisekarte.pdf"}
                   target="_blank"
                   style={{ textDecoration: "none" }}
@@ -64,7 +64,7 @@ export default function AboutUs(props) {
                   >
                     Меню для заказа на дом
                   </Button>
-                </a> */}
+                </a>
                 <br />
                 <br />
                 В этом меню Вы найдёте разнообразные традиционные блюда
@@ -80,7 +80,7 @@ export default function AboutUs(props) {
                 амфорные вина, которыми так славится Грузия.
                 <br />
                 <br />
-                {/* <a
+                <a
                   href={"/Weinkarte.pdf"}
                   target="_blank"
                   style={{ textDecoration: "none" }}
@@ -94,7 +94,7 @@ export default function AboutUs(props) {
                   >
                     Винная карта
                   </Button>
-                </a> */}
+                </a>
                 <br />
                 <br />
                 Доставка:
