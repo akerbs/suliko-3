@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Container from "@material-ui/core/Container"
@@ -20,6 +20,7 @@ import Press from "../components/Press"
 import Contact from "../components/Contact"
 import Menu from "../components/Menu"
 import { LanguageContext } from "../components/layout"
+import inView from "in-view"
 import s1 from "../images/s1.jpg"
 import s2 from "../images/s2.jpg"
 import s3 from "../images/s3.jpg"
@@ -34,6 +35,19 @@ SwiperCore.use([Autoplay, Navigation, EffectFade])
 export default function (props) {
   const { actLanguage } = useContext(LanguageContext)
   const [open, setOpen] = useState(false)
+
+  const [showSlider2, setShowSlider2] = useState(false)
+  const [showMap, setShowMap] = useState(false)
+  function startShowSlider2inView() {
+    setShowSlider2(true)
+  }
+  function startShowMapInView() {
+    setShowSlider2(true)
+  }
+  useEffect(() => {
+    inView("#slider").once("enter", startShowSlider2inView)
+    inView("#map").once("enter", startShowMapInView)
+  })
 
   const handleOpen = () => {
     setOpen(true)
@@ -149,28 +163,34 @@ export default function (props) {
           </Container>
           <br /> <br />
           <Container id="slider">
-            <Swiper
-              spaceBetween={1}
-              slidesPerView={
-                window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3
-              }
-              autoplay
-              loop
-              className="slider"
-            >
-              <SwiperSlide>
-                <img src={s1} alt="Suliko img1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={s2} alt="Suliko img2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={s3} alt="Suliko img3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={s4} alt="Suliko img4" />
-              </SwiperSlide>
-            </Swiper>
+            {showSlider2 && (
+              <Swiper
+                spaceBetween={1}
+                slidesPerView={
+                  window.innerWidth <= 600
+                    ? 1
+                    : window.innerWidth <= 900
+                    ? 2
+                    : 3
+                }
+                autoplay
+                loop
+                className="slider"
+              >
+                <SwiperSlide>
+                  <img src={s1} alt="Suliko img1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s2} alt="Suliko img2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s3} alt="Suliko img3" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s4} alt="Suliko img4" />
+                </SwiperSlide>
+              </Swiper>
+            )}
           </Container>
           <br /> <br />
           <Container id="about-us" className="aboutUsWrapper">
