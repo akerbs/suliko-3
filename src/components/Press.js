@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react"
 import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
+import Container from "@material-ui/core/Container"
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
 import CardActions from "@material-ui/core/CardActions"
@@ -13,9 +14,9 @@ export default function AboutUs(props) {
   const { actLanguage } = useContext(LanguageContext)
 
   return (
-    <>
+    <Container maxWidth="md">
       <Grid container spacing={3}>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
+        <Grid item md={4} sm={6} xs={12}>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +55,7 @@ export default function AboutUs(props) {
             </Card>
           </a>
         </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
+        <Grid item md={4} sm={6} xs={12}>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -94,6 +95,6 @@ export default function AboutUs(props) {
           </a>
         </Grid>
       </Grid>
-    </>
+    </Container>
   )
 }
