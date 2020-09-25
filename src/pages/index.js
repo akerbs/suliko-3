@@ -37,15 +37,20 @@ export default function (props) {
   const [open, setOpen] = useState(false)
 
   const [showSlider2, setShowSlider2] = useState(false)
+  const [showPress, setShowPress] = useState(false)
   const [showMap, setShowMap] = useState(false)
   function startShowSlider2inView() {
     setShowSlider2(true)
+  }
+  function startShowPressInView() {
+    setShowPress(true)
   }
   function startShowMapInView() {
     setShowSlider2(true)
   }
   useEffect(() => {
     inView("#slider").once("enter", startShowSlider2inView)
+    inView("#press").once("enter", startShowPressInView)
     inView("#map").once("enter", startShowMapInView)
   })
 
