@@ -136,8 +136,10 @@ export default function DrawerTop(props) {
         anchor="top"
         open={props.open}
         classes={{
-          paper: classes.drawerPaper,
-          drawer: classes.drawer,
+          paperAnchorDockedTop: classes.drawerPaper,
+          docked: classes.drawer,
+          // paper: classes.drawerPaper,
+          // drawer: classes.drawer,
         }}
       >
         <div style={{ overflow: "hidden" }}>
