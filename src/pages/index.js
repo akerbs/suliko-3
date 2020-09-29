@@ -46,7 +46,7 @@ export default function (props) {
     setShowPress(true)
   }
   function startShowMapInView() {
-    setShowSlider2(true)
+    setShowMap(true)
   }
   useEffect(() => {
     inView("#slider").once("enter", startShowSlider2inView)
@@ -202,9 +202,7 @@ export default function (props) {
             <AboutUs />
           </Container>
           <br /> <br />
-          <Container id="press">
-            <Press />
-          </Container>
+          <Container id="press">{showPress && <Press />}</Container>
           <br /> <br />
           <img
             id="menu"
@@ -234,11 +232,13 @@ export default function (props) {
           </Container>
         </Container>
         <Container id="map" className="mapWrapper" maxWidth="lg">
-          <iframe
-            className="map"
-            title="map"
-            src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
-          ></iframe>
+          {showMap && (
+            <iframe
+              className="map"
+              title="map"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+            ></iframe>
+          )}
         </Container>
         <Footer />
         <CookiesBar />

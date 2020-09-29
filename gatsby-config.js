@@ -57,16 +57,6 @@ module.exports = {
     },
     // In your gatsby-config.js
 
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `tomato`,
-        // Disable the loading spinner.
-        showSpinner: true,
-      },
-    },
-
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
