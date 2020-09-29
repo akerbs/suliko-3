@@ -36,9 +36,14 @@ export default function (props) {
   const { actLanguage } = useContext(LanguageContext)
   const [open, setOpen] = useState(false)
 
+  const [showAfterLoading, setShowAfterLoading] = useState(false)
   const [showSlider2, setShowSlider2] = useState(false)
   const [showPress, setShowPress] = useState(false)
   const [showMap, setShowMap] = useState(false)
+
+  function startShowAfterLoading() {
+    setShowAfterLoading(true)
+  }
   function startShowSlider2inView() {
     setShowSlider2(true)
   }
@@ -49,6 +54,7 @@ export default function (props) {
     setShowMap(true)
   }
   useEffect(() => {
+    inView("#home-text").once("enter", startShowAfterLoading)
     inView("#slider").once("enter", startShowSlider2inView)
     inView("#press").once("enter", startShowPressInView)
     inView("#map").once("enter", startShowMapInView)
@@ -159,82 +165,84 @@ export default function (props) {
             </Swiper>
           )}
         </Container>
-        <Container id="center">
-          <ReserveButton onOpen={handleOpen} />
-          <ReserveWindow onClose={handleClose} open={open} />
-          <br /> <br />
-          <Container id="home-text">
-            <HomeText />
-          </Container>
-          <br /> <br />
-          <Container id="slider">
-            {showSlider2 && (
-              <Swiper
-                spaceBetween={1}
-                slidesPerView={
-                  window.innerWidth <= 600
-                    ? 1
-                    : window.innerWidth <= 900
-                    ? 2
-                    : 3
-                }
-                autoplay
-                loop
-                className="slider"
-              >
-                <SwiperSlide>
-                  <img src={s1} alt="Suliko img1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={s2} alt="Suliko img2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={s3} alt="Suliko img3" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={s4} alt="Suliko img4" />
-                </SwiperSlide>
-              </Swiper>
+        {showAfterLoading && (
+          <Container id="center">
+            <ReserveButton onOpen={handleOpen} />
+            <ReserveWindow onClose={handleClose} open={open} />
+            <br /> <br />
+            <Container id="home-text">
+              <HomeText />
+            </Container>
+            <br /> <br />
+            <Container id="slider">
+              {showSlider2 && (
+                <Swiper
+                  spaceBetween={1}
+                  slidesPerView={
+                    window.innerWidth <= 600
+                      ? 1
+                      : window.innerWidth <= 900
+                      ? 2
+                      : 3
+                  }
+                  autoplay
+                  loop
+                  className="slider"
+                >
+                  <SwiperSlide>
+                    <img src={s1} alt="Suliko img1" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={s2} alt="Suliko img2" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={s3} alt="Suliko img3" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={s4} alt="Suliko img4" />
+                  </SwiperSlide>
+                </Swiper>
+              )}
+            </Container>
+            <br /> <br />
+            <Container id="about-us" className="aboutUsWrapper">
+              <AboutUs />
+            </Container>
+            <br /> <br />
+            <Container id="press">{showPress && <Press />}</Container>
+            <br /> <br />
+            {showPress && (
+              <img
+                id="menu"
+                src={menu}
+                alt="img"
+                style={{
+                  display: "block",
+                  margin: "0px auto",
+                  paddingTop: "100px",
+                }}
+              />
             )}
+            <br /> <br />
+            <br />
+            <Container className="menuWrapper">
+              <Menu />
+            </Container>
+            <br /> <br />
+            {showPress && (
+              <img
+                src={menu}
+                alt="img"
+                style={{ display: "block", margin: "0px auto" }}
+              />
+            )}
+            <br /> <br />
+            <br />
+            <Container id="contact" className="contactWrapper">
+              <Contact />
+            </Container>
           </Container>
-          <br /> <br />
-          <Container id="about-us" className="aboutUsWrapper">
-            <AboutUs />
-          </Container>
-          <br /> <br />
-          <Container id="press">{showPress && <Press />}</Container>
-          <br /> <br />
-          {showPress && (
-            <img
-              id="menu"
-              src={menu}
-              alt="img"
-              style={{
-                display: "block",
-                margin: "0px auto",
-                paddingTop: "100px",
-              }}
-            />
-          )}
-          <br /> <br />
-          <br />
-          <Container className="menuWrapper">
-            <Menu />
-          </Container>
-          <br /> <br />
-          {showPress && (
-            <img
-              src={menu}
-              alt="img"
-              style={{ display: "block", margin: "0px auto" }}
-            />
-          )}
-          <br /> <br />
-          <br />
-          <Container id="contact" className="contactWrapper">
-            <Contact />
-          </Container>
-        </Container>
+        )}
         <Container id="map" className="mapWrapper" maxWidth="lg">
           {showMap && (
             <iframe
@@ -244,6 +252,7 @@ export default function (props) {
             ></iframe>
           )}
         </Container>
+
         <Footer />
         <CookiesBar />
       </Container>
