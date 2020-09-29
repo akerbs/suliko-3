@@ -204,27 +204,31 @@ export default function (props) {
           <br /> <br />
           <Container id="press">{showPress && <Press />}</Container>
           <br /> <br />
-          <img
-            id="menu"
-            src={menu}
-            alt="img"
-            style={{
-              display: "block",
-              margin: "0px auto",
-              paddingTop: "100px",
-            }}
-          />
+          {showPress && (
+            <img
+              id="menu"
+              src={menu}
+              alt="img"
+              style={{
+                display: "block",
+                margin: "0px auto",
+                paddingTop: "100px",
+              }}
+            />
+          )}
           <br /> <br />
           <br />
           <Container className="menuWrapper">
             <Menu />
           </Container>
           <br /> <br />
-          <img
-            src={menu}
-            alt="img"
-            style={{ display: "block", margin: "0px auto" }}
-          />
+          {showPress && (
+            <img
+              src={menu}
+              alt="img"
+              style={{ display: "block", margin: "0px auto" }}
+            />
+          )}
           <br /> <br />
           <br />
           <Container id="contact" className="contactWrapper">
