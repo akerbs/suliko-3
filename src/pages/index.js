@@ -37,27 +37,27 @@ export default function (props) {
   const [open, setOpen] = useState(false)
 
   const [showAfterLoading, setShowAfterLoading] = useState(false)
-  const [showSlider2, setShowSlider2] = useState(false)
-  const [showPress, setShowPress] = useState(false)
-  const [showMap, setShowMap] = useState(false)
+  // const [showSlider2, setShowSlider2] = useState(false)
+  // const [showPress, setShowPress] = useState(false)
+  // const [showMap, setShowMap] = useState(false)
 
   function startShowAfterLoading() {
     setShowAfterLoading(true)
   }
-  function startShowSlider2inView() {
-    setShowSlider2(true)
-  }
-  function startShowPressInView() {
-    setShowPress(true)
-  }
-  function startShowMapInView() {
-    setShowMap(true)
-  }
+  // function startShowSlider2inView() {
+  //   setShowSlider2(true)
+  // }
+  // function startShowPressInView() {
+  //   setShowPress(true)
+  // }
+  // function startShowMapInView() {
+  //   setShowMap(true)
+  // }
   useEffect(() => {
-    inView("#home-text").once("enter", startShowAfterLoading)
-    inView("#slider").once("enter", startShowSlider2inView)
-    inView("#press").once("enter", startShowPressInView)
-    inView("#map").once("enter", startShowMapInView)
+    inView("#slider-first").once("enter", startShowAfterLoading)
+    // inView("#slider").once("enter", startShowSlider2inView)
+    // inView("#press").once("enter", startShowPressInView)
+    // inView("#map").once("enter", startShowMapInView)
   })
 
   const handleOpen = () => {
@@ -175,67 +175,64 @@ export default function (props) {
             </Container>
             <br /> <br />
             <Container id="slider">
-              {showSlider2 && (
-                <Swiper
-                  spaceBetween={1}
-                  slidesPerView={
-                    window.innerWidth <= 600
-                      ? 1
-                      : window.innerWidth <= 900
-                      ? 2
-                      : 3
-                  }
-                  autoplay
-                  loop
-                  className="slider"
-                >
-                  <SwiperSlide>
-                    <img src={s1} alt="Suliko img1" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={s2} alt="Suliko img2" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={s3} alt="Suliko img3" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={s4} alt="Suliko img4" />
-                  </SwiperSlide>
-                </Swiper>
-              )}
+              <Swiper
+                spaceBetween={1}
+                slidesPerView={
+                  window.innerWidth <= 600
+                    ? 1
+                    : window.innerWidth <= 900
+                    ? 2
+                    : 3
+                }
+                autoplay
+                loop
+                className="slider"
+              >
+                <SwiperSlide>
+                  <img src={s1} alt="Suliko img1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s2} alt="Suliko img2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s3} alt="Suliko img3" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={s4} alt="Suliko img4" />
+                </SwiperSlide>
+              </Swiper>
             </Container>
             <br /> <br />
             <Container id="about-us" className="aboutUsWrapper">
               <AboutUs />
             </Container>
             <br /> <br />
-            <Container id="press">{showPress && <Press />}</Container>
+            <Container id="press">
+              {" "}
+              <Press />{" "}
+            </Container>
             <br /> <br />
-            {showPress && (
-              <img
-                id="menu"
-                src={menu}
-                alt="img"
-                style={{
-                  display: "block",
-                  margin: "0px auto",
-                  paddingTop: "100px",
-                }}
-              />
-            )}
+            <img
+              id="menu"
+              src={menu}
+              alt="img"
+              style={{
+                display: "block",
+                margin: "0px auto",
+                paddingTop: "100px",
+              }}
+            />
             <br /> <br />
             <br />
             <Container className="menuWrapper">
               <Menu />
             </Container>
             <br /> <br />
-            {showPress && (
-              <img
-                src={menu}
-                alt="img"
-                style={{ display: "block", margin: "0px auto" }}
-              />
-            )}
+            <img
+              src={menu}
+              alt="img"
+              style={{ display: "block", margin: "0px auto" }}
+            />
             <br /> <br />
             <br />
             <Container id="contact" className="contactWrapper">
@@ -243,17 +240,16 @@ export default function (props) {
             </Container>
           </Container>
         )}
-        <Container id="map" className="mapWrapper" maxWidth="lg">
-          {showMap && (
+        {showAfterLoading && (
+          <Container id="map" className="mapWrapper" maxWidth="lg">
             <iframe
               className="map"
               title="map"
               src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
             ></iframe>
-          )}
-        </Container>
-
-        <Footer />
+          </Container>
+        )}
+        {showAfterLoading && <Footer />}
         <CookiesBar />
       </Container>
     </>
