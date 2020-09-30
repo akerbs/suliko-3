@@ -37,27 +37,13 @@ export default function (props) {
   const [open, setOpen] = useState(false)
 
   const [showAfterLoading, setShowAfterLoading] = useState(false)
-  // const [showSlider2, setShowSlider2] = useState(false)
-  // const [showPress, setShowPress] = useState(false)
-  // const [showMap, setShowMap] = useState(false)
 
   function startShowAfterLoading() {
     setShowAfterLoading(true)
   }
-  // function startShowSlider2inView() {
-  //   setShowSlider2(true)
-  // }
-  // function startShowPressInView() {
-  //   setShowPress(true)
-  // }
-  // function startShowMapInView() {
-  //   setShowMap(true)
-  // }
+
   useEffect(() => {
     inView("#slider-first").once("enter", startShowAfterLoading)
-    // inView("#slider").once("enter", startShowSlider2inView)
-    // inView("#press").once("enter", startShowPressInView)
-    // inView("#map").once("enter", startShowMapInView)
   })
 
   const handleOpen = () => {

@@ -220,7 +220,7 @@ export default function WindowReserve(props) {
 
   const alertMessage =
     actLanguage === "DEU"
-      ? "Danke!!! Wir werden uns bald bei Ihnen melden :-)"
+      ? "Vielen Dank!!! Wir werden uns bald bei Ihnen melden :-)"
       : actLanguage === "RUS"
       ? "Спасибо!!! Мы свяжемся с Вами в ближайшее время :-)"
       : actLanguage === "ENG"
