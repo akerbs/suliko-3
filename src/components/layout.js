@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./theme"
 // import CookiesBar from "./cookiesBar"
 import CssBaseline from "@material-ui/core/CssBaseline"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 const window = require("global/window")
 
@@ -40,16 +41,21 @@ function Layout({ children }) {
 
   return (
     <div style={{ backgroundColor: "#f9eacf" }}>
-      <LanguageContext.Provider
-        value={{
-          actLanguage,
-          handleLanguageChange,
-        }}
+      <GoogleReCaptchaProvider
+        // reCaptchaKey={process.env.RECAPTCHA_KEY}
+        reCaptchaKey="6LfLQ9MZAAAAAPy8tgiC1K2zDaNW5owLyg4-MjuQ"
       >
-        <CssBaseline />
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        {/* <CookiesBar /> */}
-      </LanguageContext.Provider>
+        <LanguageContext.Provider
+          value={{
+            actLanguage,
+            handleLanguageChange,
+          }}
+        >
+          <CssBaseline />
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          {/* <CookiesBar /> */}
+        </LanguageContext.Provider>
+      </GoogleReCaptchaProvider>
     </div>
   )
 }

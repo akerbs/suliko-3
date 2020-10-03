@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import {
@@ -30,6 +30,7 @@ import { yupResolver } from "@hookform/resolvers"
 import IconButton from "@material-ui/core/IconButton"
 import HighlightOffIcon from "@material-ui/icons/HighlightOff"
 import { LanguageContext } from "../components/layout"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 const useStyles = makeStyles(theme => ({
   modalWrapper: {
@@ -191,6 +192,8 @@ const schemaEng = yup.object().shape({
 })
 
 export default function WindowReserve(props) {
+  const { executeRecaptcha } = useGoogleReCaptcha()
+  const [token, setToken] = useState("")
   const { actLanguage } = useContext(LanguageContext)
   const classes = useStyles()
 
@@ -230,7 +233,13 @@ export default function WindowReserve(props) {
       : null
 
   async function onSubmit(data) {
+    if (!executeRecaptcha) {
+      return
+    }
     try {
+      const result = executeRecaptcha("shop1")
+      setToken(result) //--> grab the generated token by the reCAPTCHA
+
       let response = await fetch(
         "https://suliko-mailer.herokuapp.com/reservation",
         // "http://localhost:3000/reservation",
