@@ -162,6 +162,7 @@ export default function (props) {
             <br /> <br />
             <Container id="slider">
               <Swiper
+                style={{ zIndex: 0 }}
                 spaceBetween={1}
                 slidesPerView={
                   window.innerWidth <= 600
