@@ -5,9 +5,9 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(theme => ({
   reservierenButton: {
-    bottom: 20,
-    left: 20,
-    zIndex: 999,
+    bottom: 15,
+    left: 10,
+    zIndex: 9,
   },
 }))
 
