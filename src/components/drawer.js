@@ -204,7 +204,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1400} direction="up">
+          <Slide in={props.open} timeout={1200} direction="up">
             <div>
               <Link
                 to="#home"
@@ -234,7 +234,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1450} direction="up">
+          <Slide in={props.open} timeout={1250} direction="up">
             <div>
               <Link
                 to="#about-us"
@@ -264,7 +264,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1500} direction="up">
+          <Slide in={props.open} timeout={1300} direction="up">
             <div>
               <Link
                 to="#menu"
@@ -294,7 +294,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1550} direction="up">
+          <Slide in={props.open} timeout={1350} direction="up">
             <div>
               <Link
                 to="#contact"
