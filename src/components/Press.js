@@ -22,7 +22,7 @@ export default function AboutUs(props) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            to="https://www.zeit.de/2018/17/suliko-restaurant-georgische-kueche-hamburg"
+            href="https://www.zeit.de/2018/17/suliko-restaurant-georgische-kueche-hamburg"
             style={{ textDecoration: "none" }}
           >
             <Card
@@ -61,7 +61,7 @@ export default function AboutUs(props) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            to="https://www.abendblatt.de/hamburg/article226946467/Georgiens-Seele-hat-am-Mittelweg-seine-Heimat-gefunden.html"
+            href="https://www.abendblatt.de/hamburg/article226946467/Georgiens-Seele-hat-am-Mittelweg-seine-Heimat-gefunden.html"
             style={{ textDecoration: "none" }}
           >
             <Card
@@ -101,7 +101,7 @@ export default function AboutUs(props) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            to="https://www.pressreader.com/germany/hamburger-morgenpost/20170409/281715499473637"
+            href="https://www.pressreader.com/germany/hamburger-morgenpost/20170409/281715499473637"
             style={{ textDecoration: "none" }}
           >
             <Card
