@@ -61,6 +61,9 @@ const useStyles = makeStyles(theme => ({
     width: "4rem",
     marginBottom: 20,
   },
+  nowrap: {
+    whiteSpace: "nowrap",
+  },
 }))
 
 export function SpeisekarteGeo(props) {
@@ -117,24 +120,25 @@ export function SpeisekarteGeo(props) {
           <br />
           <br />
           <b>1.</b> სუპ-ხარჩო - პიკანტური ხბოს ხორცის სუპი ბრინჯით, პომიდვრითა
-          და სუნელებით <b>6,90 €</b>
-          <br />
-          Hartcho - spicy veal soup with rice, tomatoes, spices
-          <br />
-          <br />
-          <b>2.</b> ჩიხირთმა - ქათმის ხორცი, კვერცხი და ცოცხალი მწვანილი{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup> <b>6,20 €</b>
-          <br />
-          Tshikhirtma - chicken, eggs and fresh green <br />
-          <br />
-          <b>3. </b>სალიანკა - ხორცის ცხარე სუპი / Solyanka - rich spicy hotpot
-          with a lot of meat <b>6,90 €</b>
+          და სუნელებით <br />
+          Hartcho - spicy veal soup with rice, tomatoes, spices{" "}
+          <b className={classes.nowrap}>6,90 €</b>
           <br />
           <br />
-          <b>4. </b>მაწვნის სუპი - სუპი მაწვნისგან მწვანილეულობით / Matsoni -
-          yogurt soap with herbs
+          <b>2.</b> ჩიხირთმა - ქათმის ხორცი, კვერცხი და ცოცხალი მწვანილი <br />
+          Tshikhirtma - chicken, eggs and fresh green
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I</sup>{" "}
+          <b className={classes.nowrap}>6,20 €</b>
+          <br />
+          <br />
+          <b>3. </b>სალიანკა - ხორცის ცხარე სუპი <br /> Solyanka - rich spicy
+          hotpot with a lot of meat <b className={classes.nowrap}> 6,90 €</b>
+          <br />
+          <br />
+          <b>4. </b>მაწვნის სუპი - სუპი მაწვნისგან მწვანილეულობით <br /> Matsoni
+          - yogurt soap with herbs
           <sup style={{ color: "rgba(133, 26, 29)" }}>A, F, I</sup>{" "}
-          <b>5,60 €</b>
+          <b className={classes.nowrap}>5,60 €</b>
           <br />
           <br />
           <br />
@@ -145,36 +149,37 @@ export function SpeisekarteGeo(props) {
           <br />
           <br />
           <b>5.</b> შერეული სალათა - ახალი პომიდოი, კიტრი, ხახვი, მწვანილი
-          ყველით ფეტა (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup>{" "}
-          <b>6,40 €</b>
-          <br />
+          ყველით ფეტა (ვეგ.) <br />
           Mixed salad - fresh tomatoes, cucumbers, onion, greens with Feta
-          (veg.) <br />
+          (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup>{" "}
+          <b className={classes.nowrap}>6,40 €</b>
+          <br />
           <br />
           <b>6.</b> შერეული სალათა "ქართული" - ახალი პომიდორი, კიტრი, ნიგოზი,
-          ძმარი (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
-          <b>8,60 €</b>
-          <br />
+          ძმარი (ვეგ.) <br />
           Mixed salad "Georgian style" - fresh tomatoes, cucumbers, walnuts,
-          vinegar (veg.) <br />
+          vinegar (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>
+            H
+          </sup>{" "}
+          <b className={classes.nowrap}>8,60 €</b>
+          <br />
           <br />
           <b>7. </b>ქათმის სალათა - ქათმის პიკანტური სალათა მაიონეზით, ბარდითა
-          და სუნელებით <sup style={{ color: "rgba(133, 26, 29)" }}>I, K, F</sup>{" "}
-          <b>9,20 €</b>
-          <br />
+          და სუნელებით <br />
           Chicken Salad - Spicy chicken salad with mayonnaise, peas and spices
+          <sup style={{ color: "rgba(133, 26, 29)" }}>I, K, F</sup>{" "}
+          <b className={classes.nowrap}>9,20 €</b>
           <br />
           <br />
-          <b>8. </b>ცხვრის ყველი - ზეითუნის ზეთით, თუთუბოთი და ოხრახუშით (ვეგ.){" "}
-          <b>7,20 €</b>
+          <b>8. </b>ცხვრის ყველი - ზეითუნის ზეთით, თუთუბოთი და ოხრახუშით (ვეგ.)
           <br />
           Sheep cheese - with olive oil, sumac and parsley (veg.)
+          <b className={classes.nowrap}> 7,20 €</b>
           <br /> <br />
           <b>9.  </b>ენის სალათა - ხბოს ენა შემწვარი ქამა სოკოთი კიტრით და
-          მაიონეზით <b>9,20 €</b>
-          <br />
+          მაიონეზით <br />
           Tongue salad - veal tongue, with fried mushrooms cucumber and
-          mayonnaise
+          mayonnaise<b className={classes.nowrap}> 9,20 €</b>
           <br />
           <br />
           <br />
@@ -185,51 +190,58 @@ export function SpeisekarteGeo(props) {
           <br />
           <br />
           <b>10. </b>ისპანახის ფხალი - ბოსტნის ისპანახიt ნიგვზით, ქინძითა და
-          სუნელებით (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
-          <b>8,60 €</b>
-          <br />
+          სუნელებით (ვეგ.) <br />
           Spinach-Pkhali - balls of spinach leaves with walnut paste, coriander
-          and spices (veg.) <br />
+          and spices (veg.)<sup style={{ color: "rgba(133, 26, 29)" }}>
+            H
+          </sup>{" "}
+          <b className={classes.nowrap}>8,60 €</b>
+          <br />
           <br />
           <b>11.</b> ჭარხლის ფხალი - ჭარხლის ფურცლის ბურთები ნიგვზითა და ქინძით
-          (ვეგ) <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
-          <b>8,60 €</b>
-          <br />
+          (ვეგ) <br />
           Beetroot Pkhali - Beetroot puree balls with walnut paste and coriander
-          (veg)
+          (veg)<sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b className={classes.nowrap}>8,60 €</b>
           <br />
           <br />
           <b>12.</b> სტაფილოს ფხალი - ნიგვზით, ქინძითა და სუნელებით (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>8,60 €</b>
           <br />
           Carrot Pkhali - Carrot balls with walnut paste, coriander, spices
           (veg.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b className={classes.nowrap}>8,60 €</b>
           <br />
           <br />
-          <b>13. </b>ფხალის ასორტი - ისპანახის, ჭარხლისა და სტაფილოს ფხალი (ვეგ){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>13,60 €</b>
+          <b>13. </b>ფხალის ასორტი - ისპანახის, ჭარხლისა და სტაფილოს ფხალი (ვეგ)
           <br />
-          Pkhali Mix - spinach, beetroot and carrot Pkhali (veg) <br />
+          Pkhali Mix - spinach, beetroot and carrot Pkhali (veg)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b className={classes.nowrap}>13,60 €</b>
+          <br />
           <br />
           <b>14. </b>ბადრიჯანი - შემწვარი ბადრიჯანი ნიგვზითა და სუნელებთ (ვეგ.)
-          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup> <b>9,90 €</b>
           <br />
           Eggplants - fried eggplants filled with walnut paste and spices (veg.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b className={classes.nowrap}>9,90 €</b>
           <br />
           <br />
-          <b>15.</b> მჟავის ასორტი - ქართული მწნილის ასორტი (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup> <b>8,60 €</b>
-          <br />
-          Assortment of pickles - pickled vegetables in Georgian style (veg.){" "}
+          <b>15.</b> მჟავის ასორტი - ქართული მწნილის ასორტი (ვეგ.) <br />
+          Assortment of pickles - pickled vegetables in Georgian style (veg.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>E</sup>{" "}
+          <b className={classes.nowrap}>8,60 €</b>
           <br />
           <br />
           <b>16. </b>გებჟალია - ვეგეტარიანული ყველის თხელი ბურთულები, მოცარელას
-          ყველით და სახლში მომზადებული იოგურტისა და პიტnის სოუსით<b> 9,90 €</b>
+          ყველით და სახლში მომზადებული იოგურტისა და პიტnის სოუსით
           <br />
           Gebzhalia -vegetarian cheese rolls filled with Mozarella with homemade
-          herb pesto in light yoghurt-mint-sauce <br />
+          herb pesto in light yoghurt-mint-sauce
+          <b className={classes.nowrap}> 9,90 €</b>
           <br />
-          სუპებთან,სალათებთან და ცივ კერძებთან გთავაზობთ ჩვენთან გამომცხვარ პურს{" "}
+          <br />
+          სუპებთან,სალათებთან და ცივ კერძებთან გთავაზობთ ჩვენთან გამომცხვარ პურს
           <br />
           Homemade bread is served with soups, salads and starters
           <br />
@@ -241,33 +253,39 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br />
           <br />
-          <b>17.</b> შემწვარი ბოსტნეული - წვნიანი შემწვარი ბოსტნეული{" "}
-          <b>9,90 €</b>
-          <br />
+          <b>17.</b> შემწვარი ბოსტნეული - წვნიანი შემწვარი ბოსტნეული <br />
           Grilled vegetables - juicy grilled vegetables
+          <b className={classes.nowrap}> 9,90 €</b>
           <br /> <br />
-          <b>18.</b> ლობიო - მოხარშული ლობიო ქართული სუნელებით <b>8,90 €</b>
+          <b>18.</b> ლობიო - მოხარშული ლობიო ქართული სუნელებით
           <br />
-          Lobio - bean stew with Georgian spices <br /> <br />
-          <b>19. </b>ტოლმა - ხორცის ფარში ვაზის ფოთოლში, ხახვითა და მწვანილებით{" "}
-          <b>8,50 €</b>
+          Lobio - bean stew with Georgian spices
+          <b className={classes.nowrap}> 8,90 €</b>
+          <br /> <br />
+          <b>19. </b>ტოლმა - ხორცის ფარში ვაზის ფოთოლში, ხახვითა და მწვანილებით
           <br />
-          Dolma - grape leaves filled with minced meat, onions and herbs <br />{" "}
+          Dolma - grape leaves filled with minced meat, onions and herbs
+          <b className={classes.nowrap}> 8,50 €</b>
           <br />
-          <b>20. </b>"სოკო კეცზე" - შამპინიონები ღუმელიდან ყველით და მობრაწული{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>F, I</sup> <b>7,60 €</b>
+          <br />
+          <b>20. </b>"სოკო კეცზე" - შამპინიონები ღუმელიდან ყველით და მობრაწული
           <br />
           "Soko ketsze" - Champignon from the oven filled with cheese and
-          gratinated <br /> <br />
-          <b> 21. </b>ჭვიშტარი - მჭადის პურები სულუგუნის შიგთავსით{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F</sup> <b>4,90 €</b>
+          gratinated
+          <sup style={{ color: "rgba(133, 26, 29)" }}>F, I</sup>{" "}
+          <b className={classes.nowrap}>7,60 €</b>
+          <br /> <br />
+          <b> 21. </b>ჭვიშტარი - მჭადის პურები სულუგუნის შიგთავსით
           <br />
-          Chvishtari - corn patty with cheese Suluguni <br /> <br />
+          Chvishtari - corn patty with cheese Suluguni
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A, F</sup>{" "}
+          <b className={classes.nowrap}>4,90 €</b>
+          <br /> <br />
           <b>22. </b>აჯაფსანდალი - მოთუშული ბადრიჯანი პომიდვრით, პაპრიკით,
-          ხახვით და სუნელებით <b>9,90 €</b>
-          <br />
+          ხახვით და სუნელებით <br />
           Adzhapsandali - Braised eggplants, tomatoes, paprika, onions, herbs
-          and spices (veg.) <br /> <br />
+          and spices (veg.) <b className={classes.nowrap}> 9,90 €</b>
+          <br /> <br />
           <br />
           <br />
           <Typography variant="h6" align="center">
@@ -275,47 +293,55 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br />
           <br />
-          <b>23.</b> ხაჭაპური "იმერული" - ხაჭაპური ყველით (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>10,90 €</b>
+          <b>23.</b> ხაჭაპური "იმერული" - ხაჭაპური ყველით (ვეგ.)
           <br />
-          Khatshapuri "Imeruli" - flatbread filled with cheese (veg.) <br />{" "}
+          Khatshapuri "Imeruli" - flatbread filled with cheese (veg.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b className={classes.nowrap}>10,90 €</b>
+          <br />
           <br />
           <b>24.</b> ხაჭაპური "მეგრული" - ხაჭაპური ყველით და მობრაწული ყველით
-          ღუმელიდან (ვეგ.) <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
-          <b>12,90 €</b>
+          ღუმელიდან (ვეგ.)
           <br />
           Khatshapuri "Megruli" - flatbread filled and baked with cheese from
-          the oven (veg.) <br /> <br />
+          the oven (veg.) <sup style={{ color: "rgba(133, 26, 29)" }}>
+            A,F
+          </sup>{" "}
+          <b className={classes.nowrap}>12,90 €</b>
+          <br /> <br />
           <b>25.</b> ხაჭაპური "აჭარული" - ნავის ფორმის ხაჭაპური ყველითა და
-          კვერცხით ღუმელიდან (ვეგ.){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F,I</sup> <b>14,90 €</b>
+          კვერცხით ღუმელიდან (ვეგ.)
           <br />
           Khatshapuri "Adsharuli" - Boat-shaped dumplings with cheese and egg
-          from the oven (veg.) <br /> <br />
-          <b>26.</b> ლობიანი - ლობიოთი დატენილი ცომი{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>12,90 €</b>
-          <br />
+          from the oven (veg.)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F,I</sup>{" "}
+          <b className={classes.nowrap}>14,90 €</b>
+          <br /> <br />
+          <b>26.</b> ლობიანი - ლობიოთი დატენილი ცომი <br />
           Lobiani - flatbread filled with beans
-          <br />
-          <br />
-          <b>27.</b> ხინკალი - ხორცის ფარშით (ძროხის + ღორის ხორცი) 4 ცალიდან{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
-          <b>2,20 €/Piece</b>
+          <b className={classes.nowrap}>12,90 €</b>
+          <br />
+          <br />
+          <b>27.</b> ხინკალი - ხორცის ფარშით (ძროხის + ღორის ხორცი) 4 ცალიდან
           <br />
           Khinkali - dumplings filled with minced meat (beef + pork), seasoned
           in Georgian style (from 4 pieces)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b className={classes.nowrap}>2,20 €/Piece</b>
           <br /> <br />
           <b>28.</b> ხინკალი - ძროხის ხორცის ფარშით, შესუნელებული ქართულად (4
-          ცალიდან) <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
-          <b>2,50 €/Piece</b>
-          <br />
+          ცალიდან) <br />
           Khinkali - dumplings filled with minced beef meat, seasoned in
           Georgian style (from 4 pieces)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b className={classes.nowrap}>2,50 €/Piece</b>
           <br /> <br />
-          <b>29. </b>ხინკალი - ყველით, შესუნელებული ქართულად (4 ცალიდან){" "}
-          <b>2,20 €/Piece</b> <br />
+          <b>29. </b>ხინკალი - ყველით, შესუნელებული ქართულად (4 ცალიდან)
+          <br />
           Khinkali - dumplings filled with cheese, seasoned in Georgian style
           (from 4 pieces)
+          <b className={classes.nowrap}> 2,20 €/Piece</b>
           <br /> <br />
           ცივ კერძებთან გთავაზობთ ჩვენთან გამომცხვარ პურს
           <br />
@@ -328,60 +354,63 @@ export function SpeisekarteGeo(props) {
           <br />
           <br />
           <b> 30. </b>ღორის მწვადი - ღორის ხორცი შამფურზე შემწვარი ხახვით,
-          მწვანილითა და საწებელით <b>16,90 €</b>
-          <br />
+          მწვანილითა და საწებელით <br />
           Pork Shashlik - Pork grilled on skewers with onions, herbs and
-          satsebela <br />
+          satsebela <b className={classes.nowrap}> 16,90 €</b>
+          <br />
           <br />
           <b>31. </b>ქათმის მწვადი - დამარინებული ქათმის ხორცი შამფურზე შემწვარი
-          სააწებელით <b>16,90 €</b>
-          <br />
-          Chicken Shashlik - marinated chicken grilled on skewers with satsebela{" "}
+          სააწებელით <br />
+          Chicken Shashlik - marinated chicken grilled on skewers with satsebela
+          <b className={classes.nowrap}> 16,90 €</b>
           <br />
           <br />
           <b>32.</b> ცხვრის მწვადი - ცხვრის ხორცი შამფურზე შემწვარი ხახვით,
-          მწანილითა და საწებელით <b>18,90 €</b>
-          <br />
+          მწანილითა და საწებელით <br />
           Lamb shashlik - lamb grilled on skewers with onions, herbs and
-          satsebela <br />
+          satsebela <b className={classes.nowrap}> 18,90 €</b>
           <br />
-          <b>33.</b> ბატკნის კარე ხახვით, მწვანილებითა და საწებელით{" "}
-          <b>28,90 €</b>
           <br />
-          Noble lamb crown with onions, herbs and satsebela <br />
+          <b>33.</b> ბატკნის კარე ხახვით, მწვანილებითა და საწებელით
           <br />
-          <b>34.</b> შქმერული - ქათამი ნივრის, არაჟნის სოუსში ღუმელიდან (ძვლით){" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> (mit Knochen)
-          <b>17,90 €</b>
+          Noble lamb crown with onions, herbs and satsebela
+          <b className={classes.nowrap}> 28,90 €</b>
+          <br />
+          <br />
+          <b>34.</b> შქმერული - ქათამი ნივრის, არაჟნის სოუსში ღუმელიდან (ძვლით)
           <br />
           Shkmeruli - Chicken in garlic-Cream Fraiche -sauce from the Oven (with
-          a bone) <br />
+          a bone)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>F</sup> (mit Knochen)
+          <b className={classes.nowrap}> 17,90 €</b>
+          <br />
           <br />
           <b>35. </b>ჩანახი თიხის ქვაბში - ძროხის ხორცი კარტოფილით, ბოსტნეულითა
-          და სუნელებით <b>18,40 €</b>
-          <br />
+          და სუნელებით <br />
           Chanakhi in a clay pot - beef stew with potatoes, vegetables and
-          spices <br />
+          spices <b className={classes.nowrap}> 18,40 €</b>
           <br />
-          <b>36.</b> საცივი - ინდაური ნიგვზის სოუსში / Satsivi - turkey meat in
-          walnut sauce <b>18,90 €</b>
+          <br />
+          <b>36.</b> საცივი - ინდაური ნიგვზის სოუსში <br />
+          Satsivi - turkey meat in walnut sauce{" "}
+          <b className={classes.nowrap}> 18,90 €</b>
           <br />
           <br />
           <b>37. </b>ჩაქაფული - ხბოს ხორცი თიხის ქვაბში ტარხუნითა და მოთუშული
-          თეთრი ღვინით <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup>{" "}
-          <b>18,90 €</b>
-          <br />
+          თეთრი ღვინით <br />
           Chakapuli - veal stewed in a clay pot with tarragon and white wine
+          <sup style={{ color: "rgba(133, 26, 29)" }}>D</sup>{" "}
+          <b className={classes.nowrap}>18,90 €</b>
           <br />
           <br />
           <b>38. </b>ბატკნის ფეხი ღუმელიდან, დამარინებული აჯიკით, სუნელებითა და
-          ნივრით
-          <b>140,00 €</b>
+          ნივრით (მხოლოდ წინასწარი შეკვეთით, დაახლოებით 6 კაცზე)
           <br />
-          Leg of lamb from the oven marinated in adjika, spices and garlic
+          Leg of lamb from the oven marinated in adjika, spices and garlic (Only
+          with advance reservation, enough for approx. 6 people)
+          <b className={classes.nowrap}> 140,00 €</b>
           <br />
-          (მხოლოდ წინასწარი შეკვეთით, დაახლოებით 6 კაცზე / Only with advance
-          reservation, enough for approx. 6 people) <br />
+          <br />
           <br />
           <br />
           <br />
@@ -391,23 +420,27 @@ export function SpeisekarteGeo(props) {
           <br />
           <br />
           <b> 39. </b>ორაგულის ფილე ნივრისა და არაჟნის წვენში, თქვეთვის
-          სასურველი გარნირით{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>B,F</sup> <b>18,90 €</b>
-          <br />
+          სასურველი გარნირით <br />
           Salmon fillet in garlic-cream fraiche-sauce with side dish of your
-          choice <br />
+          choice
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B,F</sup>{" "}
+          <b className={classes.nowrap}>18,90 €</b>
           <br />
-          <b>40. </b>სამეფო კრევეტები ტანდურის სოუსით, ტაფაში{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup> <b>24,90 €</b>
           <br />
-          King prawns with tandoori sauce served in a pan <br />
+          <b>40. </b>სამეფო კრევეტები ტანდურის სოუსით, ტაფაში <br />
+          King prawns with tandoori sauce served in a pan
+          <sup style={{ color: "rgba(133, 26, 29)" }}>C</sup>{" "}
+          <b className={classes.nowrap}>24,90 €</b>
           <br />
-          <b>41. </b>სამეფო ზუთხი მთელი, შემწვარი ბოსტნეულით / Whole king
-          sturgeon gratinated with vegetables{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>B</sup> <b>140,00 €</b>
           <br />
-          (მხოლოდ წინასწარი შეკვეთით, დაახლოებით 6 კაცზე / Only with advance
-          reservation, enough for approx. 6 people) <br />
+          <b>41. </b>სამეფო ზუთხი მთელი, შემწვარი ბოსტნეულით (მხოლოდ წინასწარი
+          შეკვეთით, დაახლოებით 6 კაცზე) <br />
+          Whole king sturgeon gratinated with vegetables (Only with advance
+          reservation, enough for approx. 6 people)
+          <sup style={{ color: "rgba(133, 26, 29)" }}>B</sup>{" "}
+          <b className={classes.nowrap}>140,00 €</b>
+          <br />
+          <br />
           <br />
           ყველა კერძთან გთავაზობთ ჩვენთან გამომცხვარ პურს
           <br />
@@ -421,39 +454,47 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br />
           <br />
-          <b>42.</b> შემწვარი კარტოფილი / Roasted potatoes <b>3,70 €</b>
+          <b>42.</b> შემწვარი კარტოფილი <br /> Roasted potatoes{" "}
+          <b className={classes.nowrap}>3,70 €</b>
           <br />
           <br />
-          <b>43. </b>ბრინჯი / Rice <b>3,90 €</b>
+          <b>43. </b>ბრინჯი <br /> Rice{" "}
+          <b className={classes.nowrap}> 3,90 €</b>
           <br />
           <br />
-          <b>44. </b>სახლში გამომცხვარი პური / Homemade bread{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>1,50 €</b>
+          <b>44. </b>სახლში გამომცხვარი პური <br /> Homemade bread
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b className={classes.nowrap}>1,50 €</b>
           <br />
           <br />
-          <b>45. </b>საწებელა - ტრადიციული ქართული პომიდვრის სოუსი / Satsebela -
-          Georgian traditional tomato sauce <b>3,10 €</b>
+          <b>45. </b>საწებელა - ტრადიციული ქართული პომიდვრის სოუსი <br />{" "}
+          Satsebela - Georgian traditional tomato sauce{" "}
+          <b className={classes.nowrap}>3,10 €</b>
           <br />
           <br />
-          <b>46. </b>აჯიკა - ქართული ცხარე პომიდვრის სოუსი / Adjika - spicy
-          tomato sauce <b>3,10 €</b>
+          <b>46. </b>აჯიკა - ქართული ცხარე პომიდვრის სოუსი <br /> Adjika - spicy
+          tomato sauce <b className={classes.nowrap}> 3,10 €</b>
           <br />
           <br />
           <b>47. </b>ტყემალი - ქართული მწვანე ან წითელი ტყემლის ცხარე სოუსი{" "}
-          <b>4,20 €</b>
           <br />
-          Tkemali - Georgian spicy green or red cherry plum <br />
+          Tkemali - Georgian spicy green or red cherry plum
+          <b className={classes.nowrap}> 4,20 €</b>
           <br />
-          <b>48. </b>ბაჟე - ტრადიციული ქართული ნიგვზის სოუსი / Bazhe - Georgian
-          walnut sauce <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
-          <b>4,40 €</b>
+          <br />
+          <b>48. </b>ბაჟე - ტრადიციული ქართული ნიგვზის სოუსი <br /> Bazhe -
+          Georgian walnut sauce{" "}
+          <sup style={{ color: "rgba(133, 26, 29)" }}>H</sup>{" "}
+          <b className={classes.nowrap}>4,40 €</b>
           <br />
           <br />
           <b>49.</b> ცაციკი - იოგურტის სოუსი ნივრითა და კამით <br />
-          Tzatziki yogurt sauce with garlic and dill <b>3,10 €</b>
+          Tzatziki yogurt sauce with garlic and dill{" "}
+          <b className={classes.nowrap}>3,10 €</b>
           <br />
           <br />
-          <b>50. </b>არაჟანი / Sour cream <b>2,60 €</b>
+          <b>50. </b>არაჟანი <br /> Sour cream{" "}
+          <b className={classes.nowrap}>2,60 €</b>
           <br />
           <br />
           <br />
@@ -463,19 +504,20 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br />
           <br />
-          <b> 51.</b> სახლში გამომცხავარი ნამცხვარი "ნაპოლეონი" / Cake
-          "Napoleon" homemade{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup> <b>4,10 €</b>
+          <b> 51.</b> სახლში გამომცხავარი ნამცხვარი "ნაპოლეონი" <br /> Cake
+          "Napoleon" homemade
+          <sup style={{ color: "rgba(133, 26, 29)" }}>A,F</sup>{" "}
+          <b className={classes.nowrap}>4,10 €</b>
           <br /> <br />
           <b>52.</b> "ფელამუში" - ქართული სუფლე ყურძნის წვენისა და მჭადის
-          ფქვილისგან <sup style={{ color: "rgba(133, 26, 29)" }}>A,H</sup>{" "}
-          <b>3,20 €</b>
-          <br />
+          ფქვილისგან <br />
           "Pelamushi" - Georgian traditional dessert of grape juice and corn
-          flower <br /> <br />
-          <b>53.</b> სახლში გამომცხვარი ნამცხვრების ნაირსახეობები <b>4,90 €</b>
-          <br />
-          Homemade cake variations <br /> <br />
+          flower<sup style={{ color: "rgba(133, 26, 29)" }}>A,H</sup>{" "}
+          <b className={classes.nowrap}>3,20 €</b>
+          <br /> <br />
+          <b>53.</b> სახლში გამომცხვარი ნამცხვრების ნაირსახეობები <br />
+          Homemade cake variations<b> 4,90 €</b>
+          <br /> <br />
           <br />
           <br />
           <Typography variant="h6" align="center">
@@ -517,27 +559,28 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br />
           <b> 60.</b> ყავა / Coffee
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup> <b> 2,70 €</b>
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>{" "}
+          <b className={classes.nowrap}> 2,70 €</b>
           <br />
           <br />
           <b>61. </b> ლატე მაკიატო / Latte Macchiato{" "}
-          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup> <b>3,90 €</b>{" "}
-          <br />
+          <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup>{" "}
+          <b className={classes.nowrap}>3,90 €</b> <br />
           <br />
           <b>62. </b> ესპრესსო / Espresso{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>
-          <b>2,50 €</b> <br />
+          <b className={classes.nowrap}>2,50 €</b> <br />
           <br />
           <b>63. </b> ორმაგი ესპრესსო / Double Espresso{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>2</sup>
-          <b> 3,50 €</b> <br />
+          <b className={classes.nowrap}> 3,50 €</b> <br />
           <br />
           <b> 64.</b> კაპუჩინო / Cappuccino{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>2,F</sup>
-          <b> 3,10 €</b> <br />
+          <b className={classes.nowrap}> 3,10 €</b> <br />
           <br />
-          <b>65.</b> ჩაი (სხვადასხვა ტიპის) / Tea (various types) <b>2,60 €</b>{" "}
-          <br />
+          <b>65.</b> ჩაი (სხვადასხვა ტიპის) / Tea (various types){" "}
+          <b className={classes.nowrap}>2,60 €</b> <br />
           <br />
           <br />
           <br />
@@ -550,42 +593,44 @@ export function SpeisekarteGeo(props) {
           <br /> <br />
           <b>70. </b> კოკა-კოლა, კოკა-კოლა ლაითი / Coca- Cola, Coca-Cola light{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>1,2,3</sup>{" "}
-          <b>2,50 € 4,50 € 8,50 €</b> <br />
+          <b className={classes.nowrap}>2,50 € 4,50 € 8,50 €</b> <br />
           <br />
           <b>71. </b> ფანტა, სპრაიტი / Fanta , Sprite{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>5,4</sup>{" "}
-          <b>2,50 € 4,50 € 8,50 €</b> <br />
+          <b className={classes.nowrap}>2,50 € 4,50 € 8,50 €</b> <br />
           <br />
           <b>72.</b> St. Michaelis Naturell კლასიკური / Classic{" "}
-          <b>2,20 € 3,90 € 6,50 €</b>
+          <b className={classes.nowrap}>2,20 € 3,90 € 6,50 €</b>
           <br />
           <br />
           <b> 73. </b> ბორჯომი - ქართული სამკურნალო წყალი - Borjomi - Georgian
-          healing water 0,5 l Fl. <b>6,20 €</b> <br />
+          healing water 0,5 l Fl. <b className={classes.nowrap}>6,20 €</b>{" "}
+          <br />
           <br />
           <b>74. </b> მსხლის ლიმონათი, ქართული / Georgian pear lemonade{" "}
           <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l Fl.{" "}
-          <b>6,20 €</b>
+          <b className={classes.nowrap}>6,20 €</b>
           <br />
           <br />
           <b>75.</b> ტარხუნის ქართული ლიმონათი / Georgian estragon lemonade
           "Tarkhuna" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
-          Fl. <b>6,20 €</b>
+          Fl. <b className={classes.nowrap}>6,20 €</b>
           <br />
           <br />
           <b>76. </b> ყურძნის ქართული ლიმონათი / Georgian grape lemonade
           "Saperavi" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
-          Fl. <b>6,20 €</b>
+          Fl. <b className={classes.nowrap}>6,20 €</b>
           <br />
           <br />
           <b>77. </b> ფეიხოას ქართული ლიმონათი / Georgian Feijoa lemonade
           "Feijoa" <sup style={{ color: "rgba(133, 26, 29)" }}>1,3</sup> 0,5 l
-          Fl. <b>6,20 €</b>
+          Fl. <b className={classes.nowrap}>6,20 €</b>
           <br />
           <br />
           (ფეიხოა - ბრაზილიური გოავა - Feijoa - brasilian Goave) <br />
           <br />
-          <b>78.</b> რედ ბული / Red Bull <b>4,60 €</b> <br />
+          <b>78.</b> რედ ბული / Red Bull{" "}
+          <b className={classes.nowrap}>4,60 €</b> <br />
           <br />
           <br />
           <br />
@@ -597,21 +642,22 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br /> <br />
           <b>80. </b> ფორთოხლის წვენი / Orange juice{" "}
-          <b>2,80 € 4,90 € 10,40 €</b> <br />
+          <b className={classes.nowrap}>2,80 € 4,90 € 10,40 €</b> <br />
           <br />
-          <b>81. </b> ვაშლის წვენი / Apple juice <b>2,80 € 4,90 € 10,40 €</b>{" "}
+          <b>81. </b> ვაშლის წვენი / Apple juice{" "}
+          <b className={classes.nowrap}>2,80 € 4,90 € 10,40 €</b> <br />
           <br />
-          <br />
-          <b>82. </b> ალუბლის წვენი Cherry juice <b>2,80 € 4,90 € 10,40 €</b>{" "}
-          <br />
+          <b>82. </b> ალუბლის წვენი Cherry juice{" "}
+          <b className={classes.nowrap}>2,80 € 4,90 € 10,40 €</b> <br />
           <br />
           <b> 83.</b> რევანდის ნექტარი / Rhababa nectar{" "}
-          <b>2,80 € 4,90 € 10,40 €</b> <br />
+          <b className={classes.nowrap}>2,80 € 4,90 € 10,40 €</b> <br />
           <br />
-          <b> 84. </b> გაზირებული წვენი / Juice spritzer <b>2,60 € 4,70 € </b>{" "}
+          <b> 84. </b> გაზირებული წვენი / Juice spritzer{" "}
+          <b className={classes.nowrap}>2,60 € 4,70 € </b> <br />
           <br />
+          <b> 85.</b> KiBa <b className={classes.nowrap}> 2,80 € 4,90 € </b>{" "}
           <br />
-          <b> 85.</b> KiBa <b> 2,80 € 4,90 € </b> <br />
           <br />
           <br />
           <br />
@@ -623,20 +669,23 @@ export function SpeisekarteGeo(props) {
           </Typography>
           <br /> <br />
           <b> 90. </b> Einbecker Brauherren Pils (ჩამოსასხმელი ლუდი / Draught
-          beer) <b>3,80 € 4,90 €</b> <br />
+          beer) <b className={classes.nowrap}>3,80 € 4,90 €</b> <br />
           <br />
-          <b>91.</b> Alsterwasser <b>3,60 € 4,70 €</b> <br />
+          <b>91.</b> Alsterwasser{" "}
+          <b className={classes.nowrap}>3,60 € 4,70 €</b> <br />
           <br />
-          <b> 92. </b> Herrnbräu ხორბლის / wheat(0,5l) <b>4,90 €</b> <br />
+          <b> 92. </b> Herrnbräu ხორბლის / wheat(0,5l){" "}
+          <b className={classes.nowrap}>4,90 €</b> <br />
           <br />
-          <b> 93. </b> Herrnbräu ხორბლის შავი / wheat dark (0,5l) <b>4,90 €</b>{" "}
-          <br />
+          <b> 93. </b> Herrnbräu ხორბლის შავი / wheat dark (0,5l){" "}
+          <b className={classes.nowrap}>4,90 €</b> <br />
           <br />
           <b>94.</b> Einbecker Brauherren უალკოჰოლო / alcohol-free (0,3l){" "}
-          <b>3,80 €</b> <br />
+          <b className={classes.nowrap}>3,80 €</b> <br />
           <br />
           <b>95.</b> Herrnbräu საფუვრიანი უალკოჰოლო ხორბლის ლუდი / yeast wheat
-          beer alcohol-free (0,5l) <b>4,90 €</b> <br />
+          beer alcohol-free (0,5l) <b className={classes.nowrap}>4,90 €</b>{" "}
+          <br />
           <br />
           <br />
           <br />
@@ -647,39 +696,46 @@ export function SpeisekarteGeo(props) {
             2 cl 0,1 l 0,5 l bottle
           </Typography>
           <br /> <br />
-          <b>96.</b> მარტინი / Martini <b>6,60 € 39,00 €</b> <br />
+          <b>96.</b> მარტინი / Martini{" "}
+          <b className={classes.nowrap}>6,60 € 39,00 €</b> <br />
           <br />
-          <b>97. </b> ბაკარდი / Bacardi <b>2,90 € 12,00 € </b> <br />
+          <b>97. </b> ბაკარდი / Bacardi{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € </b> <br />
           <br />
-          <b>98.</b> ბეილისი / Baileys <b>2,90 € 12,00 €</b> <br />
+          <b>98.</b> ბეილისი / Baileys{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 €</b> <br />
           <br />
           <br />
-          <b> 99.</b> არაყი / Vodka "Finlandia" <b>2,90 € 12,00 € 65,00 €</b>{" "}
+          <b> 99.</b> არაყი / Vodka "Finlandia"{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
           <br />
-          <br />
-          <b>100. </b> არაყი / Vodka "Absolut" <b>2,90 € 12,00 € 65,00 €</b>{" "}
-          <br />
+          <b>100. </b> არაყი / Vodka "Absolut"{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
           <br />
           <b>101. </b> არაყი / Vodka "Beluga", "Grey Goose"{" "}
-          <b>4,90 € 19,00 € 90,00 € 120,00 €</b>
+          <b className={classes.nowrap}>4,90 € 19,00 € 90,00 € 120,00 €</b>
           <br />
           <br />
           <b>102. </b> ქართული ჭაჭა / Georgian Chacha{" "}
-          <b>2,80 € 11,00 € 52,00 €</b> <br />
+          <b className={classes.nowrap}>2,80 € 11,00 € 52,00 €</b> <br />
           <br />
           <br />
           <b> 103. </b> ქართული ბრენდი / Georgian Brandy Sarajishvili David{" "}
-          <b>2,80 € 11,00 € 0,5 l bottle 52,00 €</b> <br />
+          <b className={classes.nowrap}>2,80 € 11,00 € 0,5 l bottle 52,00 €</b>{" "}
+          <br />
           <br />
           <b>104.</b> Chivas Regal, Jack Daniel's, Tullamore{" "}
-          <b>3,90 € 17,50 € 95,00 €</b>
+          <b className={classes.nowrap}>3,90 € 17,50 € 95,00 €</b>
           <br />
           <br />
-          <b>105. </b> Remy Martin <b>4,90 € 21,00 € 120,00 €</b> <br />
+          <b>105. </b> Remy Martin{" "}
+          <b className={classes.nowrap}>4,90 € 21,00 € 120,00 €</b> <br />
           <br />
-          <b>106. </b> Hennessy <b>4,90 € 21,00 € 120,00 €</b> <br />
+          <b>106. </b> Hennessy{" "}
+          <b className={classes.nowrap}>4,90 € 21,00 € 120,00 €</b> <br />
           <br />
-          <b>107. </b> ჯინი / Gin <b>2,90 € 12,00 € 65,00 €</b> <br />
+          <b>107. </b> ჯინი / Gin{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
           <br />
           <br />
           <br />
@@ -687,16 +743,20 @@ export function SpeisekarteGeo(props) {
             <b> კოქტეილები / Cocktails </b>
           </Typography>
           <br />
-          <b>108.</b> არაყი / Vodka Red Bull <b>7,50 €</b> <br />
+          <b>108.</b> არაყი / Vodka Red Bull{" "}
+          <b className={classes.nowrap}>7,50 €</b> <br />
           <br />
           <b> 109.</b> ვისკი კოლა/ვოდკა კოლა / Whisky Cola/Wodka Cola{" "}
-          <b>7,20 €</b> <br />
+          <b className={classes.nowrap}>7,20 €</b> <br />
           <br />
-          <b> 110. </b> ბაკარდი კოლა / Bacardi Cola <b>7,20 €</b> <br />
+          <b> 110. </b> ბაკარდი კოლა / Bacardi Cola{" "}
+          <b className={classes.nowrap}>7,20 €</b> <br />
           <br />
-          <b>111. </b> კუბა ლიბრე / Cuba Libre <b>7,50 €</b> <br />
+          <b>111. </b> კუბა ლიბრე / Cuba Libre{" "}
+          <b className={classes.nowrap}>7,50 €</b> <br />
           <br />
-          <b> 112. </b> ჯინ ტონიკი / Gin Tonic <b>7,90 €</b> <br />
+          <b> 112. </b> ჯინ ტონიკი / Gin Tonic{" "}
+          <b className={classes.nowrap}>7,90 €</b> <br />
           <br />
           <br />
           <br />
@@ -706,16 +766,109 @@ export function SpeisekarteGeo(props) {
           <br />
           <b>113. </b> ცქრიალა ღვინო / Sparkling wine "Freixenet" Piccolo 0,2 l
           bottle
-          <b>7,50 €</b> <br />
+          <b className={classes.nowrap}> 7,50 €</b> <br />
           <br />
           <b>114. </b> ბადაგონის ცქრიალა ღვინო (ნახევრად მშრალი) / Badagoni
-          Sparkling wine (semi-dry) 0,75 l bottle <b>35,00 €</b> <br />
+          Sparkling wine (semi-dry) 0,75 l bottle{" "}
+          <b className={classes.nowrap}>35,00 €</b> <br />
           <br />
           <b>115.</b> ბადაგონის ცქრიალა ღვინო ბრუტი / ბადაგონი Sparkling wine
-          Brut 0,75 l bottle <b>35,00 €</b> <br />
+          Brut 0,75 l bottle <b className={classes.nowrap}>35,00 €</b> <br />
           <br />
           <b>116.</b> შამპანური / Champagne "Moët & Chandon", "Veuve Clicquot"
-          0,75 l bottle <b>95,00 €</b> <br />
+          0,75 l bottle <b className={classes.nowrap}>95,00 €</b> <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <Typography variant="h6" align="center">
+            <b> ალკოჰოლური სასმელები და ლიქიორები /Spirits and liquers</b>
+          </Typography>
+          <Typography variant="body1" align="center">
+            2 cl 0,1 l 0,5 l bottle
+          </Typography>
+          <br /> <br />
+          <b>96.</b> მარტინი / Martini{" "}
+          <b className={classes.nowrap}>6,60 € 39,00 €</b> <br />
+          <br />
+          <b>97. </b> ბაკარდი / Bacardi{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € </b> <br />
+          <br />
+          <b>98.</b> ბეილისი / Baileys{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 €</b> <br />
+          <br />
+          <br />
+          <b> 99.</b> არაყი / Vodka "Finlandia"{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
+          <br />
+          <b>100. </b> არაყი / Vodka "Absolut"{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
+          <br />
+          <b>101. </b> არაყი / Vodka "Beluga", "Grey Goose"{" "}
+          <b className={classes.nowrap}>4,90 € 19,00 € 90,00 € 120,00 €</b>
+          <br />
+          <br />
+          <b>102. </b> ქართული ჭაჭა / Georgian Chacha{" "}
+          <b className={classes.nowrap}>2,80 € 11,00 € 52,00 €</b> <br />
+          <br />
+          <br />
+          <b> 103. </b> ქართული ბრენდი / Georgian Brandy Sarajishvili David{" "}
+          <b className={classes.nowrap}>2,80 € 11,00 € 0,5 l bottle 52,00 €</b>{" "}
+          <br />
+          <br />
+          <b>104.</b> Chivas Regal, Jack Daniel's, Tullamore{" "}
+          <b className={classes.nowrap}>3,90 € 17,50 € 95,00 €</b>
+          <br />
+          <br />
+          <b>105. </b> Remy Martin{" "}
+          <b className={classes.nowrap}>4,90 € 21,00 € 120,00 €</b> <br />
+          <br />
+          <b>106. </b> Hennessy{" "}
+          <b className={classes.nowrap}>4,90 € 21,00 € 120,00 €</b> <br />
+          <br />
+          <b>107. </b> ჯინი / Gin{" "}
+          <b className={classes.nowrap}>2,90 € 12,00 € 65,00 €</b> <br />
+          <br />
+          <br />
+          <br />
+          <Typography variant="h6" align="center">
+            <b> კოქტეილები / Cocktails </b>
+          </Typography>
+          <br />
+          <b>108.</b> არაყი / Vodka Red Bull{" "}
+          <b className={classes.nowrap}>7,50 €</b> <br />
+          <br />
+          <b> 109.</b> ვისკი კოლა/ვოდკა კოლა / Whisky Cola/Wodka Cola{" "}
+          <b className={classes.nowrap}>7,20 €</b> <br />
+          <br />
+          <b> 110. </b> ბაკარდი კოლა / Bacardi Cola{" "}
+          <b className={classes.nowrap}>7,20 €</b> <br />
+          <br />
+          <b>111. </b> კუბა ლიბრე / Cuba Libre{" "}
+          <b className={classes.nowrap}>7,50 €</b> <br />
+          <br />
+          <b> 112. </b> ჯინ ტონიკი / Gin Tonic{" "}
+          <b className={classes.nowrap}>7,90 €</b> <br />
+          <br />
+          <br />
+          <br />
+          <Typography variant="h6" align="center">
+            <b> ცქრიალა ღვინო და შამპანური / Sparkling wine and Champagne</b>
+          </Typography>
+          <br />
+          <b>113. </b> ცქრიალა ღვინო / Sparkling wine "Freixenet" Piccolo 0,2 l
+          bottle
+          <b className={classes.nowrap}>7,50 €</b> <br />
+          <br />
+          <b>114. </b> ბადაგონის ცქრიალა ღვინო (ნახევრად მშრალი) / Badagoni
+          Sparkling wine (semi-dry) 0,75 l bottle{" "}
+          <b className={classes.nowrap}>35,00 €</b> <br />
+          <br />
+          <b>115.</b> ბადაგონის ცქრიალა ღვინო ბრუტი / ბადაგონი Sparkling wine
+          Brut 0,75 l bottle <b className={classes.nowrap}>35,00 €</b> <br />
+          <br />
+          <b>116.</b> შამპანური / Champagne "Moët & Chandon", "Veuve Clicquot"
+          0,75 l bottle <b className={classes.nowrap}>95,00 €</b> <br />
           <br />
         </Typography>
       </div>
@@ -1026,7 +1179,7 @@ export function MittagsmenuGeo(props) {
             </IconButton>
           </Grid>
         </Grid>
-        <div style={{ padding: "0 10px" }}>
+        <div style={{ padding: "0 8px" }}>
           <Typography variant="body1" style={{ lineHeight: 1.2 }}>
             <Typography variant="body1" align="center">
               <b> 12-დან 15 საათამდე</b>
@@ -1034,35 +1187,35 @@ export function MittagsmenuGeo(props) {
             <br /> <br />
             <br />
             <b> 1001.</b>„Soljanka“ Kräftiger würziger Eintopf mit viel Fleisch{" "}
-            <b>5,90 €</b>
+            <b className={classes.nowrap}>5,90 €</b>
             <br />
             <br />
             <b> 1002.</b> „Hartcho“Kalbfleischeintopf mit Reis, Gemüse, Gewürzen{" "}
-            <b>5,90 €</b> <br />
+            <b className={classes.nowrap}>5,90 €</b> <br />
             <br />
             <b> 1003. </b> „Matsoni“georgische Joghurtsuppe mit Kräutern (veg.){" "}
-            <b>4,80 €</b> <br />
+            <b className={classes.nowrap}>4,80 €</b> <br />
             <br />
             <b> 1004.</b> Chatschapuri „Imeruli“Pizzafladen gefüllt mit Käse
             (veg.)
-            <b>8,50 €</b>
+            <b className={classes.nowrap}>8,50 €</b>
             <br />
             <br />
             <b> 1005. </b> Chatschapuri „Spinat“Pizzafladen mit Spinat/Käse
-            (veg.) <b>8,90</b> €
+            (veg.) <b className={classes.nowrap}>8,90 €</b>
             <br />
             <br />
             <b> 1006. </b>Auberginen-Kartoffel-Pfanne „Adschapsandali“ (veg.){" "}
-            <b>7,90 €</b> <br />
+            <b className={classes.nowrap}>7,90 €</b> <br />
             <br />
-            <b> 1007. </b> Pfannkuchengefüllt mit Hackfleisch <b>5,60 €</b>{" "}
-            <br />
+            <b> 1007. </b> Pfannkuchengefüllt mit Hackfleisch{" "}
+            <b className={classes.nowrap}>5,60 €</b> <br />
             <br />
             <b> 1008.</b> Kalbgeschnetzeltes „Beef Stroganoff“ mit Reis{" "}
-            <b>9,40 €</b> <br />
+            <b className={classes.nowrap}>9,40 €</b> <br />
             <br />
             <b> 1009. </b>Hähnchenfilet überbacken mit Käse und Tomaten mit
-            Bratkartoffeln <b>8,90 €</b> <br />
+            Bratkartoffeln <b className={classes.nowrap}>8,90 €</b> <br />
             <br />
           </Typography>
         </div>
