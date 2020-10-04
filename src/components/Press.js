@@ -8,6 +8,8 @@ import CardActions from "@material-ui/core/CardActions"
 import CardMedia from "@material-ui/core/CardMedia"
 import zeit from "../images/zeit.png"
 import abendblatt from "../images/abendblatt.png"
+import morgenpost from "../images/morgenpost.png"
+
 import Grid from "@material-ui/core/Grid"
 
 export default function AboutUs(props) {
@@ -76,6 +78,46 @@ export default function AboutUs(props) {
                   height="50%"
                   image={abendblatt}
                   style={{ padding: "70px 10px 0px 10px" }}
+                />
+                <CardActions>
+                  <Button size="small" color="secondary">
+                    {actLanguage === "DEU"
+                      ? "Lesen Artikel"
+                      : actLanguage === "RUS"
+                      ? "Читать статью"
+                      : actLanguage === "ENG"
+                      ? "Read article"
+                      : actLanguage === "GEO"
+                      ? "წაიკითხეთ სტატია"
+                      : null}
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </a>
+        </Grid>
+
+        <Grid item md={4} sm={6} xs={12}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            to="https://www.pressreader.com/germany/hamburger-morgenpost/20170409/281715499473637"
+            style={{ textDecoration: "none" }}
+          >
+            <Card
+              style={{
+                maxWidth: "345px",
+                backgroundColor: "rgba(249,234,207)",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Hamburger Morgenpost logo"
+                  width="100%"
+                  height="50%"
+                  image={morgenpost}
+                  style={{ padding: "73px 10px 2px 10px" }}
                 />
                 <CardActions>
                   <Button size="small" color="secondary">

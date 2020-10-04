@@ -237,7 +237,7 @@ export default function WindowReserve(props) {
       return
     }
     try {
-      const result = executeRecaptcha("shop1")
+      const result = executeRecaptcha("suliko_reserve_table")
       setToken(result) //--> grab the generated token by the reCAPTCHA
 
       let response = await fetch(
