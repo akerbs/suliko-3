@@ -8,6 +8,14 @@ const useStyles = makeStyles(theme => ({
     bottom: 20,
     right: 20,
     zIndex: 10,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
+    position: "fixed",
+    "&:hover": {
+      fontWeight: "bold",
+      backgroundColor: theme.palette.primary.light,
+      color: theme.palette.secondary.contrastText,
+    },
   },
 }))
 
@@ -21,11 +29,6 @@ export default function ReserveButton(props) {
         className={classes.reservierenButton}
         onClick={props.onOpen}
         variant="contained"
-        style={{
-          backgroundColor: "rgba(133,26,29) ",
-          color: "rgba(249, 234, 207)",
-          position: "fixed",
-        }}
       >
         {actLanguage === "DEU"
           ? "Tisch reservieren"

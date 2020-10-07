@@ -3,10 +3,17 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Container from "@material-ui/core/Container"
 import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper"
+import SwiperCore, {
+  Autoplay,
+  Navigation,
+  EffectFade,
+  Pagination,
+} from "swiper"
 import "swiper/swiper-bundle.css"
 import Img from "gatsby-image"
 import "./index.css"
+import "./swiper.css"
+
 import menu from "../images/menu.png"
 import { Helmet } from "react-helmet"
 import Header from "../components/header"
@@ -30,7 +37,7 @@ import bgV2 from "../images/bgV2.jpg"
 
 const window = require("global/window")
 
-SwiperCore.use([Autoplay, Navigation, EffectFade])
+SwiperCore.use([Autoplay, Navigation, EffectFade, Pagination])
 
 export default function (props) {
   const { actLanguage } = useContext(LanguageContext)
@@ -162,6 +169,7 @@ export default function (props) {
             <br /> <br />
             <Container id="slider">
               <Swiper
+                pagination={{ clickable: true }}
                 style={{ zIndex: 0 }}
                 spaceBetween={1}
                 slidesPerView={
