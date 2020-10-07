@@ -107,6 +107,30 @@ export default function Menu(props) {
             ? "სადილის მენიუ"
             : null}
         </Button>
+        <a
+          href={"/Bankettmenue.pdf"}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            variant="contained"
+            style={{
+              backgroundColor: "rgba(249, 234, 207)",
+              color: "rgba(133,26,29)",
+              margin: 10,
+            }}
+          >
+            {actLanguage === "DEU"
+              ? "Bankettmenü"
+              : actLanguage === "RUS"
+              ? "Банкетное меню"
+              : actLanguage === "ENG"
+              ? "Banquet menu"
+              : actLanguage === "GEO"
+              ? "საბანკეტო მენიუ"
+              : null}
+          </Button>
+        </a>
       </div>
 
       {actLanguage === "DEU" && (
