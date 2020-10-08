@@ -72,6 +72,7 @@ const useStyles = makeStyles(theme => ({
     left: "45%",
     transform: "translate(-50%, 0)",
     "&:hover": {
+      fontWeight: "bold",
       color: theme.third.color,
       backgroundColor: theme.third.backgroundColor,
     },
@@ -195,6 +196,15 @@ export default function WindowReserve(props) {
   const { executeRecaptcha } = useGoogleReCaptcha()
   const [token, setToken] = useState("")
   const { actLanguage } = useContext(LanguageContext)
+  const [loading, setLoading] = useState(false)
+
+  function handleLoadingOn() {
+    setLoading(true)
+  }
+  function handleLoadingOff() {
+    setLoading(false)
+  }
+
   const classes = useStyles()
 
   const schema =
@@ -239,6 +249,7 @@ export default function WindowReserve(props) {
     try {
       const result = executeRecaptcha("suliko_reserve_table")
       setToken(result) //--> grab the generated token by the reCAPTCHA
+      handleLoadingOn()
 
       let response = await fetch(
         "https://suliko-mailer.herokuapp.com/reservation",
@@ -258,6 +269,7 @@ export default function WindowReserve(props) {
         // navigate("/")
         // window.location.reload()
         let responseJson = await response.json()
+        handleLoadingOff()
         return responseJson
       }
     } catch (error) {
@@ -296,6 +308,7 @@ export default function WindowReserve(props) {
                 <TimelineContent>
                   <FormControl className={classes.formControl}>
                     <TextField
+                      InputLabelProps={{ style: { fontSize: 18 } }}
                       type="text"
                       name="peopleCount"
                       id="peopleCount"
@@ -342,6 +355,7 @@ export default function WindowReserve(props) {
                           helperText={errorDate}
                         />
                       }
+                      InputProps={{ style: { fontSize: 18 } }}
                       control={control}
                       name="date"
                       placeholder={
@@ -385,6 +399,7 @@ export default function WindowReserve(props) {
                       }
                       control={control}
                       name="time"
+                      InputProps={{ style: { fontSize: 18 } }}
                       placeholder={
                         actLanguage === "DEU"
                           ? "Zeit"
@@ -416,6 +431,7 @@ export default function WindowReserve(props) {
                       type="text"
                       name="name"
                       id="name"
+                      InputLabelProps={{ style: { fontSize: 18 } }}
                       label={
                         actLanguage === "DEU"
                           ? "Ihr Name"
@@ -450,6 +466,7 @@ export default function WindowReserve(props) {
                       type="text"
                       name="phone"
                       id="phone"
+                      InputLabelProps={{ style: { fontSize: 18 } }}
                       label={
                         actLanguage === "DEU"
                           ? "Telefon"
@@ -482,6 +499,7 @@ export default function WindowReserve(props) {
                     <TextField
                       type="email"
                       name="email"
+                      InputLabelProps={{ style: { fontSize: 18 } }}
                       label={
                         actLanguage === "DEU"
                           ? "Email"
@@ -514,15 +532,26 @@ export default function WindowReserve(props) {
             type="submit"
             variant="outlined"
             className={classes.reservierenBtn}
+            disabled={loading}
           >
-            {actLanguage === "DEU"
+            {loading
+              ? actLanguage === "DEU"
+                ? "Wird geladen..."
+                : actLanguage === "RUS"
+                ? "Загрузка ..."
+                : actLanguage === "GEO"
+                ? "Ჩატვირთვა"
+                : actLanguage === "ENG"
+                ? "Loading..."
+                : null
+              : actLanguage === "DEU"
               ? "Reservieren jetzt"
               : actLanguage === "RUS"
               ? "Забронировать"
-              : actLanguage === "ENG"
-              ? "Reserve now"
               : actLanguage === "GEO"
               ? "Დაჯავშნა"
+              : actLanguage === "ENG"
+              ? "Reserve now"
               : null}
           </Button>
         </form>
