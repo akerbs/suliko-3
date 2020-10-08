@@ -143,7 +143,7 @@ export default function DrawerTop(props) {
         }}
       >
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={800} direction="up">
+          <Slide in={props.open} timeout={500} direction="up">
             <div>
               <div className={classes.drawerHeader}>
                 <div className={classes.mediaIcons}>
@@ -195,7 +195,7 @@ export default function DrawerTop(props) {
         </div>
 
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1000} direction="up">
+          <Slide in={props.open} timeout={700} direction="up">
             <div>
               <ListItem className={classes.listItem}>
                 <img src={menu} alt="img" className={classes.menuImg} />
@@ -204,7 +204,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1200} direction="up">
+          <Slide in={props.open} timeout={900} direction="up">
             <div>
               <Link
                 to="#home"
@@ -234,7 +234,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1250} direction="up">
+          <Slide in={props.open} timeout={1000} direction="up">
             <div>
               <Link
                 to="#about-us"
@@ -264,7 +264,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1300} direction="up">
+          <Slide in={props.open} timeout={1100} direction="up">
             <div>
               <Link
                 to="#menu"
@@ -294,7 +294,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1350} direction="up">
+          <Slide in={props.open} timeout={1200} direction="up">
             <div>
               <Link
                 to="#contact"
@@ -324,7 +324,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1000} direction="up">
+          <Slide in={props.open} timeout={700} direction="up">
             <div>
               <ListItem className={classes.listItem}>
                 <img src={menu} alt="img" className={classes.menuImg} />
@@ -333,7 +333,7 @@ export default function DrawerTop(props) {
           </Slide>
         </div>
         <div style={{ overflow: "hidden" }}>
-          <Slide in={props.open} timeout={1000} direction="up">
+          <Slide in={props.open} timeout={700} direction="up">
             <div>
               <div className={classes.imgWrapper}>
                 <img src={Logo2} alt="logo" className={classes.img} />
