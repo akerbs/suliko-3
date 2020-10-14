@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
 import Container from "@material-ui/core/Container"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, {
@@ -13,7 +12,6 @@ import "swiper/swiper-bundle.css"
 import Img from "gatsby-image"
 import "./index.css"
 import "./swiper.css"
-
 import menu from "../images/menu.png"
 import { Helmet } from "react-helmet"
 import Header from "../components/header"
@@ -65,7 +63,6 @@ export default function (props) {
 
   return (
     <>
-      {/* <SEO title="Home" /> */}
       <Helmet>
         <html
           lang={
@@ -120,17 +117,9 @@ export default function (props) {
               preventInteractionOnTransition={true}
             >
               <SwiperSlide>
-                {/* <Img
-                  fluid={props.data.bgV1.childImageSharp.fluid}
-                  alt="Suliko 1"
-                /> */}
                 <img src={bgV1} alt="Suliko 1" />
               </SwiperSlide>
               <SwiperSlide>
-                {/* <Img
-                  fluid={props.data.bgV2.childImageSharp.fluid}
-                  alt="Suliko 2"
-                /> */}
                 <img src={bgV2} alt="Suliko 2" />
               </SwiperSlide>
             </Swiper>
@@ -203,8 +192,7 @@ export default function (props) {
             </Container>
             <br /> <br />
             <Container id="press">
-              {" "}
-              <Press />{" "}
+              <Press />
             </Container>
             <br /> <br />
             <img
@@ -269,46 +257,3 @@ export const query = graphql`
     }
   }
 `
-// bgV1: file(relativePath: { eq: "bgV1.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1500) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// bgV2: file(relativePath: { eq: "bgV2.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1500) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-
-// s1: file(relativePath: { eq: "s1.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// s2: file(relativePath: { eq: "s2.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// s3: file(relativePath: { eq: "s3.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// s4: file(relativePath: { eq: "s4.jpg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }

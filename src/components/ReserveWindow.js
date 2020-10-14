@@ -111,7 +111,6 @@ const schemaRus = yup.object().shape({
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
       "Введите коректный адрес электронной почты"
     ),
-  // .email('Please check your email')
 })
 
 const schemaDeu = yup.object().shape({
@@ -137,7 +136,6 @@ const schemaDeu = yup.object().shape({
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
       "Falsche Email"
     ),
-  // .email('Please check your email')
 })
 
 const schemaGeo = yup.object().shape({
@@ -163,7 +161,6 @@ const schemaGeo = yup.object().shape({
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
       "არასწორი იმეილი"
     ),
-  // .email('Please check your email')
 })
 
 const schemaEng = yup.object().shape({
@@ -189,7 +186,6 @@ const schemaEng = yup.object().shape({
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
       "incorrect email"
     ),
-  // .email('Please check your email')
 })
 
 export default function WindowReserve(props) {
@@ -266,8 +262,6 @@ export default function WindowReserve(props) {
       if (response.ok) {
         alert(alertMessage)
         await props.onClose()
-        // navigate("/")
-        // window.location.reload()
         let responseJson = await response.json()
         handleLoadingOff()
         return responseJson
@@ -284,15 +278,7 @@ export default function WindowReserve(props) {
       open={props.open}
     >
       <div className={classes.paper}>
-        <form
-          // name="myForm"
-          // method="post"
-          // action="http://localhost:3000/reservation"
-          // action="https://suliko-mailer.herokuapp.com/reservation"
-          // onSubmit={handleSubmit(data => alert(JSON.stringify(data)))}
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-        >
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <Timeline className={classes.timeline}>
               <TimelineItem className={classes.timelineItem}>

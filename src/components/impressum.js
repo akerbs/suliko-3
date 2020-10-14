@@ -85,7 +85,6 @@ export default function Impressum(props) {
                 zIndex: 9999,
                 position: "fixed",
               }}
-              // onClick={stop}
               onClick={props.onClose}
             >
               <HighlightOffIcon />

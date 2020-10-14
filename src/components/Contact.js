@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
 import HomeIcon from "@material-ui/icons/Home"

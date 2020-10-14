@@ -1,20 +1,10 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
 import { Link } from "gatsby"
-import { makeStyles, useTheme } from "@material-ui/core/styles"
 
 export default function AboutUs(props) {
   const { actLanguage } = useContext(LanguageContext)
-  const [readMoreText2, setReadMoreText2] = useState(false)
-
-  const showTex2MoreHandler = () => {
-    setReadMoreText2(true)
-  }
-  const showTex2LessHandler = () => {
-    setReadMoreText2(false)
-  }
 
   return (
     <>

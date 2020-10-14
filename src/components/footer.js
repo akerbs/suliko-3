@@ -50,15 +50,14 @@ const Footer = props => {
           style={{ fontSize: 5, color: "rgba(0, 0, 0, 0.5 )" }}
         >
           Created by{" "}
-          <Link
+          <a
             target="_blank"
             rel="noopener noreferrer"
-            to="#"
-            // to="https://kerbs.now.sh/"
+            href="mailto:anker2702@gmail.com"
             style={{ textDecoration: "none", color: "rgba(0, 0, 0, 0.5 )" }}
           >
             Anatol Kerbs
-          </Link>
+          </a>
         </Typography>
       </div>
       <Impressum open={openImpressum} onClose={handleCloseImpressum} />

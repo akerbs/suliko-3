@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.contrastText,
     position: "fixed",
     "&:hover": {
-      // fontWeight: "bold",
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.secondary.contrastText,
     },

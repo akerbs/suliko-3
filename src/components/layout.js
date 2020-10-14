@@ -1,8 +1,7 @@
-import React, { useState, createContext, useEffect, useMemo } from "react"
+import React, { useState, createContext, useEffect } from "react"
 import "./layout.css"
 import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./theme"
-// import CookiesBar from "./cookiesBar"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
@@ -31,10 +30,6 @@ function Layout({ children }) {
     }
   }, [])
 
-  // useEffect(() => {
-  //   console.log("language changed", actLanguage)
-  // }, [actLanguage])
-
   function handleLanguageChange(event) {
     setActLanguage(event.target.value)
   }
@@ -53,7 +48,6 @@ function Layout({ children }) {
         >
           <CssBaseline />
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
-          {/* <CookiesBar /> */}
         </LanguageContext.Provider>
       </GoogleReCaptchaProvider>
     </div>

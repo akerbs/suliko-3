@@ -52,7 +52,6 @@ const useStyles = makeStyles(theme => ({
     zIndex: 9999,
     position: "fixed",
     outline: 1,
-    // padding: 10,
     padding: "50px 10px",
     fontSize: 10,
   },
@@ -103,9 +102,7 @@ export function SpeisekarteEng(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                // marginRight: "8%",
               }}
-              // onClick={stop}
               onClick={props.onClose}
             >
               <HighlightOffIcon />
@@ -821,9 +818,7 @@ export function WeinkarteEng(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                // marginRight: "5%",
               }}
-              // onClick={stop}
               onClick={props.onClose}
             >
               <HighlightOffIcon />
@@ -1078,9 +1073,7 @@ export function MittagsmenuEng(props) {
                 padding: 0,
                 zIndex: 9999,
                 position: "fixed",
-                // marginRight: "5%",
               }}
-              // onClick={stop}
               onClick={props.onClose}
             >
               <HighlightOffIcon />

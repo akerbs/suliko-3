@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react"
 import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
 import { LanguageContext } from "../components/layout"
-import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 
 const window = require("global/window")
@@ -139,9 +137,6 @@ export default function AboutUs(props) {
                 authentischen georgischen Gereichten und Weinen mit
                 jahrhundertlangen Tradition in angenehmer Atmosphäre verwöhnt.
               </Typography>
-              {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weniger
-                </p> */}
             </div>
           )}
         </div>
@@ -206,9 +201,6 @@ export default function AboutUs(props) {
                 <br />
                 მოხარული ვიქნებით თქვენი სტუმრობისა !
               </Typography>
-              {/* <p onClick={showTex1LessHandler} style={{ cursor: "pointer" }}>
-                  ...lesen weniger
-                </p> */}
             </div>
           )}
         </div>

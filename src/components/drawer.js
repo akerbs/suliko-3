@@ -129,8 +129,6 @@ export default function DrawerTop(props) {
     <>
       <CssBaseline />
       <Drawer
-        // variant="temporary"
-        // onEscapeKeyDown={handleDrawerClose}
         variant="persistent"
         transitionDuration={{ enter: 400, exit: 300 }}
         anchor="top"
@@ -138,8 +136,6 @@ export default function DrawerTop(props) {
         classes={{
           paperAnchorDockedTop: classes.drawerPaper,
           docked: classes.drawer,
-          // paper: classes.drawerPaper,
-          // drawer: classes.drawer,
         }}
       >
         <div style={{ overflow: "hidden" }}>
